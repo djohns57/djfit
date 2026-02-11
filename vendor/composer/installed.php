@@ -271,6 +271,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/ai_vdb_provider_postgres' => array(
+            'pretty_version' => '1.0.0-alpha2',
+            'version' => '1.0.0.0-alpha2',
+            'reference' => '1.0.0-alpha2',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/ai_vdb_provider_postgres',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/automatic_updates' => array(
             'pretty_version' => '4.1.0',
             'version' => '4.1.0.0',
