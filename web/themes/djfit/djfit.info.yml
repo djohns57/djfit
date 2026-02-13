@@ -1,0 +1,15 @@
+name: 'DJFit Theme'
+type: theme
+'base theme': false
+libraries:
+  - djfit/global
+logo: logo-dark.svg
+description: 'Custom theme based on Mercury.'
+core_version_requirement: ^11
+generator: 'mercury:1.0.0'
+regions:
+  content: Content
+  header: Header
+  footer: Footer
+dependencies:
+  - 'cva:cva'
