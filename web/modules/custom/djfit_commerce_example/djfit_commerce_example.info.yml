@@ -1,0 +1,15 @@
+name: DJFit Commerce Example
+type: module
+description: Example Commerce store setup with products, subscriptions, and premium access.
+package: DJFit
+core_version_requirement: ^11
+dependencies:
+  - drupal:commerce
+  - drupal:commerce_cart
+  - drupal:commerce_checkout
+  - drupal:commerce_payment
+  - drupal:commerce_product
+  - drupal:commerce_recurring
+  - drupal:commerce_license
+  - drupal:node
+  - drupal:user

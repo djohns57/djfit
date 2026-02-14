@@ -29,7 +29,7 @@
 /* External region styling */
 .region-header {
   .navbar--modal-top {
-    @apply px-4;
+    @apply pr-4 pl-[2px];
   }
 }
 
@@ -37,10 +37,13 @@
 .navbar--logo,
 .navbar--modal-logo {
   .branding {
-    @apply h-8 md:h-10;
+    @apply h-[60px];
     svg,
     img[src$=".svg"] {
       @apply h-auto! max-h-full;
+    }
+    img {
+      @apply h-[60px] w-auto max-w-none object-contain;
     }
   }
 }

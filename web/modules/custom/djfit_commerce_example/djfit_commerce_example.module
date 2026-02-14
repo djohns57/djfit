@@ -1,0 +1,74 @@
+<?php
+
+declare(strict_types=1);
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\node\Entity\NodeType;
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_install().
+ */
+function djfit_commerce_example_install(): void {
+  if (!Role::load('premium_member')) {
+    Role::create([
+      'id' => 'premium_member',
+      'label' => 'Premium Member',
+    ])->save();
+  }
+
+  if (!NodeType::load('premium_article')) {
+    NodeType::create([
+      'type' => 'premium_article',
+      'name' => 'Premium Article',
+      'description' => 'Member-only article with teaser fallback.',
+    ])->save();
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function djfit_commerce_example_entity_insert(EntityInterface $entity): void {
+  if ($entity->getEntityTypeId() !== 'commerce_subscription') {
+    return;
+  }
+  \Drupal::service('djfit_commerce_example.membership_manager')->syncRoleFromSubscription($entity);
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function djfit_commerce_example_entity_update(EntityInterface $entity): void {
+  if ($entity->getEntityTypeId() !== 'commerce_subscription') {
+    return;
+  }
+  \Drupal::service('djfit_commerce_example.membership_manager')->syncRoleFromSubscription($entity);
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function djfit_commerce_example_entity_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, string $view_mode): void {
+  if ($entity->getEntityTypeId() !== 'node' || $view_mode !== 'full') {
+    return;
+  }
+
+  $config = \Drupal::config('djfit_commerce_example.settings');
+  $premiumType = (string) $config->get('premium_content_type');
+  if ($entity->bundle() !== $premiumType) {
+    return;
+  }
+
+  /** @var \Drupal\djfit_commerce_example\MembershipAccessManager $membership_manager */
+  $membership_manager = \Drupal::service('djfit_commerce_example.membership_manager');
+  if ($membership_manager->userHasPremiumRole()) {
+    return;
+  }
+
+  if (isset($build['body'])) {
+    unset($build['body']);
+  }
+  $build['premium_teaser_gate'] = $membership_manager->buildPaywallBody($entity);
+}

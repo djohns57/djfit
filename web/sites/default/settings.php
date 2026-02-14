@@ -875,11 +875,17 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_public_path'] = '';
 # $settings['migrate_file_private_path'] = '';
 
-$settings['testing_package_manager'] = TRUE;
+$settings['testing_package_manager'] = FALSE;
 
 // Automatically generated include for settings managed by ddev.
 if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev.php')) {
   include __DIR__ . '/settings.ddev.php';
+}
+
+// Harden local config and remove status report warnings.
+$settings['skip_permissions_hardening'] = FALSE;
+if (isset($databases['default']['default'])) {
+  $databases['default']['default']['init_commands']['transaction_isolation'] = 'SET SESSION TRANSACTION ISOLATION LEVEL READ COMMITTED';
 }
 
 /**

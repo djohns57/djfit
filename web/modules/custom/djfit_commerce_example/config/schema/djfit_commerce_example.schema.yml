@@ -1,0 +1,25 @@
+djfit_commerce_example.settings:
+  type: config_object
+  label: 'DJFit commerce example settings'
+  mapping:
+    premium_role:
+      type: string
+      label: 'Premium member role ID'
+    premium_skus:
+      type: sequence
+      label: 'SKUs treated as premium memberships'
+      sequence:
+        type: string
+        label: 'Membership SKU'
+    active_states:
+      type: sequence
+      label: 'Subscription states treated as active'
+      sequence:
+        type: string
+        label: 'State ID'
+    premium_content_type:
+      type: string
+      label: 'Premium content type machine name'
+    paywall_url:
+      type: string
+      label: 'Membership page URL'

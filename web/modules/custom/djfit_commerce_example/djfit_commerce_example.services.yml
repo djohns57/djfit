@@ -1,0 +1,10 @@
+services:
+  logger.channel.djfit_commerce_example:
+    parent: logger.channel_base
+    arguments: ['djfit_commerce_example']
+
+  djfit_commerce_example.membership_manager:
+    class: Drupal\djfit_commerce_example\MembershipAccessManager
+    arguments:
+      - '@config.factory'
+      - '@current_user'
