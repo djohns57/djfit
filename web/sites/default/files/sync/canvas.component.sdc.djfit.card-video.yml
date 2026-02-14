@@ -1,0 +1,61 @@
+uuid: 0bd7b56e-553c-432f-84a2-6f7f2ca33186
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+  theme:
+    - djfit
+active_version: f3ff99773ded7183
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Watch our latest workout'
+          expression: ℹ︎string␟value
+        description:
+          required: false
+          field_type: string_long
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textarea
+          default_value:
+            -
+              value: 'A quick overview of our training programs and philosophy.'
+          expression: ℹ︎string_long␟value
+        video_url:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+          expression: ℹ︎string␟value
+        background:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: noColor
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Video card'
+id: sdc.djfit.card-video
+provider: djfit
+source: sdc
+source_local_id: 'djfit:card-video'
