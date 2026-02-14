@@ -30,15 +30,17 @@ props:
         - top-left
         - center-left
         - bottom-left
+        - bottom-center
         - hero-center
       meta:enum:
         top-left: Top left
         center-left: Center left
         bottom-left: Bottom left
+        bottom-center: Bottom center
         hero-center: Center
-      default: center-left
+      default: bottom-center
       examples:
-        - center-left
+        - bottom-center
     overlay_opacity:
       type: string
       title: Overlay opacity
@@ -70,6 +72,26 @@ props:
           alt: "Green blue gradient placeholder image"
           width: 1920
           height: 1344
+    heading_text:
+      type: string
+      title: Heading
+      description: The main headline displayed over the hero image.
+      examples:
+        - "Welcome to DJFit"
+    subheading_text:
+      type: string
+      title: Subheading
+      description: A short supporting line below the heading.
+      examples:
+        - "Your fitness journey starts here"
+    body_text:
+      type: string
+      title: Body text
+      contentMediaType: text/html
+      x-formatting-context: block
+      description: Optional rich text content below the subheading.
+      examples:
+        - "<p>Join us today and transform your life.</p>"
     overlap_navbar:
       type: boolean
       title: Overlap header
@@ -80,4 +102,4 @@ props:
 
 slots:
   hero_slot:
-    title: "Hero content"
+    title: "Additional content"
