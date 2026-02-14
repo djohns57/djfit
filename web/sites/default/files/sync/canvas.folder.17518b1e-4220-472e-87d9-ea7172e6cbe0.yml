@@ -1,0 +1,18 @@
+uuid: 17518b1e-4220-472e-87d9-ea7172e6cbe0
+langcode: en
+status: true
+dependencies: {  }
+name: Card
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.djfit.card
+  - sdc.djfit.card-icon
+  - sdc.djfit.card-logo
+  - sdc.djfit.card-pricing
+  - sdc.djfit.card-testimonial
+  - sdc.mercury.card
+  - sdc.mercury.card-icon
+  - sdc.mercury.card-logo
+  - sdc.mercury.card-pricing
+  - sdc.mercury.card-testimonial

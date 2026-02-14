@@ -1,0 +1,28 @@
+uuid: defce31b-9374-44b6-8c36-800db02a5866
+langcode: en
+status: true
+dependencies:
+  theme:
+    - djfit
+active_version: '5524813695409257'
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        id:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: anchor-id
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: Anchor
+id: sdc.djfit.anchor
+provider: djfit
+source: sdc
+source_local_id: 'djfit:anchor'

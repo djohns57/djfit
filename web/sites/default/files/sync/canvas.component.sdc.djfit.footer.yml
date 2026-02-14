@@ -1,0 +1,69 @@
+uuid: e531992f-3b11-4887-8962-bc20b061df7d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - djfit
+active_version: 929024b30b57138a
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        align:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+        site_name:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: DJFit
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions:
+        footer_first:
+          title: 'Branding & Social'
+        footer_last:
+          title: 'Call to action'
+        footer_utility_first:
+          title: 'Utility links'
+        footer_utility_last:
+          title: 'Copyright text'
+  d696cea1796b650e:
+    settings:
+      prop_field_definitions:
+        align:
+          required: false
+          field_type: boolean
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: boolean_checkbox
+          default_value:
+            -
+              value: true
+          expression: ℹ︎boolean␟value
+    fallback_metadata:
+      slot_definitions:
+        footer_first:
+          title: 'Branding & Social'
+        footer_last:
+          title: 'Call to action'
+        footer_utility_first:
+          title: 'Utility links'
+        footer_utility_last:
+          title: 'Copyright text'
+label: Footer
+id: sdc.djfit.footer
+provider: djfit
+source: sdc
+source_local_id: 'djfit:footer'

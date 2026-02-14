@@ -1,0 +1,10 @@
+uuid: ad79f6a3-c5ee-4691-9fc0-94d13aafbeab
+langcode: en
+status: true
+dependencies:
+  theme:
+    - djfit
+id: djfit.header
+region: header
+theme: djfit
+component_tree: {  }

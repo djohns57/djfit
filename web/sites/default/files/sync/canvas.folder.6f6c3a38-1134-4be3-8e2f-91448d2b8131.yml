@@ -1,0 +1,24 @@
+uuid: 6f6c3a38-1134-4be3-8e2f-91448d2b8131
+langcode: en
+status: true
+dependencies: {  }
+name: Base
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.djfit.anchor
+  - sdc.djfit.badge
+  - sdc.djfit.blockquote
+  - sdc.djfit.button
+  - sdc.djfit.heading
+  - sdc.djfit.icon
+  - sdc.djfit.image
+  - sdc.djfit.text
+  - sdc.mercury.anchor
+  - sdc.mercury.badge
+  - sdc.mercury.blockquote
+  - sdc.mercury.button
+  - sdc.mercury.heading
+  - sdc.mercury.icon
+  - sdc.mercury.image
+  - sdc.mercury.text
