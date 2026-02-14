@@ -3,6 +3,9 @@
 @import "../components/hero-blog/hero-blog.tailwind.css";
 @import "../components/navbar/navbar.tailwind.css";
 @import "../components/anchor/anchor.tailwind.css";
+@import "../components/membership-pricing-table/membership-pricing-table.tailwind.css";
+@import "../components/paywall-notice/paywall-notice.tailwind.css";
+@import "../components/account-membership-status/account-membership-status.tailwind.css";
 
 @theme inline {
   --color-background: var(--background);

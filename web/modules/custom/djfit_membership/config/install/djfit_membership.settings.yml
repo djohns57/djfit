@@ -1,0 +1,7 @@
+plan_role_map:
+  PRO-MONTHLY: member_pro
+  BASIC-MONTHLY: member_basic
+  PREMIUM-MONTHLY: member_premium
+active_states:
+  - active
+  - trialing

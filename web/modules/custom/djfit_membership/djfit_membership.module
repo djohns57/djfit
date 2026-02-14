@@ -1,0 +1,38 @@
+<?php
+
+declare(strict_types=1);
+
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Synchronizes user roles when subscriptions are created.
+ */
+function djfit_membership_entity_insert(EntityInterface $entity): void {
+  if ($entity->getEntityTypeId() !== 'commerce_subscription') {
+    return;
+  }
+
+  \Drupal::service('djfit_membership.role_synchronizer')->syncFromSubscription($entity);
+}
+
+/**
+ * Synchronizes user roles when subscriptions are updated.
+ */
+function djfit_membership_entity_update(EntityInterface $entity): void {
+  if ($entity->getEntityTypeId() !== 'commerce_subscription') {
+    return;
+  }
+
+  \Drupal::service('djfit_membership.role_synchronizer')->syncFromSubscription($entity);
+}
+
+/**
+ * Removes deprecated action plugins that trigger runtime deprecation notices.
+ */
+function djfit_membership_action_info_alter(array &$definitions): void {
+  foreach (array_keys($definitions) as $plugin_id) {
+    if ($plugin_id === 'entity_delete_action' || str_starts_with($plugin_id, 'entity_delete_action:')) {
+      unset($definitions[$plugin_id]);
+    }
+  }
+}

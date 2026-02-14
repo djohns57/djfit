@@ -13,9 +13,9 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '606a39d89246991a373564698c2d8383' => __DIR__ . '/..' . '/symfony/polyfill-php85/bootstrap.php',
+        '9d2b9fc6db0f153a0a149fefb182415e' => __DIR__ . '/..' . '/symfony/polyfill-php84/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
-        '9d2b9fc6db0f153a0a149fefb182415e' => __DIR__ . '/..' . '/symfony/polyfill-php84/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '89efb1254ef2d1c5d80096acd12c4098' => __DIR__ . '/..' . '/twig/twig/src/Resources/core.php',
@@ -38,27 +38,31 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
     );
 
     public static $prefixLengthsPsr4 = array (
-        'p' =>
+        'p' => 
         array (
             'phpowermove\\docblock\\' => 21,
             'phootwork\\lang\\' => 15,
             'phootwork\\collection\\' => 21,
         ),
-        'e' =>
+        'e' => 
         array (
             'enshrined\\svgSanitize\\' => 22,
         ),
-        'Y' =>
+        'c' => 
+        array (
+            'cweagans\\Composer\\' => 18,
+        ),
+        'Y' => 
         array (
             'Yethee\\Tiktoken\\' => 16,
         ),
-        'T' =>
+        'T' => 
         array (
             'Twig\\Extra\\Html\\' => 16,
             'Twig\\' => 5,
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
         ),
-        'S' =>
+        'S' => 
         array (
             'Symfony\\Polyfill\\Php85\\' => 23,
             'Symfony\\Polyfill\\Php84\\' => 23,
@@ -95,17 +99,18 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
+            'Stripe\\' => 7,
             'Seld\\Signal\\' => 12,
             'Seld\\PharUtils\\' => 15,
             'Seld\\JsonLint\\' => 14,
         ),
-        'R' =>
+        'R' => 
         array (
             'Robo\\' => 5,
             'Revolt\\' => 7,
             'React\\Promise\\' => 14,
         ),
-        'P' =>
+        'P' => 
         array (
             'Psy\\' => 4,
             'Psr\\Log\\' => 8,
@@ -117,21 +122,21 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
             'PhpParser\\' => 10,
             'Peast\\' => 6,
         ),
-        'O' =>
+        'O' => 
         array (
             'OpenAI\\' => 7,
         ),
-        'N' =>
+        'N' => 
         array (
             'Nette\\' => 6,
         ),
-        'M' =>
+        'M' => 
         array (
             'Mtownsend\\XmlToArray\\' => 21,
             'Masterminds\\' => 12,
             'MabeEnum\\' => 9,
         ),
-        'L' =>
+        'L' => 
         array (
             'League\\HTMLToMarkdown\\' => 22,
             'League\\Container\\' => 17,
@@ -139,17 +144,17 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
             'League\\CommonMark\\' => 18,
             'Laravel\\Prompts\\' => 16,
         ),
-        'J' =>
+        'J' => 
         array (
             'JsonSchema\\' => 11,
         ),
-        'H' =>
+        'H' => 
         array (
             'Http\\Message\\MultipartStream\\' => 29,
             'Http\\Discovery\\' => 15,
             'Html2Text\\' => 10,
         ),
-        'G' =>
+        'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
@@ -157,13 +162,14 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
             'Grasmash\\YamlCli\\' => 17,
             'Grasmash\\Expander\\' => 18,
         ),
-        'E' =>
+        'E' => 
         array (
             'Egulias\\EmailValidator\\' => 23,
         ),
-        'D' =>
+        'D' => 
         array (
             'Drush\\' => 6,
+            'Drupal\\rat\\' => 11,
             'Drupal\\automatic_updates\\Development\\' => 37,
             'Drupal\\RecipeKit\\Installer\\' => 27,
             'Drupal\\Core\\' => 12,
@@ -173,10 +179,12 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
             'Drupal\\Composer\\Plugin\\ProjectMessage\\' => 38,
             'Drupal\\Component\\' => 17,
             'DrupalCodeGenerator\\' => 20,
+            'Doctrine\\Deprecations\\' => 22,
             'Doctrine\\Common\\Lexer\\' => 22,
+            'Doctrine\\Common\\Collections\\' => 28,
             'Dflydev\\DotAccessData\\' => 22,
         ),
-        'C' =>
+        'C' => 
         array (
             'Cron\\' => 5,
             'Consolidation\\SiteProcess\\' => 26,
@@ -195,461 +203,491 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
             'Composer\\ClassMapGenerator\\' => 27,
             'Composer\\CaBundle\\' => 18,
             'Composer\\' => 9,
+            'CommerceGuys\\Intl\\' => 18,
+            'CommerceGuys\\Addressing\\' => 24,
         ),
-        'A' =>
+        'A' => 
         array (
             'Asm89\\Stack\\' => 12,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'phpowermove\\docblock\\' =>
+        'phpowermove\\docblock\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpowermove/docblock/src',
         ),
-        'phootwork\\lang\\' =>
+        'phootwork\\lang\\' => 
         array (
             0 => __DIR__ . '/..' . '/phootwork/lang',
         ),
-        'phootwork\\collection\\' =>
+        'phootwork\\collection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phootwork/collection',
         ),
-        'enshrined\\svgSanitize\\' =>
+        'enshrined\\svgSanitize\\' => 
         array (
             0 => __DIR__ . '/..' . '/enshrined/svg-sanitize/src',
         ),
-        'Yethee\\Tiktoken\\' =>
+        'cweagans\\Composer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cweagans/composer-patches/src',
+        ),
+        'Yethee\\Tiktoken\\' => 
         array (
             0 => __DIR__ . '/..' . '/yethee/tiktoken/src',
         ),
-        'Twig\\Extra\\Html\\' =>
+        'Twig\\Extra\\Html\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/html-extra',
         ),
-        'Twig\\' =>
+        'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
         ),
-        'TijsVerkoyen\\CssToInlineStyles\\' =>
+        'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
             0 => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src',
         ),
-        'Symfony\\Polyfill\\Php85\\' =>
+        'Symfony\\Polyfill\\Php85\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php85',
         ),
-        'Symfony\\Polyfill\\Php84\\' =>
+        'Symfony\\Polyfill\\Php84\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php84',
         ),
-        'Symfony\\Polyfill\\Php83\\' =>
+        'Symfony\\Polyfill\\Php83\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php83',
         ),
-        'Symfony\\Polyfill\\Php81\\' =>
+        'Symfony\\Polyfill\\Php81\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php81',
         ),
-        'Symfony\\Polyfill\\Php80\\' =>
+        'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
         ),
-        'Symfony\\Polyfill\\Php73\\' =>
+        'Symfony\\Polyfill\\Php73\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php73',
         ),
-        'Symfony\\Polyfill\\Mbstring\\' =>
+        'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
-        'Symfony\\Polyfill\\Intl\\Normalizer\\' =>
+        'Symfony\\Polyfill\\Intl\\Normalizer\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer',
         ),
-        'Symfony\\Polyfill\\Intl\\Idn\\' =>
+        'Symfony\\Polyfill\\Intl\\Idn\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-intl-idn',
         ),
-        'Symfony\\Polyfill\\Intl\\Grapheme\\' =>
+        'Symfony\\Polyfill\\Intl\\Grapheme\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme',
         ),
-        'Symfony\\Polyfill\\Iconv\\' =>
+        'Symfony\\Polyfill\\Iconv\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-iconv',
         ),
-        'Symfony\\Polyfill\\Ctype\\' =>
+        'Symfony\\Polyfill\\Ctype\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
         ),
-        'Symfony\\Contracts\\Translation\\' =>
+        'Symfony\\Contracts\\Translation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/translation-contracts',
         ),
-        'Symfony\\Contracts\\Service\\' =>
+        'Symfony\\Contracts\\Service\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/service-contracts',
         ),
-        'Symfony\\Contracts\\EventDispatcher\\' =>
+        'Symfony\\Contracts\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts',
         ),
-        'Symfony\\Component\\Yaml\\' =>
+        'Symfony\\Component\\Yaml\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/yaml',
         ),
-        'Symfony\\Component\\VarExporter\\' =>
+        'Symfony\\Component\\VarExporter\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/var-exporter',
         ),
-        'Symfony\\Component\\VarDumper\\' =>
+        'Symfony\\Component\\VarDumper\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/var-dumper',
         ),
-        'Symfony\\Component\\Validator\\' =>
+        'Symfony\\Component\\Validator\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/validator',
         ),
-        'Symfony\\Component\\String\\' =>
+        'Symfony\\Component\\String\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/string',
         ),
-        'Symfony\\Component\\Serializer\\' =>
+        'Symfony\\Component\\Serializer\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/serializer',
         ),
-        'Symfony\\Component\\Routing\\' =>
+        'Symfony\\Component\\Routing\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/routing',
         ),
-        'Symfony\\Component\\Process\\' =>
+        'Symfony\\Component\\Process\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/process',
         ),
-        'Symfony\\Component\\Mime\\' =>
+        'Symfony\\Component\\Mime\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/mime',
         ),
-        'Symfony\\Component\\Mailer\\' =>
+        'Symfony\\Component\\Mailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/mailer',
         ),
-        'Symfony\\Component\\HttpKernel\\' =>
+        'Symfony\\Component\\HttpKernel\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/http-kernel',
         ),
-        'Symfony\\Component\\HttpFoundation\\' =>
+        'Symfony\\Component\\HttpFoundation\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/http-foundation',
         ),
-        'Symfony\\Component\\Finder\\' =>
+        'Symfony\\Component\\Finder\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/finder',
         ),
-        'Symfony\\Component\\Filesystem\\' =>
+        'Symfony\\Component\\Filesystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/filesystem',
         ),
-        'Symfony\\Component\\EventDispatcher\\' =>
+        'Symfony\\Component\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
         ),
-        'Symfony\\Component\\ErrorHandler\\' =>
+        'Symfony\\Component\\ErrorHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/error-handler',
         ),
-        'Symfony\\Component\\DependencyInjection\\' =>
+        'Symfony\\Component\\DependencyInjection\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/dependency-injection',
         ),
-        'Symfony\\Component\\CssSelector\\' =>
+        'Symfony\\Component\\CssSelector\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/css-selector',
         ),
-        'Symfony\\Component\\Console\\' =>
+        'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
-        'Symfony\\Bridge\\PsrHttpMessage\\' =>
+        'Symfony\\Bridge\\PsrHttpMessage\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/psr-http-message-bridge',
         ),
-        'Seld\\Signal\\' =>
+        'Stripe\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
+        ),
+        'Seld\\Signal\\' => 
         array (
             0 => __DIR__ . '/..' . '/seld/signal-handler/src',
         ),
-        'Seld\\PharUtils\\' =>
+        'Seld\\PharUtils\\' => 
         array (
             0 => __DIR__ . '/..' . '/seld/phar-utils/src',
         ),
-        'Seld\\JsonLint\\' =>
+        'Seld\\JsonLint\\' => 
         array (
             0 => __DIR__ . '/..' . '/seld/jsonlint/src/Seld/JsonLint',
         ),
-        'Robo\\' =>
+        'Robo\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/robo/src',
         ),
-        'Revolt\\' =>
+        'Revolt\\' => 
         array (
             0 => __DIR__ . '/..' . '/revolt/event-loop/src',
         ),
-        'React\\Promise\\' =>
+        'React\\Promise\\' => 
         array (
             0 => __DIR__ . '/..' . '/react/promise/src',
         ),
-        'Psy\\' =>
+        'Psy\\' => 
         array (
             0 => __DIR__ . '/..' . '/psy/psysh/src',
         ),
-        'Psr\\Log\\' =>
+        'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
         ),
-        'Psr\\Http\\Message\\' =>
+        'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
             1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
-        'Psr\\Http\\Client\\' =>
+        'Psr\\Http\\Client\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-client/src',
         ),
-        'Psr\\EventDispatcher\\' =>
+        'Psr\\EventDispatcher\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/event-dispatcher/src',
         ),
-        'Psr\\Container\\' =>
+        'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
         ),
-        'PhpTuf\\ComposerStager\\' =>
+        'PhpTuf\\ComposerStager\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-tuf/composer-stager/src',
         ),
-        'PhpParser\\' =>
+        'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
-        'Peast\\' =>
+        'Peast\\' => 
         array (
             0 => __DIR__ . '/..' . '/mck89/peast/lib/Peast',
         ),
-        'OpenAI\\' =>
+        'OpenAI\\' => 
         array (
             0 => __DIR__ . '/..' . '/openai-php/client/src',
         ),
-        'Nette\\' =>
+        'Nette\\' => 
         array (
             0 => __DIR__ . '/..' . '/nette/schema/src',
             1 => __DIR__ . '/..' . '/nette/utils/src',
         ),
-        'Mtownsend\\XmlToArray\\' =>
+        'Mtownsend\\XmlToArray\\' => 
         array (
             0 => __DIR__ . '/..' . '/mtownsend/xml-to-array/src',
         ),
-        'Masterminds\\' =>
+        'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
-        'MabeEnum\\' =>
+        'MabeEnum\\' => 
         array (
             0 => __DIR__ . '/..' . '/marc-mabe/php-enum/src',
         ),
-        'League\\HTMLToMarkdown\\' =>
+        'League\\HTMLToMarkdown\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/html-to-markdown/src',
         ),
-        'League\\Container\\' =>
+        'League\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/container/src',
         ),
-        'League\\Config\\' =>
+        'League\\Config\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/config/src',
         ),
-        'League\\CommonMark\\' =>
+        'League\\CommonMark\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/commonmark/src',
         ),
-        'Laravel\\Prompts\\' =>
+        'Laravel\\Prompts\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/prompts/src',
         ),
-        'JsonSchema\\' =>
+        'JsonSchema\\' => 
         array (
             0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
         ),
-        'Http\\Message\\MultipartStream\\' =>
+        'Http\\Message\\MultipartStream\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-http/multipart-stream-builder/src',
         ),
-        'Http\\Discovery\\' =>
+        'Http\\Discovery\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-http/discovery/src',
         ),
-        'Html2Text\\' =>
+        'Html2Text\\' => 
         array (
             0 => __DIR__ . '/..' . '/html2text/html2text/src',
         ),
-        'GuzzleHttp\\Psr7\\' =>
+        'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
         ),
-        'GuzzleHttp\\Promise\\' =>
+        'GuzzleHttp\\Promise\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
         ),
-        'GuzzleHttp\\' =>
+        'GuzzleHttp\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
-        'Grasmash\\YamlCli\\' =>
+        'Grasmash\\YamlCli\\' => 
         array (
             0 => __DIR__ . '/..' . '/grasmash/yaml-cli/src',
         ),
-        'Grasmash\\Expander\\' =>
+        'Grasmash\\Expander\\' => 
         array (
             0 => __DIR__ . '/..' . '/grasmash/expander/src',
         ),
-        'Egulias\\EmailValidator\\' =>
+        'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/src',
         ),
-        'Drush\\' =>
+        'Drush\\' => 
         array (
             0 => __DIR__ . '/..' . '/drush/drush/src',
         ),
-        'Drupal\\automatic_updates\\Development\\' =>
+        'Drupal\\rat\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/drupal/rat/src',
+        ),
+        'Drupal\\automatic_updates\\Development\\' => 
         array (
             0 => __DIR__ . '/../..' . '/web/modules/contrib/automatic_updates/scripts/src',
         ),
-        'Drupal\\RecipeKit\\Installer\\' =>
+        'Drupal\\RecipeKit\\Installer\\' => 
         array (
             0 => __DIR__ . '/..' . '/drupal/recipe_installer_kit/src',
         ),
-        'Drupal\\Core\\' =>
+        'Drupal\\Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/web/core/lib/Drupal/Core',
         ),
-        'Drupal\\Composer\\Plugin\\VendorHardening\\' =>
+        'Drupal\\Composer\\Plugin\\VendorHardening\\' => 
         array (
             0 => __DIR__ . '/..' . '/drupal/core-vendor-hardening',
         ),
-        'Drupal\\Composer\\Plugin\\Scaffold\\' =>
+        'Drupal\\Composer\\Plugin\\Scaffold\\' => 
         array (
             0 => __DIR__ . '/..' . '/drupal/core-composer-scaffold',
         ),
-        'Drupal\\Composer\\Plugin\\RecipeUnpack\\' =>
+        'Drupal\\Composer\\Plugin\\RecipeUnpack\\' => 
         array (
             0 => __DIR__ . '/..' . '/drupal/core-recipe-unpack',
         ),
-        'Drupal\\Composer\\Plugin\\ProjectMessage\\' =>
+        'Drupal\\Composer\\Plugin\\ProjectMessage\\' => 
         array (
             0 => __DIR__ . '/..' . '/drupal/core-project-message',
         ),
-        'Drupal\\Component\\' =>
+        'Drupal\\Component\\' => 
         array (
             0 => __DIR__ . '/../..' . '/web/core/lib/Drupal/Component',
         ),
-        'DrupalCodeGenerator\\' =>
+        'DrupalCodeGenerator\\' => 
         array (
             0 => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src',
         ),
-        'Doctrine\\Common\\Lexer\\' =>
+        'Doctrine\\Deprecations\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/deprecations/src',
+        ),
+        'Doctrine\\Common\\Lexer\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/lexer/src',
         ),
-        'Dflydev\\DotAccessData\\' =>
+        'Doctrine\\Common\\Collections\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/collections/src',
+        ),
+        'Dflydev\\DotAccessData\\' => 
         array (
             0 => __DIR__ . '/..' . '/dflydev/dot-access-data/src',
         ),
-        'Cron\\' =>
+        'Cron\\' => 
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
-        'Consolidation\\SiteProcess\\' =>
+        'Consolidation\\SiteProcess\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/site-process/src',
         ),
-        'Consolidation\\SiteAlias\\' =>
+        'Consolidation\\SiteAlias\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/site-alias/src',
         ),
-        'Consolidation\\OutputFormatters\\' =>
+        'Consolidation\\OutputFormatters\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/output-formatters/src',
         ),
-        'Consolidation\\Log\\' =>
+        'Consolidation\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/log/src',
         ),
-        'Consolidation\\Filter\\' =>
+        'Consolidation\\Filter\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/filter-via-dot-access-data/src',
         ),
-        'Consolidation\\Config\\' =>
+        'Consolidation\\Config\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/config/src',
         ),
-        'Consolidation\\AnnotatedCommand\\' =>
+        'Consolidation\\AnnotatedCommand\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/annotated-command/src',
         ),
-        'Composer\\XdebugHandler\\' =>
+        'Composer\\XdebugHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/xdebug-handler/src',
         ),
-        'Composer\\Spdx\\' =>
+        'Composer\\Spdx\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/spdx-licenses/src',
         ),
-        'Composer\\Semver\\' =>
+        'Composer\\Semver\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/semver/src',
         ),
-        'Composer\\Pcre\\' =>
+        'Composer\\Pcre\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/pcre/src',
         ),
-        'Composer\\MetadataMinifier\\' =>
+        'Composer\\MetadataMinifier\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/metadata-minifier/src',
         ),
-        'Composer\\Installers\\' =>
+        'Composer\\Installers\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),
-        'Composer\\ClassMapGenerator\\' =>
+        'Composer\\ClassMapGenerator\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/class-map-generator/src',
         ),
-        'Composer\\CaBundle\\' =>
+        'Composer\\CaBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
         ),
-        'Composer\\' =>
+        'Composer\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/composer/src/Composer',
         ),
-        'Asm89\\Stack\\' =>
+        'CommerceGuys\\Intl\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/commerceguys/intl/src',
+        ),
+        'CommerceGuys\\Addressing\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/commerceguys/addressing/src',
+        ),
+        'Asm89\\Stack\\' => 
         array (
             0 => __DIR__ . '/..' . '/asm89/stack-cors/src',
         ),
     );
 
     public static $prefixesPsr0 = array (
-        'C' =>
+        'C' => 
         array (
-            'Console' =>
+            'Console' => 
             array (
                 0 => __DIR__ . '/..' . '/pear/console_getopt',
             ),
         ),
-        'A' =>
+        'A' => 
         array (
-            'Archive_Tar' =>
+            'Archive_Tar' => 
             array (
                 0 => __DIR__ . '/..' . '/pear/archive_tar',
             ),
@@ -662,6 +700,67 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'CURLStringFile' => __DIR__ . '/..' . '/symfony/polyfill-php81/Resources/stubs/CURLStringFile.php',
+        'CommerceGuys\\Addressing\\AbstractEnum' => __DIR__ . '/..' . '/commerceguys/addressing/src/AbstractEnum.php',
+        'CommerceGuys\\Addressing\\Address' => __DIR__ . '/..' . '/commerceguys/addressing/src/Address.php',
+        'CommerceGuys\\Addressing\\AddressFormat\\AddressField' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressFormat/AddressField.php',
+        'CommerceGuys\\Addressing\\AddressFormat\\AddressFormat' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressFormat/AddressFormat.php',
+        'CommerceGuys\\Addressing\\AddressFormat\\AddressFormatHelper' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressFormat/AddressFormatHelper.php',
+        'CommerceGuys\\Addressing\\AddressFormat\\AddressFormatRepository' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressFormat/AddressFormatRepository.php',
+        'CommerceGuys\\Addressing\\AddressFormat\\AddressFormatRepositoryInterface' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressFormat/AddressFormatRepositoryInterface.php',
+        'CommerceGuys\\Addressing\\AddressFormat\\AdministrativeAreaType' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressFormat/AdministrativeAreaType.php',
+        'CommerceGuys\\Addressing\\AddressFormat\\DependentLocalityType' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressFormat/DependentLocalityType.php',
+        'CommerceGuys\\Addressing\\AddressFormat\\FieldOverride' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressFormat/FieldOverride.php',
+        'CommerceGuys\\Addressing\\AddressFormat\\FieldOverrides' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressFormat/FieldOverrides.php',
+        'CommerceGuys\\Addressing\\AddressFormat\\LocalityType' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressFormat/LocalityType.php',
+        'CommerceGuys\\Addressing\\AddressFormat\\PostalCodeType' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressFormat/PostalCodeType.php',
+        'CommerceGuys\\Addressing\\AddressInterface' => __DIR__ . '/..' . '/commerceguys/addressing/src/AddressInterface.php',
+        'CommerceGuys\\Addressing\\Country\\Country' => __DIR__ . '/..' . '/commerceguys/addressing/src/Country/Country.php',
+        'CommerceGuys\\Addressing\\Country\\CountryRepository' => __DIR__ . '/..' . '/commerceguys/addressing/src/Country/CountryRepository.php',
+        'CommerceGuys\\Addressing\\Country\\CountryRepositoryInterface' => __DIR__ . '/..' . '/commerceguys/addressing/src/Country/CountryRepositoryInterface.php',
+        'CommerceGuys\\Addressing\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/commerceguys/addressing/src/Exception/ExceptionInterface.php',
+        'CommerceGuys\\Addressing\\Exception\\UnexpectedTypeException' => __DIR__ . '/..' . '/commerceguys/addressing/src/Exception/UnexpectedTypeException.php',
+        'CommerceGuys\\Addressing\\Exception\\UnknownCountryException' => __DIR__ . '/..' . '/commerceguys/addressing/src/Exception/UnknownCountryException.php',
+        'CommerceGuys\\Addressing\\Exception\\UnknownLocaleException' => __DIR__ . '/..' . '/commerceguys/addressing/src/Exception/UnknownLocaleException.php',
+        'CommerceGuys\\Addressing\\Formatter\\DefaultFormatter' => __DIR__ . '/..' . '/commerceguys/addressing/src/Formatter/DefaultFormatter.php',
+        'CommerceGuys\\Addressing\\Formatter\\FormatterInterface' => __DIR__ . '/..' . '/commerceguys/addressing/src/Formatter/FormatterInterface.php',
+        'CommerceGuys\\Addressing\\Formatter\\PostalLabelFormatter' => __DIR__ . '/..' . '/commerceguys/addressing/src/Formatter/PostalLabelFormatter.php',
+        'CommerceGuys\\Addressing\\Formatter\\PostalLabelFormatterInterface' => __DIR__ . '/..' . '/commerceguys/addressing/src/Formatter/PostalLabelFormatterInterface.php',
+        'CommerceGuys\\Addressing\\ImmutableAddressInterface' => __DIR__ . '/..' . '/commerceguys/addressing/src/ImmutableAddressInterface.php',
+        'CommerceGuys\\Addressing\\Locale' => __DIR__ . '/..' . '/commerceguys/addressing/src/Locale.php',
+        'CommerceGuys\\Addressing\\PostalCodeHelper' => __DIR__ . '/..' . '/commerceguys/addressing/src/PostalCodeHelper.php',
+        'CommerceGuys\\Addressing\\Subdivision\\LazySubdivisionCollection' => __DIR__ . '/..' . '/commerceguys/addressing/src/Subdivision/LazySubdivisionCollection.php',
+        'CommerceGuys\\Addressing\\Subdivision\\Subdivision' => __DIR__ . '/..' . '/commerceguys/addressing/src/Subdivision/Subdivision.php',
+        'CommerceGuys\\Addressing\\Subdivision\\SubdivisionRepository' => __DIR__ . '/..' . '/commerceguys/addressing/src/Subdivision/SubdivisionRepository.php',
+        'CommerceGuys\\Addressing\\Subdivision\\SubdivisionRepositoryInterface' => __DIR__ . '/..' . '/commerceguys/addressing/src/Subdivision/SubdivisionRepositoryInterface.php',
+        'CommerceGuys\\Addressing\\Subdivision\\SubdivisionUpdater' => __DIR__ . '/..' . '/commerceguys/addressing/src/Subdivision/SubdivisionUpdater.php',
+        'CommerceGuys\\Addressing\\Validator\\Constraints\\AddressFormatConstraint' => __DIR__ . '/..' . '/commerceguys/addressing/src/Validator/Constraints/AddressFormatConstraint.php',
+        'CommerceGuys\\Addressing\\Validator\\Constraints\\AddressFormatConstraintValidator' => __DIR__ . '/..' . '/commerceguys/addressing/src/Validator/Constraints/AddressFormatConstraintValidator.php',
+        'CommerceGuys\\Addressing\\Validator\\Constraints\\CountryConstraint' => __DIR__ . '/..' . '/commerceguys/addressing/src/Validator/Constraints/CountryConstraint.php',
+        'CommerceGuys\\Addressing\\Validator\\Constraints\\CountryConstraintValidator' => __DIR__ . '/..' . '/commerceguys/addressing/src/Validator/Constraints/CountryConstraintValidator.php',
+        'CommerceGuys\\Addressing\\Zone\\Zone' => __DIR__ . '/..' . '/commerceguys/addressing/src/Zone/Zone.php',
+        'CommerceGuys\\Addressing\\Zone\\ZoneTerritory' => __DIR__ . '/..' . '/commerceguys/addressing/src/Zone/ZoneTerritory.php',
+        'CommerceGuys\\Intl\\Calculator' => __DIR__ . '/..' . '/commerceguys/intl/src/Calculator.php',
+        'CommerceGuys\\Intl\\Currency\\Currency' => __DIR__ . '/..' . '/commerceguys/intl/src/Currency/Currency.php',
+        'CommerceGuys\\Intl\\Currency\\CurrencyRepository' => __DIR__ . '/..' . '/commerceguys/intl/src/Currency/CurrencyRepository.php',
+        'CommerceGuys\\Intl\\Currency\\CurrencyRepositoryInterface' => __DIR__ . '/..' . '/commerceguys/intl/src/Currency/CurrencyRepositoryInterface.php',
+        'CommerceGuys\\Intl\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/commerceguys/intl/src/Exception/ExceptionInterface.php',
+        'CommerceGuys\\Intl\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/commerceguys/intl/src/Exception/InvalidArgumentException.php',
+        'CommerceGuys\\Intl\\Exception\\UnknownCurrencyException' => __DIR__ . '/..' . '/commerceguys/intl/src/Exception/UnknownCurrencyException.php',
+        'CommerceGuys\\Intl\\Exception\\UnknownLanguageException' => __DIR__ . '/..' . '/commerceguys/intl/src/Exception/UnknownLanguageException.php',
+        'CommerceGuys\\Intl\\Exception\\UnknownLocaleException' => __DIR__ . '/..' . '/commerceguys/intl/src/Exception/UnknownLocaleException.php',
+        'CommerceGuys\\Intl\\Formatter\\CurrencyFormatter' => __DIR__ . '/..' . '/commerceguys/intl/src/Formatter/CurrencyFormatter.php',
+        'CommerceGuys\\Intl\\Formatter\\CurrencyFormatterInterface' => __DIR__ . '/..' . '/commerceguys/intl/src/Formatter/CurrencyFormatterInterface.php',
+        'CommerceGuys\\Intl\\Formatter\\FormatterTrait' => __DIR__ . '/..' . '/commerceguys/intl/src/Formatter/FormatterTrait.php',
+        'CommerceGuys\\Intl\\Formatter\\NumberFormatter' => __DIR__ . '/..' . '/commerceguys/intl/src/Formatter/NumberFormatter.php',
+        'CommerceGuys\\Intl\\Formatter\\NumberFormatterInterface' => __DIR__ . '/..' . '/commerceguys/intl/src/Formatter/NumberFormatterInterface.php',
+        'CommerceGuys\\Intl\\Formatter\\ParsedPattern' => __DIR__ . '/..' . '/commerceguys/intl/src/Formatter/ParsedPattern.php',
+        'CommerceGuys\\Intl\\Language\\Language' => __DIR__ . '/..' . '/commerceguys/intl/src/Language/Language.php',
+        'CommerceGuys\\Intl\\Language\\LanguageRepository' => __DIR__ . '/..' . '/commerceguys/intl/src/Language/LanguageRepository.php',
+        'CommerceGuys\\Intl\\Language\\LanguageRepositoryInterface' => __DIR__ . '/..' . '/commerceguys/intl/src/Language/LanguageRepositoryInterface.php',
+        'CommerceGuys\\Intl\\Locale' => __DIR__ . '/..' . '/commerceguys/intl/src/Locale.php',
+        'CommerceGuys\\Intl\\NumberFormat\\NumberFormat' => __DIR__ . '/..' . '/commerceguys/intl/src/NumberFormat/NumberFormat.php',
+        'CommerceGuys\\Intl\\NumberFormat\\NumberFormatRepository' => __DIR__ . '/..' . '/commerceguys/intl/src/NumberFormat/NumberFormatRepository.php',
+        'CommerceGuys\\Intl\\NumberFormat\\NumberFormatRepositoryInterface' => __DIR__ . '/..' . '/commerceguys/intl/src/NumberFormat/NumberFormatRepositoryInterface.php',
         'Composer\\Advisory\\AuditConfig' => __DIR__ . '/..' . '/composer/composer/src/Composer/Advisory/AuditConfig.php',
         'Composer\\Advisory\\Auditor' => __DIR__ . '/..' . '/composer/composer/src/Composer/Advisory/Auditor.php',
         'Composer\\Advisory\\IgnoredSecurityAdvisory' => __DIR__ . '/..' . '/composer/composer/src/Composer/Advisory/IgnoredSecurityAdvisory.php',
@@ -1354,8 +1453,25 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
         'Dflydev\\DotAccessData\\Exception\\InvalidPathException' => __DIR__ . '/..' . '/dflydev/dot-access-data/src/Exception/InvalidPathException.php',
         'Dflydev\\DotAccessData\\Exception\\MissingPathException' => __DIR__ . '/..' . '/dflydev/dot-access-data/src/Exception/MissingPathException.php',
         'Dflydev\\DotAccessData\\Util' => __DIR__ . '/..' . '/dflydev/dot-access-data/src/Util.php',
+        'Doctrine\\Common\\Collections\\AbstractLazyCollection' => __DIR__ . '/..' . '/doctrine/collections/src/AbstractLazyCollection.php',
+        'Doctrine\\Common\\Collections\\ArrayCollection' => __DIR__ . '/..' . '/doctrine/collections/src/ArrayCollection.php',
+        'Doctrine\\Common\\Collections\\Collection' => __DIR__ . '/..' . '/doctrine/collections/src/Collection.php',
+        'Doctrine\\Common\\Collections\\Criteria' => __DIR__ . '/..' . '/doctrine/collections/src/Criteria.php',
+        'Doctrine\\Common\\Collections\\Expr\\ClosureExpressionVisitor' => __DIR__ . '/..' . '/doctrine/collections/src/Expr/ClosureExpressionVisitor.php',
+        'Doctrine\\Common\\Collections\\Expr\\Comparison' => __DIR__ . '/..' . '/doctrine/collections/src/Expr/Comparison.php',
+        'Doctrine\\Common\\Collections\\Expr\\CompositeExpression' => __DIR__ . '/..' . '/doctrine/collections/src/Expr/CompositeExpression.php',
+        'Doctrine\\Common\\Collections\\Expr\\Expression' => __DIR__ . '/..' . '/doctrine/collections/src/Expr/Expression.php',
+        'Doctrine\\Common\\Collections\\Expr\\ExpressionVisitor' => __DIR__ . '/..' . '/doctrine/collections/src/Expr/ExpressionVisitor.php',
+        'Doctrine\\Common\\Collections\\Expr\\Value' => __DIR__ . '/..' . '/doctrine/collections/src/Expr/Value.php',
+        'Doctrine\\Common\\Collections\\ExpressionBuilder' => __DIR__ . '/..' . '/doctrine/collections/src/ExpressionBuilder.php',
+        'Doctrine\\Common\\Collections\\Order' => __DIR__ . '/..' . '/doctrine/collections/src/Order.php',
+        'Doctrine\\Common\\Collections\\Placeholder' => __DIR__ . '/..' . '/doctrine/collections/src/Placeholder.php',
+        'Doctrine\\Common\\Collections\\ReadableCollection' => __DIR__ . '/..' . '/doctrine/collections/src/ReadableCollection.php',
+        'Doctrine\\Common\\Collections\\Selectable' => __DIR__ . '/..' . '/doctrine/collections/src/Selectable.php',
         'Doctrine\\Common\\Lexer\\AbstractLexer' => __DIR__ . '/..' . '/doctrine/lexer/src/AbstractLexer.php',
         'Doctrine\\Common\\Lexer\\Token' => __DIR__ . '/..' . '/doctrine/lexer/src/Token.php',
+        'Doctrine\\Deprecations\\Deprecation' => __DIR__ . '/..' . '/doctrine/deprecations/src/Deprecation.php',
+        'Doctrine\\Deprecations\\PHPUnit\\VerifyDeprecations' => __DIR__ . '/..' . '/doctrine/deprecations/src/PHPUnit/VerifyDeprecations.php',
         'Drupal' => __DIR__ . '/../..' . '/web/core/lib/Drupal.php',
         'DrupalCodeGenerator\\Application' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/Application.php',
         'DrupalCodeGenerator\\Asset\\Asset' => __DIR__ . '/..' . '/chi-teck/drupal-code-generator/src/Asset/Asset.php',
@@ -3655,6 +3771,8 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
         'Drupal\\RecipeKit\\Installer\\Hooks' => __DIR__ . '/..' . '/drupal/recipe_installer_kit/src/Hooks.php',
         'Drupal\\RecipeKit\\Installer\\Messenger' => __DIR__ . '/..' . '/drupal/recipe_installer_kit/src/Messenger.php',
         'Drupal\\Tests\\drupal_cms_helper\\Traits\\ContentModelTestTrait' => __DIR__ . '/../..' . '/web/modules/contrib/drupal_cms_helper/tests/src/Traits/ContentModelTestTrait.php',
+        'Drupal\\rat\\v1\\RenderArray' => __DIR__ . '/..' . '/drupal/rat/src/v1/RenderArray.php',
+        'Drupal\\rat\\v1\\RenderArrayBase' => __DIR__ . '/..' . '/drupal/rat/src/v1/RenderArrayBase.php',
         'Drush\\Application' => __DIR__ . '/..' . '/drush/drush/src/Application.php',
         'Drush\\Attributes\\Argument' => __DIR__ . '/..' . '/drush/drush/src/Attributes/Argument.php',
         'Drush\\Attributes\\Bootstrap' => __DIR__ . '/..' . '/drush/drush/src/Attributes/Bootstrap.php',
@@ -6273,6 +6391,346 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
         'Seld\\PharUtils\\Timestamps' => __DIR__ . '/..' . '/seld/phar-utils/src/Timestamps.php',
         'Seld\\Signal\\SignalHandler' => __DIR__ . '/..' . '/seld/signal-handler/src/SignalHandler.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'Stripe\\Account' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Account.php',
+        'Stripe\\AccountLink' => __DIR__ . '/..' . '/stripe/stripe-php/lib/AccountLink.php',
+        'Stripe\\AccountSession' => __DIR__ . '/..' . '/stripe/stripe-php/lib/AccountSession.php',
+        'Stripe\\ApiOperations\\All' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiOperations/All.php',
+        'Stripe\\ApiOperations\\Create' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiOperations/Create.php',
+        'Stripe\\ApiOperations\\Delete' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiOperations/Delete.php',
+        'Stripe\\ApiOperations\\NestedResource' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiOperations/NestedResource.php',
+        'Stripe\\ApiOperations\\Request' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiOperations/Request.php',
+        'Stripe\\ApiOperations\\Retrieve' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiOperations/Retrieve.php',
+        'Stripe\\ApiOperations\\Search' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiOperations/Search.php',
+        'Stripe\\ApiOperations\\SingletonRetrieve' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiOperations/SingletonRetrieve.php',
+        'Stripe\\ApiOperations\\Update' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiOperations/Update.php',
+        'Stripe\\ApiRequestor' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiRequestor.php',
+        'Stripe\\ApiResource' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiResource.php',
+        'Stripe\\ApiResponse' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApiResponse.php',
+        'Stripe\\ApplePayDomain' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApplePayDomain.php',
+        'Stripe\\Application' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Application.php',
+        'Stripe\\ApplicationFee' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApplicationFee.php',
+        'Stripe\\ApplicationFeeRefund' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ApplicationFeeRefund.php',
+        'Stripe\\Apps\\Secret' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Apps/Secret.php',
+        'Stripe\\Balance' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Balance.php',
+        'Stripe\\BalanceTransaction' => __DIR__ . '/..' . '/stripe/stripe-php/lib/BalanceTransaction.php',
+        'Stripe\\BankAccount' => __DIR__ . '/..' . '/stripe/stripe-php/lib/BankAccount.php',
+        'Stripe\\BaseStripeClient' => __DIR__ . '/..' . '/stripe/stripe-php/lib/BaseStripeClient.php',
+        'Stripe\\BaseStripeClientInterface' => __DIR__ . '/..' . '/stripe/stripe-php/lib/BaseStripeClientInterface.php',
+        'Stripe\\BillingPortal\\Configuration' => __DIR__ . '/..' . '/stripe/stripe-php/lib/BillingPortal/Configuration.php',
+        'Stripe\\BillingPortal\\Session' => __DIR__ . '/..' . '/stripe/stripe-php/lib/BillingPortal/Session.php',
+        'Stripe\\Billing\\Alert' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Billing/Alert.php',
+        'Stripe\\Billing\\AlertTriggered' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Billing/AlertTriggered.php',
+        'Stripe\\Billing\\Meter' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Billing/Meter.php',
+        'Stripe\\Billing\\MeterEvent' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Billing/MeterEvent.php',
+        'Stripe\\Billing\\MeterEventAdjustment' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Billing/MeterEventAdjustment.php',
+        'Stripe\\Billing\\MeterEventSummary' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Billing/MeterEventSummary.php',
+        'Stripe\\Capability' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Capability.php',
+        'Stripe\\Card' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Card.php',
+        'Stripe\\CashBalance' => __DIR__ . '/..' . '/stripe/stripe-php/lib/CashBalance.php',
+        'Stripe\\Charge' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Charge.php',
+        'Stripe\\Checkout\\Session' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Checkout/Session.php',
+        'Stripe\\Climate\\Order' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Climate/Order.php',
+        'Stripe\\Climate\\Product' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Climate/Product.php',
+        'Stripe\\Climate\\Supplier' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Climate/Supplier.php',
+        'Stripe\\Collection' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Collection.php',
+        'Stripe\\ConfirmationToken' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ConfirmationToken.php',
+        'Stripe\\ConnectCollectionTransfer' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ConnectCollectionTransfer.php',
+        'Stripe\\CountrySpec' => __DIR__ . '/..' . '/stripe/stripe-php/lib/CountrySpec.php',
+        'Stripe\\Coupon' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Coupon.php',
+        'Stripe\\CreditNote' => __DIR__ . '/..' . '/stripe/stripe-php/lib/CreditNote.php',
+        'Stripe\\CreditNoteLineItem' => __DIR__ . '/..' . '/stripe/stripe-php/lib/CreditNoteLineItem.php',
+        'Stripe\\Customer' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Customer.php',
+        'Stripe\\CustomerBalanceTransaction' => __DIR__ . '/..' . '/stripe/stripe-php/lib/CustomerBalanceTransaction.php',
+        'Stripe\\CustomerCashBalanceTransaction' => __DIR__ . '/..' . '/stripe/stripe-php/lib/CustomerCashBalanceTransaction.php',
+        'Stripe\\CustomerSession' => __DIR__ . '/..' . '/stripe/stripe-php/lib/CustomerSession.php',
+        'Stripe\\Discount' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Discount.php',
+        'Stripe\\Dispute' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Dispute.php',
+        'Stripe\\Entitlements\\ActiveEntitlement' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Entitlements/ActiveEntitlement.php',
+        'Stripe\\Entitlements\\ActiveEntitlementSummary' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Entitlements/ActiveEntitlementSummary.php',
+        'Stripe\\Entitlements\\Feature' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Entitlements/Feature.php',
+        'Stripe\\EphemeralKey' => __DIR__ . '/..' . '/stripe/stripe-php/lib/EphemeralKey.php',
+        'Stripe\\ErrorObject' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ErrorObject.php',
+        'Stripe\\Event' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Event.php',
+        'Stripe\\Exception\\ApiConnectionException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/ApiConnectionException.php',
+        'Stripe\\Exception\\ApiErrorException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/ApiErrorException.php',
+        'Stripe\\Exception\\AuthenticationException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/AuthenticationException.php',
+        'Stripe\\Exception\\BadMethodCallException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/BadMethodCallException.php',
+        'Stripe\\Exception\\CardException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/CardException.php',
+        'Stripe\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/ExceptionInterface.php',
+        'Stripe\\Exception\\IdempotencyException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/IdempotencyException.php',
+        'Stripe\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/InvalidArgumentException.php',
+        'Stripe\\Exception\\InvalidRequestException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/InvalidRequestException.php',
+        'Stripe\\Exception\\OAuth\\ExceptionInterface' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/OAuth/ExceptionInterface.php',
+        'Stripe\\Exception\\OAuth\\InvalidClientException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/OAuth/InvalidClientException.php',
+        'Stripe\\Exception\\OAuth\\InvalidGrantException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/OAuth/InvalidGrantException.php',
+        'Stripe\\Exception\\OAuth\\InvalidRequestException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/OAuth/InvalidRequestException.php',
+        'Stripe\\Exception\\OAuth\\InvalidScopeException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/OAuth/InvalidScopeException.php',
+        'Stripe\\Exception\\OAuth\\OAuthErrorException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/OAuth/OAuthErrorException.php',
+        'Stripe\\Exception\\OAuth\\UnknownOAuthErrorException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/OAuth/UnknownOAuthErrorException.php',
+        'Stripe\\Exception\\OAuth\\UnsupportedGrantTypeException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/OAuth/UnsupportedGrantTypeException.php',
+        'Stripe\\Exception\\OAuth\\UnsupportedResponseTypeException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/OAuth/UnsupportedResponseTypeException.php',
+        'Stripe\\Exception\\PermissionException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/PermissionException.php',
+        'Stripe\\Exception\\RateLimitException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/RateLimitException.php',
+        'Stripe\\Exception\\SignatureVerificationException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/SignatureVerificationException.php',
+        'Stripe\\Exception\\UnexpectedValueException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/UnexpectedValueException.php',
+        'Stripe\\Exception\\UnknownApiErrorException' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Exception/UnknownApiErrorException.php',
+        'Stripe\\ExchangeRate' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ExchangeRate.php',
+        'Stripe\\File' => __DIR__ . '/..' . '/stripe/stripe-php/lib/File.php',
+        'Stripe\\FileLink' => __DIR__ . '/..' . '/stripe/stripe-php/lib/FileLink.php',
+        'Stripe\\FinancialConnections\\Account' => __DIR__ . '/..' . '/stripe/stripe-php/lib/FinancialConnections/Account.php',
+        'Stripe\\FinancialConnections\\AccountOwner' => __DIR__ . '/..' . '/stripe/stripe-php/lib/FinancialConnections/AccountOwner.php',
+        'Stripe\\FinancialConnections\\AccountOwnership' => __DIR__ . '/..' . '/stripe/stripe-php/lib/FinancialConnections/AccountOwnership.php',
+        'Stripe\\FinancialConnections\\Session' => __DIR__ . '/..' . '/stripe/stripe-php/lib/FinancialConnections/Session.php',
+        'Stripe\\FinancialConnections\\Transaction' => __DIR__ . '/..' . '/stripe/stripe-php/lib/FinancialConnections/Transaction.php',
+        'Stripe\\Forwarding\\Request' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Forwarding/Request.php',
+        'Stripe\\FundingInstructions' => __DIR__ . '/..' . '/stripe/stripe-php/lib/FundingInstructions.php',
+        'Stripe\\HttpClient\\ClientInterface' => __DIR__ . '/..' . '/stripe/stripe-php/lib/HttpClient/ClientInterface.php',
+        'Stripe\\HttpClient\\CurlClient' => __DIR__ . '/..' . '/stripe/stripe-php/lib/HttpClient/CurlClient.php',
+        'Stripe\\HttpClient\\StreamingClientInterface' => __DIR__ . '/..' . '/stripe/stripe-php/lib/HttpClient/StreamingClientInterface.php',
+        'Stripe\\Identity\\VerificationReport' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Identity/VerificationReport.php',
+        'Stripe\\Identity\\VerificationSession' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Identity/VerificationSession.php',
+        'Stripe\\Invoice' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Invoice.php',
+        'Stripe\\InvoiceItem' => __DIR__ . '/..' . '/stripe/stripe-php/lib/InvoiceItem.php',
+        'Stripe\\InvoiceLineItem' => __DIR__ . '/..' . '/stripe/stripe-php/lib/InvoiceLineItem.php',
+        'Stripe\\InvoiceRenderingTemplate' => __DIR__ . '/..' . '/stripe/stripe-php/lib/InvoiceRenderingTemplate.php',
+        'Stripe\\Issuing\\Authorization' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Issuing/Authorization.php',
+        'Stripe\\Issuing\\Card' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Issuing/Card.php',
+        'Stripe\\Issuing\\CardDetails' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Issuing/CardDetails.php',
+        'Stripe\\Issuing\\Cardholder' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Issuing/Cardholder.php',
+        'Stripe\\Issuing\\Dispute' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Issuing/Dispute.php',
+        'Stripe\\Issuing\\PersonalizationDesign' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Issuing/PersonalizationDesign.php',
+        'Stripe\\Issuing\\PhysicalBundle' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Issuing/PhysicalBundle.php',
+        'Stripe\\Issuing\\Token' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Issuing/Token.php',
+        'Stripe\\Issuing\\Transaction' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Issuing/Transaction.php',
+        'Stripe\\LineItem' => __DIR__ . '/..' . '/stripe/stripe-php/lib/LineItem.php',
+        'Stripe\\LoginLink' => __DIR__ . '/..' . '/stripe/stripe-php/lib/LoginLink.php',
+        'Stripe\\Mandate' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Mandate.php',
+        'Stripe\\OAuth' => __DIR__ . '/..' . '/stripe/stripe-php/lib/OAuth.php',
+        'Stripe\\OAuthErrorObject' => __DIR__ . '/..' . '/stripe/stripe-php/lib/OAuthErrorObject.php',
+        'Stripe\\PaymentIntent' => __DIR__ . '/..' . '/stripe/stripe-php/lib/PaymentIntent.php',
+        'Stripe\\PaymentLink' => __DIR__ . '/..' . '/stripe/stripe-php/lib/PaymentLink.php',
+        'Stripe\\PaymentMethod' => __DIR__ . '/..' . '/stripe/stripe-php/lib/PaymentMethod.php',
+        'Stripe\\PaymentMethodConfiguration' => __DIR__ . '/..' . '/stripe/stripe-php/lib/PaymentMethodConfiguration.php',
+        'Stripe\\PaymentMethodDomain' => __DIR__ . '/..' . '/stripe/stripe-php/lib/PaymentMethodDomain.php',
+        'Stripe\\Payout' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Payout.php',
+        'Stripe\\Person' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Person.php',
+        'Stripe\\Plan' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Plan.php',
+        'Stripe\\Price' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Price.php',
+        'Stripe\\Product' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Product.php',
+        'Stripe\\ProductFeature' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ProductFeature.php',
+        'Stripe\\PromotionCode' => __DIR__ . '/..' . '/stripe/stripe-php/lib/PromotionCode.php',
+        'Stripe\\Quote' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Quote.php',
+        'Stripe\\Radar\\EarlyFraudWarning' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Radar/EarlyFraudWarning.php',
+        'Stripe\\Radar\\ValueList' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Radar/ValueList.php',
+        'Stripe\\Radar\\ValueListItem' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Radar/ValueListItem.php',
+        'Stripe\\RecipientTransfer' => __DIR__ . '/..' . '/stripe/stripe-php/lib/RecipientTransfer.php',
+        'Stripe\\Refund' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Refund.php',
+        'Stripe\\Reporting\\ReportRun' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Reporting/ReportRun.php',
+        'Stripe\\Reporting\\ReportType' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Reporting/ReportType.php',
+        'Stripe\\RequestTelemetry' => __DIR__ . '/..' . '/stripe/stripe-php/lib/RequestTelemetry.php',
+        'Stripe\\ReserveTransaction' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ReserveTransaction.php',
+        'Stripe\\Review' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Review.php',
+        'Stripe\\SearchResult' => __DIR__ . '/..' . '/stripe/stripe-php/lib/SearchResult.php',
+        'Stripe\\Service\\AbstractService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/AbstractService.php',
+        'Stripe\\Service\\AbstractServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/AbstractServiceFactory.php',
+        'Stripe\\Service\\AccountLinkService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/AccountLinkService.php',
+        'Stripe\\Service\\AccountService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/AccountService.php',
+        'Stripe\\Service\\AccountSessionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/AccountSessionService.php',
+        'Stripe\\Service\\ApplePayDomainService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/ApplePayDomainService.php',
+        'Stripe\\Service\\ApplicationFeeService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/ApplicationFeeService.php',
+        'Stripe\\Service\\Apps\\AppsServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Apps/AppsServiceFactory.php',
+        'Stripe\\Service\\Apps\\SecretService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Apps/SecretService.php',
+        'Stripe\\Service\\BalanceService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/BalanceService.php',
+        'Stripe\\Service\\BalanceTransactionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/BalanceTransactionService.php',
+        'Stripe\\Service\\BillingPortal\\BillingPortalServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/BillingPortal/BillingPortalServiceFactory.php',
+        'Stripe\\Service\\BillingPortal\\ConfigurationService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/BillingPortal/ConfigurationService.php',
+        'Stripe\\Service\\BillingPortal\\SessionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/BillingPortal/SessionService.php',
+        'Stripe\\Service\\Billing\\AlertService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Billing/AlertService.php',
+        'Stripe\\Service\\Billing\\BillingServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Billing/BillingServiceFactory.php',
+        'Stripe\\Service\\Billing\\MeterEventAdjustmentService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Billing/MeterEventAdjustmentService.php',
+        'Stripe\\Service\\Billing\\MeterEventService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Billing/MeterEventService.php',
+        'Stripe\\Service\\Billing\\MeterService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Billing/MeterService.php',
+        'Stripe\\Service\\ChargeService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/ChargeService.php',
+        'Stripe\\Service\\Checkout\\CheckoutServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Checkout/CheckoutServiceFactory.php',
+        'Stripe\\Service\\Checkout\\SessionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Checkout/SessionService.php',
+        'Stripe\\Service\\Climate\\ClimateServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Climate/ClimateServiceFactory.php',
+        'Stripe\\Service\\Climate\\OrderService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Climate/OrderService.php',
+        'Stripe\\Service\\Climate\\ProductService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Climate/ProductService.php',
+        'Stripe\\Service\\Climate\\SupplierService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Climate/SupplierService.php',
+        'Stripe\\Service\\ConfirmationTokenService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/ConfirmationTokenService.php',
+        'Stripe\\Service\\CoreServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/CoreServiceFactory.php',
+        'Stripe\\Service\\CountrySpecService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/CountrySpecService.php',
+        'Stripe\\Service\\CouponService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/CouponService.php',
+        'Stripe\\Service\\CreditNoteService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/CreditNoteService.php',
+        'Stripe\\Service\\CustomerService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/CustomerService.php',
+        'Stripe\\Service\\CustomerSessionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/CustomerSessionService.php',
+        'Stripe\\Service\\DisputeService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/DisputeService.php',
+        'Stripe\\Service\\Entitlements\\ActiveEntitlementService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Entitlements/ActiveEntitlementService.php',
+        'Stripe\\Service\\Entitlements\\EntitlementsServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Entitlements/EntitlementsServiceFactory.php',
+        'Stripe\\Service\\Entitlements\\FeatureService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Entitlements/FeatureService.php',
+        'Stripe\\Service\\EphemeralKeyService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/EphemeralKeyService.php',
+        'Stripe\\Service\\EventService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/EventService.php',
+        'Stripe\\Service\\ExchangeRateService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/ExchangeRateService.php',
+        'Stripe\\Service\\FileLinkService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/FileLinkService.php',
+        'Stripe\\Service\\FileService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/FileService.php',
+        'Stripe\\Service\\FinancialConnections\\AccountService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/FinancialConnections/AccountService.php',
+        'Stripe\\Service\\FinancialConnections\\FinancialConnectionsServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/FinancialConnections/FinancialConnectionsServiceFactory.php',
+        'Stripe\\Service\\FinancialConnections\\SessionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/FinancialConnections/SessionService.php',
+        'Stripe\\Service\\FinancialConnections\\TransactionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/FinancialConnections/TransactionService.php',
+        'Stripe\\Service\\Forwarding\\ForwardingServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Forwarding/ForwardingServiceFactory.php',
+        'Stripe\\Service\\Forwarding\\RequestService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Forwarding/RequestService.php',
+        'Stripe\\Service\\Identity\\IdentityServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Identity/IdentityServiceFactory.php',
+        'Stripe\\Service\\Identity\\VerificationReportService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Identity/VerificationReportService.php',
+        'Stripe\\Service\\Identity\\VerificationSessionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Identity/VerificationSessionService.php',
+        'Stripe\\Service\\InvoiceItemService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/InvoiceItemService.php',
+        'Stripe\\Service\\InvoiceRenderingTemplateService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/InvoiceRenderingTemplateService.php',
+        'Stripe\\Service\\InvoiceService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/InvoiceService.php',
+        'Stripe\\Service\\Issuing\\AuthorizationService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Issuing/AuthorizationService.php',
+        'Stripe\\Service\\Issuing\\CardService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Issuing/CardService.php',
+        'Stripe\\Service\\Issuing\\CardholderService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Issuing/CardholderService.php',
+        'Stripe\\Service\\Issuing\\DisputeService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Issuing/DisputeService.php',
+        'Stripe\\Service\\Issuing\\IssuingServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Issuing/IssuingServiceFactory.php',
+        'Stripe\\Service\\Issuing\\PersonalizationDesignService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Issuing/PersonalizationDesignService.php',
+        'Stripe\\Service\\Issuing\\PhysicalBundleService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Issuing/PhysicalBundleService.php',
+        'Stripe\\Service\\Issuing\\TokenService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Issuing/TokenService.php',
+        'Stripe\\Service\\Issuing\\TransactionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Issuing/TransactionService.php',
+        'Stripe\\Service\\MandateService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/MandateService.php',
+        'Stripe\\Service\\OAuthService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/OAuthService.php',
+        'Stripe\\Service\\PaymentIntentService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/PaymentIntentService.php',
+        'Stripe\\Service\\PaymentLinkService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/PaymentLinkService.php',
+        'Stripe\\Service\\PaymentMethodConfigurationService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/PaymentMethodConfigurationService.php',
+        'Stripe\\Service\\PaymentMethodDomainService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/PaymentMethodDomainService.php',
+        'Stripe\\Service\\PaymentMethodService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/PaymentMethodService.php',
+        'Stripe\\Service\\PayoutService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/PayoutService.php',
+        'Stripe\\Service\\PlanService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/PlanService.php',
+        'Stripe\\Service\\PriceService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/PriceService.php',
+        'Stripe\\Service\\ProductService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/ProductService.php',
+        'Stripe\\Service\\PromotionCodeService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/PromotionCodeService.php',
+        'Stripe\\Service\\QuoteService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/QuoteService.php',
+        'Stripe\\Service\\Radar\\EarlyFraudWarningService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Radar/EarlyFraudWarningService.php',
+        'Stripe\\Service\\Radar\\RadarServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Radar/RadarServiceFactory.php',
+        'Stripe\\Service\\Radar\\ValueListItemService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Radar/ValueListItemService.php',
+        'Stripe\\Service\\Radar\\ValueListService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Radar/ValueListService.php',
+        'Stripe\\Service\\RefundService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/RefundService.php',
+        'Stripe\\Service\\Reporting\\ReportRunService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Reporting/ReportRunService.php',
+        'Stripe\\Service\\Reporting\\ReportTypeService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Reporting/ReportTypeService.php',
+        'Stripe\\Service\\Reporting\\ReportingServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Reporting/ReportingServiceFactory.php',
+        'Stripe\\Service\\ReviewService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/ReviewService.php',
+        'Stripe\\Service\\SetupAttemptService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/SetupAttemptService.php',
+        'Stripe\\Service\\SetupIntentService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/SetupIntentService.php',
+        'Stripe\\Service\\ShippingRateService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/ShippingRateService.php',
+        'Stripe\\Service\\Sigma\\ScheduledQueryRunService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Sigma/ScheduledQueryRunService.php',
+        'Stripe\\Service\\Sigma\\SigmaServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Sigma/SigmaServiceFactory.php',
+        'Stripe\\Service\\SourceService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/SourceService.php',
+        'Stripe\\Service\\SubscriptionItemService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/SubscriptionItemService.php',
+        'Stripe\\Service\\SubscriptionScheduleService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/SubscriptionScheduleService.php',
+        'Stripe\\Service\\SubscriptionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/SubscriptionService.php',
+        'Stripe\\Service\\TaxCodeService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TaxCodeService.php',
+        'Stripe\\Service\\TaxIdService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TaxIdService.php',
+        'Stripe\\Service\\TaxRateService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TaxRateService.php',
+        'Stripe\\Service\\Tax\\CalculationService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Tax/CalculationService.php',
+        'Stripe\\Service\\Tax\\RegistrationService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Tax/RegistrationService.php',
+        'Stripe\\Service\\Tax\\SettingsService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Tax/SettingsService.php',
+        'Stripe\\Service\\Tax\\TaxServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Tax/TaxServiceFactory.php',
+        'Stripe\\Service\\Tax\\TransactionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Tax/TransactionService.php',
+        'Stripe\\Service\\Terminal\\ConfigurationService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Terminal/ConfigurationService.php',
+        'Stripe\\Service\\Terminal\\ConnectionTokenService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Terminal/ConnectionTokenService.php',
+        'Stripe\\Service\\Terminal\\LocationService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Terminal/LocationService.php',
+        'Stripe\\Service\\Terminal\\ReaderService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Terminal/ReaderService.php',
+        'Stripe\\Service\\Terminal\\TerminalServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Terminal/TerminalServiceFactory.php',
+        'Stripe\\Service\\TestHelpers\\ConfirmationTokenService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/ConfirmationTokenService.php',
+        'Stripe\\Service\\TestHelpers\\CustomerService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/CustomerService.php',
+        'Stripe\\Service\\TestHelpers\\Issuing\\AuthorizationService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Issuing/AuthorizationService.php',
+        'Stripe\\Service\\TestHelpers\\Issuing\\CardService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Issuing/CardService.php',
+        'Stripe\\Service\\TestHelpers\\Issuing\\IssuingServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Issuing/IssuingServiceFactory.php',
+        'Stripe\\Service\\TestHelpers\\Issuing\\PersonalizationDesignService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Issuing/PersonalizationDesignService.php',
+        'Stripe\\Service\\TestHelpers\\Issuing\\TransactionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Issuing/TransactionService.php',
+        'Stripe\\Service\\TestHelpers\\RefundService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/RefundService.php',
+        'Stripe\\Service\\TestHelpers\\Terminal\\ReaderService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Terminal/ReaderService.php',
+        'Stripe\\Service\\TestHelpers\\Terminal\\TerminalServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Terminal/TerminalServiceFactory.php',
+        'Stripe\\Service\\TestHelpers\\TestClockService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/TestClockService.php',
+        'Stripe\\Service\\TestHelpers\\TestHelpersServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/TestHelpersServiceFactory.php',
+        'Stripe\\Service\\TestHelpers\\Treasury\\InboundTransferService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Treasury/InboundTransferService.php',
+        'Stripe\\Service\\TestHelpers\\Treasury\\OutboundPaymentService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Treasury/OutboundPaymentService.php',
+        'Stripe\\Service\\TestHelpers\\Treasury\\OutboundTransferService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Treasury/OutboundTransferService.php',
+        'Stripe\\Service\\TestHelpers\\Treasury\\ReceivedCreditService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Treasury/ReceivedCreditService.php',
+        'Stripe\\Service\\TestHelpers\\Treasury\\ReceivedDebitService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Treasury/ReceivedDebitService.php',
+        'Stripe\\Service\\TestHelpers\\Treasury\\TreasuryServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TestHelpers/Treasury/TreasuryServiceFactory.php',
+        'Stripe\\Service\\TokenService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TokenService.php',
+        'Stripe\\Service\\TopupService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TopupService.php',
+        'Stripe\\Service\\TransferService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/TransferService.php',
+        'Stripe\\Service\\Treasury\\CreditReversalService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Treasury/CreditReversalService.php',
+        'Stripe\\Service\\Treasury\\DebitReversalService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Treasury/DebitReversalService.php',
+        'Stripe\\Service\\Treasury\\FinancialAccountService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Treasury/FinancialAccountService.php',
+        'Stripe\\Service\\Treasury\\InboundTransferService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Treasury/InboundTransferService.php',
+        'Stripe\\Service\\Treasury\\OutboundPaymentService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Treasury/OutboundPaymentService.php',
+        'Stripe\\Service\\Treasury\\OutboundTransferService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Treasury/OutboundTransferService.php',
+        'Stripe\\Service\\Treasury\\ReceivedCreditService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Treasury/ReceivedCreditService.php',
+        'Stripe\\Service\\Treasury\\ReceivedDebitService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Treasury/ReceivedDebitService.php',
+        'Stripe\\Service\\Treasury\\TransactionEntryService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Treasury/TransactionEntryService.php',
+        'Stripe\\Service\\Treasury\\TransactionService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Treasury/TransactionService.php',
+        'Stripe\\Service\\Treasury\\TreasuryServiceFactory' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/Treasury/TreasuryServiceFactory.php',
+        'Stripe\\Service\\WebhookEndpointService' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Service/WebhookEndpointService.php',
+        'Stripe\\SetupAttempt' => __DIR__ . '/..' . '/stripe/stripe-php/lib/SetupAttempt.php',
+        'Stripe\\SetupIntent' => __DIR__ . '/..' . '/stripe/stripe-php/lib/SetupIntent.php',
+        'Stripe\\ShippingRate' => __DIR__ . '/..' . '/stripe/stripe-php/lib/ShippingRate.php',
+        'Stripe\\Sigma\\ScheduledQueryRun' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Sigma/ScheduledQueryRun.php',
+        'Stripe\\SingletonApiResource' => __DIR__ . '/..' . '/stripe/stripe-php/lib/SingletonApiResource.php',
+        'Stripe\\Source' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Source.php',
+        'Stripe\\SourceMandateNotification' => __DIR__ . '/..' . '/stripe/stripe-php/lib/SourceMandateNotification.php',
+        'Stripe\\SourceTransaction' => __DIR__ . '/..' . '/stripe/stripe-php/lib/SourceTransaction.php',
+        'Stripe\\Stripe' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Stripe.php',
+        'Stripe\\StripeClient' => __DIR__ . '/..' . '/stripe/stripe-php/lib/StripeClient.php',
+        'Stripe\\StripeClientInterface' => __DIR__ . '/..' . '/stripe/stripe-php/lib/StripeClientInterface.php',
+        'Stripe\\StripeObject' => __DIR__ . '/..' . '/stripe/stripe-php/lib/StripeObject.php',
+        'Stripe\\StripeStreamingClientInterface' => __DIR__ . '/..' . '/stripe/stripe-php/lib/StripeStreamingClientInterface.php',
+        'Stripe\\Subscription' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Subscription.php',
+        'Stripe\\SubscriptionItem' => __DIR__ . '/..' . '/stripe/stripe-php/lib/SubscriptionItem.php',
+        'Stripe\\SubscriptionSchedule' => __DIR__ . '/..' . '/stripe/stripe-php/lib/SubscriptionSchedule.php',
+        'Stripe\\TaxCode' => __DIR__ . '/..' . '/stripe/stripe-php/lib/TaxCode.php',
+        'Stripe\\TaxDeductedAtSource' => __DIR__ . '/..' . '/stripe/stripe-php/lib/TaxDeductedAtSource.php',
+        'Stripe\\TaxId' => __DIR__ . '/..' . '/stripe/stripe-php/lib/TaxId.php',
+        'Stripe\\TaxRate' => __DIR__ . '/..' . '/stripe/stripe-php/lib/TaxRate.php',
+        'Stripe\\Tax\\Calculation' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Tax/Calculation.php',
+        'Stripe\\Tax\\CalculationLineItem' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Tax/CalculationLineItem.php',
+        'Stripe\\Tax\\Registration' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Tax/Registration.php',
+        'Stripe\\Tax\\Settings' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Tax/Settings.php',
+        'Stripe\\Tax\\Transaction' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Tax/Transaction.php',
+        'Stripe\\Tax\\TransactionLineItem' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Tax/TransactionLineItem.php',
+        'Stripe\\Terminal\\Configuration' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Terminal/Configuration.php',
+        'Stripe\\Terminal\\ConnectionToken' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Terminal/ConnectionToken.php',
+        'Stripe\\Terminal\\Location' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Terminal/Location.php',
+        'Stripe\\Terminal\\Reader' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Terminal/Reader.php',
+        'Stripe\\TestHelpers\\TestClock' => __DIR__ . '/..' . '/stripe/stripe-php/lib/TestHelpers/TestClock.php',
+        'Stripe\\Token' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Token.php',
+        'Stripe\\Topup' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Topup.php',
+        'Stripe\\Transfer' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Transfer.php',
+        'Stripe\\TransferReversal' => __DIR__ . '/..' . '/stripe/stripe-php/lib/TransferReversal.php',
+        'Stripe\\Treasury\\CreditReversal' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Treasury/CreditReversal.php',
+        'Stripe\\Treasury\\DebitReversal' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Treasury/DebitReversal.php',
+        'Stripe\\Treasury\\FinancialAccount' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Treasury/FinancialAccount.php',
+        'Stripe\\Treasury\\FinancialAccountFeatures' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Treasury/FinancialAccountFeatures.php',
+        'Stripe\\Treasury\\InboundTransfer' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Treasury/InboundTransfer.php',
+        'Stripe\\Treasury\\OutboundPayment' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Treasury/OutboundPayment.php',
+        'Stripe\\Treasury\\OutboundTransfer' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Treasury/OutboundTransfer.php',
+        'Stripe\\Treasury\\ReceivedCredit' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Treasury/ReceivedCredit.php',
+        'Stripe\\Treasury\\ReceivedDebit' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Treasury/ReceivedDebit.php',
+        'Stripe\\Treasury\\Transaction' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Treasury/Transaction.php',
+        'Stripe\\Treasury\\TransactionEntry' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Treasury/TransactionEntry.php',
+        'Stripe\\UsageRecord' => __DIR__ . '/..' . '/stripe/stripe-php/lib/UsageRecord.php',
+        'Stripe\\UsageRecordSummary' => __DIR__ . '/..' . '/stripe/stripe-php/lib/UsageRecordSummary.php',
+        'Stripe\\Util\\ApiVersion' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Util/ApiVersion.php',
+        'Stripe\\Util\\CaseInsensitiveArray' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Util/CaseInsensitiveArray.php',
+        'Stripe\\Util\\DefaultLogger' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Util/DefaultLogger.php',
+        'Stripe\\Util\\LoggerInterface' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Util/LoggerInterface.php',
+        'Stripe\\Util\\ObjectTypes' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Util/ObjectTypes.php',
+        'Stripe\\Util\\RandomGenerator' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Util/RandomGenerator.php',
+        'Stripe\\Util\\RequestOptions' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Util/RequestOptions.php',
+        'Stripe\\Util\\Set' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Util/Set.php',
+        'Stripe\\Util\\Util' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Util/Util.php',
+        'Stripe\\Webhook' => __DIR__ . '/..' . '/stripe/stripe-php/lib/Webhook.php',
+        'Stripe\\WebhookEndpoint' => __DIR__ . '/..' . '/stripe/stripe-php/lib/WebhookEndpoint.php',
+        'Stripe\\WebhookSignature' => __DIR__ . '/..' . '/stripe/stripe-php/lib/WebhookSignature.php',
         'Symfony\\Bridge\\PsrHttpMessage\\ArgumentValueResolver\\PsrServerRequestResolver' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/ArgumentValueResolver/PsrServerRequestResolver.php',
         'Symfony\\Bridge\\PsrHttpMessage\\EventListener\\PsrResponseListener' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/EventListener/PsrResponseListener.php',
         'Symfony\\Bridge\\PsrHttpMessage\\Factory\\HttpFoundationFactory' => __DIR__ . '/..' . '/symfony/psr-http-message-bridge/Factory/HttpFoundationFactory.php',
@@ -8029,6 +8487,9 @@ class ComposerStaticInitacb2ad5bf0b1a11f8baf47776c92a2e3
         'Yethee\\Tiktoken\\Vocab\\Loader\\DefaultVocabLoader' => __DIR__ . '/..' . '/yethee/tiktoken/src/Vocab/Loader/DefaultVocabLoader.php',
         'Yethee\\Tiktoken\\Vocab\\Vocab' => __DIR__ . '/..' . '/yethee/tiktoken/src/Vocab/Vocab.php',
         'Yethee\\Tiktoken\\Vocab\\VocabLoader' => __DIR__ . '/..' . '/yethee/tiktoken/src/Vocab/VocabLoader.php',
+        'cweagans\\Composer\\PatchEvent' => __DIR__ . '/..' . '/cweagans/composer-patches/src/PatchEvent.php',
+        'cweagans\\Composer\\PatchEvents' => __DIR__ . '/..' . '/cweagans/composer-patches/src/PatchEvents.php',
+        'cweagans\\Composer\\Patches' => __DIR__ . '/..' . '/cweagans/composer-patches/src/Patches.php',
         'enshrined\\svgSanitize\\ElementReference\\Resolver' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/ElementReference/Resolver.php',
         'enshrined\\svgSanitize\\ElementReference\\Subject' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/ElementReference/Subject.php',
         'enshrined\\svgSanitize\\ElementReference\\Usage' => __DIR__ . '/..' . '/enshrined/svg-sanitize/src/ElementReference/Usage.php',

@@ -1,0 +1,17 @@
+djfit_membership.settings:
+  type: config_object
+  label: 'DJFit membership settings'
+  mapping:
+    plan_role_map:
+      type: mapping
+      label: 'Plan to role map'
+      mapping:
+        '*':
+          type: string
+          label: 'Role ID'
+    active_states:
+      type: sequence
+      label: 'Subscription states considered active'
+      sequence:
+        type: string
+        label: 'State machine ID'

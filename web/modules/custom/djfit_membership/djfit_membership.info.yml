@@ -1,0 +1,9 @@
+name: DJFit Membership
+type: module
+description: Synchronizes membership roles from Commerce subscriptions.
+package: DJFit
+core_version_requirement: ^11
+dependencies:
+  - drupal:user
+  - drupal:commerce
+  - drupal:commerce_recurring
