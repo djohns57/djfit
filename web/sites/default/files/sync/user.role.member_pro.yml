@@ -1,0 +1,9 @@
+uuid: 22bd0207-7274-4ea3-9588-54cb3809dc57
+langcode: en
+status: true
+dependencies: {  }
+id: member_pro
+label: 'Member Pro'
+weight: 5
+is_admin: false
+permissions: {  }

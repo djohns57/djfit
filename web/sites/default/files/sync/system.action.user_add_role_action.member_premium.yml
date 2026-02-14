@@ -1,0 +1,14 @@
+uuid: bdb2f49a-fca8-4154-be6c-fe4fd3ac6823
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_premium
+  module:
+    - user
+id: user_add_role_action.member_premium
+label: 'Add the Member Premium role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: member_premium

@@ -9,6 +9,8 @@ props:
       type: string
       title: Text
       description: The badge text content
+      examples:
+        - Status
     variant:
       type: string
       title: Variant
@@ -19,4 +21,6 @@ props:
         - danger
         - neutral
       default: neutral
+      examples:
+        - neutral
 

@@ -1,0 +1,12 @@
+uuid: 68993937-5c9f-46d3-a585-fa6d3c608881
+langcode: en
+status: true
+dependencies: {  }
+id: membership
+label: Membership
+traits: {  }
+locked: false
+description: ''
+variationTypes: {  }
+multipleVariations: true
+injectVariationFields: true

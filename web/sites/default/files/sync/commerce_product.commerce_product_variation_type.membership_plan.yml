@@ -1,0 +1,17 @@
+uuid: 4b8207c0-727c-4371-82a0-f7d2a749b00b
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_license
+third_party_settings:
+  commerce_license:
+    license_types:
+      - role
+id: membership_plan
+label: 'Membership plan'
+traits:
+  - commerce_license
+locked: false
+orderItemType: default
+generateTitle: false

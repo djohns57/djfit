@@ -1,10 +1,7 @@
 "$schema": "https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json"
 name: Video card
 group: Card
-<<<<<<< HEAD
-=======
 description: A card with embedded video and supporting text.
->>>>>>> paid_membership_feat
 props:
   type: object
   required:
@@ -15,21 +12,6 @@ props:
       type: string
       title: Title
       examples:
-<<<<<<< HEAD
-        - "Watch our latest workout"
-    description:
-      type: string
-      title: Description
-      pattern: "(.|\\r?\\n)*"
-      examples:
-        - "A quick overview of our training programs and philosophy."
-    video_url:
-      type: string
-      title: Video URL
-      description: Accepts YouTube or Vimeo URLs.
-      examples:
-        - "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-=======
         - Watch our latest workout
     description:
       type: string
@@ -44,11 +26,6 @@ props:
       examples:
         - https://www.youtube.com/watch?v=dQw4w9WgXcQ
         - https://vimeo.com/148751763
-    video:
-      type: object
-      $ref: json-schema-definitions://canvas.module/video
-      title: Self-hosted video (fallback)
->>>>>>> paid_membership_feat
     background:
       type: string
       title: Background
@@ -64,9 +41,6 @@ props:
         primary: Primary
         inverted: Inverted
         noColor: No color
-<<<<<<< HEAD
       default: noColor
-=======
->>>>>>> paid_membership_feat
       examples:
         - noColor

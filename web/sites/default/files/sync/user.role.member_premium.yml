@@ -1,0 +1,9 @@
+uuid: ec6dfcb9-dcf3-42ac-9e19-7ca9e080dcbc
+langcode: en
+status: true
+dependencies: {  }
+id: member_premium
+label: 'Member Premium'
+weight: 6
+is_admin: false
+permissions: {  }

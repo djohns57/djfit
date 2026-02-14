@@ -1,0 +1,14 @@
+uuid: 557bcd0e-777d-4ffd-afdf-74074c632088
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_pro
+  module:
+    - user
+id: user_add_role_action.member_pro
+label: 'Add the Member Pro role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: member_pro

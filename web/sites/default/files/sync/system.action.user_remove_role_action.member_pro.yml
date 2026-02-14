@@ -1,0 +1,14 @@
+uuid: e3ad58cb-491d-460e-ac40-92d007a8f3f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.member_pro
+  module:
+    - user
+id: user_remove_role_action.member_pro
+label: 'Remove the Member Pro role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: member_pro
