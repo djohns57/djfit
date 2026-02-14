@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {#
   Video Card component.
 
@@ -31,18 +32,30 @@
 {% set card_variants =
   html_cva(
     base: ['group relative flex flex-col overflow-hidden rounded-xl shadow-2xl transition duration-300'],
+=======
+{% set card_background = background|default('noColor') %}
+
+{% set card =
+  html_cva(
+    base: ['relative flex flex-col gap-4 rounded-xl p-4 shadow-2xl transition duration-300 lg:gap-6 lg:p-6'],
+>>>>>>> paid_membership_feat
     variants: {
       backgroundColor: {
         default: 'bg-card text-card-foreground',
         accent: 'bg-accent text-accent-foreground',
         primary: 'bg-primary text-primary-foreground',
         inverted: 'bg-foreground text-background',
+<<<<<<< HEAD
         noColor: 'border border-secondary shadow-none'
+=======
+        noColor: 'border border-secondary bg-transparent text-foreground shadow-none'
+>>>>>>> paid_membership_feat
       }
     }
   )
 %}
 
+<<<<<<< HEAD
 <div class="{{ card_variants.apply({ backgroundColor: card_background }) }}">
   {% if embed_url is not empty %}
     <div class="aspect-video w-full">
@@ -65,3 +78,85 @@
     {% endif %}
   </div>
 </div>
+=======
+{% set video_data = video|default({}) %}
+{% set video_src = video_data.src|default('') %}
+{% set video_poster = video_data.poster|default('') %}
+{% set provided_video_url = video_url|default('') %}
+{% set embed_url = '' %}
+
+{% if 'youtube.com/watch?v=' in provided_video_url %}
+  {% set youtube_id = provided_video_url|split('v=')|last|split('&')|first %}
+  {% set embed_url = 'https://www.youtube.com/embed/' ~ youtube_id %}
+{% elseif 'youtu.be/' in provided_video_url %}
+  {% set youtube_id = provided_video_url|split('youtu.be/')|last|split('?')|first %}
+  {% set embed_url = 'https://www.youtube.com/embed/' ~ youtube_id %}
+{% elseif 'vimeo.com/' in provided_video_url %}
+  {% set vimeo_id = provided_video_url|split('vimeo.com/')|last|split('?')|first %}
+  {% set embed_url = 'https://player.vimeo.com/video/' ~ vimeo_id %}
+{% endif %}
+
+<article
+  class="{{
+  card.apply({
+    backgroundColor: card_background
+  })
+  }}"
+>
+  <div class="aspect-video overflow-hidden rounded-lg">
+    {% if embed_url is not empty %}
+      <iframe
+        class="h-full w-full"
+        src="{{ embed_url }}"
+        title="{{ title|default('Video') }}"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    {% elseif video_src is not empty %}
+      {% if video_poster is not empty %}
+        <video class="h-full w-full object-cover" controls poster="{{ video_poster }}" preload="metadata">
+          <source src="{{ video_src }}" type="video/mp4" />Your browser does not support the video tag.
+        </video>
+      {% else %}
+        <video class="h-full w-full object-cover" controls preload="metadata">
+          <source src="{{ video_src }}" type="video/mp4" />Your browser does not support the video tag.
+        </video>
+      {% endif %}
+    {% endif %}
+  </div>
+
+  <div class="flex flex-col gap-2">
+    {{
+      include(
+        'djfit:heading',
+        {
+          heading_text: title|default(''),
+          level: 3,
+          text_color: 'default',
+          text_size: 'heading-responsive-3xl',
+          url: 'No URL',
+          align: 'left'
+        },
+        with_context: false
+      )
+    }}
+    {% if description|default('') is not empty %}
+      <div class="rich-text mb-0 text-base text-inherit md:text-lg">
+        {{
+          include(
+            'djfit:text',
+            {
+              text: description,
+              text_color: 'default',
+              text_size: 'normal'
+            },
+            with_context: false
+          )
+        }}
+      </div>
+    {% endif %}
+  </div>
+</article>
+>>>>>>> paid_membership_feat

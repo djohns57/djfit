@@ -1,0 +1,11 @@
+services:
+  logger.channel.djfit_membership:
+    parent: logger.channel_base
+    arguments: ['djfit_membership']
+
+  djfit_membership.role_synchronizer:
+    class: Drupal\djfit_membership\MembershipRoleSynchronizer
+    arguments:
+      - '@config.factory'
+      - '@entity_type.manager'
+      - '@logger.channel.djfit_membership'

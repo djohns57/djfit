@@ -70,7 +70,7 @@
         'top-left': 'lg:max-w-2/3',
         'center-left': 'lg:max-w-2/3',
         'bottom-left': 'lg:max-w-2/3',
-        'bottom-center': ['items-center text-center lg:mx-auto lg:max-w-2/3 text-gray-500'],
+        'bottom-center': ['items-center text-center text-gray-500 lg:mx-auto lg:max-w-2/3'],
         'hero-center': ['items-center text-center lg:mx-auto lg:max-w-2/3']
       },
       overlapNavbar: {
@@ -145,10 +145,14 @@
           }}
         {% endif %}
         {% if subheading_text is not empty %}
-          <p class="text-lg md:text-xl xl:text-2xl">{{ subheading_text }}</p>
+          <p class="text-lg md:text-xl xl:text-2xl">
+            {{ subheading_text }}
+          </p>
         {% endif %}
         {% if body_text is not empty %}
-          <div class="text-base md:text-lg">{{ body_text|raw }}</div>
+          <div class="text-base md:text-lg">
+            {{ body_text|raw }}
+          </div>
         {% endif %}
         {% block hero_slot %}
 

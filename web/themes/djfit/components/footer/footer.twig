@@ -81,7 +81,9 @@
         }}"
       >
         {% block footer_utility_last %}
-          <p class="text-xs md:text-sm">&copy; {{ "now"|date("Y") }} {{ site_name|default("DJFit") }}. All rights reserved.</p>
+          <p class="text-xs md:text-sm">
+            &copy; {{ 'now'|date('Y') }} {{ site_name|default('DJFit') }}. All rights reserved.
+          </p>
         {% endblock %}
       </div>
     </div>

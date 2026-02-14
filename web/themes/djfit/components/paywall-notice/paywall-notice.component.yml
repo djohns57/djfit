@@ -1,0 +1,23 @@
+"$schema": "https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json"
+name: Paywall notice
+group: Membership
+description: Message shown when content requires a membership.
+props:
+  type: object
+  properties:
+    heading_text:
+      type: string
+      title: Heading
+      default: This content is for members
+    body_text:
+      type: string
+      title: Body text
+      default: Join now to access workouts, nutrition plans, and community support.
+    button_label:
+      type: string
+      title: Button label
+      default: View membership plans
+    button_url:
+      type: string
+      title: Button URL
+      default: /membership
