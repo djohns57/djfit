@@ -20,3 +20,8 @@ messages:
   dependencies:
     - core/drupal
     - core/once
+
+breadcrumb:
+  version: VERSION
+  dependencies:
+    - core/drupal

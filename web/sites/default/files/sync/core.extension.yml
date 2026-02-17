@@ -3,9 +3,13 @@ _core:
 module:
   address: 0
   advancedqueue: 0
+  ai: 0
+  ai_assistant_api: 0
+  ai_chatbot: 0
+  ai_ckeditor: 0
+  ai_provider_amazeeio: 0
   announcements_feed: 0
   automated_cron: 0
-  automatic_updates: 0
   autosave_form: 0
   big_pipe: 0
   block: 0
@@ -36,6 +40,8 @@ module:
   dashboard: 0
   datetime: 0
   dblog: 0
+  djfit_commerce_example: 0
+  djfit_membership: 0
   drupal_cms_helper: 0
   drupical: 0
   dynamic_page_cache: 0
@@ -68,6 +74,7 @@ module:
   interval: 0
   jquery_ui: 0
   jquery_ui_resizable: 0
+  key: 0
   klaro: 0
   layout_builder: 0
   layout_discovery: 0
@@ -88,7 +95,6 @@ module:
   navigation_extra_tools: 0
   node: 0
   options: 0
-  package_manager: 0
   page_cache: 0
   path: 0
   path_alias: 0

@@ -21,7 +21,7 @@ recipes:
 
   # The recipes to apply if the user doesn't choose a site template.
   default:
-    - drupal/drupal_cms_starter
+    - drupal/djfit_starter
 
 # Explicitly provide an empty list of themes -- this prevents the installer from
 # injecting Stark into it.

@@ -1,0 +1,78 @@
+{#
+/**
+ * @file
+ * Site Header component.
+ *
+ * Renders the header with JPS Enterprise logo, site name, navigation
+ * links, and action buttons. Matches Figma node 1:326.
+ *
+ * Props:
+ *   - logo_url: string - URL to the logo image
+ *   - logo_alt: string - Alt text for the logo
+ *   - site_name: string - Brand text next to the logo
+ *   - home_url: string - URL the logo/brand links to
+ *   - nav_links: array - Navigation items [{label, url, active}]
+ *   - signin_url: string - Sign In button URL
+ *   - signup_url: string - Get Started button URL
+ */
+#}
+{% set logo_url = logo_url|default('/' ~ active_theme_path() ~ '/components/site-header/assets/logo-jps-enterprise.png') %}
+{% set logo_alt = logo_alt|default('JPS Enterprise') %}
+{% set site_name = site_name|default('DJ Fit') %}
+{% set home_url = home_url|default('/') %}
+{% set signin_url = signin_url|default('/user/login') %}
+{% set signup_url = signup_url|default('/user/register') %}
+
+<header class="site-header">
+  <div class="site-header__container">
+
+    {# Branding: logo image + site name #}
+    <a href="{{ home_url }}" class="site-header__branding" rel="home" aria-label="{{ site_name }}">
+      <span class="site-header__logo">
+        <img
+          src="{{ logo_url }}"
+          alt="{{ logo_alt }}"
+          width="40"
+          height="40"
+          loading="eager"
+          class="site-header__logo-img"
+        />
+      </span>
+      <span class="site-header__brand-text">{{ site_name }}</span>
+    </a>
+
+    {# Navigation #}
+    {% if nav_links is not empty %}
+      <nav class="site-header__nav" aria-label="{{ 'Main navigation'|t }}">
+        <ul class="site-header__nav-list">
+          {% for link in nav_links %}
+            <li class="site-header__nav-item">
+              <a
+                href="{{ link.url }}"
+                class="site-header__nav-link{% if link.active %} site-header__nav-link--active{% endif %}"
+                {% if link.active %}aria-current="page"{% endif %}
+              >
+                {{ link.label }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+
+    {# Action buttons #}
+    <div class="site-header__actions">
+      <a href="{{ signin_url }}" class="site-header__btn site-header__btn--signin">
+        <svg class="site-header__btn-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12.6667 14V12.6667C12.6667 11.9594 12.3857 11.2811 11.8856 10.781C11.3855 10.281 10.7072 10 10 10H6C5.29276 10 4.61448 10.281 4.11438 10.781C3.61428 11.2811 3.33333 11.9594 3.33333 12.6667V14" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 7.33333C9.47276 7.33333 10.6667 6.13943 10.6667 4.66667C10.6667 3.19391 9.47276 2 8 2C6.52724 2 5.33333 3.19391 5.33333 4.66667C5.33333 6.13943 6.52724 7.33333 8 7.33333Z" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        {{ 'Sign In'|t }}
+      </a>
+      <a href="{{ signup_url }}" class="site-header__btn site-header__btn--signup">
+        {{ 'Get Started'|t }}
+      </a>
+    </div>
+
+  </div>
+</header>

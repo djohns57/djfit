@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: 2xh_zR5boVA8wZThnU_lvgBb0Zr3laLhJ0XuST3VFDQ
+plan_role_map:
+  PRO-MONTHLY: member_pro
+  BASIC-MONTHLY: member_basic
+  PREMIUM-MONTHLY: member_premium
+active_states:
+  - active
+  - trialing

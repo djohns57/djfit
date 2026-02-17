@@ -1,0 +1,15 @@
+@@ -9,6 +9,8 @@
+     text:
+       type: string
+       title: Text
++      examples:
++        - Status
+       description: The badge text content
+     variant:
+       type: string
+@@ -20,3 +22,5 @@
+         - danger
+         - neutral
+       default: neutral
++      examples:
++        - neutral

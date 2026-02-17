@@ -1,0 +1,43 @@
+{#
+/**
+ * @file
+ * JPS ENTERPRISE logo component.
+ *
+ * Renders the JPS logo at 60px (header) or other sizes.
+ * Uses img with src when provided, otherwise inline SVG.
+ */
+#}
+{% set size_classes = {
+  small: 'h-6',
+  medium: 'h-8',
+  large: 'h-10',
+  header: 'h-[60px]'
+} %}
+{% set size = size|default('header') %}
+{% set href = url|default('/') %}
+{% set standalone = standalone|default(true) %}
+{% set logo_src = src|default('') %}
+{% set size_px = { small: 24, medium: 32, large: 40, header: 60 } %}
+{% set px = size_px[size]|default(60) %}
+
+{% if logo_src %}
+  {% set logo_content %}
+    <img src="{{ logo_src }}" alt="" class="h-full w-auto object-contain" width="{{ px }}" height="{{ px }}" loading="eager" />
+  {% endset %}
+{% else %}
+  {% set logo_content %}
+    <svg class="logo-jps-enterprise__svg h-full w-auto" viewBox="0 0 95 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="136" height="60">
+      <text x="0" y="26" font-family="Inter, Outfit, system-ui, sans-serif" font-size="24" font-weight="700" fill="var(--hg-color-header-accent)">J</text>
+      <text x="16" y="26" font-family="Inter, Outfit, system-ui, sans-serif" font-size="24" font-weight="700" fill="var(--hg-color-header-text)">P</text>
+      <path d="M28 16 Q34 6 40 14" stroke="#7ebf72" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      <text x="44" y="26" font-family="Inter, Outfit, system-ui, sans-serif" font-size="24" font-weight="700" fill="#0f5f86">S</text>
+      <text x="14" y="40" font-family="Inter, Outfit, system-ui, sans-serif" font-size="9" font-weight="500" letter-spacing="0.08em" fill="var(--hg-color-text-muted)">ENTERPRISE</text>
+    </svg>
+  {% endset %}
+{% endif %}
+
+{% if standalone %}
+  <a href="{{ href }}" class="logo-jps-enterprise inline-flex items-center {{ size_classes[size] }}" rel="home" aria-label="JPS Enterprise">{{ logo_content|raw }}</a>
+{% else %}
+  <span class="logo-jps-enterprise inline-flex items-center {{ size_classes[size] }}" aria-hidden="true">{{ logo_content|raw }}</span>
+{% endif %}

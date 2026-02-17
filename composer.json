@@ -13,12 +13,17 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        "djfit_starter": {
+            "type": "path",
+            "url": "recipes/djfit_starter"
         }
     },
     "require": {
-        "cweagans/composer-patches": "^1.7",
         "composer/composer": "^2.8",
         "composer/installers": "^2.3",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/ai_provider_amazeeio": "^1.2",
         "drupal/ai_vdb_provider_postgres": "^1.0@alpha",
         "drupal/byte": "^1",
         "drupal/commerce": "^3",
@@ -37,6 +42,8 @@
         "drupal/drupal_cms_google_analytics": "^2",
         "drupal/drupal_cms_seo_tools": "^2",
         "drupal/drupal_cms_starter": "^2",
+        "drupal/djfit_starter": "@dev",
+        "drupal/group": "^3.3",
         "drupal/inline_entity_form": "^3.0@rc",
         "drupal/recipe_installer_kit": "^1.0.4",
         "drupal/ultimate_cron": "^2.0@beta",

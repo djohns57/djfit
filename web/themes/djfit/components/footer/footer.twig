@@ -73,19 +73,19 @@
         </div>
       {% endif %}
 
-      <div
-        class="{{
-        footer_bottom_col_variants.apply({
-          align: 'right'
-        })
-        }}"
-      >
-        {% block footer_utility_last %}
-          <p class="text-xs md:text-sm">
-            &copy; {{ 'now'|date('Y') }} {{ site_name|default('DJFit') }}. All rights reserved.
-          </p>
-        {% endblock %}
-      </div>
+      {% if block('footer_utility_last') is defined %}
+        <div
+          class="{{
+          footer_bottom_col_variants.apply({
+            align: 'right'
+          })
+          }}"
+        >
+          {% block footer_utility_last %}
+            {# Slot for components. #}
+          {% endblock %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </section>

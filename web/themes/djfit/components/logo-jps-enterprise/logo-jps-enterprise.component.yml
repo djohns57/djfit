@@ -1,0 +1,38 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Logo JPS Enterprise
+group: Base
+status: stable
+props:
+  type: object
+  properties:
+    size:
+      type: string
+      title: Size
+      enum:
+        - small
+        - medium
+        - large
+        - header
+      meta:enum:
+        small: Small (24px)
+        medium: Medium (32px)
+        large: Large (40px)
+        header: Header (60px)
+      default: header
+      examples:
+        - header
+    url:
+      type: string
+      title: Link
+      default: "/"
+      examples:
+        - "/"
+    src:
+      type: string
+      title: Logo image URL
+      description: Optional. When set, uses img tag instead of inline SVG.
+    standalone:
+      type: boolean
+      title: Render as link
+      default: true
+      description: When false, renders without link wrapper (for use inside brand-logo)

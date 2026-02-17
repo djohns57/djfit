@@ -1,0 +1,12 @@
+uuid: f2a0a979-1197-4c94-8846-5cdd4cbe1d16
+langcode: en
+status: true
+dependencies: {  }
+id: merch
+label: Merch
+traits: {  }
+locked: false
+description: ''
+variationTypes: {  }
+multipleVariations: true
+injectVariationFields: true

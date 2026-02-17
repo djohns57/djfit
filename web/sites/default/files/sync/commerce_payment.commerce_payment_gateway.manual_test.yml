@@ -1,0 +1,19 @@
+uuid: 109faf6b-0352-487e-9962-5d29a002d282
+langcode: en
+status: true
+dependencies: {  }
+id: manual_test
+label: 'Manual test gateway'
+weight: null
+plugin: manual
+configuration:
+  display_label: Manual
+  mode: n/a
+  payment_method_types:
+    - credit_card
+  collect_billing_information: true
+  instructions:
+    value: ''
+    format: plain_text
+conditions: {  }
+conditionOperator: AND

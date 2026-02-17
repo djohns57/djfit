@@ -1,0 +1,73 @@
+role_id	role_label	permission
+administrator	Administrator	
+anonymous	Anonymous user	access checkout
+anonymous	Anonymous user	access content
+anonymous	Anonymous user	use klaro
+anonymous	Anonymous user	view commerce_product
+anonymous	Anonymous user	view media
+authenticated	Authenticated user	access administration pages
+authenticated	Authenticated user	access checkout
+authenticated	Authenticated user	access coffee
+authenticated	Authenticated user	access content
+authenticated	Authenticated user	access contextual links
+authenticated	Authenticated user	access navigation
+authenticated	Authenticated user	bypass honeypot protection
+authenticated	Authenticated user	delete own files
+authenticated	Authenticated user	manage own commerce_payment_method
+authenticated	Authenticated user	skip CAPTCHA
+authenticated	Authenticated user	use klaro
+authenticated	Authenticated user	view commerce_product
+authenticated	Authenticated user	view media
+authenticated	Authenticated user	view own commerce_order
+authenticated	Authenticated user	view own unpublished content
+authenticated	Authenticated user	view the administration theme
+authenticated	Authenticated user	view welcome dashboard
+content_editor	Content editor	access administration pages
+content_editor	Content editor	access content overview
+content_editor	Content editor	access media overview
+content_editor	Content editor	access trash
+content_editor	Content editor	administer menu
+content_editor	Content editor	administer redirects
+content_editor	Content editor	administer url aliases
+content_editor	Content editor	create canvas_page
+content_editor	Content editor	create document media
+content_editor	Content editor	create image media
+content_editor	Content editor	create page content
+content_editor	Content editor	create remote_video media
+content_editor	Content editor	create svg_image media
+content_editor	Content editor	create url aliases
+content_editor	Content editor	create video media
+content_editor	Content editor	delete any document media
+content_editor	Content editor	delete any image media
+content_editor	Content editor	delete any page content
+content_editor	Content editor	delete any remote_video media
+content_editor	Content editor	delete any svg_image media
+content_editor	Content editor	delete any video media
+content_editor	Content editor	delete canvas_page
+content_editor	Content editor	delete page revisions
+content_editor	Content editor	edit any image media
+content_editor	Content editor	edit any page content
+content_editor	Content editor	edit any remote_video media
+content_editor	Content editor	edit any svg_image media
+content_editor	Content editor	edit any video media
+content_editor	Content editor	edit canvas_page
+content_editor	Content editor	revert all revisions
+content_editor	Content editor	schedule publishing of nodes
+content_editor	Content editor	use basic_editorial transition create_new_draft
+content_editor	Content editor	use basic_editorial transition publish
+content_editor	Content editor	use basic_editorial transition unpublish
+content_editor	Content editor	use media document bulk upload form
+content_editor	Content editor	use media image bulk upload form
+content_editor	Content editor	use media remote_video bulk upload form
+content_editor	Content editor	use media svg_image bulk upload form
+content_editor	Content editor	use media video bulk upload form
+content_editor	Content editor	use text format content_format
+content_editor	Content editor	view all revisions
+content_editor	Content editor	view any unpublished content
+content_editor	Content editor	view own unpublished content
+content_editor	Content editor	view own unpublished media
+content_editor	Content editor	view scheduled content
+member_basic	Member Basic	
+member_premium	Member Premium	
+member_pro	Member Pro	
+premium_member	Premium Member	

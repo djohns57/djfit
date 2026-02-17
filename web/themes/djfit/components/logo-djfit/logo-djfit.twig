@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * DJ Fit wordmark component (Figma node 1:331).
+ *
+ * Bold dark teal text with optional subtle glow effect.
+ */
+#}
+{% set size_classes = {
+  small: 'text-xl',
+  medium: 'text-2xl',
+  large: 'text-3xl',
+  header: 'text-[1.75rem]'
+} %}
+{% set size = size|default('header') %}
+{% set href = url|default('/') %}
+{% set has_glow = glow|default(true) %}
+{% set standalone = standalone|default(true) %}
+
+{% set logo_content %}
+  <span class="logo-djfit__text">DJ Fit</span>
+{% endset %}
+
+{% if standalone %}
+  <a href="{{ href }}" class="logo-djfit inline-flex items-center font-bold {{ size_classes[size] }} {{ has_glow ? 'logo-djfit--glow' : '' }}" rel="home" aria-label="DJ Fit">{{ logo_content|raw }}</a>
+{% else %}
+  <span class="logo-djfit inline-flex items-center font-bold {{ size_classes[size] }} {{ has_glow ? 'logo-djfit--glow' : '' }}" aria-hidden="true">{{ logo_content|raw }}</span>
+{% endif %}

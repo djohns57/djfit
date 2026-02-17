@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Combined brand logo: JPS ENTERPRISE + DJ Fit (Figma nodes 1:329, 1:331).
+ *
+ * Used in navbar and other header contexts.
+ */
+#}
+{% set href = url|default('/') %}
+{% set show_jps = show_jps|default(true) %}
+{% set show_djfit = show_djfit|default(true) %}
+{% set size = size|default('header') %}
+
+<a href="{{ href }}" class="brand-logo inline-flex items-center gap-3" rel="home" aria-label="DJ Fit">
+  {% if show_jps %}
+    {{ include('djfit:logo-jps-enterprise', { url: href, size: size, standalone: false }, with_context: false) }}
+  {% endif %}
+  {% if show_djfit %}
+    {{ include('djfit:logo-djfit', { url: href, size: size, glow: true, standalone: false }, with_context: false) }}
+  {% endif %}
+</a>

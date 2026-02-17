@@ -12,6 +12,7 @@ id: membership_plan
 label: 'Membership plan'
 traits:
   - commerce_license
+  - purchasable_entity_subscription
 locked: false
 orderItemType: default
 generateTitle: false

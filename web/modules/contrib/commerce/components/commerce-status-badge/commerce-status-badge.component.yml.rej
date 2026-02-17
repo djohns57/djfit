@@ -1,0 +1,6 @@
+@@ -19,3 +21,5 @@
+         - danger
+         - neutral
+       default: neutral
++      examples:
++        - neutral

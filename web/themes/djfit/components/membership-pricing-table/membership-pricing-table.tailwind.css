@@ -1,7 +1,0 @@
-.membership-pricing-table {
-  @apply py-6 md:py-8;
-}
-
-.membership-pricing-table__cards article {
-  @apply h-full;
-}

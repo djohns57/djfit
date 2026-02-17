@@ -4,8 +4,8 @@
  * @file
  * Theme override for a branding block.
  *
- * Each branding element variable (logo, name, slogan) is only available if
- * enabled in the block configuration.
+ * Renders the JPS Enterprise logo image + site name as a branding unit.
+ * Logo uses the actual PNG from Figma (node 1:329), displayed at 40x40.
  *
  * Available variables:
  * - site_logo: Logo for site as defined in Appearance or theme settings.
@@ -15,20 +15,19 @@
 #}
 
 {% block content %}
-  {% set site_logo_url = site_logo ? file_url(site_logo) : '' %}
-
-  <a href="{{ home_url|default('/') }}" class="inline-block" rel="home">
-    {% block branding %}
-      {% if site_logo %}
-        <div class="branding">
-          <img class="h-full w-full" src="{{ site_logo_url }}" alt="{{ site_name }}" />
-        </div>
-      {% endif %}
-      {% if site_name %}
-        <div class="heading-responsive-4xl font-[var(--hgc-font-weight-h1)]">
-          {{ site_name }}
-        </div>
-      {% endif %}
-    {% endblock %}
+  <a href="{{ path('<front>') }}" class="branding-link" rel="home" aria-label="{{ site_name|default('Home') }}">
+    <span class="branding-logo">
+      <img
+        src="/{{ active_theme_path() }}/components/site-header/assets/logo-jps-enterprise.png"
+        alt="{{ site_name|default('JPS Enterprise') }}"
+        width="40"
+        height="40"
+        loading="eager"
+        class="branding-logo__img"
+      />
+    </span>
+    {% if site_name %}
+      <span class="branding-site-name">{{ site_name }}</span>
+    {% endif %}
   </a>
 {% endblock %}

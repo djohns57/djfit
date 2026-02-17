@@ -1,0 +1,9 @@
+uuid: 4b0bb6f2-4444-4545-995e-01f87aabe725
+langcode: en
+status: true
+dependencies: {  }
+id: premium_member
+label: 'Premium Member'
+weight: 7
+is_admin: false
+permissions: {  }

@@ -8,3 +8,4 @@ content_access_roles_gids:
   member_basic: 5
   member_pro: 6
   member_premium: 7
+  premium_member: 8

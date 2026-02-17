@@ -1,0 +1,23 @@
+uuid: 09717803-b1a5-4f33-99b2-056f19741d1b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - djfit
+id: djfit_branding
+theme: djfit
+region: header
+weight: -100
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: ''
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

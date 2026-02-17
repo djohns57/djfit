@@ -1,5 +1,5 @@
 {% set hero_height = height|default('full') %}
-{% set hero_flex_position = flex_position|default('bottom-center') %}
+{% set hero_flex_position = flex_position|default('center-left') %}
 {% set hero_overlay_opacity = overlay_opacity|default('40%') %}
 {% set hero_object_position = object_position|default('center') %}
 {% set hero_overlap_navbar = overlap_navbar|default(false) ? 'yes' : 'no' %}
@@ -23,7 +23,6 @@
         'top-left': 'justify-start',
         'center-left': 'justify-center-safe',
         'bottom-left': 'justify-end',
-        'bottom-center': 'justify-end',
         'hero-center': 'justify-center'
       },
       overlapNavbar: {
@@ -70,7 +69,6 @@
         'top-left': 'lg:max-w-2/3',
         'center-left': 'lg:max-w-2/3',
         'bottom-left': 'lg:max-w-2/3',
-        'bottom-center': ['items-center text-center text-gray-500 lg:mx-auto lg:max-w-2/3'],
         'hero-center': ['items-center text-center lg:mx-auto lg:max-w-2/3']
       },
       overlapNavbar: {
@@ -128,32 +126,6 @@
       }}"
     >
       {% block hero_content %}
-        {% if heading_text is not empty %}
-          {{
-            include(
-              'djfit:heading',
-              {
-                heading_text: heading_text,
-                level: 1,
-                url: 'No URL',
-                text_color: 'default',
-                text_size: 'heading-responsive-7xl',
-                align: hero_flex_position in ['bottom-center', 'hero-center'] ? 'center' : 'left'
-              },
-              with_context: false
-            )
-          }}
-        {% endif %}
-        {% if subheading_text is not empty %}
-          <p class="text-lg md:text-xl xl:text-2xl">
-            {{ subheading_text }}
-          </p>
-        {% endif %}
-        {% if body_text is not empty %}
-          <div class="text-base md:text-lg">
-            {{ body_text|raw }}
-          </div>
-        {% endif %}
         {% block hero_slot %}
 
         {% endblock %}

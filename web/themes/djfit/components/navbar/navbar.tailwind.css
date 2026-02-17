@@ -1,5 +1,12 @@
 @layer components;
 
+/* Figma design: white header background, header tokens */
+.navbar {
+  background-color: var(--hg-color-header-bg);
+  border-bottom: var(--hg-header-border-width) solid var(--hg-color-header-border);
+  box-shadow: var(--hg-header-shadow);
+}
+
 /* Modal state - prevents body scroll when mobile menu is open */
 :root.navbar-modal-open {
   &,
@@ -28,22 +35,57 @@
 
 /* External region styling */
 .region-header {
+  @apply overflow-visible;
   .navbar--modal-top {
-    @apply pr-4 pl-[2px];
+    @apply px-4;
   }
 }
+.navbar {
+  @apply overflow-visible;
+}
 
-/* Branding component styling */
-.navbar--logo,
-.navbar--modal-logo {
-  .branding {
-    @apply h-[60px];
-    svg,
-    img[src$=".svg"] {
-      @apply h-auto! max-h-full;
-    }
-    img {
-      @apply h-[60px] w-auto max-w-none object-contain;
-    }
-  }
+/* --- Branding: logo image + site name --- */
+
+.branding-link {
+  display: flex;
+  align-items: center;
+  gap: var(--hg-space-3);
+  overflow: visible;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.branding-link:hover {
+  opacity: 0.85;
+}
+
+/* Logo container: overflow visible, never clips */
+.branding-logo {
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  flex-shrink: 0;
+  width: var(--hg-header-logo-size);
+  height: var(--hg-header-logo-size);
+}
+
+/* Logo image: block display, object-fit contain, explicit size */
+.branding-logo__img {
+  display: block;
+  width: var(--hg-header-logo-size);
+  height: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+/* Site name: Inter Bold 20px, accent color */
+.branding-site-name {
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-font-size-header-brand);
+  font-weight: var(--hg-font-weight-bold);
+  line-height: var(--hg-line-height-header-brand);
+  letter-spacing: var(--hg-letter-spacing-header-brand);
+  color: var(--hg-color-header-accent);
+  white-space: nowrap;
 }

@@ -1,11 +1,14 @@
 @import "tailwindcss";
+@import "./schemes.css";
 
 @import "../components/hero-blog/hero-blog.tailwind.css";
 @import "../components/navbar/navbar.tailwind.css";
 @import "../components/anchor/anchor.tailwind.css";
-@import "../components/membership-pricing-table/membership-pricing-table.tailwind.css";
-@import "../components/paywall-notice/paywall-notice.tailwind.css";
-@import "../components/account-membership-status/account-membership-status.tailwind.css";
+@import "../components/logo-jps-enterprise/logo-jps-enterprise.tailwind.css";
+@import "../components/logo-djfit/logo-djfit.tailwind.css";
+@import "../components/brand-logo/brand-logo.tailwind.css";
+@import "../components/site-header/site-header.tailwind.css";
+@import "../components/home-hero/home-hero.tailwind.css";
 
 @theme inline {
   --color-background: var(--background);

@@ -14,9 +14,58 @@ dependencies:
     - text
   theme:
     - djfit
-active_version: f7bc104b73498abd
+active_version: f909d1e9987c86de
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        title:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Watch our latest workout'
+          expression: ℹ︎string␟value
+        description:
+          required: false
+          field_type: text_long
+          field_storage_settings: {  }
+          field_instance_settings:
+            allowed_formats:
+              - canvas_html_block
+          field_widget: text_textarea
+          default_value:
+            -
+              value: 'A quick overview of our training programs and philosophy.'
+              format: canvas_html_block
+          expression: ℹ︎text_long␟processed
+        video_url:
+          required: true
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+          expression: ℹ︎string␟value
+        background:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: noColor
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  f7bc104b73498abd:
     settings:
       prop_field_definitions:
         title:

@@ -51,3 +51,25 @@ Instead of manual module configuration, use the **Drupal Recipe** system to auto
   Remember that recipes are applied once; you are responsible for maintaining the resulting configuration thereafter.
 
 ---
+
+## 5. Token Governance (Drupal CMS 2.0 + Figma)
+
+- **Token-First Implementation** 
+ Use Drupal CMS 2.0 theme tokens (`--hg-*`) for spacing, typography, color, radius, and sizing before adding component-specific literals.
+
+- **Figma Verification Gate** 
+ If a required token is missing from the Figma token source, stop and verify the value with the design source before finalizing implementation or running production builds.
+
+---
+
+## 6. Figma → Drupal Design Token Conversion
+
+When implementing Figma designs:
+
+1. **Extract tokens** via Figma MCP (`get_design_context`, `get_variable_defs`)
+2. **Layer 1**: Add `--hg-*` variables to `src/schemes.css`
+3. **Layer 2**: Bridge into Tailwind via `@theme` in `src/main.css`
+4. **Layer 3**: Use tokens in SDC component CSS; add literals only when tokens don't fit
+5. **Verify**: Confirm missing tokens with design source before production
+6. **Build**: Run `npm run build` and `drush cr` after changes
+

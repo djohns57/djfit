@@ -1,0 +1,46 @@
+---
+description: Convert Figma design tokens into Drupal theme variables, styles, and SDC components
+globs: "**/*.css,**/*.twig,**/schemes.css,**/main.css,**/components/**/*"
+alwaysApply: false
+---
+
+# Figma → Drupal Design Token Conversion
+
+When implementing designs from Figma in a Drupal CMS 2.0 (Mercury/Byte) theme:
+
+## 1. Extract Tokens from Figma
+
+- Use **Figma MCP** (`mcp_Figma_get_variable_defs`, `mcp_Figma_get_design_context`) to fetch design tokens and component specs
+- Map Figma variables to semantic names (e.g. `icon/default/secondary` → `--hg-color-icon-secondary`)
+
+## 2. Token Implementation (3-Layer Rule)
+
+**Layer 1 – Global variables** (`src/schemes.css`):
+- Add `--hg-*` prefixed CSS custom properties
+- Categories: color, spacing, typography, radius, shadow, sizing
+- Example: `--hg-color-brand: #005a7d;` `--hg-space-4: 1rem;`
+
+**Layer 2 – Tailwind theme** (`src/main.css`):
+- Bridge custom variables into Tailwind via `@theme` or `@theme inline`
+- Example: `--color-primary: var(--hg-color-brand);`
+
+**Layer 3 – Component CSS** (SDC `*.css` or `*.tailwind.css`):
+- Use tokens first; add component-specific values only when tokens don’t fit
+
+## 3. Figma Verification Gate
+
+- If a required token is missing in Figma, verify the value with the design source before finalizing
+- Do not ship production builds with unverified token values
+
+## 4. SDC Component Creation
+
+- Use `drush generate` or `drush cr` so components appear in Drupal Canvas
+- Name components with `djfit:` prefix (e.g. `djfit:button`, `djfit:hero`)
+- Define props and slots in `*.component.yml`; avoid duplicate prop/slot names
+
+## 5. Cursor + Figma Workflow
+
+1. Get design context: `mcp_Figma_get_design_context` (nodeId, fileKey)
+2. Get variables: `mcp_Figma_get_variable_defs` for token values
+3. Implement in theme: schemes.css → main.css → component CSS
+4. Run `npm run build` and `drush cr` after changes

@@ -1,0 +1,195 @@
+/**
+ * @file
+ * Layer 1 design tokens for Drupal CMS 2.0 (Starshot) components.
+ *
+ * All component styles must consume these --hg-* tokens through var()
+ * references instead of hardcoded design literals.
+ */
+
+:root {
+  /* Color tokens */
+  --hg-color-surface: oklch(1 0 0);
+  --hg-color-surface-elevated: oklch(0.967 0.003 264.542);
+  --hg-color-text: oklch(0.13 0.043 265.132);
+  --hg-color-text-muted: oklch(0.373 0.031 259.733);
+  --hg-color-primary: oklch(0.547 0.246 262.866);
+  --hg-color-primary-contrast: oklch(1 0 0);
+  --hg-color-secondary: oklch(0.9219 0 0);
+  --hg-color-secondary-contrast: oklch(0.28 0.041 260.329);
+  --hg-color-border: oklch(0.872 0.009 258.338);
+  --hg-color-focus: oklch(0.932 0.032 255.585);
+  --hg-color-header-bg: #ffffff;
+  --hg-color-header-text: #2d2d2d;
+  --hg-color-header-accent: #005a7d;
+  --hg-color-header-accent-contrast: #ffffff;
+  --hg-color-header-border: rgb(0 0 0 / 0.1);
+  --hg-color-header-hover-mix-base: #ffffff;
+  --hg-color-hero-overlay: oklch(0.13 0.043 265.132);
+  --hg-color-hero-text: oklch(1 0 0);
+  --hg-color-hero-gradient-start: #005a7d;
+  --hg-color-hero-gradient-end: #4d5a64;
+  --hg-color-hero-button-primary: #7ebf72;
+  --hg-color-hero-button-primary-text: #ffffff;
+  --hg-color-hero-button-secondary: #ffffff;
+  --hg-color-hero-button-secondary-text: #005a7d;
+  --hg-color-hero-button-primary-hover-mix-base: #000000;
+  --hg-color-hero-text-muted-mix-base: transparent;
+  --hg-color-hero-button-secondary-hover-mix-ratio: 88%;
+  --hg-color-hero-button-primary-hover-mix-ratio: 88%;
+  --hg-color-hero-text-muted-mix-ratio: 86%;
+
+  /* Typography tokens */
+  --hg-font-family-sans: "Outfit", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  --hg-font-family-header: "Inter", "Outfit", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  --hg-font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --hg-font-family-mono: "Fira Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+  --hg-font-size-hero-title: clamp(2.5rem, 8vw, 4.5rem);
+  --hg-font-size-hero-body: clamp(1rem, 2.5vw, 1.25rem);
+  --hg-font-size-hero-heading-display: clamp(2.2rem, 5vw, 4rem);
+  --hg-font-size-hero-body-display: clamp(1.15rem, 2.1vw, 2rem);
+  --hg-font-weight-regular: 400;
+  --hg-font-weight-medium: 500;
+  --hg-font-weight-semibold: 600;
+  --hg-font-weight-bold: 700;
+  --hg-font-weight-hero-heading: 700;
+  --hg-font-weight-hero-button: 600;
+  --hg-line-height-hero-heading: 1.1;
+  --hg-line-height-hero-body: 1.5;
+  --hg-letter-spacing-hero-heading: -0.01em;
+  --hg-font-size-header-action: 0.875rem;
+  --hg-line-height-header-action: 1.25rem;
+  --hg-letter-spacing-header-action: -0.0094rem;
+  --hg-font-size-header-brand: 1.25rem;
+  --hg-line-height-header-brand: 1.75rem;
+  --hg-letter-spacing-header-brand: -0.0281rem;
+  --hg-font-size-header-nav: 1rem;
+  --hg-line-height-header-nav: 1.5rem;
+  --hg-letter-spacing-header-nav: -0.0195rem;
+
+  /* Spacing tokens */
+  --hg-space-1: 0.25rem;
+  --hg-space-2: 0.5rem;
+  --hg-space-3: 0.75rem;
+  --hg-space-4: 1rem;
+  --hg-space-6: 1.5rem;
+  --hg-space-8: 2rem;
+  --hg-space-24: 6rem;
+  --hg-space-12: 3rem;
+  --hg-space-16: 4rem;
+
+  /* Radius + header layout tokens */
+  --hg-radius-sm: 0.375rem;
+  --hg-radius-md: 0.5rem;
+  --hg-radius-lg: 0.75rem;
+  --hg-header-height: 64px;
+  --hg-header-content-width: 1216px;
+  --hg-header-inline-padding-desktop: 224px;
+  --hg-header-inline-padding-compact: 0.125rem;
+  --hg-header-nav-padding-inline-start: 0;
+  --hg-header-branding-min-width: 6.625rem;
+  --hg-header-action-height: 2rem;
+  --hg-header-action-padding-inline: 0.75rem;
+  --hg-header-link-min-height: 2.5rem;
+  --hg-header-link-padding-block: 0.5rem;
+  --hg-header-link-padding-inline: 1rem;
+  --hg-header-touch-target-min: 2.75rem;
+  --hg-header-logo-size: 40px;
+  --hg-header-logo-size-mobile: 40px;
+  --hg-header-action-icon-size: 1rem;
+  --hg-header-logo-padding: 0.125rem;
+  --hg-header-focus-outline-width: 0.125rem;
+  --hg-header-focus-outline-offset: 0.125rem;
+  --hg-header-border-width: 1px;
+  --hg-header-z-index: 500;
+  --hg-header-dropdown-z-index: 20;
+  --hg-header-submenu-min-width: 16rem;
+  --hg-header-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px 0 rgb(0 0 0 / 0.1);
+  --hg-header-dropdown-shadow: 0 10px 30px rgb(0 0 0 / 0.12);
+  --hg-navbar-mobile-overlay-fade-height: var(--hg-space-24);
+  --hg-layout-offset-zero: 0px;
+  --hg-hero-content-max-width: 58rem;
+  --hg-hero-actions-gap: var(--hg-space-4);
+  --hg-hero-actions-margin-top: var(--hg-space-4);
+  --hg-hero-content-gap: var(--hg-space-6);
+  --hg-hero-content-padding-block: var(--hg-space-16);
+  --hg-hero-content-padding-block-lg: clamp(4rem, 10vw, 6.5rem);
+  --hg-hero-button-min-height: 3.5rem;
+  --hg-hero-button-padding-inline: clamp(1.5rem, 2.5vw, 2.75rem);
+  --hg-focus-outline-width: 0.125rem;
+  --hg-focus-outline-offset: 0.125rem;
+  --hg-home-hero-min-height: 40.9375rem;
+  --hg-home-container-max-width: 76rem;
+  --hg-home-section-inline-padding: 14rem;
+  --hg-home-hero-padding-block-start: 8rem;
+  --hg-home-hero-heading-max-width: 31.4375rem;
+  --hg-home-hero-body-max-width: 33.5rem;
+  --hg-home-hero-content-gap: 1.5rem;
+  --hg-home-hero-button-gap: 1rem;
+  --hg-home-hero-image-size: 5.5rem;
+  --hg-home-feature-card-radius: 0.75rem;
+  --hg-home-feature-card-border-width: 0.125rem;
+  --hg-home-feature-icon-size: 3rem;
+  --hg-home-feature-icon-radius: 0.5rem;
+  --hg-home-articles-card-radius: 0.75rem;
+  --hg-home-articles-media-height: 13.4297rem;
+  --hg-home-videos-media-height: 13.5rem;
+  --hg-home-testimonial-card-radius: 0.5rem;
+  --hg-home-input-height: 2rem;
+  --hg-home-input-radius: 0.25rem;
+  --hg-home-button-radius: 0.375rem;
+  --hg-home-hero-gradient-end: #4a4a4a;
+  --hg-home-section-muted-bg: #f5f5f5;
+  --hg-home-media-placeholder-bg: #f3f4f6;
+  --hg-home-subtle-border: rgb(0 0 0 / 0.1);
+  --hg-home-kicker-muted: #717182;
+  --hg-home-tag-blue-bg: rgb(0 90 125 / 0.1);
+  --hg-home-tag-blue-text: #005a7d;
+  --hg-home-tag-teal-bg: rgb(107 159 176 / 0.1);
+  --hg-home-tag-green-bg: rgb(124 184 115 / 0.1);
+  --hg-home-cta-green: #7cb873;
+  --hg-home-heading-xl: 3.75rem;
+  --hg-home-heading-lg: 2.25rem;
+  --hg-home-body-lg: 1.5rem;
+  --hg-home-body-md: 1.125rem;
+  --hg-home-body-sm: 1rem;
+  --hg-home-body-xs: 0.875rem;
+  --hg-home-line-height-xl: 4.6875rem;
+  --hg-home-line-height-lg: 2.5rem;
+  --hg-home-line-height-md: 2.4375rem;
+  --hg-home-line-height-sm: 1.75rem;
+  --hg-home-line-height-xs: 1.5rem;
+  --hg-home-letter-spacing-lg: 0.0231rem;
+  --hg-home-letter-spacing-md: 0.0044rem;
+  --hg-home-letter-spacing-sm: -0.0195rem;
+  --hg-home-letter-spacing-xs: -0.0094rem;
+
+  /* Bridge tokens to existing Mercury-compatible theme variables. */
+  --background: var(--hg-color-surface);
+  --foreground: var(--hg-color-text);
+  --card: var(--hg-color-surface-elevated);
+  --card-foreground: var(--hg-color-text);
+  --primary: var(--hg-color-primary);
+  --primary-foreground: var(--hg-color-primary-contrast);
+  --secondary: var(--hg-color-secondary);
+  --secondary-foreground: var(--hg-color-secondary-contrast);
+  --muted: var(--hg-color-surface-elevated);
+  --muted-foreground: var(--hg-color-text-muted);
+  --accent: var(--hg-color-focus);
+  --accent-foreground: var(--hg-color-text);
+  --border: var(--hg-color-border);
+  --input: var(--hg-color-border);
+  --font-sans: var(--hg-font-family-sans);
+  --font-serif: var(--hg-font-family-serif);
+  --font-mono: var(--hg-font-family-mono);
+  --radius: var(--hg-radius-md);
+  --spacing: var(--hg-space-1);
+}
+
+.dark {
+  --hg-color-surface: oklch(0.13 0.043 265.132);
+  --hg-color-surface-elevated: oklch(0.208 0.042 266.359);
+  --hg-color-text: oklch(1 0 89.876);
+  --hg-color-text-muted: oklch(0.967 0.003 264.542);
+  --hg-color-border: oklch(0.373 0.031 259.733);
+  --hg-color-primary-contrast: oklch(1 0 89.876);
+}

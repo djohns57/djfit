@@ -1,0 +1,38 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Logo DJ Fit
+group: Base
+status: stable
+props:
+  type: object
+  properties:
+    size:
+      type: string
+      title: Size
+      enum:
+        - small
+        - medium
+        - large
+      meta:enum:
+        small: Small
+        medium: Medium
+        large: Large
+      default: medium
+      examples:
+        - medium
+    url:
+      type: string
+      title: Link
+      default: "/"
+      examples:
+        - "/"
+    glow:
+      type: boolean
+      title: Glow effect
+      default: true
+      examples:
+        - true
+    standalone:
+      type: boolean
+      title: Render as link
+      default: true
+      description: When false, renders without link wrapper (for use inside brand-logo)

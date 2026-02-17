@@ -1,0 +1,10 @@
+@layer components;
+
+.brand-logo {
+  text-decoration: none;
+}
+
+.brand-logo:focus-visible {
+  outline: 2px solid var(--hg-color-header-accent);
+  outline-offset: 2px;
+}

@@ -81,10 +81,12 @@ function drupal_cms_installer_theme_form_installer_site_template_form_alter(arra
   $form['add_ons'] += [
     '#prefix' => '<div class="cms-installer__form-group">',
     '#suffix' => '</div>',
-    '#default_value' => 'drupal_cms_starter',
+    '#default_value' => 'djfit_starter',
   ];
-  // Put the drupal_cms_starter template before the others.
-  $form['add_ons']['drupal_cms_starter']['#weight'] = -100;
+  // Put the djfit_starter template before the others.
+  if (isset($form['add_ons']['djfit_starter'])) {
+    $form['add_ons']['djfit_starter']['#weight'] = -100;
+  }
   $form['add_ons']['#required'] = TRUE;
 
   $form['actions']['submit']['#attributes']['class'] = ['button--next'];

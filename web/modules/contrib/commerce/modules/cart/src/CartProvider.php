@@ -201,7 +201,6 @@ class CartProvider implements CartProviderInterface {
       $cart_ids = $this->cartSession->getCartIds();
     }
 
-    $this->cartData[$uid] = [];
     if (!$cart_ids) {
       return [];
     }
@@ -210,6 +209,7 @@ class CartProvider implements CartProviderInterface {
     // it's assumed that these entities would be loaded at one point anyway.
     /** @var \Drupal\commerce_order\Entity\OrderInterface[] $carts */
     $carts = $order_storage->loadMultiple($cart_ids);
+    $this->cartData[$uid] = [];
     $non_eligible_cart_ids = [];
     foreach ($carts as $cart) {
       if ($cart->isLocked()) {

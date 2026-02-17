@@ -17,8 +17,8 @@
   })
 %}
 
-<div class="navbar relative z-[500] container mx-auto flex justify-between py-2 pr-4 pl-[2px] md:py-4">
-  <div class="navbar--logo self-center [&>div]:flex [&>div]:flex-col [&>div]:justify-center">
+<div class="navbar relative z-[500] container mx-auto flex justify-between p-2 px-4 md:py-4">
+  <div class="navbar--logo flex shrink-0 items-center self-center">
     {% block logo %}
       {{ include('@djfit/templates/block/block--system-branding-block.html.twig') }}
     {% endblock %}
@@ -28,10 +28,10 @@
     class="navbar--menu fixed inset-0 top-[calc(var(--drupal-displace-offset-top,0px)+var(--gin-toolbar-height,0px)-var(--navbar-scroll-top,0px))] grid shrink-1 grow-1 grid-cols-[1fr] grid-rows-[auto_1fr_auto] flex-col items-stretch justify-start bg-background pb-8 md:static md:flex md:h-auto md:flex-row md:items-center md:bg-transparent md:pb-0"
   >
     <div
-      class="navbar--modal-top relative z-[500] col-span-1 col-start-1 row-span-1 row-start-1 container mx-auto flex w-full justify-between py-2 pr-4 pl-[2px] md:hidden"
+      class="navbar--modal-top relative z-[500] col-span-1 col-start-1 row-span-1 row-start-1 container mx-auto flex w-full justify-between p-2 md:hidden"
     >
       <div
-        class="navbar--modal-logo flex min-h-[44px] flex-1 flex-col items-start justify-center md:hidden [&>div]:flex [&>div]:flex-col [&>div]:justify-center"
+        class="navbar--modal-logo flex min-h-[44px] flex-1 shrink-0 items-center md:hidden"
       >
         {{ block('logo') }}
       </div>
@@ -70,10 +70,11 @@
           include(
             'djfit:button',
             {
-              variant: 'primary',
-              label: 'Button'|t,
-              icon: 'arrow-right',
-              href: 'https://example.com',
+              variant: 'secondary-inverted',
+              label: 'Sign In'|t,
+              icon: 'user',
+              icon_first: true,
+              href: '/user/login',
               size: 'medium'
             }
           )
@@ -83,10 +84,9 @@
           include(
             'djfit:button',
             {
-              variant: 'secondary',
-              label: 'Another'|t,
-              icon: 'arrow-right',
-              href: 'https://example.com',
+              variant: 'primary',
+              label: 'Get Started'|t,
+              href: '/user/register',
               size: 'medium'
             }
           )

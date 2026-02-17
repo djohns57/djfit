@@ -1,0 +1,11 @@
+uuid: 72621abe-1ff7-4812-ad00-3a050f725cc9
+langcode: en
+status: true
+dependencies: {  }
+name: 'Premium Article'
+type: premium_article
+description: 'Member-only article with teaser fallback.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

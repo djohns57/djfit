@@ -1,6 +1,6 @@
 logo:
-  provider: default
-  path: ''
+  provider: custom
+  path: 'public://jps_logo3.png'
   max:
     filesize: 1048576
     height: 40

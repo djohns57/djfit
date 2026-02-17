@@ -1,0 +1,62 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Site Header
+group: Layout
+status: experimental
+props:
+  type: object
+  properties:
+    logo_url:
+      type: string
+      title: Logo URL
+      description: 'URL to the site logo image (e.g. /themes/djfit/components/site-header/assets/logo-jps-enterprise.png).'
+      examples:
+        - '/themes/djfit/components/site-header/assets/logo-jps-enterprise.png'
+    logo_alt:
+      type: string
+      title: Logo alt text
+      description: 'Accessible alt text for the logo image.'
+      default: 'JPS Enterprise'
+      examples:
+        - 'JPS Enterprise'
+    site_name:
+      type: string
+      title: Site name
+      description: 'Brand text displayed next to the logo.'
+      default: 'DJ Fit'
+      examples:
+        - 'DJ Fit'
+    home_url:
+      type: string
+      title: Home URL
+      description: 'URL the logo links to.'
+      default: '/'
+      examples:
+        - '/'
+    nav_links:
+      type: array
+      title: Navigation links
+      items:
+        type: object
+        properties:
+          label:
+            type: string
+            title: Link label
+          url:
+            type: string
+            title: Link URL
+          active:
+            type: boolean
+            title: Active state
+            default: false
+    signin_url:
+      type: string
+      title: Sign In URL
+      default: '/user/login'
+      examples:
+        - '/user/login'
+    signup_url:
+      type: string
+      title: Get Started URL
+      default: '/user/register'
+      examples:
+        - '/user/register'

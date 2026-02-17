@@ -11,6 +11,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
 use Drupal\Core\Extension\ThemeExtensionList;
 use Drupal\Core\Extension\ThemeSettingsProvider;
+use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Hook\Attribute\Hook;
 use Drupal\djfit\RenderCallbacks;
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -19,7 +20,7 @@ use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
- * Contains hook implementations for Djfit.
+ * Contains hook implementations for DJ Fit.
  */
 final class ThemeHooks {
 
@@ -29,6 +30,7 @@ final class ThemeHooks {
   private static ?string $appRoot = NULL;
 
   public function __construct(
+    private readonly ConfigFactoryInterface $configFactory,
     private readonly ThemeSettingsProvider $themeSettings,
     private readonly RequestStack $requestStack,
     private readonly ThemeExtensionList $themeList,
@@ -101,6 +103,22 @@ final class ThemeHooks {
     // @todo revisit in https://drupal.org/node/3114318
     if (isset($data['preview']['#access']) && $data['preview']['#access'] === FALSE) {
       unset($data['preview']);
+    }
+  }
+
+  /**
+   * Implements template_preprocess_block() for branding block.
+   */
+  #[Hook('preprocess_block')]
+  public function preprocessBlock(array &$variables): void {
+    $plugin_id = $variables['base_plugin_id'] ?? ($variables['plugin_id'] ?? '');
+    if ($plugin_id !== 'system_branding_block') {
+      return;
+    }
+    // Always provide site_name for JPS ENTERPRISE + DJ Fit branding,
+    // even when use_site_name is false in block config.
+    if (empty($variables['site_name'])) {
+      $variables['site_name'] = $this->configFactory->get('system.site')->get('name') ?: 'DJ Fit';
     }
   }
 

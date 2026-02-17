@@ -1,0 +1,22 @@
+@layer components;
+
+.logo-djfit {
+  @apply inline-flex shrink-0 items-center overflow-visible;
+  color: var(--hg-color-header-accent);
+  font-family: var(--hg-font-family-header);
+  letter-spacing: -0.02em;
+  letter-spacing: var(--hg-letter-spacing-header-brand, -0.0281rem);
+  transition: opacity 0.2s ease;
+}
+
+.logo-djfit:hover {
+  opacity: 0.9;
+}
+
+/* Subtle glow effect (Figma design) */
+.logo-djfit--glow .logo-djfit__text {
+  text-shadow:
+    0 0 0.5px var(--hg-color-header-accent),
+    0 1px 2px rgb(0 90 125 / 0.15),
+    0 2px 4px rgb(0 90 125 / 0.08);
+}

@@ -72,3 +72,4 @@ function djfit_commerce_example_entity_view(array &$build, EntityInterface $enti
   }
   $build['premium_teaser_gate'] = $membership_manager->buildPaywallBody($entity);
 }
+

@@ -9,13 +9,6 @@ props:
       title: Display links horizontally
       examples:
         - true
-    site_name:
-      type: string
-      title: Site name
-      description: Used in the copyright notice. Defaults to "DJFit".
-      default: "DJFit"
-      examples:
-        - "DJFit"
 slots:
   footer_first:
     title: Branding & Social

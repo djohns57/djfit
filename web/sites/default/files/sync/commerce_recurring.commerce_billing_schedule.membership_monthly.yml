@@ -1,0 +1,22 @@
+uuid: 8d18c0b0-9c75-4ecc-936a-87e33e4a8710
+langcode: en
+status: true
+dependencies: {  }
+id: membership_monthly
+label: 'Membership Monthly'
+displayLabel: 'Membership Monthly'
+billingType: prepaid
+combineSubscriptions: false
+retrySchedule:
+  - 1
+  - 3
+  - 5
+unpaidSubscriptionState: canceled
+plugin: rolling
+configuration:
+  trial_interval: {  }
+  interval:
+    number: 1
+    unit: month
+prorater: proportional
+proraterConfiguration: {  }

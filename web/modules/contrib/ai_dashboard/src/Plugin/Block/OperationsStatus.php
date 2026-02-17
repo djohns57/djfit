@@ -4,6 +4,7 @@ namespace Drupal\ai_dashboard\Plugin\Block;
 
 use Drupal\ai\AiProviderPluginManager;
 use Drupal\ai\Enum\AiModelCapability;
+use Drupal\ai\Exception\AiSetupFailureException;
 use Drupal\ai_dashboard\AiSetupStatusInterface;
 use Drupal\Component\Plugin\Exception\PluginException;
 use Drupal\Core\Block\Attribute\Block;
@@ -277,6 +278,7 @@ class OperationsStatus extends BlockBase implements ContainerFactoryPluginInterf
    */
   protected function checkOperationTypeStatus($type, $provider_name) {
     try {
+      /** @var \Drupal\ai\AiProviderInterface $provider */
       $provider = $this->aiProviderManager->createInstance($provider_name);
       if (in_array($type, $provider->getSupportedOperationTypes())) {
         return TRUE;
@@ -294,8 +296,11 @@ class OperationsStatus extends BlockBase implements ContainerFactoryPluginInterf
         return TRUE;
       }
     }
-    catch (PluginException $exception) {
+    catch (PluginException | AiSetupFailureException $exception) {
       $this->logger->warning($exception->getMessage());
+    }
+    catch (\Error $exception) {
+      $this->logger->error($exception->getMessage());
     }
     return FALSE;
   }

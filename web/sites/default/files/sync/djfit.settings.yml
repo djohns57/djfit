@@ -8,5 +8,6 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  use_default: true
+  path: 'public://jps_logo3_1.png'
+  use_default: false
 scheme: light

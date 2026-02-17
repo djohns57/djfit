@@ -2236,18 +2236,18 @@
         },
         {
             "name": "drupal/ai_agents",
-            "version": "1.2.1",
-            "version_normalized": "1.2.1.0",
+            "version": "1.2.2",
+            "version_normalized": "1.2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai_agents.git",
-                "reference": "1.2.1"
+                "reference": "1.2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ai_agents-1.2.1.zip",
-                "reference": "1.2.1",
-                "shasum": "057ab414e5097b3500ff1b2c95c46ee269474dd6"
+                "url": "https://ftp.drupal.org/files/projects/ai_agents-1.2.2.zip",
+                "reference": "1.2.2",
+                "shasum": "e43f392ffda950aab313ebe662f775ac454664bb"
             },
             "require": {
                 "drupal/ai": "^1.2.0",
@@ -2265,8 +2265,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.2.1",
-                    "datestamp": "1763555955",
+                    "version": "1.2.2",
+                    "datestamp": "1771227740",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2316,18 +2316,18 @@
         },
         {
             "name": "drupal/ai_dashboard",
-            "version": "1.0.1",
-            "version_normalized": "1.0.1.0",
+            "version": "1.0.2",
+            "version_normalized": "1.0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ai_dashboard.git",
-                "reference": "1.0.1"
+                "reference": "1.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ai_dashboard-1.0.1.zip",
-                "reference": "1.0.1",
-                "shasum": "506fe0b6296c2b6924581427e54ce27f308df668"
+                "url": "https://ftp.drupal.org/files/projects/ai_dashboard-1.0.2.zip",
+                "reference": "1.0.2",
+                "shasum": "e936267752cc839d3050f88f2a334ef1813ee32b"
             },
             "require": {
                 "drupal/ai": "^1.2",
@@ -2338,8 +2338,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.1",
-                    "datestamp": "1768481252",
+                    "version": "1.0.2",
+                    "datestamp": "1771237845",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3534,18 +3534,18 @@
         },
         {
             "name": "drupal/commerce",
-            "version": "3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "3.3.1",
+            "version_normalized": "3.3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/commerce.git",
-                "reference": "3.3.0"
+                "reference": "3.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/commerce-3.3.0.zip",
-                "reference": "3.3.0",
-                "shasum": "c313668f8e37476a2b264b55f6450517db22f07c"
+                "url": "https://ftp.drupal.org/files/projects/commerce-3.3.1.zip",
+                "reference": "3.3.1",
+                "shasum": "d3023dcdbd841ba73b5a6e4fe07f141ee7ff0019"
             },
             "require": {
                 "commerceguys/intl": "^2.0.6",
@@ -3581,16 +3581,14 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0",
-                    "datestamp": "1770913392",
+                    "version": "3.3.1",
+                    "datestamp": "1771353983",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
-                "patches_applied": {
-                    "Canvas preview defaults for commerce status badge": "patches/drupal-commerce-canvas-preview-defaults.patch"
-                }
+                "patches_applied": []
             },
             "installation-source": "dist",
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3620,8 +3618,8 @@
         },
         {
             "name": "drupal/commerce_cart",
-            "version": "3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "3.3.1",
+            "version_normalized": "3.3.1.0",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_order": "*",
@@ -3630,8 +3628,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0",
-                    "datestamp": "1770913392",
+                    "version": "3.3.1",
+                    "datestamp": "1771353983",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3665,8 +3663,8 @@
         },
         {
             "name": "drupal/commerce_checkout",
-            "version": "3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "3.3.1",
+            "version_normalized": "3.3.1.0",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_cart": "*",
@@ -3676,8 +3674,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0",
-                    "datestamp": "1770913392",
+                    "version": "3.3.1",
+                    "datestamp": "1771353983",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3791,8 +3789,8 @@
         },
         {
             "name": "drupal/commerce_number_pattern",
-            "version": "3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "3.3.1",
+            "version_normalized": "3.3.1.0",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_store": "*",
@@ -3801,8 +3799,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0",
-                    "datestamp": "1770913392",
+                    "version": "3.3.1",
+                    "datestamp": "1771353983",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3836,8 +3834,8 @@
         },
         {
             "name": "drupal/commerce_order",
-            "version": "3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "3.3.1",
+            "version_normalized": "3.3.1.0",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_number_pattern": "*",
@@ -3851,8 +3849,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0",
-                    "datestamp": "1770913392",
+                    "version": "3.3.1",
+                    "datestamp": "1771353983",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3886,8 +3884,8 @@
         },
         {
             "name": "drupal/commerce_payment",
-            "version": "3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "3.3.1",
+            "version_normalized": "3.3.1.0",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_order": "*",
@@ -3897,8 +3895,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0",
-                    "datestamp": "1770913392",
+                    "version": "3.3.1",
+                    "datestamp": "1771353983",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3932,8 +3930,8 @@
         },
         {
             "name": "drupal/commerce_price",
-            "version": "3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "3.3.1",
+            "version_normalized": "3.3.1.0",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/core": "^10.3 || ^11"
@@ -3941,8 +3939,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0",
-                    "datestamp": "1770913392",
+                    "version": "3.3.1",
+                    "datestamp": "1771353983",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3976,8 +3974,8 @@
         },
         {
             "name": "drupal/commerce_product",
-            "version": "3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "3.3.1",
+            "version_normalized": "3.3.1.0",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_price": "*",
@@ -3987,8 +3985,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0",
-                    "datestamp": "1770913392",
+                    "version": "3.3.1",
+                    "datestamp": "1771353983",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4120,8 +4118,8 @@
         },
         {
             "name": "drupal/commerce_store",
-            "version": "3.3.0",
-            "version_normalized": "3.3.0.0",
+            "version": "3.3.1",
+            "version_normalized": "3.3.1.0",
             "require": {
                 "drupal/commerce": "*",
                 "drupal/commerce_price": "*",
@@ -4130,8 +4128,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.3.0",
-                    "datestamp": "1770913392",
+                    "version": "3.3.1",
+                    "datestamp": "1771353983",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5061,6 +5059,38 @@
                 "issues": "https://www.drupal.org/project/issues/dashboard"
             },
             "install-path": "../../web/modules/contrib/dashboard"
+        },
+        {
+            "name": "drupal/djfit_starter",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "dist": {
+                "type": "path",
+                "url": "recipes/djfit_starter",
+                "reference": "696077f80d7b05b4cb22ada3ca75376e2634ddd2"
+            },
+            "require": {
+                "drupal/drupal_cms_admin_ui": "^2",
+                "drupal/drupal_cms_anti_spam": "^2",
+                "drupal/drupal_cms_authentication": "^2",
+                "drupal/drupal_cms_content_type_base": "^2",
+                "drupal/drupal_cms_helper": "^2",
+                "drupal/drupal_cms_media": "^2",
+                "drupal/drupal_cms_privacy_basic": "^2",
+                "drupal/drupal_cms_search": "^2",
+                "drupal/drupal_cms_seo_basic": "^2",
+                "drupal/easy_email_express": "^1.0.2"
+            },
+            "type": "drupal-recipe",
+            "installation-source": "dist",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "A basic site template with DJ Fit theme. Bring your own design, and build what you need.",
+            "transport-options": {
+                "relative": true
+            },
+            "install-path": "../../recipes/djfit_starter"
         },
         {
             "name": "drupal/drupal_cms_accessibility_tools",
@@ -6484,6 +6514,63 @@
             "install-path": "../../web/modules/contrib/field_group"
         },
         {
+            "name": "drupal/flexible_permissions",
+            "version": "2.0.1",
+            "version_normalized": "2.0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/flexible_permissions.git",
+                "reference": "2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/flexible_permissions-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "382ad20c674a6c07974d411e767310166851a0a8"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "require-dev": {
+                "jangregor/phpstan-prophecy": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.1",
+                    "datestamp": "1726835397",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Kristiaan Van den Eynde",
+                    "homepage": "https://www.drupal.org/u/kristiaanvandeneynde",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mathias Wächter",
+                    "homepage": "https://www.drupal.org/u/mef",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "This module allows you to gather, calculate and cache permissions from a myriad of sources",
+            "homepage": "http://drupal.org/project/flexible_permissions",
+            "support": {
+                "source": "https://git.drupalcode.org/project/flexible_permissions",
+                "issues": "https://drupal.org/project/issues/flexible_permissions"
+            },
+            "install-path": "../../web/modules/contrib/flexible_permissions"
+        },
+        {
             "name": "drupal/focal_point",
             "version": "2.1.2",
             "version_normalized": "2.1.2.0",
@@ -6909,6 +6996,65 @@
                 "source": "https://git.drupalcode.org/project/google_tag"
             },
             "install-path": "../../web/modules/contrib/google_tag"
+        },
+        {
+            "name": "drupal/group",
+            "version": "3.3.5",
+            "version_normalized": "3.3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/group.git",
+                "reference": "3.3.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/group-3.3.5.zip",
+                "reference": "3.3.5",
+                "shasum": "5e8df19cf48ef171bbe042e4d4b2f8107a339530"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/entity": "^1.2",
+                "drupal/flexible_permissions": "^2.0"
+            },
+            "require-dev": {
+                "drupal/variationcache": "^1.5",
+                "jangregor/phpstan-prophecy": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.3.5",
+                    "datestamp": "1746519542",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Kristiaan Van den Eynde",
+                    "homepage": "https://www.drupal.org/u/kristiaanvandeneynde",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "kristiaanvandeneynde",
+                    "homepage": "https://www.drupal.org/user/1345130"
+                }
+            ],
+            "description": "This module allows you to group users, content and other entities",
+            "homepage": "http://drupal.org/project/group",
+            "support": {
+                "source": "https://git.drupalcode.org/project/group",
+                "issues": "https://drupal.org/project/issues/group"
+            },
+            "install-path": "../../web/modules/contrib/group"
         },
         {
             "name": "drupal/honeypot",
@@ -10796,17 +10942,17 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "6.6.4",
-            "version_normalized": "6.6.4.0",
+            "version": "v6.7.2",
+            "version_normalized": "6.7.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsonrainbow/json-schema.git",
-                "reference": "2eeb75d21cf73211335888e7f5e6fd7440723ec7"
+                "reference": "6fea66c7204683af437864e7c4e7abf383d14bc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/2eeb75d21cf73211335888e7f5e6fd7440723ec7",
-                "reference": "2eeb75d21cf73211335888e7f5e6fd7440723ec7",
+                "url": "https://api.github.com/repos/jsonrainbow/json-schema/zipball/6fea66c7204683af437864e7c4e7abf383d14bc0",
+                "reference": "6fea66c7204683af437864e7c4e7abf383d14bc0",
                 "shasum": ""
             },
             "require": {
@@ -10822,7 +10968,7 @@
                 "phpstan/phpstan": "^1.12",
                 "phpunit/phpunit": "^8.5"
             },
-            "time": "2025-12-19T15:01:32+00:00",
+            "time": "2026-02-15T15:06:22+00:00",
             "bin": [
                 "bin/validate-json"
             ],
@@ -10868,7 +11014,7 @@
             ],
             "support": {
                 "issues": "https://github.com/jsonrainbow/json-schema/issues",
-                "source": "https://github.com/jsonrainbow/json-schema/tree/6.6.4"
+                "source": "https://github.com/jsonrainbow/json-schema/tree/v6.7.2"
             },
             "install-path": "../justinrainbow/json-schema"
         },
@@ -11630,17 +11776,17 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.1.2",
-            "version_normalized": "4.1.2.0",
+            "version": "v4.1.3",
+            "version_normalized": "4.1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "f76b5dc3d6c6d3043c8d937df2698515b99cbaf5"
+                "reference": "bb3ea637e3d131d72acc033cfc2746ee893349fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/f76b5dc3d6c6d3043c8d937df2698515b99cbaf5",
-                "reference": "f76b5dc3d6c6d3043c8d937df2698515b99cbaf5",
+                "url": "https://api.github.com/repos/nette/utils/zipball/bb3ea637e3d131d72acc033cfc2746ee893349fe",
+                "reference": "bb3ea637e3d131d72acc033cfc2746ee893349fe",
                 "shasum": ""
             },
             "require": {
@@ -11652,8 +11798,10 @@
             },
             "require-dev": {
                 "jetbrains/phpstorm-attributes": "^1.2",
+                "nette/phpstan-rules": "^1.0",
                 "nette/tester": "^2.5",
-                "phpstan/phpstan": "^2.0@stable",
+                "phpstan/extension-installer": "^1.4@stable",
+                "phpstan/phpstan": "^2.1@stable",
                 "tracy/tracy": "^2.9"
             },
             "suggest": {
@@ -11664,7 +11812,7 @@
                 "ext-mbstring": "to use Strings::lower() etc...",
                 "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()"
             },
-            "time": "2026-02-03T17:21:09+00:00",
+            "time": "2026-02-13T03:05:33+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -11716,7 +11864,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.1.2"
+                "source": "https://github.com/nette/utils/tree/v4.1.3"
             },
             "install-path": "../nette/utils"
         },
@@ -13526,23 +13674,23 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v7.4.0",
-            "version_normalized": "7.4.0.0",
+            "version": "v8.0.0",
+            "version_normalized": "8.0.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "ab862f478513e7ca2fe9ec117a6f01a8da6e1135"
+                "reference": "6225bd458c53ecdee056214cb4a2ffaf58bd592b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/ab862f478513e7ca2fe9ec117a6f01a8da6e1135",
-                "reference": "ab862f478513e7ca2fe9ec117a6f01a8da6e1135",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/6225bd458c53ecdee056214cb4a2ffaf58bd592b",
+                "reference": "6225bd458c53ecdee056214cb4a2ffaf58bd592b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2"
+                "php": ">=8.4"
             },
-            "time": "2025-10-30T13:39:42+00:00",
+            "time": "2025-10-30T14:17:19+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -13574,7 +13722,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v7.4.0"
+                "source": "https://github.com/symfony/css-selector/tree/v8.0.0"
             },
             "funding": [
                 {

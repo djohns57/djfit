@@ -1,0 +1,53 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Home Hero
+group: Layout
+status: experimental
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      description: 'Main hero heading text.'
+      default: 'Health, Strength & Longevity for Men Over 40'
+      examples:
+        - 'Health, Strength & Longevity for Men Over 40'
+    body:
+      type: string
+      title: Body text
+      description: 'Supporting paragraph below the heading.'
+      default: 'Science-backed fitness, nutrition, and recovery strategies designed specifically for your stage of life.'
+      examples:
+        - 'Science-backed fitness, nutrition, and recovery strategies designed specifically for your stage of life.'
+    primary_button_label:
+      type: string
+      title: Primary button label
+      default: 'Membership Plans'
+      examples:
+        - 'Membership Plans'
+    primary_button_url:
+      type: string
+      title: Primary button URL
+      default: '/membership'
+      examples:
+        - '/membership'
+    secondary_button_label:
+      type: string
+      title: Secondary button label
+      default: 'Learn More'
+      examples:
+        - 'Learn More'
+    secondary_button_url:
+      type: string
+      title: Secondary button URL
+      default: '/about'
+      examples:
+        - '/about'
+    hero_image_url:
+      type: string
+      title: Hero image URL
+      description: 'URL to the hero image displayed on the right side.'
+    hero_image_alt:
+      type: string
+      title: Hero image alt text
+      default: ''

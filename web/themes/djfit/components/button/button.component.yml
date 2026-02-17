@@ -54,6 +54,7 @@ props:
         - caret-right
         - caret-left
         - download
+        - user
         - user-plus
       meta:enum:
         arrow-right: Arrow right
@@ -61,6 +62,7 @@ props:
         caret-right: Caret right
         caret-left: Caret left
         download: Download
+        user: User
         user-plus: User plus
       examples:
         - arrow-right
