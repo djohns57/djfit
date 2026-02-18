@@ -1,0 +1,12 @@
+uuid: 7a64dc3a-ec8a-450a-b267-713c60ee111c
+langcode: en
+status: true
+dependencies: {  }
+id: membership
+label: Membership
+traits: {  }
+locked: false
+description: 'Membership subscription plans for DJ Fit.'
+variationTypes: {  }
+multipleVariations: true
+injectVariationFields: true

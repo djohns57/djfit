@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.article.field_access_level
     - field.field.node.article.field_article_author
     - field.field.node.article.field_article_body
     - field.field.node.article.field_article_category
@@ -60,6 +61,7 @@ content:
     weight: 3
     region: content
 hidden:
+  field_access_level: true
   field_article_taxonomy: true
   field_tags: true
   langcode: true

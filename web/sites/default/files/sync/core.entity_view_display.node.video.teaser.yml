@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.video.field_access_level
     - field.field.node.video.field_tags
     - field.field.node.video.field_video_access
     - field.field.node.video.field_video_category
@@ -55,6 +56,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_access_level: true
   field_tags: true
   field_video_access: true
   field_video_duration: true

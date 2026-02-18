@@ -1,0 +1,26 @@
+uuid: 3571c7ee-42b6-4768-abea-9ade535d02fd
+langcode: en
+status: true
+dependencies: {  }
+id: annual
+label: Annual
+displayLabel: Annual
+billingType: prepaid
+combineSubscriptions: false
+retrySchedule:
+  - 1
+  - 3
+  - 5
+unpaidSubscriptionState: canceled
+plugin: fixed
+configuration:
+  trial_interval:
+    number: 7
+    unit: day
+  interval:
+    number: 1
+    unit: year
+  start_month: 1
+  start_day: 1
+prorater: proportional
+proraterConfiguration: {  }

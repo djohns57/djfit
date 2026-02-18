@@ -1,0 +1,25 @@
+uuid: 3f563f6c-1be7-4e1c-8973-3e6f4abf6b85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_access_level
+    - node.type.article
+    - taxonomy.vocabulary.access_level
+id: node.article.field_access_level
+field_name: field_access_level
+entity_type: node
+bundle: article
+label: 'Access Level'
+description: 'Set the membership level required to access this content.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      access_level: access_level
+    auto_create: false
+field_type: entity_reference

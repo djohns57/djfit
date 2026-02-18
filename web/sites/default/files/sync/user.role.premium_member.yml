@@ -1,0 +1,14 @@
+uuid: a3c745a5-03b7-43ea-8ce0-02a76ad0bc6b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - system
+id: premium_member
+label: 'Premium Member'
+weight: 5
+is_admin: false
+permissions:
+  - 'access content'
+  - 'view media'

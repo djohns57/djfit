@@ -1,0 +1,12 @@
+uuid: ea27d31e-b032-4530-966d-d7333679bfe1
+langcode: en
+status: true
+dependencies: {  }
+id: membership
+label: Membership
+traits:
+  - commerce_license
+  - purchasable_entity_subscription
+locked: false
+orderItemType: default
+generateTitle: true

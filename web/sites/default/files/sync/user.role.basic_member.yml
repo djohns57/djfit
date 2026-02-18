@@ -1,0 +1,14 @@
+uuid: 266fffa4-958c-4a54-adbe-06ba4781ae92
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - system
+id: basic_member
+label: 'Basic Member'
+weight: 4
+is_admin: false
+permissions:
+  - 'access content'
+  - 'view media'

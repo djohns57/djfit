@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.video.field_access_level
     - field.field.node.video.field_tags
     - field.field.node.video.field_video_access
     - field.field.node.video.field_video_category
@@ -140,6 +141,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_access_level: true
   promote: true
   publish_on: true
   publish_state: true

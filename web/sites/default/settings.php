@@ -882,6 +882,13 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
   include __DIR__ . '/settings.ddev.php';
 }
 
+// Stripe Commerce configuration — loaded from .env, never hardcoded.
+if (getenv('STRIPE_SECRET_KEY')) {
+  $config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['secret_key'] = getenv('STRIPE_SECRET_KEY');
+  $config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['publishable_key'] = getenv('STRIPE_PUBLISHABLE_KEY');
+  $config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['mode'] = 'test';
+}
+
 // Harden local config and remove status report warnings.
 $settings['skip_permissions_hardening'] = FALSE;
 if (isset($databases['default']['default'])) {

@@ -1,0 +1,9 @@
+uuid: 3881e55e-b1f1-4154-ae10-bece47609218
+langcode: en
+status: true
+dependencies: {  }
+name: 'Access Level'
+vid: access_level
+description: 'Controls content visibility by membership tier.'
+weight: 0
+new_revision: false

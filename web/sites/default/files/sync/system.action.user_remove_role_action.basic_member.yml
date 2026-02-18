@@ -1,0 +1,14 @@
+uuid: dab56fcd-0928-403b-934c-873dab9295f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.basic_member
+  module:
+    - user
+id: user_remove_role_action.basic_member
+label: 'Remove the Basic Member role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: basic_member
