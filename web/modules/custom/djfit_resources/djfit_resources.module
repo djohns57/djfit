@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * DJ Fit Resources module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function djfit_resources_theme(): array {
+  return [
+    'djfit_resource_listing' => [
+      'variables' => [
+        'categories' => [],
+        'active_filter' => 'all',
+        'resources' => [],
+      ],
+    ],
+  ];
+}

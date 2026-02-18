@@ -60,14 +60,11 @@ class HomeArticlesBlock extends BlockBase implements ContainerFactoryPluginInter
         }
       }
 
-      $category = $node->get('field_article_category')->value ?? '';
-      $category_label = match ($category) {
-        'fitness' => 'Fitness',
-        'recovery' => 'Recovery',
-        'nutrition' => 'Nutrition',
-        'mindset' => 'Mindset',
-        default => ucfirst($category),
-      };
+      $category_label = '';
+      $cat_ref = $node->get('field_article_taxonomy')->entity;
+      if ($cat_ref) {
+        $category_label = $cat_ref->label();
+      }
 
       $articles[] = [
         'tag' => $category_label,

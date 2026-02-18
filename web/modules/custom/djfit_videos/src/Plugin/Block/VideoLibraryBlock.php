@@ -131,6 +131,13 @@ class VideoLibraryBlock extends BlockBase implements ContainerFactoryPluginInter
       }
     }
 
+    $tags = [];
+    foreach ($node->get('field_tags') as $tag_ref) {
+      if ($tag_ref->entity) {
+        $tags[] = $tag_ref->entity->label();
+      }
+    }
+
     return [
       'nid' => $node->id(),
       'title' => $node->getTitle(),
@@ -143,6 +150,7 @@ class VideoLibraryBlock extends BlockBase implements ContainerFactoryPluginInter
       'access_label' => $node->get('field_video_access')->value === 'members_only' ? 'Members Only' : 'Free',
       'duration' => $node->get('field_video_duration')->value ?? '',
       'featured' => (bool) $node->get('field_video_featured')->value,
+      'tags' => $tags,
     ];
   }
 

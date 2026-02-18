@@ -1,0 +1,8 @@
+name: DJ Fit Resources
+type: module
+description: Provides the Resources Listing block for downloadable resources.
+core_version_requirement: ^11
+package: DJ Fit
+dependencies:
+  - drupal:node
+  - drupal:taxonomy

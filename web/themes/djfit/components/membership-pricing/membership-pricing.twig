@@ -1,0 +1,73 @@
+{#
+/**
+ * @file
+ * Membership pricing – two-column pricing card layout with Basic & Pro plans.
+ */
+#}
+<section class="membership-pricing">
+  <div class="membership-pricing__container">
+    {# Basic plan #}
+    <div class="membership-pricing__card membership-pricing__card--basic">
+      <div class="membership-pricing__header">
+        <h3 class="membership-pricing__plan-name">{{ basic_name }}</h3>
+        <p class="membership-pricing__plan-desc">{{ basic_description }}</p>
+        <div class="membership-pricing__price-row">
+          <span class="membership-pricing__price">{{ basic_price }}</span>
+          <span class="membership-pricing__period">/ month</span>
+        </div>
+      </div>
+      <div class="membership-pricing__body">
+        <a href="{{ basic_cta_url }}" class="membership-pricing__btn membership-pricing__btn--primary">{{ basic_cta_text }}</a>
+        <ul class="membership-pricing__features">
+          <li>Access to basic workout library</li>
+          <li>Weekly nutrition tips</li>
+          <li>Community forum access</li>
+          <li>Monthly progress tracking</li>
+          <li>Email support</li>
+        </ul>
+      </div>
+    </div>
+
+    {# Pro plan #}
+    <div class="membership-pricing__card membership-pricing__card--pro">
+      <div class="membership-pricing__badge">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="white"/>
+        </svg>
+        Most Popular
+      </div>
+      <div class="membership-pricing__header">
+        <h3 class="membership-pricing__plan-name">{{ pro_name }}</h3>
+        <p class="membership-pricing__plan-desc">{{ pro_description }}</p>
+        <div class="membership-pricing__price-row">
+          <span class="membership-pricing__price">{{ pro_price }}</span>
+          <span class="membership-pricing__period">/ month</span>
+        </div>
+      </div>
+      <div class="membership-pricing__body">
+        <a href="{{ pro_cta_url }}" class="membership-pricing__btn membership-pricing__btn--primary">{{ pro_cta_text }}</a>
+        <ul class="membership-pricing__features membership-pricing__features--pro">
+          <li class="membership-pricing__feature--bold">Everything in Basic, plus:</li>
+          <li>Full video library (200+ videos)</li>
+          <li>Advanced workout programs</li>
+          <li>Personalized meal plans</li>
+          <li>Weekly coaching calls</li>
+          <li>Private coaching community</li>
+          <li>Downloadable resources &amp; guides</li>
+          <li>Priority support</li>
+          <li>Early access to new content</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  {# All plans include #}
+  <div class="membership-pricing__includes">
+    <p class="membership-pricing__includes-label">All plans include:</p>
+    <div class="membership-pricing__includes-items">
+      <span>✓ 30-day money-back guarantee</span>
+      <span>✓ Cancel anytime</span>
+      <span>✓ Secure payment</span>
+    </div>
+  </div>
+</section>

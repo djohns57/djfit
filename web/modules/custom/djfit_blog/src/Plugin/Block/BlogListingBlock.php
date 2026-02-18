@@ -38,16 +38,18 @@ class BlogListingBlock extends BlockBase implements ContainerFactoryPluginInterf
 
   public function build(): array {
     $node_storage = $this->entityTypeManager->getStorage('node');
+    $term_storage = $this->entityTypeManager->getStorage('taxonomy_term');
 
     $active_filter = \Drupal::request()->query->get('category', 'all');
 
-    $categories = [
-      'all' => 'All',
-      'fitness' => 'Fitness',
-      'recovery' => 'Recovery',
-      'nutrition' => 'Nutrition',
-      'mindset' => 'Mindset',
-    ];
+    $terms = $term_storage->loadByProperties(['vid' => 'blog_categories']);
+    $categories = ['all' => 'All'];
+    $term_map = [];
+    foreach ($terms as $term) {
+      $key = strtolower($term->label());
+      $categories[$key] = $term->label();
+      $term_map[$key] = $term->id();
+    }
 
     $query = $node_storage->getQuery()
       ->condition('type', 'article')
@@ -55,8 +57,8 @@ class BlogListingBlock extends BlockBase implements ContainerFactoryPluginInterf
       ->sort('created', 'DESC')
       ->accessCheck(TRUE);
 
-    if ($active_filter !== 'all' && array_key_exists($active_filter, $categories)) {
-      $query->condition('field_article_category', $active_filter);
+    if ($active_filter !== 'all' && isset($term_map[$active_filter])) {
+      $query->condition('field_article_taxonomy', $term_map[$active_filter]);
     }
 
     $nids = $query->execute();
@@ -89,14 +91,20 @@ class BlogListingBlock extends BlockBase implements ContainerFactoryPluginInterf
       }
     }
 
-    $category = $node->get('field_article_category')->value ?? '';
-    $category_label = match ($category) {
-      'fitness' => 'Fitness',
-      'recovery' => 'Recovery',
-      'nutrition' => 'Nutrition',
-      'mindset' => 'Mindset',
-      default => ucfirst($category),
-    };
+    $category = '';
+    $category_label = '';
+    $cat_ref = $node->get('field_article_taxonomy')->entity;
+    if ($cat_ref) {
+      $category_label = $cat_ref->label();
+      $category = strtolower($cat_ref->label());
+    }
+
+    $tags = [];
+    foreach ($node->get('field_tags') as $tag_ref) {
+      if ($tag_ref->entity) {
+        $tags[] = $tag_ref->entity->label();
+      }
+    }
 
     return [
       'nid' => $node->id(),
@@ -109,6 +117,7 @@ class BlogListingBlock extends BlockBase implements ContainerFactoryPluginInterf
       'author' => $node->get('field_article_author')->value ?? '',
       'read_time' => $node->get('field_article_read_time')->value ?? '',
       'date' => date('M j, Y', (int) $node->getCreatedTime()),
+      'tags' => $tags,
     ];
   }
 

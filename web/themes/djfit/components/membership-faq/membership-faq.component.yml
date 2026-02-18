@@ -1,0 +1,13 @@
+name: Membership FAQ
+status: experimental
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      default: 'Frequently Asked Questions'
+libraryOverrides:
+  css:
+    component:
+      membership-faq.tailwind.css: {}

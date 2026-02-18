@@ -27,6 +27,11 @@
 @import "../components/resources-listing/resources-listing.tailwind.css";
 @import "../components/resources-benefits/resources-benefits.tailwind.css";
 @import "../components/resources-cta/resources-cta.tailwind.css";
+@import "../components/membership-hero/membership-hero.tailwind.css";
+@import "../components/membership-pricing/membership-pricing.tailwind.css";
+@import "../components/membership-compare/membership-compare.tailwind.css";
+@import "../components/membership-faq/membership-faq.tailwind.css";
+@import "../components/membership-cta/membership-cta.tailwind.css";
 
 @theme inline {
   --color-background: var(--background);

@@ -247,6 +247,26 @@
   text-decoration: underline;
 }
 
+/* Tag pills */
+.resource-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.resource-card__tag-pill {
+  display: inline-flex;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  background: rgba(0, 90, 125, 0.08);
+  font-family: var(--hg-font-family-header);
+  font-size: 0.6875rem;
+  font-weight: var(--hg-font-weight-medium);
+  line-height: 1.25rem;
+  color: var(--hg-color-hero-gradient-start);
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 639px) {
   .resources-filters,
