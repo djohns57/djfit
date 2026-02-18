@@ -7,6 +7,9 @@
   background: var(--hg-home-section-muted-bg);
   padding-block: var(--hg-space-16);
   padding-inline: var(--hg-home-section-inline-padding);
+  width: 100cqw;
+  margin-inline: calc(-50cqw + 50%);
+  box-sizing: border-box;
 }
 
 .home-cta__container {
@@ -125,11 +128,15 @@
 @media (max-width: 1023px) {
   .home-cta {
     padding-inline: var(--hg-space-6);
+    width: 100cqw;
+    margin-inline: calc(-50cqw + 50%);
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .home-cta {
     padding-inline: var(--hg-space-12);
+    width: 100cqw;
+    margin-inline: calc(-50cqw + 50%);
   }
 }

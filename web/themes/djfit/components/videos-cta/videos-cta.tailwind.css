@@ -4,6 +4,9 @@
   background: var(--hg-home-section-muted-bg);
   padding-block: var(--hg-space-16);
   padding-inline: var(--hg-home-section-inline-padding);
+  width: 100cqw;
+  margin-inline: calc(-50cqw + 50%);
+  box-sizing: border-box;
 }
 
 .videos-cta__container {
@@ -87,6 +90,8 @@
 @media (max-width: 1023px) {
   .videos-cta {
     padding-inline: var(--hg-space-6);
+    width: 100cqw;
+    margin-inline: calc(-50cqw + 50%);
   }
   .videos-cta__actions {
     flex-direction: column;
@@ -96,5 +101,7 @@
 @media (min-width: 1024px) and (max-width: 1279px) {
   .videos-cta {
     padding-inline: var(--hg-space-12);
+    width: 100cqw;
+    margin-inline: calc(-50cqw + 50%);
   }
 }

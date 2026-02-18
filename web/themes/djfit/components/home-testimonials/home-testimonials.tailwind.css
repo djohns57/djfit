@@ -12,6 +12,9 @@
   padding-block-start: var(--hg-space-16);
   padding-block-end: var(--hg-space-16);
   padding-inline: var(--hg-home-section-inline-padding);
+  width: 100cqw;
+  margin-inline: calc(-50cqw + 50%);
+  box-sizing: border-box;
 }
 
 .home-testimonials__container {
@@ -135,6 +138,8 @@
 @media (max-width: 1023px) {
   .home-testimonials {
     padding-inline: var(--hg-space-6);
+    width: 100cqw;
+    margin-inline: calc(-50cqw + 50%);
   }
 
   .home-testimonials__container {
@@ -149,5 +154,7 @@
 @media (min-width: 1024px) and (max-width: 1279px) {
   .home-testimonials {
     padding-inline: var(--hg-space-12);
+    width: 100cqw;
+    margin-inline: calc(-50cqw + 50%);
   }
 }
