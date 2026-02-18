@@ -1,0 +1,17 @@
+name: Resources Hero
+status: experimental
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      default: 'Templates & Guides'
+    subtitle:
+      type: string
+      title: Subtitle
+      default: 'Downloadable resources to support your fitness journey. Workout plans, nutrition guides, and tracking tools.'
+libraryOverrides:
+  css:
+    component:
+      resources-hero.tailwind.css: {}

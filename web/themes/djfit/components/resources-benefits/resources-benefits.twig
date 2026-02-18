@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Resources benefits – 3 feature cards + CTA.
+ * Figma node 1:1527.
+ */
+#}
+{% set heading = heading|default('Get Access to All Resources') %}
+{% set subtitle = subtitle|default('Pro members get unlimited downloads of all guides, templates, and resources') %}
+{% set cta_url = cta_url|default('/membership') %}
+{% set cta_text = cta_text|default('Upgrade to Pro') %}
+
+<section class="resources-benefits">
+  <div class="resources-benefits__header">
+    <h2 class="resources-benefits__heading">{{ heading }}</h2>
+    <p class="resources-benefits__subtitle">{{ subtitle }}</p>
+  </div>
+
+  <div class="resources-benefits__grid">
+    <div class="resources-benefits__card">
+      <div class="resources-benefits__icon resources-benefits__icon--teal">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5V4.5A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h4 class="resources-benefits__card-title">50+ Resources</h4>
+      <p class="resources-benefits__card-desc">Comprehensive library of workout plans, nutrition guides, and tracking tools</p>
+    </div>
+
+    <div class="resources-benefits__card">
+      <div class="resources-benefits__icon resources-benefits__icon--green">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="7,10 12,15 17,10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <h4 class="resources-benefits__card-title">Unlimited Downloads</h4>
+      <p class="resources-benefits__card-desc">Download and print as many copies as you need for personal use</p>
+    </div>
+
+    <div class="resources-benefits__card">
+      <div class="resources-benefits__icon resources-benefits__icon--slate">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polyline points="23,6 13.5,15.5 8.5,10.5 1,18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="17,6 23,6 23,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <h4 class="resources-benefits__card-title">Regular Updates</h4>
+      <p class="resources-benefits__card-desc">New resources added monthly based on member feedback and requests</p>
+    </div>
+  </div>
+
+  <div class="resources-benefits__cta">
+    <a href="{{ cta_url }}" class="resources-benefits__cta-btn">{{ cta_text }}</a>
+  </div>
+</section>

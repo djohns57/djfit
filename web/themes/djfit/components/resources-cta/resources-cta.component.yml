@@ -1,0 +1,25 @@
+name: Resources CTA
+status: experimental
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      default: 'Want Full Access to All Resources?'
+    subtitle:
+      type: string
+      title: Subtitle
+      default: 'Pro membership includes unlimited downloads of all guides, templates, workout plans, and more.'
+    cta_url:
+      type: string
+      title: CTA URL
+      default: '/membership'
+    cta_text:
+      type: string
+      title: CTA Text
+      default: 'View Membership Plans'
+libraryOverrides:
+  css:
+    component:
+      resources-cta.tailwind.css: {}

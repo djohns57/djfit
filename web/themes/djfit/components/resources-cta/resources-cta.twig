@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Resources CTA banner – gradient background with membership prompt.
+ * Figma node 1:1571.
+ */
+#}
+{% set heading = heading|default('Want Full Access to All Resources?') %}
+{% set subtitle = subtitle|default('Pro membership includes unlimited downloads of all guides, templates, workout plans, and more.') %}
+{% set cta_url = cta_url|default('/membership') %}
+{% set cta_text = cta_text|default('View Membership Plans') %}
+
+<section class="resources-cta">
+  <div class="resources-cta__container">
+    <h2 class="resources-cta__heading">{{ heading }}</h2>
+    <p class="resources-cta__subtitle">{{ subtitle }}</p>
+    <a href="{{ cta_url }}" class="resources-cta__btn">{{ cta_text }}</a>
+  </div>
+</section>

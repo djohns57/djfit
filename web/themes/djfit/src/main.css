@@ -23,6 +23,10 @@
 @import "../components/videos-cta/videos-cta.tailwind.css";
 @import "../components/video-detail/video-detail.tailwind.css";
 @import "../components/article-detail/article-detail.tailwind.css";
+@import "../components/resources-hero/resources-hero.tailwind.css";
+@import "../components/resources-listing/resources-listing.tailwind.css";
+@import "../components/resources-benefits/resources-benefits.tailwind.css";
+@import "../components/resources-cta/resources-cta.tailwind.css";
 
 @theme inline {
   --color-background: var(--background);

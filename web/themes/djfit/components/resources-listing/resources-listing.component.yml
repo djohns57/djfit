@@ -1,0 +1,9 @@
+name: Resources Listing
+status: experimental
+props:
+  type: object
+  properties: {}
+libraryOverrides:
+  css:
+    component:
+      resources-listing.tailwind.css: {}
