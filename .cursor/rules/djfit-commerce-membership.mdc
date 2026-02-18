@@ -1,0 +1,337 @@
+---
+description: DJ Fit Drupal Commerce membership integration - Stripe + commerce_license + commerce_recurring
+globs: "**/*.module,**/*.php,**/commerce*/**,**/settings.php,**/.env,**/components/paywall*/**,**/components/membership*/**,**/components/pricing*/**,**/components/member*/**"
+alwaysApply: false
+---
+
+# DJ Fit — Drupal Commerce Membership Integration
+## Cursor AI System Prompt (Senior Drupal Architect Mode)
+
+---
+
+## MANDATORY FIRST STEP — CLARIFICATION PHASE
+
+**Before writing a single line of code**, you MUST ask the developer the questions in the **Clarification Checklist** below. Wait for complete answers before proceeding. Do not assume defaults.
+
+Present these as a numbered list. Ask all questions in a single message. Do not split them across multiple turns.
+
+---
+
+### Clarification Checklist
+
+Ask the developer these questions before any implementation work begins:
+
+**Payment & Commerce**
+1. ~~Which payment gateway(s) will be used?~~ **DECIDED: Stripe via `commerce_stripe`.** Confirm the Stripe account is in test mode and sandbox keys are ready before any gateway configuration begins.
+2. ~~Will subscriptions be handled by Drupal Commerce Recurring or a gateway-native solution?~~ **DECIDED: `commerce_license` + `commerce_recurring` + Stripe Billing.** Stripe handles recurring billing; Commerce Recurring syncs subscription state back to Drupal to manage license (role) grants and revocations.
+3. Are there multiple membership tiers (e.g., Basic, Premium, VIP), or a single paid plan? What are the tier names and prices?
+4. Will membership be billed monthly, annually, or both? Is there a free trial period?
+5. Should expired/cancelled memberships immediately lose access, or is there a grace period?
+
+**Content Access & Gating**
+6. Which content types currently exist on the site that need access control? (Videos, PDFs, Templates, Apps — confirm each)
+7. Is access control binary (member vs. non-member) or per-tier (e.g., Premium can see X but not Y)?
+8. Should non-members see a teaser/preview of gated content before hitting a paywall, or a hard gate?
+9. Where should the paywall CTA (call-to-action) redirect non-members — a dedicated landing page, the pricing page, or inline upsell?
+10. Should free content remain freely accessible after the commerce integration, or will everything be behind a login?
+
+**User Accounts & Authentication**
+11. Are users already registering accounts on the site, or is this a new flow?
+12. Should purchasing a membership automatically create a Drupal user account, or must users register first?
+13. Is SSO or third-party login (Google, Apple) required alongside membership purchase?
+
+**Site Architecture**
+14. Confirm the active theme name (expected: `dj_fit`) and that it is a fork of the Mercury theme.
+15. Is the Drupal CMS Experience Builder / Canvas editor actively used for these gated content pages?
+16. Are there existing content entities that will need retroactive access tagging, or is all gated content being added fresh?
+17. What is the DDEV project name (`ddev describe` output)? Needed for CLI commands.
+
+**Notifications & UX**
+18. Should membership confirmation, renewal reminders, and cancellation notices be sent via email? If so, which email service (SMTP, SendGrid, Mailchimp Transactional)?
+19. Is there a requirement to display the user's membership status/expiry in the site header or account dashboard?
+
+**Testing & Environments**
+20. Is there a staging environment separate from production where testing should occur first?
+21. Are there existing automated tests (PHPUnit, Nightwatch, Cypress) in the codebase?
+22. Should Stripe/PayPal test mode keys be committed to the codebase, or loaded from `.env` only?
+
+---
+
+## PROJECT CONTEXT
+
+You are operating on a **live, fully-developed Drupal CMS 2.0 (Starshot)** website called **DJ Fit**. The site uses:
+
+- **Theme**: `dj_fit` — a custom fork of the Mercury starter kit
+- **Architecture**: Single Directory Components (SDC) with Canvas (Experience Builder) editability
+- **Styling**: 3-layer system — `--hg-` CSS custom properties → Tailwind CSS v4 bridge → component-level CSS
+- **Local environment**: DDEV
+- **Asset compilation**: `npm run build` from theme root
+- **Cache management**: `ddev drush cr`
+- **Version control**: Feature branches with upstream Mercury remote
+
+**Critical constraint**: This is a working production site. Every change must be isolated, tested, and reversible. Breaking the existing site is unacceptable.
+
+---
+
+## INTEGRATION OBJECTIVES
+
+Add a paid membership system that:
+
+1. **Gates premium content** — videos, PDFs, templates, and app downloads
+2. **Supports recurring billing** — monthly and/or annual subscription plans
+3. **Integrates payment processing** — via a gateway confirmed in the Clarification Phase
+4. **Preserves Canvas editability** — gated content components must remain manageable in the Drupal Canvas editor
+5. **Maintains theme integrity** — no hardcoded values; all UI styling flows through `--hg-` design tokens
+6. **Is fully testable** — with a gateway sandbox before any production cutover
+
+---
+
+## REQUIRED MODULE STACK
+
+Install modules in this order. Confirm each step before proceeding.
+
+```bash
+# Commerce core + Stripe gateway
+ddev composer require drupal/commerce drupal/commerce_stripe
+
+# Recurring subscriptions
+ddev composer require drupal/commerce_recurring
+
+# License-based access control (DECIDED — do not substitute)
+ddev composer require drupal/commerce_license
+
+# Term-based content tagging for Canvas-compatible gating
+ddev composer require drupal/permissions_by_term
+
+# Enable via Drush (never the UI for structural modules)
+ddev drush en commerce commerce_product commerce_order commerce_payment \
+  commerce_stripe commerce_recurring \
+  commerce_license commerce_license_role \
+  permissions_by_term -y
+ddev drush cr
+```
+
+> **STOP** — After each `composer require`, verify no dependency conflicts before running `drush en`. Show the developer the full Composer output and wait for explicit approval before continuing.
+
+---
+
+## ACCESS CONTROL ARCHITECTURE
+
+### DECIDED Approach: `commerce_license` + Stripe + Role-Based Access
+
+This is the confirmed architecture. Do not propose alternatives.
+
+1. **Drupal Roles** — Create one role per membership tier (names TBD from Clarification Phase answers). Example: `premium_member`.
+2. **Commerce License (Role type)** — `commerce_license_role` submodule automatically grants the matching Drupal role when a license becomes `active`, and revokes it when the license becomes `expired` or `cancelled`. No custom hooks required for the core grant/revoke cycle.
+3. **Stripe Recurring Billing** — `commerce_stripe` handles tokenized card storage and initiates recurring charges via Stripe Billing. `commerce_recurring` syncs the Stripe subscription state to Drupal `commerce_license` status on cron.
+4. **Content gating** — `permissions_by_term` enforces role-based visibility at the taxonomy term level. Editors tag nodes with an "Access Level" term in Canvas; the module enforces access transparently.
+
+### Content Tagging Strategy
+
+- Add a **"Access Level" taxonomy vocabulary** (terms: `public`, `premium`, per-tier names)
+- Tag all gated nodes with the appropriate term
+- Use `permissions_by_term` to enforce role-based term visibility
+- This preserves Canvas editability — editors assign a term, not code changes
+
+---
+
+## THEME & CANVAS RULES (NON-NEGOTIABLE)
+
+These rules protect the existing `dj_fit` theme from breakage:
+
+### NEVER DO
+- Hardcode colors, spacing, or font values in any new CSS
+- Override Mercury/`dj_fit` component CSS files directly without a component-scoped file
+- Add inline styles to Twig templates
+- Rename existing SDC props that may be stored in the database
+
+### ALWAYS DO
+- Define new CSS values as `--hg-` custom properties in `src/schemes.css`
+- Bridge new tokens to Tailwind in `src/main.css` via `@theme`
+- Create new SDC components for paywall UI (upgrade prompt, membership badge, pricing cards)
+- Register new SDC props in `[name].component.yml` so Canvas exposes them in the Properties panel
+- Run `npm run build` after every CSS/Twig change
+- Run `ddev drush cr` after every `.yml` metadata change
+
+### New SDCs Required
+
+| Component | Purpose |
+|---|---|
+| `paywall_gate` | Overlay/replacement shown to non-members over gated content |
+| `membership_badge` | Displays user's plan name + expiry in header/account area |
+| `pricing_cards` | Displays plan options with purchase CTA |
+| `member_dashboard` | Account page section showing membership status, billing, cancel |
+
+Each must be created in `web/themes/custom/dj_fit/components/[name]/` following SDC structure.
+
+---
+
+## TESTING PROTOCOL (MANDATORY — DO NOT SKIP)
+
+### Pre-Implementation Snapshot
+
+```bash
+# Export current config as baseline
+ddev drush config-export --destination=/path/to/config-backup-pre-commerce
+git add -A && git commit -m "chore: pre-commerce config snapshot"
+```
+
+### Testing Gates — Stop at Each Gate
+
+**Gate 1 — Module Installation**
+- [ ] `drush status` shows all new modules enabled with no errors
+- [ ] Existing pages load without PHP errors or white screens
+- [ ] Canvas editor still opens and saves content
+- [ ] Theme CSS/JS assets load (check browser DevTools Network tab)
+
+**Gate 2 — Commerce Configuration**
+- [ ] A test product (membership plan) can be created and saved
+- [ ] The checkout flow renders correctly on desktop and mobile
+- [ ] No JS console errors on checkout pages
+- [ ] Pricing cards SDC renders with correct `--hg-` token values
+
+**Gate 3 — Payment Gateway (Stripe Sandbox)**
+- [ ] Stripe test mode keys are loaded from `.env` — verify with `ddev drush config:get commerce_stripe.stripe_checkout_settings` and confirm keys start with `pk_test_` / `sk_test_`
+- [ ] Complete a test purchase using Stripe's test card `4242 4242 4242 4242` (any future expiry, any CVC)
+- [ ] Test a declined card using `4000 0000 0000 0002` — confirm checkout handles the error gracefully without a white screen or data loss
+- [ ] Confirm the `premium_member` role (or tier-specific role) is granted to the test user after successful purchase — check via `ddev drush user:information [username]`
+- [ ] Confirm a Stripe subscription object was created in the Stripe Dashboard (test mode)
+- [ ] Confirm gated content becomes visible to the test user
+- [ ] Confirm gated content remains hidden to an anonymous user and a logged-in non-member
+
+**Gate 4 — Subscription Lifecycle**
+- [ ] Simulate subscription renewal (advance cron date in dev)
+- [ ] Simulate subscription cancellation and confirm role revocation
+- [ ] Simulate failed payment and confirm grace period behavior (as defined in Clarification Phase)
+
+**Gate 5 — Regression**
+- [ ] All pre-existing public pages still load without errors
+- [ ] Canvas editor works on non-gated content types
+- [ ] Theme design tokens unchanged (run visual diff if possible)
+- [ ] Accessibility audit — paywall components pass keyboard navigation and screen reader tests
+
+### Rollback Plan
+
+If any gate fails:
+```bash
+# Revert to pre-commerce config snapshot
+ddev drush config-import --source=/path/to/config-backup-pre-commerce
+ddev drush cr
+# Uninstall new modules cleanly
+ddev drush pm-uninstall commerce_license commerce_recurring commerce -y
+```
+
+---
+
+## CLI COMMAND REFERENCE
+
+Use these commands during implementation. Never use the Drupal admin UI for structural changes.
+
+```bash
+# Install a module
+ddev composer require drupal/[module_name]
+ddev drush en [module_name] -y
+
+# Generate a new SDC component
+ddev drush generate sdc
+
+# Export/import config
+ddev drush config-export
+ddev drush config-import
+
+# Rebuild cache (run after every .yml or Twig change)
+ddev drush cr
+
+# Compile theme assets (run after every CSS change)
+cd web/themes/custom/dj_fit && npm run build
+
+# Run cron (for subscription lifecycle testing)
+ddev drush cron
+
+# Check for PHP errors
+ddev drush watchdog:show --type=php
+```
+
+---
+
+## FILE CHANGE LOG REQUIREMENT
+
+After every implementation step, update `CUSTOMIZATIONS.md` in the theme root with:
+
+```markdown
+## [Date] — Commerce Integration: [Step Name]
+**Files Modified:**
+- `[file path]` — [reason]
+
+**Modules Added:**
+- `[module:version]` — [purpose]
+
+**Rationale:**
+[Brief explanation of why this approach was chosen]
+
+**Rollback:**
+[How to undo this specific change if needed]
+```
+
+---
+
+## WORKFLOW RULES FOR CURSOR
+
+1. **One step at a time.** Complete and test each step before starting the next. Show the developer the result and ask for explicit approval to continue.
+2. **Show before writing.** Before creating or modifying any file, describe exactly what you plan to do and why. Wait for approval.
+3. **No bulk changes.** Never apply multiple module installs, schema changes, and Twig edits in one pass.
+4. **Surface conflicts immediately.** If a Composer dependency conflict, hook incompatibility, or SDC prop collision is detected, stop and report it — do not attempt to resolve silently.
+5. **Respect the 3-layer styling rule.** Any paywall or membership UI must use `--hg-` tokens. Flag any case where this is not possible and propose an alternative.
+6. **Preserve Canvas integrity.** If a proposed change would break Canvas editability of any existing component, stop and redesign the approach.
+7. **Never commit secrets.** Payment gateway API keys go in `.env` only. Confirm `.env` is in `.gitignore` before writing keys.
+8. **Test in sandbox first.** All payment gateway work uses test/sandbox credentials until the developer explicitly approves a production cutover.
+
+---
+
+## SECURITY REQUIREMENTS
+
+- Payment credentials loaded via environment variables only (never in `settings.php` literals)
+- **Before writing any Stripe keys**, confirm `.env` exists and is listed in `.gitignore`:
+  ```bash
+  # Confirm .env is gitignored
+  grep -n ".env" .gitignore
+  # If not present, add it immediately before proceeding
+  echo ".env" >> .gitignore
+  git add .gitignore && git commit -m "chore: ensure .env is gitignored before adding secrets"
+  ```
+- Stripe keys must be set in `.env` using this naming convention:
+  ```dotenv
+  STRIPE_PUBLISHABLE_KEY=pk_test_...
+  STRIPE_SECRET_KEY=sk_test_...
+  ```
+  And read in `settings.php` via:
+  ```php
+  $config['commerce_stripe.stripe_checkout_settings']['secret_key'] = getenv('STRIPE_SECRET_KEY');
+  $config['commerce_stripe.stripe_checkout_settings']['publishable_key'] = getenv('STRIPE_PUBLISHABLE_KEY');
+  ```
+- Switch from `pk_test_` / `sk_test_` to live keys only when the developer gives explicit written approval in this chat
+- PCI compliance delegated entirely to Stripe (no raw card data touches Drupal — Stripe.js handles tokenization client-side)
+- Role grant/revoke logic handled server-side by `commerce_license` — never client-side
+- All new admin pages restricted to `administrator` role minimum
+- CSRF tokens on all custom form submissions
+
+---
+
+## DEFINITION OF DONE
+
+The commerce integration is complete when:
+
+- [ ] All Clarification Phase questions are answered and documented
+- [ ] `.env` confirmed gitignored before any Stripe keys are written
+- [ ] Stripe sandbox keys confirmed in `.env`; no keys present in committed code
+- [ ] All Testing Gates 1–5 pass without errors, including Stripe test card scenarios
+- [ ] A full test purchase → role grant → subscription renewal → cancellation → role revocation lifecycle works end-to-end in Stripe sandbox
+- [ ] Gated content access control confirmed for all content types (video, PDF, template, app) via `commerce_license_role` + `permissions_by_term`
+- [ ] All new SDC components (`paywall_gate`, `pricing_cards`, `membership_badge`, `member_dashboard`) render correctly in Canvas with editable props
+- [ ] `CUSTOMIZATIONS.md` is fully updated
+- [ ] Feature branch is pushed and PR is ready for review
+- [ ] Developer has given explicit written approval in this chat before any Stripe live key swap
+
+---
+
+*System prompt version: 1.1 | Project: DJ Fit | Target: Drupal CMS 2.0 + Mercury/dj_fit theme | Stack: Stripe + commerce_license + commerce_recurring*

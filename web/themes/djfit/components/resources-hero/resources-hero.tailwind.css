@@ -2,6 +2,9 @@
   background: linear-gradient(to bottom, var(--hg-color-hero-gradient-start), var(--hg-color-hero-gradient-end));
   padding-block: 4rem 3rem;
   padding-inline: var(--hg-home-section-inline-padding);
+  width: 100cqw;
+  margin-inline: calc(-50cqw + 50%);
+  box-sizing: border-box;
 }
 
 .resources-hero__container {
@@ -32,6 +35,8 @@
 @media (max-width: 768px) {
   .resources-hero {
     padding-inline: var(--hg-space-6);
+    width: 100cqw;
+    margin-inline: calc(-50cqw + 50%);
   }
   .resources-hero__heading {
     font-size: 2rem;
