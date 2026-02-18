@@ -13,6 +13,22 @@
 {% set _tw = twitter_url|default('#') %}
 {% set _ig = instagram_url|default('#') %}
 {% set _copy = copyright_text|default('© 2026 DJ Fit. All rights reserved.') %}
+{% set _blog_url = blog_url|default('/blog') %}
+{% set _blog_label = blog_label|default('Blog') %}
+{% set _videos_url = videos_url|default('/videos') %}
+{% set _videos_label = videos_label|default('Video Library') %}
+{% set _resources_url = resources_url|default('/resources') %}
+{% set _resources_label = resources_label|default('Resources') %}
+{% set _membership_url = membership_url|default('/membership') %}
+{% set _membership_label = membership_label|default('Membership') %}
+{% set _privacy_url = privacy_url|default('/privacy') %}
+{% set _privacy_label = privacy_label|default('Privacy Policy') %}
+{% set _terms_url = terms_url|default('/terms') %}
+{% set _terms_label = terms_label|default('Terms of Service') %}
+{% set _cookies_url = cookies_url|default('/cookies') %}
+{% set _cookies_label = cookies_label|default('Cookie Policy') %}
+{% set _contact_url = contact_url|default('/contact') %}
+{% set _contact_label = contact_label|default('Contact Us') %}
 
 <footer class="home-footer" role="contentinfo">
   <div class="home-footer__top">
@@ -46,10 +62,10 @@
     <nav class="home-footer__nav" aria-label="Quick Links">
       <h4 class="home-footer__nav-heading">Quick Links</h4>
       <ul class="home-footer__nav-list">
-        <li><a href="/blog" class="home-footer__nav-link">Blog</a></li>
-        <li><a href="/videos" class="home-footer__nav-link">Video Library</a></li>
-        <li><a href="/resources" class="home-footer__nav-link">Resources</a></li>
-        <li><a href="/membership" class="home-footer__nav-link">Membership</a></li>
+        <li><a href="{{ _blog_url }}" class="home-footer__nav-link">{{ _blog_label }}</a></li>
+        <li><a href="{{ _videos_url }}" class="home-footer__nav-link">{{ _videos_label }}</a></li>
+        <li><a href="{{ _resources_url }}" class="home-footer__nav-link">{{ _resources_label }}</a></li>
+        <li><a href="{{ _membership_url }}" class="home-footer__nav-link">{{ _membership_label }}</a></li>
       </ul>
     </nav>
 
@@ -57,10 +73,10 @@
     <nav class="home-footer__nav" aria-label="Legal">
       <h4 class="home-footer__nav-heading">Legal</h4>
       <ul class="home-footer__nav-list">
-        <li><a href="/privacy" class="home-footer__nav-link">Privacy Policy</a></li>
-        <li><a href="/terms" class="home-footer__nav-link">Terms of Service</a></li>
-        <li><a href="/cookies" class="home-footer__nav-link">Cookie Policy</a></li>
-        <li><a href="/contact" class="home-footer__nav-link">Contact Us</a></li>
+        <li><a href="{{ _privacy_url }}" class="home-footer__nav-link">{{ _privacy_label }}</a></li>
+        <li><a href="{{ _terms_url }}" class="home-footer__nav-link">{{ _terms_label }}</a></li>
+        <li><a href="{{ _cookies_url }}" class="home-footer__nav-link">{{ _cookies_label }}</a></li>
+        <li><a href="{{ _contact_url }}" class="home-footer__nav-link">{{ _contact_label }}</a></li>
       </ul>
     </nav>
   </div>

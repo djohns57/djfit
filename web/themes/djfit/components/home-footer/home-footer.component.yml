@@ -26,6 +26,70 @@ props:
       type: string
       title: Instagram URL
       default: '#'
+    privacy_url:
+      type: string
+      title: Privacy Policy URL
+      default: '/privacy'
+    privacy_label:
+      type: string
+      title: Privacy Policy Label
+      default: 'Privacy Policy'
+    terms_url:
+      type: string
+      title: Terms of Service URL
+      default: '/terms'
+    terms_label:
+      type: string
+      title: Terms of Service Label
+      default: 'Terms of Service'
+    cookies_url:
+      type: string
+      title: Cookie Policy URL
+      default: '/cookies'
+    cookies_label:
+      type: string
+      title: Cookie Policy Label
+      default: 'Cookie Policy'
+    contact_url:
+      type: string
+      title: Contact Us URL
+      default: '/contact'
+    contact_label:
+      type: string
+      title: Contact Us Label
+      default: 'Contact Us'
+    blog_url:
+      type: string
+      title: Blog URL
+      default: '/blog'
+    blog_label:
+      type: string
+      title: Blog Label
+      default: 'Blog'
+    videos_url:
+      type: string
+      title: Video Library URL
+      default: '/videos'
+    videos_label:
+      type: string
+      title: Video Library Label
+      default: 'Video Library'
+    resources_url:
+      type: string
+      title: Resources URL
+      default: '/resources'
+    resources_label:
+      type: string
+      title: Resources Label
+      default: 'Resources'
+    membership_url:
+      type: string
+      title: Membership URL
+      default: '/membership'
+    membership_label:
+      type: string
+      title: Membership Label
+      default: 'Membership'
     copyright_text:
       type: string
       title: Copyright Text
