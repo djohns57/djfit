@@ -1,0 +1,19 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Newsletter Hero
+group: Content
+status: experimental
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      default: 'Join Our Newsletter'
+    subtitle:
+      type: string
+      title: Subtitle
+      default: 'Get expert health and fitness tips delivered to your inbox every week. No spam, just actionable advice.'
+libraryOverrides:
+  css:
+    component:
+      newsletter-hero.tailwind.css: {}

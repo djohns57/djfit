@@ -1,0 +1,31 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Newsletter Preview
+group: Content
+status: experimental
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Section Heading
+      default: 'Preview Our Newsletter'
+    issue_date:
+      type: string
+      title: Issue Date
+      default: 'Monday, February 10, 2026'
+    issue_number:
+      type: string
+      title: Issue Number
+      default: 'Issue #208'
+    issue_title:
+      type: string
+      title: Issue Title
+      default: 'DJ Fit Weekly: The Recovery Edition'
+    issue_tagline:
+      type: string
+      title: Issue Tagline
+      default: 'Your weekly dose of fitness, nutrition, and recovery strategies'
+libraryOverrides:
+  css:
+    component:
+      newsletter-preview.tailwind.css: {}

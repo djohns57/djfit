@@ -40,9 +40,9 @@ props:
     secondary_button_url:
       type: string
       title: Secondary button URL
-      default: '/about'
+      default: '/blog'
       examples:
-        - '/about'
+        - '/blog'
     hero_image_url:
       type: string
       title: Hero image URL

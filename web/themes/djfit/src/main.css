@@ -32,6 +32,13 @@
 @import "../components/membership-compare/membership-compare.tailwind.css";
 @import "../components/membership-faq/membership-faq.tailwind.css";
 @import "../components/membership-cta/membership-cta.tailwind.css";
+@import "../components/newsletter-form/newsletter-form.tailwind.css";
+@import "../components/newsletter-hero/newsletter-hero.tailwind.css";
+@import "../components/newsletter-benefits/newsletter-benefits.tailwind.css";
+@import "../components/newsletter-testimonials/newsletter-testimonials.tailwind.css";
+@import "../components/newsletter-stats/newsletter-stats.tailwind.css";
+@import "../components/newsletter-faq/newsletter-faq.tailwind.css";
+@import "../components/newsletter-preview/newsletter-preview.tailwind.css";
 
 @theme inline {
   --color-background: var(--background);

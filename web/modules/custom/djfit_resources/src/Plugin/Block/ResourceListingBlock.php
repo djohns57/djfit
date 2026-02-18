@@ -97,11 +97,18 @@ class ResourceListingBlock extends BlockBase implements ContainerFactoryPluginIn
       }
     }
 
+    $file_url = '';
+    $file_entity = $node->get('field_resource_file')->entity;
+    if ($file_entity) {
+      $file_url = \Drupal::service('file_url_generator')->generateAbsoluteString($file_entity->getFileUri());
+    }
+
     return [
       'nid' => $node->id(),
       'title' => $node->getTitle(),
       'description' => $node->get('field_resource_description')->value ?? '',
       'url' => $node->toUrl()->toString(),
+      'file_url' => $file_url,
       'category_label' => $category_label,
       'category_key' => $category_key,
       'access' => $node->get('field_resource_access')->value ?? 'free',

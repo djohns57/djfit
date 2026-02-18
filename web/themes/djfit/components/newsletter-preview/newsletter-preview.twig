@@ -1,0 +1,94 @@
+{#
+/**
+ * @file
+ * Newsletter preview – mock email showing a sample issue.
+ */
+#}
+<section class="nl-preview">
+  <h2 class="nl-preview__heading">{{ heading }}</h2>
+
+  <div class="nl-preview__email">
+    {# Email header #}
+    <div class="nl-preview__email-header">
+      <div class="nl-preview__email-meta">
+        <div class="nl-preview__email-date-wrap">
+          <svg class="nl-preview__email-cal-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span class="nl-preview__email-date">{{ issue_date }}</span>
+        </div>
+        <span class="nl-preview__email-badge">{{ issue_number }}</span>
+      </div>
+      <h3 class="nl-preview__email-title">{{ issue_title }}</h3>
+      <p class="nl-preview__email-tagline">{{ issue_tagline }}</p>
+    </div>
+
+    {# Email body #}
+    <div class="nl-preview__email-body">
+      <p class="nl-preview__body-text">Hey there,</p>
+      <p class="nl-preview__body-text">Welcome back to another edition of the DJ Fit Weekly newsletter. This week, we're diving deep into the often-overlooked foundation of all progress: <strong>recovery</strong>.</p>
+
+      <div class="nl-preview__featured">
+        <h4 class="nl-preview__featured-label">&#x1F525; This Week's Featured Topic</h4>
+        <h5 class="nl-preview__featured-title">The Recovery Pyramid: Building From The Ground Up</h5>
+        <p class="nl-preview__body-text">Most guys over 40 focus solely on training harder, but the real gains happen during recovery. Here's what you need to prioritize:</p>
+        <ol class="nl-preview__numbered-list">
+          <li><strong>Sleep (7-9 hours):</strong> Non-negotiable. This is where muscle repair and hormone optimization happen.</li>
+          <li><strong>Nutrition timing:</strong> Post-workout protein within 2 hours accelerates recovery by up to 25%.</li>
+          <li><strong>Active recovery:</strong> Light movement on rest days improves blood flow and reduces soreness.</li>
+          <li><strong>Stress management:</strong> Chronic stress kills gains. Practice daily stress-reduction techniques.</li>
+        </ol>
+      </div>
+
+      <div class="nl-preview__quick-wins">
+        <h4 class="nl-preview__section-title">&#x1F4A1; Quick Wins This Week</h4>
+        <div class="nl-preview__tip-card">
+          <h5 class="nl-preview__tip-title">Workout Tip: Deload Week</h5>
+          <p class="nl-preview__tip-text">If you've been training hard for 4+ weeks, take a deload week. Reduce volume by 40-50% while maintaining intensity. Your body (and joints) will thank you.</p>
+        </div>
+        <div class="nl-preview__tip-card">
+          <h5 class="nl-preview__tip-title">Nutrition Hack: Cherry Juice</h5>
+          <p class="nl-preview__tip-text">Tart cherry juice has been shown to reduce muscle soreness and improve sleep quality. Try 8oz before bed for better recovery.</p>
+        </div>
+        <div class="nl-preview__tip-card">
+          <h5 class="nl-preview__tip-title">Recovery Tool: Foam Rolling</h5>
+          <p class="nl-preview__tip-text">Just 10 minutes of foam rolling can increase range of motion by 10% and reduce delayed onset muscle soreness. Focus on quads, IT band, and lats.</p>
+        </div>
+      </div>
+
+      <div class="nl-preview__divider"></div>
+
+      <div class="nl-preview__story">
+        <h4 class="nl-preview__section-title">&#x2B50; Member Success Story</h4>
+        <div class="nl-preview__story-card">
+          <p class="nl-preview__story-quote">"I used to think more training = more results. After implementing proper recovery protocols from DJ Fit, I've gained more muscle in 3 months than I did in the previous year. Sleep and nutrition matter just as much as the workouts."</p>
+          <p class="nl-preview__story-author">— Robert M., Age 47, Pro Member</p>
+        </div>
+      </div>
+
+      <div class="nl-preview__divider"></div>
+
+      <div class="nl-preview__resources">
+        <h4 class="nl-preview__section-title">&#x1F4DA; This Week's Resources</h4>
+        <ul class="nl-preview__resource-list">
+          <li><strong>New Video:</strong> 15-Minute Evening Mobility Routine (Members)</li>
+          <li><strong>Blog Post:</strong> The Science of Sleep for Muscle Growth (Free)</li>
+          <li><strong>Template:</strong> Recovery Tracking Worksheet (Members)</li>
+        </ul>
+      </div>
+
+      <div class="nl-preview__divider"></div>
+
+      <div class="nl-preview__sign-off">
+        <p class="nl-preview__body-text">Remember: Your body doesn't get stronger in the gym. It gets stronger during recovery. Prioritize it accordingly.</p>
+        <p class="nl-preview__body-text">Train smart,</p>
+        <p class="nl-preview__body-text nl-preview__body-text--strong">The DJ Fit Team</p>
+      </div>
+
+      <div class="nl-preview__divider"></div>
+
+      <div class="nl-preview__footer">
+        <p class="nl-preview__footer-text">You're receiving this because you subscribed to the DJ Fit newsletter.</p>
+        <p class="nl-preview__footer-links"><a href="#">Update preferences</a> | <a href="#">Unsubscribe</a></p>
+      </div>
+    </div>
+  </div>
+</section>

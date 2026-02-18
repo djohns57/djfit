@@ -57,6 +57,6 @@ props:
     signup_url:
       type: string
       title: Get Started URL
-      default: '/user/register'
+      default: '/membership'
       examples:
-        - '/user/register'
+        - '/membership'

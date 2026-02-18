@@ -1,0 +1,91 @@
+.nl-benefits {
+  background: #fff;
+  width: 100cqw;
+  margin-inline: calc(-50cqw + 50%);
+  padding: 64px var(--hg-home-section-inline-padding);
+}
+
+.nl-benefits__heading {
+  font-family: var(--hg-font-family-header);
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  color: #2d2d2d;
+  text-align: center;
+  margin: 0 0 3rem;
+}
+
+.nl-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.nl-benefits__card {
+  background: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nl-benefits__icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.nl-benefits__icon-wrap--teal {
+  background: rgba(0, 90, 125, 0.1);
+}
+
+.nl-benefits__icon-wrap--green {
+  background: rgba(124, 184, 115, 0.1);
+}
+
+.nl-benefits__icon-wrap--slate {
+  background: rgba(107, 159, 176, 0.1);
+}
+
+.nl-benefits__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.nl-benefits__icon-wrap--teal .nl-benefits__icon { color: #005a7d; }
+.nl-benefits__icon-wrap--green .nl-benefits__icon { color: #7cb873; }
+.nl-benefits__icon-wrap--slate .nl-benefits__icon { color: #6b9fb0; }
+
+.nl-benefits__title {
+  font-family: var(--hg-font-family-header);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1rem;
+  color: #2d2d2d;
+  margin: 0 0 1.5rem;
+}
+
+.nl-benefits__text {
+  font-family: var(--hg-font-family-header);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #717182;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .nl-benefits__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
