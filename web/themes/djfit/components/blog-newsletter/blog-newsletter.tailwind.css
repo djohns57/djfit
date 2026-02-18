@@ -1,0 +1,72 @@
+/* Blog Newsletter CTA – Figma node 2:321 */
+
+.blog-newsletter {
+  background: #ffffff;
+  padding-block: var(--hg-space-16);
+  padding-inline: var(--hg-home-section-inline-padding);
+}
+
+.blog-newsletter__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--hg-space-4);
+  text-align: center;
+}
+
+.blog-newsletter__heading {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: 1.875rem;
+  font-weight: var(--hg-font-weight-bold);
+  line-height: 2.25rem;
+  letter-spacing: 0.025rem;
+  color: var(--hg-home-heading-dark);
+  text-align: center;
+}
+
+.blog-newsletter__subtitle {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: 1.125rem;
+  font-weight: var(--hg-font-weight-regular);
+  line-height: 1.75rem;
+  color: var(--hg-home-kicker-muted);
+  text-align: center;
+}
+
+.blog-newsletter__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  padding-inline: 1.5rem;
+  margin-block-start: var(--hg-space-4);
+  border-radius: var(--hg-home-button-radius);
+  background: var(--hg-color-hero-gradient-start);
+  color: #ffffff;
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-xs);
+  font-weight: var(--hg-font-weight-medium);
+  line-height: 1.25rem;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.blog-newsletter__btn:hover {
+  opacity: 0.88;
+}
+
+@media (max-width: 1023px) {
+  .blog-newsletter {
+    padding-inline: var(--hg-space-6);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .blog-newsletter {
+    padding-inline: var(--hg-space-12);
+  }
+}

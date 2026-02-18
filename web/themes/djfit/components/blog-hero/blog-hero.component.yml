@@ -1,0 +1,16 @@
+name: Blog Hero
+status: stable
+description: Blog page hero banner with gradient background, heading, and subtitle.
+group: Blog
+
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      default: 'Blog & Articles'
+    subtitle:
+      type: string
+      title: Subtitle
+      default: 'Expert insights, actionable advice, and evidence-based strategies for health and fitness after 40.'

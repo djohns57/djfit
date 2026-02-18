@@ -12,6 +12,17 @@
 @import "../components/home-features/home-features.tailwind.css";
 @import "../components/home-articles/home-articles.tailwind.css";
 @import "../components/home-videos/home-videos.tailwind.css";
+@import "../components/home-testimonials/home-testimonials.tailwind.css";
+@import "../components/home-cta/home-cta.tailwind.css";
+@import "../components/home-footer/home-footer.tailwind.css";
+@import "../components/blog-hero/blog-hero.tailwind.css";
+@import "../components/blog-listing/blog-listing.tailwind.css";
+@import "../components/blog-newsletter/blog-newsletter.tailwind.css";
+@import "../components/videos-hero/videos-hero.tailwind.css";
+@import "../components/videos-listing/videos-listing.tailwind.css";
+@import "../components/videos-cta/videos-cta.tailwind.css";
+@import "../components/video-detail/video-detail.tailwind.css";
+@import "../components/article-detail/article-detail.tailwind.css";
 
 @theme inline {
   --color-background: var(--background);

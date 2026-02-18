@@ -1,0 +1,100 @@
+/* Videos CTA – Unlock section */
+
+.videos-cta {
+  background: var(--hg-home-section-muted-bg);
+  padding-block: var(--hg-space-16);
+  padding-inline: var(--hg-home-section-inline-padding);
+}
+
+.videos-cta__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--hg-space-4);
+  text-align: center;
+}
+
+.videos-cta__icon {
+  color: var(--hg-home-kicker-muted);
+  margin-block-end: var(--hg-space-2);
+}
+
+.videos-cta__heading {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: 1.875rem;
+  font-weight: var(--hg-font-weight-bold);
+  line-height: 2.25rem;
+  letter-spacing: 0.025rem;
+  color: var(--hg-home-heading-dark);
+  text-align: center;
+}
+
+.videos-cta__subtitle {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: 1.125rem;
+  font-weight: var(--hg-font-weight-regular);
+  line-height: 1.75rem;
+  color: var(--hg-home-kicker-muted);
+  text-align: center;
+  max-width: 36rem;
+}
+
+.videos-cta__actions {
+  display: flex;
+  gap: var(--hg-space-3);
+  align-items: center;
+  margin-block-start: var(--hg-space-4);
+}
+
+.videos-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  padding-inline: 1.5rem;
+  border-radius: var(--hg-home-button-radius);
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-xs);
+  font-weight: var(--hg-font-weight-medium);
+  line-height: 1.25rem;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.videos-cta__btn--primary {
+  background: var(--hg-color-hero-gradient-start);
+  color: #ffffff;
+}
+
+.videos-cta__btn--primary:hover {
+  opacity: 0.88;
+}
+
+.videos-cta__btn--secondary {
+  background: #ffffff;
+  color: var(--hg-home-heading-dark);
+  border: 1px solid var(--hg-home-subtle-border);
+}
+
+.videos-cta__btn--secondary:hover {
+  background: var(--hg-home-section-muted-bg);
+}
+
+@media (max-width: 1023px) {
+  .videos-cta {
+    padding-inline: var(--hg-space-6);
+  }
+  .videos-cta__actions {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .videos-cta {
+    padding-inline: var(--hg-space-12);
+  }
+}

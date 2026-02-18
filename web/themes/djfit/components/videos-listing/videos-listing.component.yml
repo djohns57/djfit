@@ -1,0 +1,12 @@
+name: Videos Listing
+status: stable
+description: Video library listing with filters, demo player, and video card grid.
+group: Videos
+
+props:
+  type: object
+  properties:
+    active_filter:
+      type: string
+      title: Active Filter
+      default: 'all'

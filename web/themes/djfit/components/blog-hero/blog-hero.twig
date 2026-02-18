@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Blog hero banner – Figma node 2:5
+ */
+#}
+{% set _heading = heading|default('Blog & Articles') %}
+{% set _subtitle = subtitle|default('Expert insights, actionable advice, and evidence-based strategies for health and fitness after 40.') %}
+
+<section class="blog-hero">
+  <div class="blog-hero__container">
+    <h1 class="blog-hero__heading">{{ _heading }}</h1>
+    <p class="blog-hero__subtitle">{{ _subtitle }}</p>
+  </div>
+</section>

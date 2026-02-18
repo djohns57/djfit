@@ -32,6 +32,7 @@ props:
     video1_image_url:
       type: string
       title: Video 1 thumbnail URL
+      default: ''
     video1_badge:
       type: string
       title: Video 1 badge text
@@ -63,6 +64,7 @@ props:
     video2_image_url:
       type: string
       title: Video 2 thumbnail URL
+      default: ''
     video2_badge:
       type: string
       title: Video 2 badge text

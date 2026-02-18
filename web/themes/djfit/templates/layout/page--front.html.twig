@@ -37,12 +37,15 @@
     {# Featured Videos section – Figma node 1:139 #}
     {% include 'djfit:home-videos' %}
 
+    {# Testimonials section – Figma node 1:186 #}
+    {% include 'djfit:home-testimonials' %}
+
+    {# CTA section – Figma node 1:254 #}
+    {% include 'djfit:home-cta' %}
+
     {# Additional homepage sections will be added here as built #}
   </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+  {# Custom footer – Figma node 1:280 #}
+  {% include 'djfit:home-footer' %}
 </div>

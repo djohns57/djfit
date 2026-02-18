@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Videos CTA – "Unlock the Complete Video Library"
+ */
+#}
+{% set _heading = heading|default('Unlock the Complete Video Library') %}
+{% set _subtitle = subtitle|default('Get unlimited access to over 200+ workout videos, nutrition guides, and recovery protocols.') %}
+{% set _primary_label = primary_button_label|default('View Membership Plans') %}
+{% set _primary_url = primary_button_url|default('/membership') %}
+{% set _secondary_label = secondary_button_label|default('Learn More') %}
+{% set _secondary_url = secondary_button_url|default('#') %}
+
+<section class="videos-cta">
+  <div class="videos-cta__container">
+    <div class="videos-cta__icon" aria-hidden="true">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="currentColor" stroke-width="2" fill="none"/>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <h2 class="videos-cta__heading">{{ _heading }}</h2>
+    <p class="videos-cta__subtitle">{{ _subtitle }}</p>
+    <div class="videos-cta__actions">
+      <a href="{{ _primary_url }}" class="videos-cta__btn videos-cta__btn--primary">{{ _primary_label }}</a>
+      <a href="{{ _secondary_url }}" class="videos-cta__btn videos-cta__btn--secondary">{{ _secondary_label }}</a>
+    </div>
+  </div>
+</section>

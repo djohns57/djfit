@@ -1,0 +1,64 @@
+name: Home Testimonials
+status: stable
+description: Testimonials section with gradient background and 3 testimonial cards.
+group: Homepage
+
+props:
+  type: object
+  properties:
+    section_heading:
+      type: string
+      title: Section Heading
+      default: 'Real Results from Real Men'
+    section_subtitle:
+      type: string
+      title: Section Subtitle
+      default: "Join thousands who've transformed their lives"
+    testimonial1_name:
+      type: string
+      title: Testimonial 1 Name
+      default: 'Michael T.'
+    testimonial1_age:
+      type: string
+      title: Testimonial 1 Age
+      default: 'Age 45'
+    testimonial1_quote:
+      type: string
+      title: Testimonial 1 Quote
+      default: '"Lost 30 pounds and feel stronger than I did in my 30s. The structured approach made all the difference."'
+    testimonial1_image_url:
+      type: string
+      title: Testimonial 1 Image URL
+      default: ''
+    testimonial2_name:
+      type: string
+      title: Testimonial 2 Name
+      default: 'James R.'
+    testimonial2_age:
+      type: string
+      title: Testimonial 2 Age
+      default: 'Age 52'
+    testimonial2_quote:
+      type: string
+      title: Testimonial 2 Quote
+      default: '"Finally found a program that addresses the specific challenges of training after 40. Game changer."'
+    testimonial2_image_url:
+      type: string
+      title: Testimonial 2 Image URL
+      default: ''
+    testimonial3_name:
+      type: string
+      title: Testimonial 3 Name
+      default: 'David K.'
+    testimonial3_age:
+      type: string
+      title: Testimonial 3 Age
+      default: 'Age 48'
+    testimonial3_quote:
+      type: string
+      title: Testimonial 3 Quote
+      default: '"The combination of fitness, nutrition, and recovery guidance transformed my health completely."'
+    testimonial3_image_url:
+      type: string
+      title: Testimonial 3 Image URL
+      default: ''

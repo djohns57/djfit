@@ -1,0 +1,135 @@
+/* =============================================
+ *  Home CTA – Figma node 1:254
+ *  Centered call-to-action with trust badges.
+ * ============================================= */
+
+.home-cta {
+  background: var(--hg-home-section-muted-bg);
+  padding-block: var(--hg-space-16);
+  padding-inline: var(--hg-home-section-inline-padding);
+}
+
+.home-cta__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--hg-space-8);
+  text-align: center;
+}
+
+/* ---- Heading ---- */
+.home-cta__heading {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-heading-lg);
+  font-weight: var(--hg-font-weight-bold);
+  line-height: var(--hg-home-line-height-lg);
+  letter-spacing: var(--hg-home-letter-spacing-lg);
+  color: var(--hg-home-heading-dark);
+  text-align: center;
+}
+
+/* ---- Subtitle ---- */
+.home-cta__subtitle {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.028rem;
+  color: var(--hg-home-kicker-muted);
+  text-align: center;
+  margin-block-start: calc(-1 * var(--hg-space-4));
+}
+
+/* ---- Action buttons ---- */
+.home-cta__actions {
+  display: flex;
+  gap: var(--hg-space-4);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.5rem;
+  padding-inline: 1.5rem;
+  border-radius: var(--hg-home-button-radius);
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-xs);
+  font-weight: var(--hg-font-weight-medium);
+  line-height: 1.25rem;
+  letter-spacing: -0.0094rem;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+  cursor: pointer;
+}
+
+.home-cta__btn:hover {
+  opacity: 0.88;
+}
+
+.home-cta__btn--primary {
+  background: var(--hg-color-hero-gradient-start);
+  color: #ffffff;
+}
+
+.home-cta__btn--primary svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.home-cta__btn--secondary {
+  background: #ffffff;
+  color: var(--hg-home-heading-dark);
+  border: 1px solid var(--hg-home-subtle-border);
+}
+
+/* ---- Trust badges ---- */
+.home-cta__badges {
+  display: flex;
+  gap: var(--hg-space-6);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.home-cta__badge {
+  display: flex;
+  align-items: center;
+  gap: var(--hg-space-2);
+}
+
+.home-cta__badge-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  color: var(--hg-home-cta-green);
+}
+
+.home-cta__badge-text {
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-sm);
+  line-height: var(--hg-home-line-height-xs);
+  letter-spacing: var(--hg-home-letter-spacing-sm);
+  color: var(--hg-home-kicker-muted);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1023px) {
+  .home-cta {
+    padding-inline: var(--hg-space-6);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .home-cta {
+    padding-inline: var(--hg-space-12);
+  }
+}

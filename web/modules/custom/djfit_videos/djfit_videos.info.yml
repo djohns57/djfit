@@ -1,0 +1,10 @@
+name: DJ Fit Videos
+type: module
+description: Provides the Video Library block and related video functionality.
+core_version_requirement: ^11
+package: DJ Fit
+dependencies:
+  - drupal:node
+  - drupal:media
+  - drupal:taxonomy
+  - drupal:views

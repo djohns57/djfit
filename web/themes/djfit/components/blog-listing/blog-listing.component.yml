@@ -1,0 +1,12 @@
+name: Blog Listing
+status: stable
+description: Blog listing with category filters, article card grid, and pagination.
+group: Blog
+
+props:
+  type: object
+  properties:
+    active_filter:
+      type: string
+      title: Active Filter
+      default: 'all'

@@ -1,0 +1,153 @@
+/* =============================================
+ *  Home Testimonials – Figma node 1:186
+ *  Gradient background with 3 testimonial cards.
+ * ============================================= */
+
+.home-testimonials {
+  background: linear-gradient(
+    to bottom,
+    var(--hg-color-hero-gradient-start),
+    var(--hg-home-testimonial-gradient-end)
+  );
+  padding-block-start: var(--hg-space-16);
+  padding-block-end: var(--hg-space-16);
+  padding-inline: var(--hg-home-section-inline-padding);
+}
+
+.home-testimonials__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hg-space-12);
+  padding-inline: var(--hg-space-8);
+}
+
+/* ---- Section header ---- */
+.home-testimonials__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hg-space-4);
+  text-align: center;
+}
+
+.home-testimonials__heading {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-heading-lg);
+  font-weight: var(--hg-font-weight-bold);
+  line-height: var(--hg-home-line-height-lg);
+  letter-spacing: var(--hg-home-letter-spacing-lg);
+  color: #ffffff;
+  text-align: center;
+}
+
+.home-testimonials__subtitle {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--hg-home-testimonial-text-muted);
+  text-align: center;
+}
+
+/* ---- Card grid ---- */
+.home-testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--hg-space-8);
+}
+
+/* ---- Individual card ---- */
+.home-testimonials__card {
+  background: var(--hg-home-testimonial-card-bg);
+  border: 1px solid var(--hg-home-testimonial-card-border);
+  border-radius: var(--hg-home-testimonial-card-radius);
+  padding: var(--hg-space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hg-space-4);
+}
+
+.home-testimonials__card-top {
+  display: flex;
+  align-items: center;
+  gap: var(--hg-space-4);
+}
+
+/* ---- Avatar ---- */
+.home-testimonials__avatar {
+  width: var(--hg-home-testimonial-avatar-size);
+  height: var(--hg-home-testimonial-avatar-size);
+  border-radius: 9999px;
+  background: var(--hg-home-testimonial-avatar-bg);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.home-testimonials__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.home-testimonials__avatar-placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- Name + age ---- */
+.home-testimonials__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-testimonials__name {
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-sm);
+  font-weight: var(--hg-font-weight-medium);
+  line-height: 1rem;
+  color: #ffffff;
+}
+
+.home-testimonials__age {
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-sm);
+  font-weight: var(--hg-font-weight-regular);
+  line-height: var(--hg-home-line-height-xs);
+  color: var(--hg-home-testimonial-text-muted);
+}
+
+/* ---- Quote ---- */
+.home-testimonials__quote {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-sm);
+  font-style: italic;
+  font-weight: var(--hg-font-weight-regular);
+  line-height: var(--hg-home-line-height-xs);
+  color: var(--hg-home-testimonial-quote-color);
+}
+
+/* ---- Responsive: stack cards on small screens ---- */
+@media (max-width: 1023px) {
+  .home-testimonials {
+    padding-inline: var(--hg-space-6);
+  }
+
+  .home-testimonials__container {
+    padding-inline: 0;
+  }
+
+  .home-testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .home-testimonials {
+    padding-inline: var(--hg-space-12);
+  }
+}

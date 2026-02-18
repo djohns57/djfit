@@ -1,0 +1,16 @@
+name: Videos Hero
+status: stable
+description: Video library page hero banner with gradient background.
+group: Videos
+
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      default: 'Video Library'
+    subtitle:
+      type: string
+      title: Subtitle
+      default: 'Comprehensive workout programs, nutrition education, and recovery protocols. All taught by expert coaches.'

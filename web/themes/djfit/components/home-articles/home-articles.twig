@@ -1,49 +1,20 @@
 {#
 /**
  * @file
- * Home Articles section – "Latest Articles" with 3 article cards.
+ * Home Articles section – "Latest Articles" with dynamic article cards.
  *
  * Figma node 1:60.
  *
- * Props (flat for Canvas):
- *   - section_heading, section_subtitle, view_all_url
- *   - article[1-3]_tag, article[1-3]_date, article[1-3]_heading,
- *     article[1-3]_body, article[1-3]_url, article[1-3]_image_url
+ * Section header props come from Canvas; article cards are sourced dynamically
+ * from the djfit_home_articles block (queries the 3 most recent Article nodes).
  */
 #}
 {% set section_heading = section_heading|default('Latest Articles') %}
 {% set section_subtitle = section_subtitle|default('Expert insights and actionable advice') %}
 {% set view_all_url = view_all_url|default('/blog') %}
 
-{% set articles = [
-  {
-    tag: article1_tag|default('Fitness'),
-    date: article1_date|default('Feb 10, 2026'),
-    heading: article1_heading|default('Building Muscle After 40: What Really Works'),
-    body: article1_body|default('Science-backed strategies for maintaining and building muscle mass as you age.'),
-    url: article1_url|default('/blog/building-muscle-after-40'),
-    image_url: article1_image_url|default(''),
-  },
-  {
-    tag: article2_tag|default('Recovery'),
-    date: article2_date|default('Feb 8, 2026'),
-    heading: article2_heading|default('Optimizing Recovery: Sleep and Stress Management'),
-    body: article2_body|default('How proper recovery can accelerate your fitness results and improve overall health.'),
-    url: article2_url|default('/blog/optimizing-recovery'),
-    image_url: article2_image_url|default(''),
-  },
-  {
-    tag: article3_tag|default('Nutrition'),
-    date: article3_date|default('Feb 5, 2026'),
-    heading: article3_heading|default('Nutrition Fundamentals for Men Over 40'),
-    body: article3_body|default('Essential dietary principles to support longevity, energy, and performance.'),
-    url: article3_url|default('/blog/nutrition-fundamentals'),
-    image_url: article3_image_url|default(''),
-  },
-] %}
-
 <section class="home-articles">
-  {# Section header #}
+  {# Section header – editable via Canvas props #}
   <div class="home-articles__header">
     <div class="home-articles__header-text">
       <h2 class="home-articles__title">{{ section_heading }}</h2>
@@ -52,47 +23,6 @@
     <a href="{{ view_all_url }}" class="home-articles__view-all">View All</a>
   </div>
 
-  {# Cards grid #}
-  <div class="home-articles__grid">
-    {% for article in articles %}
-      <article class="home-articles__card">
-        {# Image area #}
-        <div class="home-articles__media">
-          {% if article.image_url %}
-            <img src="{{ article.image_url }}" alt="{{ article.heading }}" class="home-articles__image" loading="lazy" />
-          {% else %}
-            <div class="home-articles__placeholder">
-              <svg class="home-articles__placeholder-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/>
-                <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M3 16L8 11L13 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M14 15L17 12L21 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-          {% endif %}
-        </div>
-
-        {# Meta: tag + date #}
-        <div class="home-articles__meta">
-          <span class="home-articles__tag">{{ article.tag }}</span>
-          <span class="home-articles__date">{{ article.date }}</span>
-        </div>
-
-        {# Card title #}
-        <h4 class="home-articles__card-heading">{{ article.heading }}</h4>
-
-        {# Card body + link #}
-        <div class="home-articles__card-body">
-          <p class="home-articles__excerpt">{{ article.body }}</p>
-          <a href="{{ article.url }}" class="home-articles__read-more">
-            Read More
-            <svg class="home-articles__arrow" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M3.33333 8H12.6667" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M8 3.33333L12.6667 8L8 12.6667" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-        </div>
-      </article>
-    {% endfor %}
-  </div>
+  {# Dynamic article cards from Article nodes #}
+  {{ drupal_block('djfit_home_articles') }}
 </section>

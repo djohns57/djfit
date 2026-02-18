@@ -1504,6 +1504,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/twig_tweak' => array(
+            'pretty_version' => '3.4.1',
+            'version' => '3.4.1.0',
+            'reference' => '3.4.1',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/twig_tweak',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/ui_icons' => array(
             'pretty_version' => '1.1.1',
             'version' => '1.1.1.0',

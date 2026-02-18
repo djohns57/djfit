@@ -1,0 +1,8 @@
+name: DJ Fit Blog
+type: module
+description: Provides the Blog Listing block and related article functionality.
+core_version_requirement: ^11
+package: DJ Fit
+dependencies:
+  - drupal:node
+  - drupal:media

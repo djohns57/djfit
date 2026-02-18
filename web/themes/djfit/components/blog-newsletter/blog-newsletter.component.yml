@@ -1,0 +1,24 @@
+name: Blog Newsletter
+status: stable
+description: Newsletter signup CTA section for the blog page.
+group: Blog
+
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      default: 'Never Miss an Article'
+    subtitle:
+      type: string
+      title: Subtitle
+      default: 'Get the latest articles delivered directly to your inbox every week.'
+    button_label:
+      type: string
+      title: Button Label
+      default: 'Subscribe to Newsletter'
+    button_url:
+      type: string
+      title: Button URL
+      default: '/newsletter'

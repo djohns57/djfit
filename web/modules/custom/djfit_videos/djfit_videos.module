@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * DJ Fit Videos module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function djfit_videos_theme(): array {
+  return [
+    'djfit_video_library' => [
+      'variables' => [
+        'categories' => [],
+        'featured_video' => NULL,
+        'videos' => [],
+      ],
+    ],
+    'djfit_home_videos' => [
+      'variables' => [
+        'videos' => [],
+      ],
+    ],
+  ];
+}

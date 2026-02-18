@@ -1,0 +1,41 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the DJ Fit theme.
+ */
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ *
+ * Adds page template suggestions based on the current path alias,
+ * e.g. /blog -> page--blog.html.twig
+ */
+function djfit_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $path = \Drupal::service('path.current')->getPath();
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+  if ($alias !== $path) {
+    $alias_parts = explode('/', trim($alias, '/'));
+    $suggestion = 'page';
+    foreach ($alias_parts as $part) {
+      $suggestion .= '__' . str_replace('-', '_', $part);
+      $suggestions[] = $suggestion;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_page_title().
+ *
+ * Hides the default page title on Video and Article node pages since
+ * the node templates render their own styled title.
+ */
+function djfit_preprocess_page_title(array &$variables) {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $bundle = $node->bundle();
+    if (in_array($bundle, ['video', 'article'], TRUE)) {
+      $variables['title'] = '';
+    }
+  }
+}

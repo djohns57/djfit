@@ -1,0 +1,32 @@
+name: Home Footer
+status: stable
+description: Site footer with brand info, social links, quick links, legal links, and copyright.
+group: Homepage
+
+props:
+  type: object
+  properties:
+    brand_name:
+      type: string
+      title: Brand Name
+      default: 'DJ Fit'
+    brand_description:
+      type: string
+      title: Brand Description
+      default: 'Health, strength, and longevity for men over 40. Science-backed fitness, nutrition, and recovery strategies.'
+    facebook_url:
+      type: string
+      title: Facebook URL
+      default: '#'
+    twitter_url:
+      type: string
+      title: Twitter URL
+      default: '#'
+    instagram_url:
+      type: string
+      title: Instagram URL
+      default: '#'
+    copyright_text:
+      type: string
+      title: Copyright Text
+      default: '© 2026 DJ Fit. All rights reserved.'

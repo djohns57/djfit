@@ -1,0 +1,173 @@
+/* =============================================
+ *  Home Footer – Figma node 1:280
+ *  Dark footer with brand, nav columns, copyright.
+ * ============================================= */
+
+.home-footer {
+  background: var(--hg-home-footer-bg);
+  padding-block-start: var(--hg-space-12);
+  padding-inline: var(--hg-home-section-inline-padding);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hg-space-8);
+}
+
+/* ---- Top row: brand + nav columns ---- */
+.home-footer__top {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--hg-space-8);
+}
+
+/* ---- Brand column ---- */
+.home-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hg-space-4);
+  max-width: 28rem;
+}
+
+.home-footer__brand-row {
+  display: flex;
+  align-items: center;
+  gap: var(--hg-space-3);
+}
+
+.home-footer__logo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.home-footer__brand-name {
+  font-family: var(--hg-font-family-header);
+  font-size: 1.5rem;
+  font-weight: var(--hg-font-weight-bold);
+  line-height: 2rem;
+  color: var(--hg-home-footer-heading);
+}
+
+.home-footer__brand-desc {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-sm);
+  font-weight: var(--hg-font-weight-regular);
+  line-height: var(--hg-home-line-height-xs);
+  letter-spacing: var(--hg-home-letter-spacing-sm);
+  color: var(--hg-home-footer-text);
+}
+
+/* ---- Social icons ---- */
+.home-footer__social {
+  display: flex;
+  gap: var(--hg-space-4);
+  align-items: center;
+  margin-block-start: var(--hg-space-2);
+}
+
+.home-footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--hg-home-footer-text);
+  transition: opacity 0.15s ease;
+}
+
+.home-footer__social-link:hover {
+  opacity: 0.75;
+}
+
+.home-footer__social-link svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* ---- Navigation columns ---- */
+.home-footer__nav {
+  min-width: 10rem;
+}
+
+.home-footer__nav-heading {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-sm);
+  font-weight: var(--hg-font-weight-semibold);
+  line-height: var(--hg-home-line-height-xs);
+  letter-spacing: var(--hg-home-letter-spacing-sm);
+  color: var(--hg-home-footer-heading);
+  margin-block-end: var(--hg-space-4);
+}
+
+.home-footer__nav-list {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hg-space-2);
+  list-style: none;
+  padding: 0;
+}
+
+.home-footer__nav-list li {
+  all: unset;
+  display: block;
+}
+
+.home-footer__nav-link {
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-sm);
+  font-weight: var(--hg-font-weight-regular);
+  line-height: var(--hg-home-line-height-xs);
+  letter-spacing: var(--hg-home-letter-spacing-sm);
+  color: var(--hg-home-footer-text);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.home-footer__nav-link:hover {
+  opacity: 0.75;
+}
+
+/* ---- Copyright bar ---- */
+.home-footer__bottom {
+  border-top: 1px solid var(--hg-home-footer-border);
+  padding-block: var(--hg-space-8);
+}
+
+.home-footer__copyright {
+  all: unset;
+  display: block;
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-sm);
+  font-weight: var(--hg-font-weight-regular);
+  line-height: var(--hg-home-line-height-xs);
+  letter-spacing: var(--hg-home-letter-spacing-sm);
+  color: var(--hg-home-footer-copyright);
+  text-align: center;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1023px) {
+  .home-footer {
+    padding-inline: var(--hg-space-6);
+  }
+
+  .home-footer__top {
+    grid-template-columns: 1fr;
+    gap: var(--hg-space-8);
+  }
+
+  .home-footer__brand {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .home-footer {
+    padding-inline: var(--hg-space-12);
+  }
+}

@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * DJ Fit Blog module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function djfit_blog_theme(): array {
+  return [
+    'djfit_blog_listing' => [
+      'variables' => [
+        'categories' => [],
+        'active_filter' => 'all',
+        'articles' => [],
+      ],
+    ],
+    'djfit_home_articles' => [
+      'variables' => [
+        'articles' => [],
+      ],
+    ],
+  ];
+}

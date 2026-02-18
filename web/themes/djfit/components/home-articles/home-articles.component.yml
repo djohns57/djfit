@@ -40,6 +40,7 @@ props:
     article1_image_url:
       type: string
       title: Article 1 image URL
+      default: ''
     article2_tag:
       type: string
       title: Article 2 tag
@@ -63,6 +64,7 @@ props:
     article2_image_url:
       type: string
       title: Article 2 image URL
+      default: ''
     article3_tag:
       type: string
       title: Article 3 tag
@@ -86,3 +88,4 @@ props:
     article3_image_url:
       type: string
       title: Article 3 image URL
+      default: ''
