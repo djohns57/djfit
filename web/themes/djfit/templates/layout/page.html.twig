@@ -96,6 +96,8 @@
     </footer>
   {% endif %}
 
-  {% include 'djfit:home-footer' %}
+  {% if not rendered_by_canvas %}
+    {% include 'djfit:home-footer' %}
+  {% endif %}
 </div>
 {# /.layout-container #}
