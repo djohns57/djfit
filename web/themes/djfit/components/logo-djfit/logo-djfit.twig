@@ -15,7 +15,7 @@
 {% set size = size|default('header') %}
 {% set href = url|default('/') %}
 {% set has_glow = glow|default(true) %}
-{% set standalone = standalone|default(true) %}
+{% set standalone = standalone is defined ? standalone : true %}
 
 {% set logo_content %}
   <span class="logo-djfit__text">DJ Fit</span>

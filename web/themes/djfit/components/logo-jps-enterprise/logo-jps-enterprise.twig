@@ -15,7 +15,7 @@
 } %}
 {% set size = size|default('header') %}
 {% set href = url|default('/') %}
-{% set standalone = standalone|default(true) %}
+{% set standalone = standalone is defined ? standalone : true %}
 {% set logo_src = src|default('') %}
 {% set size_px = { small: 24, medium: 32, large: 40, header: 60 } %}
 {% set px = size_px[size]|default(60) %}
@@ -26,12 +26,12 @@
   {% endset %}
 {% else %}
   {% set logo_content %}
-    <svg class="logo-jps-enterprise__svg h-full w-auto" viewBox="0 0 95 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="136" height="60">
-      <text x="0" y="26" font-family="Inter, Outfit, system-ui, sans-serif" font-size="24" font-weight="700" fill="var(--hg-color-header-accent)">J</text>
-      <text x="16" y="26" font-family="Inter, Outfit, system-ui, sans-serif" font-size="24" font-weight="700" fill="var(--hg-color-header-text)">P</text>
-      <path d="M28 16 Q34 6 40 14" stroke="#7ebf72" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      <text x="44" y="26" font-family="Inter, Outfit, system-ui, sans-serif" font-size="24" font-weight="700" fill="#0f5f86">S</text>
-      <text x="14" y="40" font-family="Inter, Outfit, system-ui, sans-serif" font-size="9" font-weight="500" letter-spacing="0.08em" fill="var(--hg-color-text-muted)">ENTERPRISE</text>
+    <svg class="logo-jps-enterprise__svg h-full w-auto" viewBox="0 0 71 42" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="101" height="60">
+      <text class="logo-jps-enterprise__j" x="0" y="26" font-family="Inter, Outfit, system-ui, sans-serif" font-size="24" font-weight="700" fill="var(--hg-color-header-accent)">J</text>
+      <text class="logo-jps-enterprise__p" x="14" y="26" font-family="Inter, Outfit, system-ui, sans-serif" font-size="24" font-weight="700" fill="var(--hg-color-header-text)">P</text>
+      <path class="logo-jps-enterprise__arrow" d="M22 9 L27 5.5 M25.5 4 L27 5.5 L26 7.5" stroke="#7ebf72" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text class="logo-jps-enterprise__s" x="28" y="26" font-family="Inter, Outfit, system-ui, sans-serif" font-size="24" font-weight="700" fill="#0f5f86">S</text>
+      <text class="logo-jps-enterprise__ent" x="4" y="40" font-family="Inter, Outfit, system-ui, sans-serif" font-size="9" font-weight="500" letter-spacing="0.08em" fill="var(--hg-color-text-muted)">ENTERPRISE</text>
     </svg>
   {% endset %}
 {% endif %}

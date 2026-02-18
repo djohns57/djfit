@@ -35,7 +35,7 @@
     {# Brand column #}
     <div class="home-footer__brand">
       <div class="home-footer__brand-row">
-        <img src="/{{ active_theme_path() }}/components/logo-jps-enterprise/assets/logo-jps.svg" alt="{{ _brand }} logo" class="home-footer__logo" width="48" height="48" />
+        {{ include('djfit:logo-jps-enterprise', { size: 'large', standalone: false }, with_context: false) }}
         <span class="home-footer__brand-name">{{ _brand }}</span>
       </div>
       <p class="home-footer__brand-desc">{{ _desc }}</p>

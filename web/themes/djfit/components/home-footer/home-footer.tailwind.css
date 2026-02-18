@@ -33,11 +33,24 @@
   gap: var(--hg-space-3);
 }
 
-.home-footer__logo {
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
+.home-footer__brand-row .logo-jps-enterprise {
   flex-shrink: 0;
+}
+
+.home-footer__brand-row .logo-jps-enterprise__j {
+  fill: #7ebf72;
+}
+
+.home-footer__brand-row .logo-jps-enterprise__p {
+  fill: #ffffff;
+}
+
+.home-footer__brand-row .logo-jps-enterprise__s {
+  fill: #5cb8d6;
+}
+
+.home-footer__brand-row .logo-jps-enterprise__ent {
+  fill: #a0a0a0;
 }
 
 .home-footer__brand-name {
