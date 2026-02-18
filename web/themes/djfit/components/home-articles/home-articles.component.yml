@@ -1,0 +1,88 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Home Articles
+group: Layout
+status: experimental
+props:
+  type: object
+  properties:
+    section_heading:
+      type: string
+      title: Section heading
+      default: 'Latest Articles'
+    section_subtitle:
+      type: string
+      title: Section subtitle
+      default: 'Expert insights and actionable advice'
+    view_all_url:
+      type: string
+      title: View All URL
+      default: '/blog'
+    article1_tag:
+      type: string
+      title: Article 1 tag
+      default: 'Fitness'
+    article1_date:
+      type: string
+      title: Article 1 date
+      default: 'Feb 10, 2026'
+    article1_heading:
+      type: string
+      title: Article 1 heading
+      default: 'Building Muscle After 40: What Really Works'
+    article1_body:
+      type: string
+      title: Article 1 body
+      default: 'Science-backed strategies for maintaining and building muscle mass as you age.'
+    article1_url:
+      type: string
+      title: Article 1 URL
+      default: '/blog/building-muscle-after-40'
+    article1_image_url:
+      type: string
+      title: Article 1 image URL
+    article2_tag:
+      type: string
+      title: Article 2 tag
+      default: 'Recovery'
+    article2_date:
+      type: string
+      title: Article 2 date
+      default: 'Feb 8, 2026'
+    article2_heading:
+      type: string
+      title: Article 2 heading
+      default: 'Optimizing Recovery: Sleep and Stress Management'
+    article2_body:
+      type: string
+      title: Article 2 body
+      default: 'How proper recovery can accelerate your fitness results and improve overall health.'
+    article2_url:
+      type: string
+      title: Article 2 URL
+      default: '/blog/optimizing-recovery'
+    article2_image_url:
+      type: string
+      title: Article 2 image URL
+    article3_tag:
+      type: string
+      title: Article 3 tag
+      default: 'Nutrition'
+    article3_date:
+      type: string
+      title: Article 3 date
+      default: 'Feb 5, 2026'
+    article3_heading:
+      type: string
+      title: Article 3 heading
+      default: 'Nutrition Fundamentals for Men Over 40'
+    article3_body:
+      type: string
+      title: Article 3 body
+      default: 'Essential dietary principles to support longevity, energy, and performance.'
+    article3_url:
+      type: string
+      title: Article 3 URL
+      default: '/blog/nutrition-fundamentals'
+    article3_image_url:
+      type: string
+      title: Article 3 image URL

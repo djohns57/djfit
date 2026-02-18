@@ -17,20 +17,20 @@
   width: 100%;
 }
 
-/* Inner container: 64px tall, horizontal padding, centered content */
+/* Inner container: 64px tall, horizontal padding matching hero/features */
 .site-header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: var(--hg-header-height);
-  max-width: var(--hg-header-content-width);
+  width: 100%;
   margin-inline: auto;
   padding-inline: var(--hg-space-4);
 }
 
 @media (min-width: 1024px) {
   .site-header__container {
-    padding-inline: var(--hg-space-8);
+    padding-inline: var(--hg-home-section-inline-padding);
   }
 }
 
@@ -96,7 +96,7 @@
 .site-header__nav-list {
   display: flex;
   align-items: center;
-  gap: var(--hg-space-1);
+  gap: var(--hg-space-2);
   list-style: none;
   margin: 0;
   padding: 0;

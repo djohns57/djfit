@@ -9,6 +9,9 @@
 @import "../components/brand-logo/brand-logo.tailwind.css";
 @import "../components/site-header/site-header.tailwind.css";
 @import "../components/home-hero/home-hero.tailwind.css";
+@import "../components/home-features/home-features.tailwind.css";
+@import "../components/home-articles/home-articles.tailwind.css";
+@import "../components/home-videos/home-videos.tailwind.css";
 
 @theme inline {
   --color-background: var(--background);

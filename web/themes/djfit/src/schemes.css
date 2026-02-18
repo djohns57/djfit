@@ -147,6 +147,10 @@
   --hg-home-tag-teal-bg: rgb(107 159 176 / 0.1);
   --hg-home-tag-green-bg: rgb(124 184 115 / 0.1);
   --hg-home-cta-green: #7cb873;
+  --hg-home-heading-dark: #2d2d2d;
+  --hg-home-icon-stroke-blue: #005a7d;
+  --hg-home-icon-stroke-teal: #6b9fb0;
+  --hg-home-icon-stroke-green: #7cb873;
   --hg-home-heading-xl: 3.75rem;
   --hg-home-heading-lg: 2.25rem;
   --hg-home-body-lg: 1.5rem;

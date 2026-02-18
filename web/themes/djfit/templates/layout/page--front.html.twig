@@ -28,9 +28,16 @@
       secondary_button_url: '/about',
     } %}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>
+    {# Home Features section – Figma node 1:27 #}
+    {% include 'djfit:home-features' %}
+
+    {# Latest Articles section – Figma node 1:60 #}
+    {% include 'djfit:home-articles' %}
+
+    {# Featured Videos section – Figma node 1:139 #}
+    {% include 'djfit:home-videos' %}
+
+    {# Additional homepage sections will be added here as built #}
   </main>
 
   {% if page.footer %}

@@ -1,0 +1,56 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Home Features
+group: Layout
+status: experimental
+props:
+  type: object
+  properties:
+    feature1_icon:
+      type: string
+      title: Feature 1 icon
+      description: 'Icon variant: training, longevity, or results.'
+      default: training
+      enum:
+        - training
+        - longevity
+        - results
+    feature1_heading:
+      type: string
+      title: Feature 1 heading
+      default: 'Evidence-Based Training'
+    feature1_body:
+      type: string
+      title: Feature 1 body
+      default: 'Programs built on the latest exercise science, optimized for men over 40 to build strength safely and effectively.'
+    feature2_icon:
+      type: string
+      title: Feature 2 icon
+      default: longevity
+      enum:
+        - training
+        - longevity
+        - results
+    feature2_heading:
+      type: string
+      title: Feature 2 heading
+      default: 'Longevity Focused'
+    feature2_body:
+      type: string
+      title: Feature 2 body
+      default: 'Strategies designed not just for today, but for sustained health, vitality, and performance for decades to come.'
+    feature3_icon:
+      type: string
+      title: Feature 3 icon
+      default: results
+      enum:
+        - training
+        - longevity
+        - results
+    feature3_heading:
+      type: string
+      title: Feature 3 heading
+      default: 'Proven Results'
+    feature3_body:
+      type: string
+      title: Feature 3 body
+      default: "Join thousands of men who've transformed their health, strength, and confidence with our comprehensive approach."

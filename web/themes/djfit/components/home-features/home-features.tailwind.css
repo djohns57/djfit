@@ -1,0 +1,90 @@
+/* Home Features – 3-column cards – Figma node 1:27 */
+
+.home-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--hg-space-8);
+  padding-block: var(--hg-space-16);
+  padding-inline: var(--hg-home-section-inline-padding);
+  background-color: #fff;
+  max-width: 100%;
+}
+
+/* Individual card */
+.home-features__card {
+  background-color: #fff;
+  border: var(--hg-home-feature-card-border-width) solid var(--hg-home-subtle-border);
+  border-radius: var(--hg-home-feature-card-radius);
+  padding: var(--hg-space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hg-space-4);
+}
+
+/* Icon container – shared base */
+.home-features__icon {
+  width: var(--hg-home-feature-icon-size);
+  height: var(--hg-home-feature-icon-size);
+  border-radius: var(--hg-home-feature-icon-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-features__icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Icon colour variants */
+.home-features__icon--training {
+  background-color: var(--hg-home-tag-blue-bg);
+  color: var(--hg-home-icon-stroke-blue);
+}
+
+.home-features__icon--longevity {
+  background-color: var(--hg-home-tag-teal-bg);
+  color: var(--hg-home-icon-stroke-teal);
+}
+
+.home-features__icon--results {
+  background-color: var(--hg-home-tag-green-bg);
+  color: var(--hg-home-icon-stroke-green);
+}
+
+/* Typography */
+.home-features__heading {
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-sm);
+  font-weight: var(--hg-font-weight-medium);
+  line-height: 1;
+  letter-spacing: var(--hg-home-letter-spacing-sm);
+  color: var(--hg-home-heading-dark);
+  margin: 0;
+}
+
+.home-features__body {
+  font-family: var(--hg-font-family-header);
+  font-size: var(--hg-home-body-sm);
+  font-weight: var(--hg-font-weight-regular);
+  line-height: var(--hg-home-line-height-xs);
+  letter-spacing: var(--hg-home-letter-spacing-sm);
+  color: var(--hg-home-kicker-muted);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .home-features {
+    grid-template-columns: 1fr;
+    padding-inline: var(--hg-space-8);
+    gap: var(--hg-space-6);
+  }
+}
+
+@media (max-width: 640px) {
+  .home-features {
+    padding-inline: var(--hg-space-4);
+    padding-block: var(--hg-space-8);
+  }
+}
