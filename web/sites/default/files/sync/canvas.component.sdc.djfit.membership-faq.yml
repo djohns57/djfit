@@ -1,0 +1,26 @@
+uuid: 7b7745f1-dc49-43d7-bd82-091dfd04da2a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - djfit
+active_version: 9e9b12e09f510266
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Membership FAQ'
+id: sdc.djfit.membership-faq
+provider: djfit
+source: sdc
+source_local_id: 'djfit:membership-faq'

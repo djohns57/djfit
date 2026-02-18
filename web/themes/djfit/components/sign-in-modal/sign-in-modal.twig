@@ -1,0 +1,91 @@
+{#
+/**
+ * @file
+ * Sign In Modal component — Figma node 2:826–2:850.
+ *
+ * Renders a centered sign-in dialog over a semi-transparent backdrop.
+ * Opened via [data-signin-trigger] buttons; closed by backdrop click,
+ * close button, or Escape key.
+ */
+#}
+{% set heading = heading|default('Sign In') %}
+{% set subtitle = subtitle|default('Enter your credentials to access your account.') %}
+{% set email_label = email_label|default('Email') %}
+{% set email_placeholder = email_placeholder|default('your@email.com') %}
+{% set password_label = password_label|default('Password') %}
+{% set button_text = button_text|default('Sign In') %}
+{% set signup_text = signup_text|default("Don't have an account?") %}
+{% set signup_link_text = signup_link_text|default('Get started') %}
+{% set signup_url = signup_url|default('/membership') %}
+{% set form_action = form_action|default('/user/login') %}
+
+<div
+  class="signin-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-label="{{ heading }}"
+  aria-hidden="true"
+>
+  {# Backdrop #}
+  <div class="signin-modal__backdrop"></div>
+
+  {# Dialog card #}
+  <div class="signin-modal__card">
+    {# Header #}
+    <div class="signin-modal__header">
+      <h2 class="signin-modal__title">{{ heading }}</h2>
+      <p class="signin-modal__subtitle">{{ subtitle }}</p>
+    </div>
+
+    {# Close button #}
+    <button
+      type="button"
+      class="signin-modal__close"
+      aria-label="{{ 'Close'|t }}"
+    >
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 4L4 12" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M4 4L12 12" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    {# Form #}
+    <form class="signin-modal__form" action="{{ form_action }}" method="post">
+      <div class="signin-modal__field">
+        <label class="signin-modal__label" for="signin-email">{{ email_label }}</label>
+        <input
+          class="signin-modal__input"
+          type="email"
+          id="signin-email"
+          name="name"
+          placeholder="{{ email_placeholder }}"
+          autocomplete="email"
+          required
+        />
+      </div>
+
+      <div class="signin-modal__field">
+        <label class="signin-modal__label" for="signin-password">{{ password_label }}</label>
+        <input
+          class="signin-modal__input"
+          type="password"
+          id="signin-password"
+          name="pass"
+          autocomplete="current-password"
+          required
+        />
+      </div>
+
+      <input type="hidden" name="form_id" value="user_login_form" />
+
+      <button type="submit" class="signin-modal__submit">
+        {{ button_text }}
+      </button>
+
+      <p class="signin-modal__signup">
+        {{ signup_text }}
+        <a href="{{ signup_url }}" class="signin-modal__signup-link">{{ signup_link_text }}</a>
+      </p>
+    </form>
+  </div>
+</div>

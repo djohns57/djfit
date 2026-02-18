@@ -1,0 +1,34 @@
+uuid: e624a23a-4405-4cad-a85d-6329f9153da0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - djfit
+active_version: c63b3f3352fc7592
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        subtitle:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Resources Hero'
+id: sdc.djfit.resources-hero
+provider: djfit
+source: sdc
+source_local_id: 'djfit:resources-hero'

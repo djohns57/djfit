@@ -1,0 +1,22 @@
+uuid: 68bad856-b317-4d4b-a890-cfeecbd3def4
+langcode: en
+status: true
+dependencies:
+  module:
+    - djfit_blog
+active_version: db62651d3e370658
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: djfit_blog_listing
+        label: 'DJ Fit Blog Listing'
+        label_display: '0'
+        provider: djfit_blog
+    fallback_metadata:
+      slot_definitions: null
+label: 'DJ Fit Blog Listing'
+id: block.djfit_blog_listing
+provider: djfit_blog
+source: block
+source_local_id: djfit_blog_listing

@@ -1,4 +1,4 @@
-uuid: 468dfd2d-95ae-4e27-8959-e8759d3aa279
+uuid: 62d1bdec-c9f2-4029-9310-6a0b745828e2
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,13 @@ dependencies:
     - options
   theme:
     - djfit
+_core:
+  default_config_hash: gu8oX5f894sTFnfr6hqQZcFvTGUuXHc8xnF2g8dkYGY
+label: Icon
+id: sdc.djfit.icon
+source: sdc
+source_local_id: 'djfit:icon'
+provider: djfit
 active_version: 7d2cdaeca3752d68
 versioned_properties:
   active:
@@ -34,8 +41,3 @@ versioned_properties:
           expression: ℹ︎list_string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: Icon
-id: sdc.djfit.icon
-provider: djfit
-source: sdc
-source_local_id: 'djfit:icon'

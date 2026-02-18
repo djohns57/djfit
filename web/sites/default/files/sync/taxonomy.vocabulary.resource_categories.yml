@@ -1,0 +1,9 @@
+uuid: 82587463-32d5-4874-a7da-123a62202211
+langcode: en
+status: true
+dependencies: {  }
+name: 'Resource Categories'
+vid: resource_categories
+description: 'Categories for downloadable resources'
+weight: 0
+new_revision: false

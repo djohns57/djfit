@@ -1,0 +1,19 @@
+uuid: 6764767f-c5c7-40ee-a7bc-de077f1098f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_pages
+    - node.type.resource
+id: node.resource.field_resource_pages
+field_name: field_resource_pages
+entity_type: node
+bundle: resource
+label: 'Page Count'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

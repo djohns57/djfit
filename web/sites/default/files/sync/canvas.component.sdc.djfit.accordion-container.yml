@@ -1,9 +1,16 @@
-uuid: f58e5fdd-3cb3-4bdf-aeb3-f5a896271b6e
+uuid: 89045720-5899-4e32-ac07-0936a20881f9
 langcode: en
 status: true
 dependencies:
   theme:
     - djfit
+_core:
+  default_config_hash: JtvTSo5sW7PIpxFkGbWTfGddv_23jpO_bpXnJGQ4fKM
+label: 'Accordion container'
+id: sdc.djfit.accordion-container
+source: sdc
+source_local_id: 'djfit:accordion-container'
+provider: djfit
 active_version: 6d6367123c15a82a
 versioned_properties:
   active:
@@ -14,8 +21,3 @@ versioned_properties:
         accordion_content:
           title: 'Accordion content'
           description: 'Only one of collapsible sections added can be open at a time.'
-label: 'Accordion container'
-id: sdc.djfit.accordion-container
-provider: djfit
-source: sdc
-source_local_id: 'djfit:accordion-container'

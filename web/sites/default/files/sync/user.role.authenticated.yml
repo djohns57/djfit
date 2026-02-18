@@ -1,4 +1,4 @@
-uuid: abef7437-1e9b-4524-b082-720fae9ee55d
+uuid: c616df10-edfe-480b-bc1e-6012a37c7346
 langcode: en
 status: true
 dependencies:
@@ -7,10 +7,6 @@ dependencies:
   module:
     - captcha
     - coffee
-    - commerce_checkout
-    - commerce_order
-    - commerce_payment
-    - commerce_product
     - contextual
     - dashboard
     - file
@@ -28,19 +24,15 @@ weight: 1
 is_admin: false
 permissions:
   - 'access administration pages'
-  - 'access checkout'
   - 'access coffee'
   - 'access content'
   - 'access contextual links'
   - 'access navigation'
   - 'bypass honeypot protection'
   - 'delete own files'
-  - 'manage own commerce_payment_method'
   - 'skip CAPTCHA'
   - 'use klaro'
-  - 'view commerce_product'
   - 'view media'
-  - 'view own commerce_order'
   - 'view own unpublished content'
   - 'view the administration theme'
   - 'view welcome dashboard'

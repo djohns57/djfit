@@ -1,0 +1,12 @@
+uuid: 53ce2294-9e28-4791-baf8-9a3dc6a8b499
+langcode: en
+status: true
+dependencies: {  }
+name: Hero
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.djfit.cta
+  - sdc.djfit.hero-billboard
+  - sdc.djfit.hero-blog
+  - sdc.djfit.hero-side-by-side

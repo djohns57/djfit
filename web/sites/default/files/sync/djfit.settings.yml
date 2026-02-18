@@ -1,13 +1,12 @@
-_core:
-  default_config_hash: Ccm_9FhbmFTBDLZfm7YBrCDTC5mhvXeqNcYSZAeIJJE
 favicon:
-  use_default: true
+  path: ''
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true
-  favicon: true
+  favicon: false
   node_user_picture: true
 logo:
-  path: 'public://jps_logo3_1.png'
+  path: 'public://logo-jps_0.png'
   use_default: false
 scheme: light

@@ -1,0 +1,19 @@
+uuid: ec8b5e8c-1adc-44dd-94f2-8b6f9a2d3d08
+langcode: en
+status: true
+dependencies: {  }
+name: Base
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.djfit.anchor
+  - sdc.djfit.badge
+  - sdc.djfit.blockquote
+  - sdc.djfit.brand-logo
+  - sdc.djfit.button
+  - sdc.djfit.heading
+  - sdc.djfit.icon
+  - sdc.djfit.image
+  - sdc.djfit.logo-djfit
+  - sdc.djfit.logo-jps-enterprise
+  - sdc.djfit.text

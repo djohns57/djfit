@@ -1,0 +1,23 @@
+uuid: 4694fc09-cc86-4a81-b765-e4e611c046c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_featured
+    - node.type.video
+id: node.video.field_video_featured
+field_name: field_video_featured
+entity_type: node
+bundle: video
+label: Featured
+description: 'Featured videos appear in the demo player section.'
+required: false
+translatable: true
+default_value:
+  -
+    value: false
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

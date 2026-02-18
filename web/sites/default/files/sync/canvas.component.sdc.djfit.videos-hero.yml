@@ -1,0 +1,34 @@
+uuid: 939c84f1-e95f-4fe6-be31-b3ef2d924bd8
+langcode: en
+status: true
+dependencies:
+  theme:
+    - djfit
+active_version: c63b3f3352fc7592
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        subtitle:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Videos Hero'
+id: sdc.djfit.videos-hero
+provider: djfit
+source: sdc
+source_local_id: 'djfit:videos-hero'

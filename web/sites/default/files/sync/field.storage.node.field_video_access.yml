@@ -1,0 +1,27 @@
+uuid: e6928dc6-75cd-479f-9a56-69af47fe9cb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_video_access
+field_name: field_video_access
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: free
+      label: Free
+    -
+      value: members_only
+      label: 'Members Only'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,26 @@
+uuid: 2559fc04-56a3-4459-b19b-30352abb10fd
+langcode: en
+status: true
+dependencies:
+  theme:
+    - djfit
+active_version: a644917394b9be67
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        active_filter:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Blog Listing'
+id: sdc.djfit.blog-listing
+provider: djfit
+source: sdc
+source_local_id: 'djfit:blog-listing'

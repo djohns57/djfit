@@ -1,10 +1,8 @@
-uuid: a0b52da5-3e0f-4971-b4db-4ecbde26972d
+uuid: 978aeaca-2a97-4c36-add1-45a6e5d7cdf9
 langcode: en
 status: true
 dependencies:
   module:
-    - commerce_checkout
-    - commerce_product
     - klaro
     - media
     - system
@@ -15,8 +13,6 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access checkout'
   - 'access content'
   - 'use klaro'
-  - 'view commerce_product'
   - 'view media'

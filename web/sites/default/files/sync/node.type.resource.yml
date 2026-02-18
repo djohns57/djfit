@@ -1,0 +1,11 @@
+uuid: 1d5c8c61-20c9-42ba-b87c-767a882938b7
+langcode: en
+status: true
+dependencies: {  }
+name: Resource
+type: resource
+description: 'Downloadable resource (guides, templates, tracking tools)'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

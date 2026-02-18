@@ -1,9 +1,0 @@
-uuid: 37c637ff-5c4e-4ff6-97fc-00c89ec202d1
-langcode: en
-status: true
-dependencies: {  }
-name: 'Lists (Views)'
-configEntityTypeId: component
-weight: 0
-items:
-  - block.views_block.recent_pages-block_recent_pages

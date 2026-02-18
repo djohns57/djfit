@@ -1,0 +1,23 @@
+uuid: 298b8326-799a-4aea-8a64-e44fd8aa477b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_access
+    - node.type.video
+  module:
+    - options
+id: node.video.field_video_access
+field_name: field_video_access
+entity_type: node
+bundle: video
+label: 'Access Level'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: free
+default_value_callback: ''
+settings: {  }
+field_type: list_string

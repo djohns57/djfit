@@ -1,0 +1,27 @@
+uuid: f89b5533-69de-490f-9877-df74458b91c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_thumbnail
+    - media.type.image
+    - node.type.video
+id: node.video.field_video_thumbnail
+field_name: field_video_thumbnail
+entity_type: node
+bundle: video
+label: 'Custom Thumbnail'
+description: 'Optional. If empty, the YouTube thumbnail will be used.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

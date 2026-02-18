@@ -1,10 +1,50 @@
-uuid: ad79f6a3-c5ee-4691-9fc0-94d13aafbeab
+uuid: 8ee16e2f-61eb-46fd-9d2d-f9ea92a4db9d
 langcode: en
 status: true
 dependencies:
+  config:
+    - canvas.component.block.system_branding_block
+    - canvas.component.block.system_menu_block.main
+    - canvas.component.sdc.djfit.button
+    - canvas.component.sdc.djfit.navbar
+  module:
+    - options
   theme:
     - djfit
 id: djfit.header
 region: header
 theme: djfit
-component_tree: {  }
+component_tree:
+  0:
+    uuid: 3b448d2f-f191-44cb-8189-2362dbf3fe18
+    component_id: sdc.djfit.navbar
+    component_version: 3149f199d66bbc29
+    inputs: '{"menu_align":"center"}'
+  '0:links:0':
+    parent_uuid: 3b448d2f-f191-44cb-8189-2362dbf3fe18
+    slot: links
+    uuid: a1b2c3d4-e5f6-7890-abcd-ef1234567890
+    component_id: sdc.djfit.button
+    component_version: 8c253a9827f0ca84
+    inputs: '{"variant":"secondary-inverted","label":"Sign In","icon":"user","icon_first":true,"href":"#signin-modal","size":"medium"}'
+  '0:links:1':
+    parent_uuid: 3b448d2f-f191-44cb-8189-2362dbf3fe18
+    slot: links
+    uuid: b2c3d4e5-f6a7-8901-bcde-f12345678901
+    component_id: sdc.djfit.button
+    component_version: 8c253a9827f0ca84
+    inputs: '{"variant":"primary","label":"Get Started","href":"\/membership","size":"medium"}'
+  '0:logo:0':
+    parent_uuid: 3b448d2f-f191-44cb-8189-2362dbf3fe18
+    slot: logo
+    uuid: 032b3150-7557-468a-ba40-d1c8fdc27f11
+    component_id: block.system_branding_block
+    component_version: b168140fdcaebae5
+    inputs: '{"label":"Site branding","label_display":"0","use_site_logo":false,"use_site_name":true,"use_site_slogan":false}'
+  '0:navigation:0':
+    parent_uuid: 3b448d2f-f191-44cb-8189-2362dbf3fe18
+    slot: navigation
+    uuid: 6d13ceff-24ca-47d3-9a3b-10bc48480618
+    component_id: block.system_menu_block.main
+    component_version: 023ff7ba63f80798
+    inputs: '{"label":"Main navigation","label_display":"0","level":1,"depth":null,"expand_all_items":false}'

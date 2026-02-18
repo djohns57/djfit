@@ -1,9 +1,16 @@
-uuid: c275031c-cd5f-4df0-a713-d885ac8b8ae9
+uuid: 1fcfa5c7-2093-418d-9a02-7ba3b8d478a9
 langcode: en
 status: true
 dependencies:
   theme:
     - djfit
+_core:
+  default_config_hash: bU-BHYp6qAXkRsosAibfRYbCgORSUDZSHwKz2zxm_S8
+label: Blockquote
+id: sdc.djfit.blockquote
+source: sdc
+source_local_id: 'djfit:blockquote'
+provider: djfit
 active_version: f8798ead1e51ce02
 versioned_properties:
   active:
@@ -49,8 +56,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: Blockquote
-id: sdc.djfit.blockquote
-provider: djfit
-source: sdc
-source_local_id: 'djfit:blockquote'

@@ -1,4 +1,4 @@
-uuid: 03133d21-959d-4e6e-b3b7-34eaa6d16a39
+uuid: ea2e655c-8aaa-4fa1-8619-04b327093a39
 langcode: en
 status: true
 dependencies:
@@ -15,9 +15,73 @@ dependencies:
     - options
   theme:
     - djfit
+_core:
+  default_config_hash: ry8ZgkxXOjoIXWf-0iBULWYLuE4fkYI8q2yaE0rKgVI
+label: Image
+id: sdc.djfit.image
+source: sdc
+source_local_id: 'djfit:image'
+provider: djfit
 active_version: 8185d7ac26d59949
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        media:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
+        size:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: '4:3'
+          expression: ℹ︎list_string␟value
+        radius:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: small
+          expression: ℹ︎list_string␟value
+        caption:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        url:
+          default_value: null
+          expression: ℹ︎string␟value
+          field_instance_settings: {  }
+          field_storage_settings: {  }
+          field_type: string
+          field_widget: string_textfield
+          required: false
+    fallback_metadata:
+      slot_definitions: {  }
+  683c28ae4489062f:
     settings:
       prop_field_definitions:
         media:
@@ -74,8 +138,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: Image
-id: sdc.djfit.image
-provider: djfit
-source: sdc
-source_local_id: 'djfit:image'

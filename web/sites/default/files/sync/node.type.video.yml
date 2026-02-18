@@ -1,0 +1,11 @@
+uuid: e1047f14-ed1e-414c-b21a-6dd3721c1622
+langcode: en
+status: true
+dependencies: {  }
+name: Video
+type: video
+description: 'A video for the DJ Fit video library. Supports YouTube and remote video embeds.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

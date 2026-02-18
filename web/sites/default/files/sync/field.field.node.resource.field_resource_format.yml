@@ -1,0 +1,21 @@
+uuid: a11e9865-090a-4e04-938d-995fcb335118
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_format
+    - node.type.resource
+id: node.resource.field_resource_format
+field_name: field_resource_format
+entity_type: node
+bundle: resource
+label: Format
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: PDF
+default_value_callback: ''
+settings: {  }
+field_type: string

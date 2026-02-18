@@ -1,0 +1,22 @@
+uuid: c161dd70-2e5f-4055-9956-723b5bcb2391
+langcode: en
+status: true
+dependencies:
+  module:
+    - djfit_resources
+active_version: 448fd17494bf0d2d
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: djfit_resource_listing
+        label: 'DJ Fit Resource Listing'
+        label_display: '0'
+        provider: djfit_resources
+    fallback_metadata:
+      slot_definitions: null
+label: 'DJ Fit Resource Listing'
+id: block.djfit_resource_listing
+provider: djfit_resources
+source: block
+source_local_id: djfit_resource_listing

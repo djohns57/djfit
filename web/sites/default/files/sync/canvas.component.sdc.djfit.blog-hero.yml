@@ -1,0 +1,34 @@
+uuid: 3f2a31fe-5a94-47cf-9a53-3f97e6e0a2c7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - djfit
+active_version: c63b3f3352fc7592
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        subtitle:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Blog Hero'
+id: sdc.djfit.blog-hero
+provider: djfit
+source: sdc
+source_local_id: 'djfit:blog-hero'

@@ -1,0 +1,25 @@
+uuid: c98be3f8-37f6-4ce1-b518-fbebf0cbf7ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_article_taxonomy
+    - node.type.article
+    - taxonomy.vocabulary.blog_categories
+id: node.article.field_article_taxonomy
+field_name: field_article_taxonomy
+entity_type: node
+bundle: article
+label: Categories
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      blog_categories: blog_categories
+    auto_create: false
+field_type: entity_reference

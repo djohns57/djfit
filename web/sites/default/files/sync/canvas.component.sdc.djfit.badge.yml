@@ -1,4 +1,4 @@
-uuid: 96ef1adf-8e00-4449-9352-83d27dd0a0c3
+uuid: 9bd531f2-7169-4386-9053-39dee05abcfd
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,13 @@ dependencies:
     - options
   theme:
     - djfit
+_core:
+  default_config_hash: dzp3P8U72s0cAmJ9f6a51Yuj-11iYu2pd_NDz0JVkgM
+label: Badge
+id: sdc.djfit.badge
+source: sdc
+source_local_id: 'djfit:badge'
+provider: djfit
 active_version: 1333d70702cd586b
 versioned_properties:
   active:
@@ -62,8 +69,3 @@ versioned_properties:
           expression: ℹ︎boolean␟value
     fallback_metadata:
       slot_definitions: {  }
-label: Badge
-id: sdc.djfit.badge
-provider: djfit
-source: sdc
-source_local_id: 'djfit:badge'

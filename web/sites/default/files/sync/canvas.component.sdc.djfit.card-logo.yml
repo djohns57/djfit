@@ -1,4 +1,4 @@
-uuid: 529d4999-d070-4535-8ac7-0200a8759d60
+uuid: d0039ad2-2e8e-4306-9362-442bd3ec5758
 langcode: en
 status: true
 dependencies:
@@ -15,9 +15,63 @@ dependencies:
     - options
   theme:
     - djfit
+_core:
+  default_config_hash: FAG-4e3Xa_zfcK6JV8yyWYhvZDiX_4eT1hPiN6PRte8
+label: 'Logo card'
+id: sdc.djfit.card-logo
+source: sdc
+source_local_id: 'djfit:card-logo'
+provider: djfit
 active_version: a2733fe241c6841e
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        media:
+          required: false
+          field_type: entity_reference
+          field_storage_settings:
+            target_type: media
+          field_instance_settings:
+            handler: 'default:media'
+            handler_settings:
+              target_bundles:
+                image: image
+                svg_image: svg_image
+          field_widget: media_library_widget
+          default_value: {  }
+          expression: 'ℹ︎entity_reference␟entity␜[␜entity:media:image␝field_media_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}][␜entity:media:svg_image␝field_media_svg_image␞␟{src↠src_with_alternate_widths,alt↠alt,width↠width,height↠height}]'
+        background_color:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value: null
+          expression: ℹ︎list_string␟value
+        border_radius:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: small
+          expression: ℹ︎list_string␟value
+        url:
+          default_value: null
+          expression: ℹ︎string␟value
+          field_instance_settings: {  }
+          field_storage_settings: {  }
+          field_type: string
+          field_widget: string_textfield
+          required: false
+    fallback_metadata:
+      slot_definitions: {  }
+  b0d33fbebc165763:
     settings:
       prop_field_definitions:
         media:
@@ -64,8 +118,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: 'Logo card'
-id: sdc.djfit.card-logo
-provider: djfit
-source: sdc
-source_local_id: 'djfit:card-logo'

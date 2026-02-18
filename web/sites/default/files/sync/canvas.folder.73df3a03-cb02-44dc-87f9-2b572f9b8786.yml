@@ -1,0 +1,11 @@
+uuid: 73df3a03-cb02-44dc-87f9-2b572f9b8786
+langcode: en
+status: true
+dependencies: {  }
+name: Homepage
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.djfit.home-cta
+  - sdc.djfit.home-footer
+  - sdc.djfit.home-testimonials

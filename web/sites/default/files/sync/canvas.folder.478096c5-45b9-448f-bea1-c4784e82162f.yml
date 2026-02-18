@@ -1,0 +1,15 @@
+uuid: 478096c5-45b9-448f-bea1-c4784e82162f
+langcode: en
+status: true
+dependencies: {  }
+name: Content
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.djfit.newsletter-benefits
+  - sdc.djfit.newsletter-faq
+  - sdc.djfit.newsletter-form
+  - sdc.djfit.newsletter-hero
+  - sdc.djfit.newsletter-preview
+  - sdc.djfit.newsletter-stats
+  - sdc.djfit.newsletter-testimonials

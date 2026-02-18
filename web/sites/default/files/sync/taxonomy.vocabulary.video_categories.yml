@@ -1,0 +1,9 @@
+uuid: 5e36ca63-1e74-47af-b538-6875af210cfe
+langcode: en
+status: true
+dependencies: {  }
+name: 'Video Categories'
+vid: video_categories
+description: 'Categories for video library content'
+weight: 0
+new_revision: false

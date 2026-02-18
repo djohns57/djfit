@@ -1,38 +1,43 @@
 _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
-  address: 0
-  advancedqueue: 0
   ai: 0
+  ai_agents: 0
+  ai_agents_explorer: 0
+  ai_agents_extra: 0
+  ai_agents_extra_tools: 0
+  ai_agents_form_integration: 0
+  ai_api_explorer: 0
   ai_assistant_api: 0
+  ai_automators: 0
   ai_chatbot: 0
   ai_ckeditor: 0
+  ai_content_suggestions: 0
+  ai_dashboard: 0
+  ai_eca: 0
+  ai_image_alt_text: 0
+  ai_image_bulk_alt_text: 0
+  ai_logging: 0
   ai_provider_amazeeio: 0
+  ai_provider_anthropic: 0
+  ai_provider_openai: 0
+  ai_search: 0
+  ai_translate: 0
   announcements_feed: 0
   automated_cron: 0
+  automatic_updates: 0
   autosave_form: 0
   big_pipe: 0
   block: 0
+  block_content: 0
   bpmn_io: 0
   breakpoint: 0
   canvas: 0
+  canvas_ai: 0
   captcha: 0
   ckeditor5: 0
   coffee: 0
-  commerce: 0
-  commerce_cart: 0
-  commerce_checkout: 0
-  commerce_license: 0
-  commerce_number_pattern: 0
-  commerce_order: 0
-  commerce_payment: 0
-  commerce_price: 0
-  commerce_product: 0
-  commerce_recurring: 0
-  commerce_store: 0
-  commerce_stripe: 0
   config: 0
-  content_access: 0
   content_moderation: 0
   contextual: 0
   crop: 0
@@ -40,8 +45,9 @@ module:
   dashboard: 0
   datetime: 0
   dblog: 0
-  djfit_commerce_example: 0
-  djfit_membership: 0
+  djfit_blog: 0
+  djfit_resources: 0
+  djfit_videos: 0
   drupal_cms_helper: 0
   drupical: 0
   dynamic_page_cache: 0
@@ -57,8 +63,6 @@ module:
   eca_ui: 0
   eca_user: 0
   editor: 0
-  entity: 0
-  entity_reference_revisions: 0
   field: 0
   field_ui: 0
   file: 0
@@ -69,13 +73,12 @@ module:
   gin_toolbar: 0
   honeypot: 0
   image: 0
-  inline_entity_form: 0
   inline_form_errors: 0
-  interval: 0
   jquery_ui: 0
   jquery_ui_resizable: 0
   key: 0
   klaro: 0
+  language: 0
   layout_builder: 0
   layout_discovery: 0
   link: 0
@@ -95,10 +98,10 @@ module:
   navigation_extra_tools: 0
   node: 0
   options: 0
+  package_manager: 0
   page_cache: 0
   path: 0
   path_alias: 0
-  profile: 0
   project_browser: 0
   redirect: 0
   redirect_404: 0
@@ -106,7 +109,8 @@ module:
   sam: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
-  state_machine: 0
+  search_api: 0
+  settings_tray: 0
   svg_image: 0
   symfony_mailer_lite: 0
   system: 0
@@ -115,19 +119,20 @@ module:
   taxonomy: 0
   text: 0
   token: 0
+  toolbar: 0
   trash: 0
-  ultimate_cron: 0
+  twig_tweak: 0
   update: 0
   user: 0
   view_password: 0
   views_ui: 0
   workflows: 0
   pathauto: 1
+  content_translation: 10
   views: 10
 theme:
   claro: 0
   gin: 0
   canvas_stark: 0
   easy_email_theme: 0
-  mercury: 0
   djfit: 0

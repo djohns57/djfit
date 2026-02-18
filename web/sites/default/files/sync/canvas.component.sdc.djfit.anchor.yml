@@ -1,9 +1,16 @@
-uuid: defce31b-9374-44b6-8c36-800db02a5866
+uuid: 15ecaac9-aed1-420d-a43b-e0468825835b
 langcode: en
 status: true
 dependencies:
   theme:
     - djfit
+_core:
+  default_config_hash: iI2hvjpFzZa0p1nL9F3zpm1_eVpgdBOi5kUbAD2AxgI
+label: Anchor
+id: sdc.djfit.anchor
+source: sdc
+source_local_id: 'djfit:anchor'
+provider: djfit
 active_version: '5524813695409257'
 versioned_properties:
   active:
@@ -21,8 +28,3 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
-label: Anchor
-id: sdc.djfit.anchor
-provider: djfit
-source: sdc
-source_local_id: 'djfit:anchor'

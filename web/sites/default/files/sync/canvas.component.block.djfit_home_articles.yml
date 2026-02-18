@@ -1,0 +1,22 @@
+uuid: 5548137c-9147-47b0-bfc2-9cd0c539672f
+langcode: en
+status: true
+dependencies:
+  module:
+    - djfit_blog
+active_version: 7f2b8018fc16c2fd
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: djfit_home_articles
+        label: 'DJ Fit Home Articles'
+        label_display: '0'
+        provider: djfit_blog
+    fallback_metadata:
+      slot_definitions: null
+label: 'DJ Fit Home Articles'
+id: block.djfit_home_articles
+provider: djfit_blog
+source: block
+source_local_id: djfit_home_articles

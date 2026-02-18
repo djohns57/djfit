@@ -1,0 +1,11 @@
+uuid: 811694e3-2719-44d0-a609-9c2db4490d18
+langcode: en
+status: true
+dependencies: {  }
+name: Blog
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.djfit.blog-hero
+  - sdc.djfit.blog-listing
+  - sdc.djfit.blog-newsletter

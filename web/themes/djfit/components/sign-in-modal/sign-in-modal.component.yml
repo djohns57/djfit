@@ -1,0 +1,55 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Sign In Modal
+group: Layout
+status: experimental
+props:
+  type: object
+  properties:
+    heading:
+      type: string
+      title: Heading
+      default: 'Sign In'
+    subtitle:
+      type: string
+      title: Subtitle
+      default: 'Enter your credentials to access your account.'
+    email_label:
+      type: string
+      title: Email Label
+      default: 'Email'
+    email_placeholder:
+      type: string
+      title: Email Placeholder
+      default: 'your@email.com'
+    password_label:
+      type: string
+      title: Password Label
+      default: 'Password'
+    button_text:
+      type: string
+      title: Button Text
+      default: 'Sign In'
+    signup_text:
+      type: string
+      title: Signup Prompt
+      default: "Don't have an account?"
+    signup_link_text:
+      type: string
+      title: Signup Link Text
+      default: 'Get started'
+    signup_url:
+      type: string
+      title: Signup URL
+      default: '/membership'
+    form_action:
+      type: string
+      title: Form Action URL
+      default: '/user/login'
+libraryOverrides:
+  css:
+    component:
+      sign-in-modal.tailwind.css: {}
+  js:
+    sign-in-modal.js:
+      attributes:
+        type: module

@@ -1,4 +1,4 @@
-uuid: 646f8b5d-5586-4e53-ada2-2804f6da9934
+uuid: dd186ff3-3d4c-4b86-a58a-9ff1fa6ab77b
 langcode: en
 status: true
 dependencies:
@@ -9,6 +9,13 @@ dependencies:
     - text
   theme:
     - djfit
+_core:
+  default_config_hash: gt-gAYJZsYlQZUGWe3KIOe3NJmtCKQGU6xVUVuhIsbo
+label: 'Pricing card'
+id: sdc.djfit.card-pricing
+source: sdc
+source_local_id: 'djfit:card-pricing'
+provider: djfit
 active_version: e3cd2e622cde8f16
 versioned_properties:
   active:
@@ -118,8 +125,3 @@ versioned_properties:
           expression: ℹ︎boolean␟value
     fallback_metadata:
       slot_definitions: {  }
-label: 'Pricing card'
-id: sdc.djfit.card-pricing
-provider: djfit
-source: sdc
-source_local_id: 'djfit:card-pricing'

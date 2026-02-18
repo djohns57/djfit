@@ -1,4 +1,4 @@
-uuid: ff28fca8-320a-4593-8bcb-471aeeba9af4
+uuid: bd151791-514a-4a94-92e2-bcee67c1a32d
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,13 @@ dependencies:
     - options
   theme:
     - djfit
+_core:
+  default_config_hash: 4rAsIBFzadyhsAnS_KOgnIM_8B5P5gTSAYn5ZV_r63c
+label: Navbar
+id: sdc.djfit.navbar
+source: sdc
+source_local_id: 'djfit:navbar'
+provider: djfit
 active_version: 3149f199d66bbc29
 versioned_properties:
   active:
@@ -30,8 +37,3 @@ versioned_properties:
           title: 'Navigation menu'
         links:
           title: CTAs
-label: Navbar
-id: sdc.djfit.navbar
-provider: djfit
-source: sdc
-source_local_id: 'djfit:navbar'

@@ -1,0 +1,11 @@
+uuid: eb3f8436-c6ce-420d-af40-65f01d79750c
+langcode: en
+status: true
+dependencies: {  }
+name: Videos
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.djfit.videos-cta
+  - sdc.djfit.videos-hero
+  - sdc.djfit.videos-listing

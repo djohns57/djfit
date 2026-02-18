@@ -1,0 +1,13 @@
+uuid: 9c744e48-29a9-4228-b30a-2f1ac2d1515a
+langcode: en
+status: true
+dependencies: {  }
+name: 'DJ Fit'
+configEntityTypeId: component
+weight: 0
+items:
+  - block.djfit_blog_listing
+  - block.djfit_home_articles
+  - block.djfit_home_videos
+  - block.djfit_resource_listing
+  - block.djfit_video_library

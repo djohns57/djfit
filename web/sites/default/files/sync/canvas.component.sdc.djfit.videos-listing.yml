@@ -1,0 +1,26 @@
+uuid: 1cb13798-de0b-40ca-8490-feb6dcaea349
+langcode: en
+status: true
+dependencies:
+  theme:
+    - djfit
+active_version: a644917394b9be67
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        active_filter:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+label: 'Videos Listing'
+id: sdc.djfit.videos-listing
+provider: djfit
+source: sdc
+source_local_id: 'djfit:videos-listing'

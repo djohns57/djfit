@@ -1,0 +1,18 @@
+uuid: 16c6644c-6e27-4ca3-87c3-eacbb8cfddf0
+langcode: en
+status: true
+dependencies: {  }
+name: Other
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.djfit.membership-compare
+  - sdc.djfit.membership-cta
+  - sdc.djfit.membership-faq
+  - sdc.djfit.membership-hero
+  - sdc.djfit.membership-pricing
+  - sdc.djfit.resources-benefits
+  - sdc.djfit.resources-cta
+  - sdc.djfit.resources-hero
+  - sdc.djfit.resources-listing
+  - sdc.navigation.title

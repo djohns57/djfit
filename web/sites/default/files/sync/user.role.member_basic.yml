@@ -1,9 +1,0 @@
-uuid: 6927d1ec-fd7c-4ecc-8c70-69af1187b472
-langcode: en
-status: true
-dependencies: {  }
-id: member_basic
-label: 'Member Basic'
-weight: 4
-is_admin: false
-permissions: {  }

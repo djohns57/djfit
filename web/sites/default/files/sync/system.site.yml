@@ -1,9 +1,9 @@
 _core:
   default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
 langcode: en
-uuid: 9c58a198-dd03-4de9-8db1-1498d2ba016f
+uuid: 5d146c42-7db2-4e10-8989-3d4f867d5e94
 name: 'DJ Fit'
-mail: jpsenterprise.corp@gmail.com
+mail: admin@example.com
 slogan: ''
 page:
   403: /user/login

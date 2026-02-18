@@ -1,0 +1,22 @@
+uuid: 0bf84233-fbfc-4f69-895a-5464149bf697
+langcode: en
+status: true
+dependencies:
+  module:
+    - djfit_videos
+active_version: 2e8dd1346281837c
+versioned_properties:
+  active:
+    settings:
+      default_settings:
+        id: djfit_home_videos
+        label: 'DJ Fit Home Videos'
+        label_display: '0'
+        provider: djfit_videos
+    fallback_metadata:
+      slot_definitions: null
+label: 'DJ Fit Home Videos'
+id: block.djfit_home_videos
+provider: djfit_videos
+source: block
+source_local_id: djfit_home_videos
