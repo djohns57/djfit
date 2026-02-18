@@ -1,6 +1,8 @@
 _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
+  address: 0
+  advancedqueue: 0
   ai: 0
   ai_agents: 0
   ai_agents_explorer: 0
@@ -37,6 +39,18 @@ module:
   captcha: 0
   ckeditor5: 0
   coffee: 0
+  commerce: 0
+  commerce_cart: 0
+  commerce_checkout: 0
+  commerce_license: 0
+  commerce_number_pattern: 0
+  commerce_order: 0
+  commerce_payment: 0
+  commerce_price: 0
+  commerce_product: 0
+  commerce_recurring: 0
+  commerce_store: 0
+  commerce_stripe: 0
   config: 0
   content_moderation: 0
   contextual: 0
@@ -63,6 +77,8 @@ module:
   eca_ui: 0
   eca_user: 0
   editor: 0
+  entity: 0
+  entity_reference_revisions: 0
   field: 0
   field_ui: 0
   file: 0
@@ -73,7 +89,9 @@ module:
   gin_toolbar: 0
   honeypot: 0
   image: 0
+  inline_entity_form: 0
   inline_form_errors: 0
+  interval: 0
   jquery_ui: 0
   jquery_ui_resizable: 0
   key: 0
@@ -102,6 +120,8 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  permissions_by_term: 0
+  profile: 0
   project_browser: 0
   redirect: 0
   redirect_404: 0
@@ -111,6 +131,7 @@ module:
   scheduler_content_moderation_integration: 0
   search_api: 0
   settings_tray: 0
+  state_machine: 0
   svg_image: 0
   symfony_mailer_lite: 0
   system: 0

@@ -6,6 +6,7 @@ name: Other
 configEntityTypeId: component
 weight: 0
 items:
+  - sdc.commerce.commerce-status-badge
   - sdc.djfit.membership-compare
   - sdc.djfit.membership-cta
   - sdc.djfit.membership-faq

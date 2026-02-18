@@ -1,0 +1,9 @@
+uuid: bb051572-5ee1-4247-ad73-bf6c905e25f4
+langcode: en
+status: true
+dependencies: {  }
+name: Commerce
+configEntityTypeId: component
+weight: 0
+items:
+  - block.commerce_checkout_progress

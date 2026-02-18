@@ -1324,6 +1324,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/permissions_by_term' => array(
+            'pretty_version' => '3.1.40',
+            'version' => '3.1.40.0',
+            'reference' => '3.1.40',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/permissions_by_term',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/profile' => array(
             'pretty_version' => '1.14.0',
             'version' => '1.14.0.0',
