@@ -39,3 +39,4 @@ function djfit_preprocess_page_title(array &$variables) {
     }
   }
 }
+

@@ -22,7 +22,7 @@ props:
     basic_cta_url:
       type: string
       title: Basic CTA URL
-      default: '#'
+      default: '/product/1'
     pro_name:
       type: string
       title: Pro Plan Name
@@ -42,7 +42,7 @@ props:
     pro_cta_url:
       type: string
       title: Pro CTA URL
-      default: '#'
+      default: '/product/2'
 libraryOverrides:
   css:
     component:

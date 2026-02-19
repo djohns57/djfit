@@ -60,3 +60,9 @@ props:
       default: '/membership'
       examples:
         - '/membership'
+    cart_url:
+      type: string
+      title: Cart URL
+      default: '/cart'
+      examples:
+        - '/cart'

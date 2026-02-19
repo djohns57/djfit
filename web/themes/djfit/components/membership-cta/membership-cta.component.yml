@@ -18,7 +18,7 @@ props:
     primary_cta_url:
       type: string
       title: Primary CTA URL
-      default: '#'
+      default: '/product/2'
     secondary_cta_text:
       type: string
       title: Secondary CTA Text

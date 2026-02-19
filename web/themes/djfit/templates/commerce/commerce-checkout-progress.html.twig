@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * DJ Fit theme override for the checkout progress indicator.
+ *
+ * Available variables:
+ * - steps: Array of step objects with keys:
+ *   - id: Step machine name.
+ *   - label: Human-readable step label.
+ *   - position: 'previous', 'current', or 'next'.
+ */
+#}
+<nav aria-label="{{ 'Checkout progress'|t }}">
+  <ol class="checkout-progress">
+    {% for step in steps %}
+      <li class="checkout-progress--step checkout-progress--step__{{ step.position }}"
+          {% if step.position == 'current' %}aria-current="step"{% endif %}>
+        {{- step.label -}}
+      </li>
+    {% endfor %}
+  </ol>
+</nav>

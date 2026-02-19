@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * DJ Fit theme override for the checkout completion/confirmation message.
+ *
+ * Available variables:
+ * - order_entity: The completed Commerce order entity.
+ * - message: The configured completion message (from checkout flow config).
+ * - payment_instructions: Optional payment instructions (e.g. for manual gateway).
+ */
+#}
+<div class="checkout-complete" role="status" aria-live="polite">
+  {{- message -}}
+
+  {% if payment_instructions %}
+    <div class="checkout-complete__payment-instructions">
+      <h2>{{ 'Payment instructions'|t }}</h2>
+      {{ payment_instructions }}
+    </div>
+  {% endif %}
+</div>

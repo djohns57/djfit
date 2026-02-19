@@ -12,6 +12,8 @@ global:
         minified: true
       src/theme.css:
         preprocess: false
+      css/commerce.css:
+        preprocess: false
 
 messages:
   version: VERSION
@@ -25,3 +27,20 @@ breadcrumb:
   version: VERSION
   dependencies:
     - core/drupal
+
+commerce_cart_count:
+  version: VERSION
+  js:
+    lib/commerce-cart-count.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+
+nav_auth_state:
+  version: VERSION
+  js:
+    lib/nav-auth-state.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once

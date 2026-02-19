@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * DJ Fit theme override for the Commerce product template.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the <article> wrapper.
+ * - product: Rendered product fields. Print all via {{ product }}, or
+ *   selectively via {{ product.field_name }}.
+ * - product_entity: The raw product entity object.
+ * - product_url: Canonical URL for the product.
+ * - title_prefix / title_suffix: Module-injected content around the title.
+ *
+ * Note: variation_attributes (color/size selectors) are excluded from the
+ * default product output and rendered inline by the add-to-cart form.
+ */
+#}
+<article{{ attributes.addClass('commerce-product') }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {{- product|without('variation_attributes') -}}
+</article>

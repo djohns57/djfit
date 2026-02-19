@@ -14,6 +14,7 @@ use Drupal\Core\Extension\ThemeSettingsProvider;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Hook\Attribute\Hook;
 use Drupal\djfit\RenderCallbacks;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\node\NodeInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
@@ -171,6 +172,108 @@ final class ThemeHooks {
     else {
       $variables['rendered_by_canvas'] = FALSE;
     }
+
+    // Inject Commerce cart count into drupalSettings for the site-header badge.
+    // The site-header is Canvas-managed and cannot consume Drupal block output
+    // directly; a JS behavior reads this value and updates the badge element.
+    if (\Drupal::hasService('commerce_cart.cart_provider')) {
+      try {
+        $count = 0;
+        foreach (\Drupal::service('commerce_cart.cart_provider')->getCarts() as $cart) {
+          foreach ($cart->getItems() as $item) {
+            $count += (int) $item->getQuantity();
+          }
+        }
+        $variables['#attached']['drupalSettings']['djfit']['cartCount'] = $count;
+        $variables['#attached']['library'][] = 'djfit/commerce_cart_count';
+      }
+      catch (\Exception $e) {
+        // Silently degrade if Commerce is not fully bootstrapped.
+      }
+    }
+
+    // Inject logged-in state for the navbar JS behavior that swaps
+    // Sign In / Get Started buttons to My Account / Log Out.
+    $account = \Drupal::currentUser();
+    $variables['#attached']['drupalSettings']['djfit']['loggedIn'] = $account->isAuthenticated();
+    if ($account->isAuthenticated()) {
+      $variables['#attached']['drupalSettings']['djfit']['userName'] = $account->getDisplayName();
+      $variables['#attached']['drupalSettings']['djfit']['userUrl'] = '/user/' . $account->id();
+      $variables['#attached']['drupalSettings']['djfit']['logoutUrl'] = '/user/logout';
+    }
+    $variables['#attached']['library'][] = 'djfit/nav_auth_state';
+  }
+
+  /**
+   * Implements hook_form_alter() for the user login form.
+   *
+   * Redirects to the front page after sign-in, but only when no destination
+   * is already set (e.g. by checkout or a 403 redirect).
+   */
+  #[Hook('form_alter')]
+  public function formAlterUserLogin(array &$form, FormStateInterface $form_state, string $form_id): void {
+    if ($form_id !== 'user_login_form') {
+      return;
+    }
+    $form['actions']['submit']['#submit'][] = [static::class, 'redirectToFront'];
+  }
+
+  /**
+   * Submit handler: sends the user to the front page after login.
+   *
+   * Respects an existing destination (checkout, 403 redirect, etc.).
+   */
+  public static function redirectToFront(array &$form, FormStateInterface $form_state): void {
+    $request = \Drupal::request();
+    if ($request->query->has('destination') || $request->request->has('destination')) {
+      return;
+    }
+    $form_state->setRedirect('<front>');
+  }
+
+  /**
+   * Implements hook_form_alter() for the add-to-cart form.
+   *
+   * Enforces one membership plan per cart: clears existing items before
+   * adding. Hides the quantity field. Redirects to /cart after submit.
+   */
+  #[Hook('form_alter')]
+  public function formAlterAddToCart(array &$form, FormStateInterface $form_state, string $form_id): void {
+    if (!str_starts_with($form_id, 'commerce_order_item_add_to_cart_form')) {
+      return;
+    }
+
+    if (isset($form['quantity'])) {
+      $form['quantity']['#attributes']['class'][] = 'visually-hidden';
+    }
+
+    $form['actions']['submit']['#submit'][] = [static::class, 'redirectToCart'];
+    if (isset($form['actions']['submit']['#submit'])) {
+      array_unshift($form['actions']['submit']['#submit'], [static::class, 'clearCartBeforeAdd']);
+    }
+  }
+
+  /**
+   * Submit handler: empties all carts so only one plan can be purchased.
+   */
+  public static function clearCartBeforeAdd(array &$form, FormStateInterface $form_state): void {
+    if (!\Drupal::hasService('commerce_cart.cart_provider')) {
+      return;
+    }
+    $cart_provider = \Drupal::service('commerce_cart.cart_provider');
+    $cart_manager = \Drupal::service('commerce_cart.cart_manager');
+    foreach ($cart_provider->getCarts() as $cart) {
+      foreach ($cart->getItems() as $item) {
+        $cart_manager->removeOrderItem($cart, $item);
+      }
+    }
+  }
+
+  /**
+   * Submit handler: redirects to the cart page after adding a plan.
+   */
+  public static function redirectToCart(array &$form, FormStateInterface $form_state): void {
+    $form_state->setRedirect('commerce_cart.page');
   }
 
 }

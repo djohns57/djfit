@@ -23,10 +23,20 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.membership-pricing__card:hover {
+  transform: translateY(-4px);
 }
 
 .membership-pricing__card--basic {
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.membership-pricing__card--basic:hover {
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+  border-color: var(--hg-color-hero-gradient-start);
 }
 
 .membership-pricing__card--pro {
@@ -34,6 +44,10 @@
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   position: relative;
   margin-top: -1rem;
+}
+
+.membership-pricing__card--pro:hover {
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.35);
 }
 
 /* Badge */
@@ -120,7 +134,8 @@
 }
 
 .membership-pricing__btn--primary:hover {
-  opacity: 0.9;
+  filter: brightness(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Features list */

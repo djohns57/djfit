@@ -62,6 +62,14 @@
 
     {# Action buttons #}
     <div class="site-header__actions">
+      <a href="{{ cart_url|default('/cart') }}" class="site-header__cart-link" aria-label="{{ 'Shopping cart'|t }}">
+        <svg class="site-header__cart-icon" width="22" height="22" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M42.3 72L222 72L197.7 168H66.6L42.3 72Z" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="88" cy="204" r="14" fill="currentColor"/>
+          <circle cx="176" cy="204" r="14" fill="currentColor"/>
+          <path d="M42.3 72L28 28" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
       <button type="button" class="site-header__btn site-header__btn--signin" data-signin-trigger>
         <svg class="site-header__btn-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M12.6667 14V12.6667C12.6667 11.9594 12.3857 11.2811 11.8856 10.781C11.3855 10.281 10.7072 10 10 10H6C5.29276 10 4.61448 10.281 4.11438 10.781C3.61428 11.2811 3.33333 11.9594 3.33333 12.6667V14" stroke="currentColor" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>

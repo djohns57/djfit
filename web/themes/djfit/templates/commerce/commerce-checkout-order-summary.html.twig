@@ -1,0 +1,32 @@
+{#
+/**
+ * @file
+ * DJ Fit theme override for the checkout order summary (sidebar).
+ *
+ * Uses flexbox layout instead of tables for reliable alignment.
+ *
+ * Available variables:
+ * - attributes: HTML attributes including the checkout-order-summary class.
+ * - order_entity: The Commerce order entity.
+ * - checkout_step: Current checkout step machine name.
+ * - totals: Keyed array with subtotal, adjustments[], and total.
+ * - rendered_totals: Pre-rendered totals block.
+ */
+#}
+<div{{ attributes.addClass('checkout-order-summary') }}>
+  {% block order_items %}
+    <div class="order-summary__items">
+      {% for order_item in order_entity.getItems %}
+        <div class="order-summary__line-item">
+          <span class="order-summary__qty">{{ order_item.getQuantity|number_format }}&nbsp;&times;</span>
+          <span class="order-summary__label">{{- order_item.label -}}</span>
+          <span class="order-summary__price">{{- order_item.getTotalPrice|commerce_price_format -}}</span>
+        </div>
+      {% endfor %}
+    </div>
+  {% endblock %}
+
+  {% block totals %}
+    {{ rendered_totals }}
+  {% endblock %}
+</div>

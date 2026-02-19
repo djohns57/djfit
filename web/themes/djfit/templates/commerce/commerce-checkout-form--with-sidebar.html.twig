@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * DJ Fit theme override for the two-column checkout form (with sidebar).
+ *
+ * Available variables:
+ * - form: The complete checkout form render array.
+ *   - form.sidebar: The order summary sidebar.
+ *   - form.actions: The form submit/back actions.
+ *
+ * Sidebar stacks below main on mobile; sits at right on desktop.
+ * Sticky positioning keeps the order summary visible while scrolling.
+ */
+#}
+<div class="layout-checkout-form">
+  <div class="layout-region layout-region-checkout-main">
+    {{ form|without('sidebar', 'actions') }}
+  </div>
+
+  <div class="layout-region layout-region-checkout-secondary">
+    <h3>{{ 'Order Summary'|t }}</h3>
+    {{ form.sidebar }}
+  </div>
+
+  <div class="layout-region layout-region-checkout-footer">
+    {{ form.actions }}
+  </div>
+</div>

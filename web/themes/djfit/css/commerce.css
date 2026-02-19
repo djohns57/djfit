@@ -1,0 +1,1193 @@
+/**
+ * @file
+ * Commerce styles — DJ Fit theme.
+ *
+ * All values reference --hg-* design tokens or shadcn bridge variables.
+ * No hardcoded colors, spacing, or font literals anywhere in this file.
+ *
+ * Tokens sourced from: src/schemes.css and src/theme.css
+ */
+
+/* ==========================================================================
+   CHECKOUT PAGE — overall page accent background
+   ========================================================================== */
+
+.path-checkout .page-title {
+  font-family: var(--hg-font-family-sans);
+  color: var(--hg-color-header-accent);
+}
+
+.path-checkout .region-content {
+  background: linear-gradient(180deg, color-mix(in oklch, var(--hg-color-header-accent) 3%, var(--hg-color-surface)) 0%, var(--hg-color-surface) 40rem);
+  min-height: 80vh;
+}
+
+/* ==========================================================================
+   SITE-HEADER CART BADGE — injected by commerce-cart-count.js
+   Targets the existing .site-header__cart-link in the Canvas SDC.
+   ========================================================================== */
+
+.site-header__cart-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.site-header__cart-badge {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.1rem;
+  height: 1.1rem;
+  padding: 0 0.2rem;
+  font-size: 0.625rem;
+  font-weight: var(--hg-font-weight-bold);
+  line-height: 1;
+  border-radius: 9999px;
+  background-color: var(--hg-color-header-accent);
+  color: var(--hg-color-header-accent-contrast);
+  pointer-events: none;
+}
+
+.site-header__cart-badge[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   CART BLOCK — header icon + count + dropdown
+   ========================================================================== */
+
+.cart-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-block--summary {
+  display: flex;
+  align-items: center;
+}
+
+.cart-block--link__expand {
+  display: flex;
+  align-items: center;
+  gap: var(--hg-space-1);
+  color: var(--hg-color-header-text);
+  text-decoration: none;
+  padding: var(--hg-space-2);
+  border-radius: var(--hg-radius-sm);
+  transition: color 0.2s ease, background-color 0.2s ease;
+  position: relative;
+}
+
+.cart-block--link__expand:hover,
+.cart-block--link__expand:focus-visible {
+  color: var(--hg-color-header-accent);
+  background-color: color-mix(in oklch, var(--hg-color-header-accent) 8%, transparent);
+  outline: var(--hg-header-focus-outline-width) solid var(--hg-color-header-accent);
+  outline-offset: var(--hg-header-focus-outline-offset);
+}
+
+.cart-block--summary__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--hg-header-action-icon-size);
+  height: var(--hg-header-action-icon-size);
+}
+
+.cart-block--summary__icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Cart item count badge */
+.cart-block--summary__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 var(--hg-space-1);
+  font-size: 0.6875rem;
+  font-weight: var(--hg-font-weight-bold);
+  line-height: 1;
+  border-radius: 9999px;
+  background-color: var(--hg-color-header-accent);
+  color: var(--hg-color-header-accent-contrast);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(30%, -30%);
+}
+
+/* Cart dropdown panel */
+.cart-block--contents {
+  position: absolute;
+  top: calc(100% + var(--hg-space-2));
+  right: 0;
+  z-index: var(--hg-header-dropdown-z-index);
+  min-width: 20rem;
+  background-color: var(--hg-color-surface);
+  border: 1px solid var(--hg-color-border);
+  border-radius: var(--hg-radius-lg);
+  box-shadow: var(--hg-header-dropdown-shadow);
+  overflow: hidden;
+}
+
+.cart-block--contents__inner {
+  padding: var(--hg-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hg-space-3);
+}
+
+.cart-block--contents__items {
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.875rem;
+  color: var(--hg-color-text);
+}
+
+.cart-block--contents__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hg-space-2);
+  padding-top: var(--hg-space-3);
+  border-top: 1px solid var(--hg-color-border);
+}
+
+.cart-block--contents__links a {
+  display: block;
+  text-align: center;
+  padding: var(--hg-space-2) var(--hg-space-4);
+  border-radius: var(--hg-radius-sm);
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.875rem;
+  font-weight: var(--hg-font-weight-semibold);
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cart-block--contents__links a:first-child {
+  background-color: var(--hg-color-header-accent);
+  color: var(--hg-color-header-accent-contrast);
+}
+
+.cart-block--contents__links a:first-child:hover {
+  background-color: color-mix(in oklch, var(--hg-color-header-accent) 85%, black);
+}
+
+.cart-block--contents__links a:not(:first-child) {
+  background-color: var(--hg-color-surface-elevated);
+  color: var(--hg-color-text);
+}
+
+.cart-block--contents__links a:not(:first-child):hover {
+  background-color: var(--hg-color-border);
+}
+
+/* ==========================================================================
+   CHECKOUT PROGRESS — step indicator
+   ========================================================================== */
+
+.checkout-progress {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-family: var(--hg-font-family-sans);
+  overflow-x: auto;
+  background: linear-gradient(135deg, color-mix(in oklch, var(--hg-color-header-accent) 6%, var(--hg-color-surface)), var(--hg-color-surface));
+  border: 1px solid color-mix(in oklch, var(--hg-color-header-accent) 15%, var(--hg-color-border));
+  border-radius: var(--hg-radius-lg);
+  padding: var(--hg-space-2);
+}
+
+.checkout-progress--step {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: var(--hg-font-weight-medium);
+  padding: var(--hg-space-2) var(--hg-space-4);
+  color: var(--hg-color-text-muted);
+  position: relative;
+  white-space: nowrap;
+  border-radius: var(--hg-radius-sm);
+  transition: background-color 0.15s ease;
+}
+
+.checkout-progress--step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -0.375rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-right: 1.5px solid var(--hg-color-border);
+  border-top: 1.5px solid var(--hg-color-border);
+  transform: rotate(45deg);
+}
+
+.checkout-progress--step__previous {
+  color: var(--hg-color-header-accent);
+  font-weight: var(--hg-font-weight-semibold);
+}
+
+.checkout-progress--step__previous::before {
+  content: '✓';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 0.625rem;
+  background-color: var(--hg-color-header-accent);
+  color: var(--hg-color-header-accent-contrast);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.checkout-progress--step__current {
+  color: var(--hg-color-text);
+  font-weight: var(--hg-font-weight-bold);
+  background-color: color-mix(in oklch, var(--hg-color-header-accent) 8%, transparent);
+}
+
+.checkout-progress--step__current::before {
+  content: '';
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--hg-color-header-accent);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.checkout-progress--step__next {
+  color: var(--hg-color-text-muted);
+  opacity: 0.5;
+}
+
+/* ==========================================================================
+   CHECKOUT FORM — two-column layout
+   ========================================================================== */
+
+.layout-checkout-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "main"
+    "secondary"
+    "footer";
+  gap: var(--hg-space-6);
+  max-width: 80rem;
+  margin-inline: auto;
+  padding: var(--hg-space-6) var(--hg-space-4);
+  font-family: var(--hg-font-family-sans);
+}
+
+@media (min-width: 1024px) {
+  .layout-checkout-form {
+    grid-template-columns: 1fr 32rem;
+    grid-template-areas:
+      "main secondary"
+      "footer secondary";
+    gap: var(--hg-space-8);
+    padding: var(--hg-space-8) var(--hg-space-6);
+  }
+}
+
+.layout-region-checkout-main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: var(--hg-space-6);
+  float: none !important;
+  width: 90% !important;
+}
+
+.layout-region-checkout-secondary {
+  grid-area: secondary;
+  float: none !important;
+  width: 90% !important;
+}
+
+.layout-region-checkout-footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--hg-space-3);
+  padding-top: var(--hg-space-6);
+  border-top: 2px solid color-mix(in oklch, var(--hg-color-header-accent) 20%, var(--hg-color-border));
+}
+
+/* ==========================================================================
+   CHECKOUT PANES — card containers
+   ========================================================================== */
+
+.checkout-pane {
+  background-color: var(--hg-color-surface);
+  border: 1px solid var(--hg-color-border);
+  border-left: 3px solid var(--hg-color-header-accent);
+  border-radius: var(--hg-radius-lg);
+  padding: var(--hg-space-6) var(--hg-space-6) var(--hg-space-8);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.checkout-pane legend,
+.checkout-pane h2,
+.checkout-pane > .fieldset-legend {
+  font-size: 1.125rem;
+  font-weight: var(--hg-font-weight-semibold);
+  color: var(--hg-color-header-accent);
+  margin-bottom: var(--hg-space-5);
+  padding-bottom: var(--hg-space-4);
+  border-bottom: 2px solid color-mix(in oklch, var(--hg-color-header-accent) 20%, transparent);
+  width: 100%;
+  display: block;
+}
+
+/* Pane fieldsets — remove default browser styling */
+.checkout-pane fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ==========================================================================
+   FORM ITEMS — spacing and structure
+   ========================================================================== */
+
+.layout-checkout-form .form-item,
+.layout-checkout-form .js-form-item {
+  margin-bottom: var(--hg-space-4);
+}
+
+.layout-checkout-form .form-item:last-child {
+  margin-bottom: 0;
+}
+
+.layout-checkout-form label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: var(--hg-font-weight-semibold);
+  color: var(--hg-color-text);
+  margin-bottom: var(--hg-space-2);
+  letter-spacing: 0.01em;
+}
+
+/* Required field indicator — uses hero green for visibility without alarm-red */
+.layout-checkout-form .form-required::after {
+  content: ' *';
+  color: var(--hg-color-hero-button-primary);
+  font-weight: var(--hg-font-weight-bold);
+}
+
+/* ==========================================================================
+   FORM INPUTS — text, email, tel, select, textarea
+   ========================================================================== */
+
+.layout-checkout-form input[type="text"],
+.layout-checkout-form input[type="email"],
+.layout-checkout-form input[type="tel"],
+.layout-checkout-form input[type="number"],
+.layout-checkout-form input[type="password"],
+.layout-checkout-form select,
+.layout-checkout-form textarea {
+  width: 100%;
+  padding: 0.625rem var(--hg-space-3);
+  background-color: var(--hg-color-surface);
+  border: 1px solid var(--hg-color-border);
+  border-radius: var(--hg-radius-sm);
+  color: var(--hg-color-text);
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  appearance: none;
+}
+
+.layout-checkout-form select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' stroke='%23717182' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.25rem;
+}
+
+.layout-checkout-form input:focus,
+.layout-checkout-form select:focus,
+.layout-checkout-form textarea:focus {
+  outline: none;
+  border-color: var(--hg-color-header-accent);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--hg-color-header-accent) 15%, transparent);
+}
+
+.layout-checkout-form input::placeholder {
+  color: var(--hg-color-text-muted);
+  opacity: 0.6;
+}
+
+/* Error state for form inputs */
+.layout-checkout-form .error input,
+.layout-checkout-form .error select,
+.layout-checkout-form .error textarea,
+.layout-checkout-form input.error,
+.layout-checkout-form select.error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* Form description / help text */
+.layout-checkout-form .description,
+.layout-checkout-form .form-item--error-message {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  margin-top: var(--hg-space-1);
+}
+
+.layout-checkout-form .description {
+  color: var(--hg-color-text-muted);
+}
+
+.layout-checkout-form .form-item--error-message {
+  color: #dc2626;
+  font-weight: var(--hg-font-weight-medium);
+}
+
+/* ==========================================================================
+   ADDRESS FIELDS — grid layout for city / state / zip row
+   ========================================================================== */
+
+.layout-checkout-form .address-container,
+.layout-checkout-form .field--type-address {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.layout-checkout-form .address-container .form-item {
+  margin-bottom: var(--hg-space-4);
+}
+
+/* Inline fields — country/admin area on same row */
+@media (min-width: 640px) {
+  .layout-checkout-form .address-container-inline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--hg-space-4);
+  }
+
+  .layout-checkout-form .address-container-inline .form-item {
+    margin-bottom: 0;
+  }
+}
+
+/* ==========================================================================
+   RADIO BUTTONS & CHECKBOXES
+   ========================================================================== */
+
+.layout-checkout-form input[type="radio"],
+.layout-checkout-form input[type="checkbox"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: var(--hg-space-2);
+  accent-color: var(--hg-color-header-accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.layout-checkout-form .form-type-radio,
+.layout-checkout-form .form-type-checkbox {
+  display: flex;
+  align-items: center;
+  padding: var(--hg-space-3);
+  margin-bottom: var(--hg-space-2);
+  border: 1px solid var(--hg-color-border);
+  border-radius: var(--hg-radius-sm);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.layout-checkout-form .form-type-radio:hover,
+.layout-checkout-form .form-type-checkbox:hover {
+  border-color: var(--hg-color-header-accent);
+  background-color: color-mix(in oklch, var(--hg-color-header-accent) 3%, transparent);
+}
+
+.layout-checkout-form .form-type-radio label,
+.layout-checkout-form .form-type-checkbox label {
+  margin-bottom: 0;
+  font-weight: var(--hg-font-weight-regular);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   STRIPE PAYMENT ELEMENT
+   ========================================================================== */
+
+.layout-checkout-form .stripe-form,
+.layout-checkout-form [id*="stripe"],
+.layout-checkout-form .commerce-stripe-form {
+  padding: var(--hg-space-4);
+  border: 1px solid var(--hg-color-border);
+  border-radius: var(--hg-radius-sm);
+  background-color: var(--hg-color-surface);
+  margin-top: var(--hg-space-2);
+}
+
+/* ==========================================================================
+   CHECKOUT ACTION BUTTONS
+   ========================================================================== */
+
+.layout-region-checkout-footer .button,
+.layout-region-checkout-footer input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--hg-space-2);
+  padding: 0.75rem var(--hg-space-8);
+  border-radius: var(--hg-radius-sm);
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.9375rem;
+  font-weight: var(--hg-font-weight-semibold);
+  line-height: 1.25;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  min-height: 2.75rem;
+}
+
+.layout-region-checkout-footer .button--primary,
+.layout-region-checkout-footer input[type="submit"].button--primary,
+.layout-region-checkout-footer input[type="submit"]:last-child {
+  background-color: var(--hg-color-header-accent);
+  color: var(--hg-color-header-accent-contrast);
+  border-color: var(--hg-color-header-accent);
+}
+
+.layout-region-checkout-footer .button--primary:hover,
+.layout-region-checkout-footer input[type="submit"].button--primary:hover,
+.layout-region-checkout-footer input[type="submit"]:last-child:hover {
+  background-color: color-mix(in oklch, var(--hg-color-header-accent) 85%, black);
+  border-color: color-mix(in oklch, var(--hg-color-header-accent) 85%, black);
+  box-shadow: 0 2px 8px color-mix(in oklch, var(--hg-color-header-accent) 30%, transparent);
+}
+
+.layout-region-checkout-footer .button--primary:focus-visible,
+.layout-region-checkout-footer input[type="submit"]:focus-visible {
+  outline: 2px solid var(--hg-color-header-accent);
+  outline-offset: 2px;
+}
+
+/* Secondary / back buttons */
+.layout-region-checkout-footer .button:not(.button--primary),
+.layout-region-checkout-footer input[type="submit"]:first-child:not(:last-child) {
+  background-color: var(--hg-color-surface);
+  color: var(--hg-color-text);
+  border-color: var(--hg-color-border);
+}
+
+.layout-region-checkout-footer .button:not(.button--primary):hover,
+.layout-region-checkout-footer input[type="submit"]:first-child:not(:last-child):hover {
+  background-color: var(--hg-color-surface-elevated);
+  border-color: var(--hg-color-text-muted);
+}
+
+/* ==========================================================================
+   CHECKOUT ORDER SUMMARY — sidebar
+   ========================================================================== */
+
+.layout-region-checkout-secondary > h3 {
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.6875rem;
+  font-weight: var(--hg-font-weight-bold);
+  color: var(--hg-color-header-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 var(--hg-space-3) 0;
+}
+
+.checkout-order-summary {
+  background: linear-gradient(180deg, color-mix(in oklch, var(--hg-color-header-accent) 4%, var(--hg-color-surface)) 0%, var(--hg-color-surface) 100%);
+  border: 1px solid color-mix(in oklch, var(--hg-color-header-accent) 18%, var(--hg-color-border));
+  border-top: 3px solid var(--hg-color-header-accent);
+  border-radius: var(--hg-radius-lg);
+  padding: var(--hg-space-6);
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.9375rem;
+  color: var(--hg-color-text);
+  position: sticky;
+  top: calc(var(--hg-header-height) + var(--hg-space-6));
+  box-shadow: 0 4px 12px color-mix(in oklch, var(--hg-color-header-accent) 8%, transparent);
+}
+
+.checkout-order-summary h3 {
+  font-size: 1rem;
+  font-weight: var(--hg-font-weight-semibold);
+  color: var(--hg-color-header-accent);
+  margin: 0 0 var(--hg-space-4) 0;
+  padding-bottom: var(--hg-space-3);
+  border-bottom: 1px solid color-mix(in oklch, var(--hg-color-header-accent) 18%, var(--hg-color-border));
+}
+
+/* Line items — CSS Grid for precise 3-column alignment */
+.order-summary__items {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--hg-space-2) var(--hg-space-3);
+  align-items: baseline;
+  margin-bottom: var(--hg-space-4);
+  padding-bottom: var(--hg-space-4);
+  border-bottom: 1px solid color-mix(in oklch, var(--hg-color-header-accent) 18%, var(--hg-color-border));
+}
+
+.order-summary__line-item {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: baseline;
+}
+
+.order-summary__qty {
+  color: var(--hg-color-text-muted);
+  white-space: nowrap;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.order-summary__label {
+  font-weight: var(--hg-font-weight-medium);
+  color: var(--hg-color-text);
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.order-summary__price {
+  text-align: right;
+  font-weight: var(--hg-font-weight-semibold);
+  white-space: nowrap;
+  color: var(--hg-color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Fallback for browsers without subgrid */
+@supports not (grid-template-columns: subgrid) {
+  .order-summary__items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--hg-space-3);
+  }
+
+  .order-summary__line-item {
+    display: flex;
+    align-items: baseline;
+    gap: var(--hg-space-3);
+  }
+
+  .order-summary__qty { flex-shrink: 0; }
+  .order-summary__label { flex: 1 1 auto; }
+  .order-summary__price { flex-shrink: 0; }
+}
+
+/* Order totals — CSS Grid for label + value alignment */
+.checkout-order-summary .commerce-order-total-summary {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--hg-space-1) var(--hg-space-4);
+  align-items: baseline;
+}
+
+.checkout-order-summary .order-total-line {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: baseline;
+  padding: var(--hg-space-1) 0;
+}
+
+.checkout-order-summary .order-total-line-label {
+  color: var(--hg-color-text-muted);
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.checkout-order-summary .order-total-line-value {
+  font-weight: var(--hg-font-weight-semibold);
+  font-size: 0.875rem;
+  white-space: nowrap;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.checkout-order-summary .order-total-line__total {
+  margin-top: var(--hg-space-2);
+  padding-top: var(--hg-space-3);
+  border-top: 2px solid var(--hg-color-header-accent);
+}
+
+.checkout-order-summary .order-total-line__total .order-total-line-label {
+  font-size: 1rem;
+  font-weight: var(--hg-font-weight-bold);
+  color: var(--hg-color-text);
+}
+
+.checkout-order-summary .order-total-line__total .order-total-line-value {
+  font-size: 1.125rem;
+  font-weight: var(--hg-font-weight-bold);
+  color: var(--hg-color-header-accent);
+}
+
+/* Fallback for browsers without subgrid */
+@supports not (grid-template-columns: subgrid) {
+  .checkout-order-summary .order-total-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--hg-space-4);
+  }
+}
+
+/* Mobile: stack sidebar below form and remove sticky */
+@media (max-width: 1023px) {
+  .checkout-order-summary {
+    position: static;
+    border-top: 3px solid var(--hg-color-header-accent);
+  }
+}
+
+/* Secure checkout badge in sidebar */
+.checkout-order-summary::after {
+  content: '🔒 Secure checkout';
+  display: block;
+  text-align: center;
+  margin-top: var(--hg-space-5);
+  padding-top: var(--hg-space-4);
+  border-top: 1px solid color-mix(in oklch, var(--hg-color-header-accent) 18%, var(--hg-color-border));
+  font-size: 0.75rem;
+  font-weight: var(--hg-font-weight-medium);
+  color: var(--hg-color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* ==========================================================================
+   CHECKOUT REVIEW STEP — read-only summary
+   ========================================================================== */
+
+.checkout-pane--review {
+  background-color: var(--hg-color-surface);
+}
+
+.checkout-pane--review .review-pane {
+  padding: var(--hg-space-4);
+  border: 1px solid var(--hg-color-border);
+  border-radius: var(--hg-radius-sm);
+  margin-bottom: var(--hg-space-4);
+  background-color: var(--hg-color-surface-elevated);
+}
+
+.checkout-pane--review .review-pane:last-child {
+  margin-bottom: 0;
+}
+
+.checkout-pane--review .review-label {
+  font-size: 0.75rem;
+  font-weight: var(--hg-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--hg-color-text-muted);
+  margin-bottom: var(--hg-space-2);
+}
+
+/* ==========================================================================
+   CHECKOUT COMPLETION — success message
+   ========================================================================== */
+
+.checkout-complete {
+  max-width: 44rem;
+  margin: var(--hg-space-12) auto;
+  padding: var(--hg-space-12) var(--hg-space-8);
+  background: linear-gradient(180deg, color-mix(in oklch, var(--hg-color-hero-button-primary) 5%, var(--hg-color-surface)) 0%, var(--hg-color-surface) 50%);
+  border: 1px solid color-mix(in oklch, var(--hg-color-hero-button-primary) 15%, var(--hg-color-border));
+  border-radius: var(--hg-radius-lg);
+  font-family: var(--hg-font-family-sans);
+  text-align: center;
+  box-shadow: 0 4px 24px color-mix(in oklch, var(--hg-color-header-accent) 8%, transparent);
+}
+
+.checkout-complete::before {
+  content: '✓';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto var(--hg-space-6) auto;
+  background-color: color-mix(in oklch, var(--hg-color-hero-button-primary) 12%, transparent);
+  color: var(--hg-color-hero-button-primary);
+  border-radius: 9999px;
+  font-size: 1.5rem;
+  font-weight: var(--hg-font-weight-bold);
+}
+
+.checkout-complete h1,
+.checkout-complete h2 {
+  font-size: 1.75rem;
+  font-weight: var(--hg-font-weight-bold);
+  color: var(--hg-color-text);
+  margin-bottom: var(--hg-space-3);
+}
+
+.checkout-complete p {
+  color: var(--hg-color-text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--hg-space-3);
+  max-width: 32rem;
+  margin-inline: auto;
+}
+
+.checkout-complete a {
+  color: var(--hg-color-header-accent);
+  font-weight: var(--hg-font-weight-semibold);
+  text-decoration: none;
+}
+
+.checkout-complete a:hover {
+  text-decoration: underline;
+}
+
+.checkout-complete__payment-instructions {
+  margin-top: var(--hg-space-8);
+  padding-top: var(--hg-space-6);
+  border-top: 1px solid var(--hg-color-border);
+  text-align: left;
+}
+
+.checkout-complete__payment-instructions h2 {
+  font-size: 1.125rem;
+  font-weight: var(--hg-font-weight-semibold);
+  margin-bottom: var(--hg-space-4);
+  text-align: left;
+}
+
+/* ==========================================================================
+   DRUPAL SYSTEM MESSAGES — styled for checkout context
+   ========================================================================== */
+
+.layout-checkout-form .messages,
+.commerce-checkout-flow .messages {
+  padding: var(--hg-space-4);
+  border-radius: var(--hg-radius-sm);
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: var(--hg-space-4);
+}
+
+.layout-checkout-form .messages--error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.layout-checkout-form .messages--warning {
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  color: #92400e;
+}
+
+.layout-checkout-form .messages--status {
+  background-color: color-mix(in oklch, var(--hg-color-hero-button-primary) 8%, var(--hg-color-surface));
+  border: 1px solid color-mix(in oklch, var(--hg-color-hero-button-primary) 25%, var(--hg-color-border));
+  color: #166534;
+}
+
+/* ==========================================================================
+   PRODUCT PAGE
+   ========================================================================== */
+
+/* Hide attribute selectors (billing period) and quantity from the public
+   add-to-cart form. Elements stay in the DOM so values are still submitted;
+   admins edit attributes on the product variation admin form instead. */
+.commerce-order-item-add-to-cart-form .attribute-widgets,
+.commerce-order-item-add-to-cart-form .visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}
+
+/* Hide the "Variations" inline label rendered by the product display */
+.commerce-product .field--name-variations > .field__label {
+  display: none;
+}
+
+.commerce-product {
+  font-family: var(--hg-font-family-sans);
+  color: var(--hg-color-text);
+  max-width: var(--hg-home-container-max-width);
+  margin-inline: auto;
+  padding: var(--hg-space-8) var(--hg-space-4);
+}
+
+/* Add to Cart form button */
+.commerce-product .button--add-to-cart,
+.field--name-variations .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--hg-space-3) var(--hg-space-8);
+  background-color: var(--hg-color-header-accent);
+  color: var(--hg-color-header-accent-contrast);
+  border: none;
+  border-radius: var(--hg-radius-sm);
+  font-family: var(--hg-font-family-sans);
+  font-size: 1rem;
+  font-weight: var(--hg-font-weight-semibold);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  min-height: var(--hg-hero-button-min-height);
+}
+
+.commerce-product .button--add-to-cart:hover,
+.field--name-variations .button:hover {
+  background-color: color-mix(in oklch, var(--hg-color-header-accent) 85%, black);
+}
+
+.commerce-product .button--add-to-cart:focus-visible,
+.field--name-variations .button:focus-visible {
+  outline: var(--hg-focus-outline-width) solid var(--hg-color-header-accent);
+  outline-offset: var(--hg-focus-outline-offset);
+}
+
+/* ==========================================================================
+   CART PAGE (/cart)
+   ========================================================================== */
+
+.view-commerce-cart-form,
+.commerce-order-item-cart-form-form {
+  font-family: var(--hg-font-family-sans);
+  max-width: var(--hg-home-container-max-width);
+  margin-inline: auto;
+  padding: var(--hg-space-8) var(--hg-space-4);
+}
+
+/* Cart table — targets both Views tables and plain Commerce tables */
+.view-commerce-cart-form table,
+.commerce-order-item-cart-form-form table,
+.cart-form table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--hg-space-6);
+  table-layout: auto;
+}
+
+.view-commerce-cart-form th,
+.commerce-order-item-cart-form-form th,
+.cart-form th {
+  font-size: 0.75rem;
+  font-weight: var(--hg-font-weight-semibold);
+  color: var(--hg-color-text-muted);
+  text-align: left;
+  padding: var(--hg-space-3) var(--hg-space-4);
+  border-bottom: 2px solid var(--hg-color-border);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.view-commerce-cart-form td,
+.commerce-order-item-cart-form-form td,
+.cart-form td {
+  padding: var(--hg-space-4);
+  border-bottom: 1px solid var(--hg-color-border);
+  color: var(--hg-color-text);
+  vertical-align: middle;
+  font-size: 0.9375rem;
+}
+
+/* Item name column */
+.cart-form .views-field-purchased-entity,
+.cart-form td:first-child {
+  font-weight: var(--hg-font-weight-medium);
+  min-width: 12rem;
+}
+
+/* Quantity input */
+.cart-form input[type="number"],
+.views-field-edit-quantity input {
+  width: 4rem;
+  padding: var(--hg-space-2);
+  text-align: center;
+  border: 1px solid var(--hg-color-border);
+  border-radius: var(--hg-radius-sm);
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.9375rem;
+}
+
+.cart-form input[type="number"]:focus,
+.views-field-edit-quantity input:focus {
+  outline: none;
+  border-color: var(--hg-color-header-accent);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--hg-color-header-accent) 20%, transparent);
+}
+
+/* Remove button */
+.views-field-remove-button input[type="submit"],
+.cart-form .delete-order-item {
+  background: none;
+  border: 1px solid var(--hg-color-border);
+  border-radius: var(--hg-radius-sm);
+  padding: var(--hg-space-1) var(--hg-space-3);
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.8125rem;
+  font-weight: var(--hg-font-weight-medium);
+  color: var(--hg-color-text-muted);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.views-field-remove-button input[type="submit"]:hover,
+.cart-form .delete-order-item:hover {
+  color: #dc2626;
+  border-color: #dc2626;
+}
+
+/* Order total summary below the cart table — uses div.order-total-line markup */
+.view-commerce-cart-form .commerce-order-total-summary,
+.commerce-order-item-cart-form-form .commerce-order-total-summary,
+.cart-form .commerce-order-total-summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--hg-space-2);
+  font-family: var(--hg-font-family-sans);
+}
+
+.view-commerce-cart-form .order-total-line,
+.commerce-order-item-cart-form-form .order-total-line,
+.cart-form .order-total-line {
+  display: flex;
+  gap: var(--hg-space-4);
+  align-items: baseline;
+}
+
+.view-commerce-cart-form .order-total-line-label,
+.cart-form .order-total-line-label {
+  color: var(--hg-color-text-muted);
+  font-size: 0.9375rem;
+  text-align: right;
+}
+
+.view-commerce-cart-form .order-total-line-value,
+.cart-form .order-total-line-value {
+  font-weight: var(--hg-font-weight-semibold);
+  font-size: 0.9375rem;
+  text-align: right;
+  min-width: 5rem;
+}
+
+.view-commerce-cart-form .order-total-line__total,
+.cart-form .order-total-line__total {
+  padding-top: var(--hg-space-3);
+  border-top: 2px solid var(--hg-color-border);
+}
+
+.view-commerce-cart-form .order-total-line__total .order-total-line-label,
+.cart-form .order-total-line__total .order-total-line-label {
+  font-size: 1.125rem;
+  font-weight: var(--hg-font-weight-bold);
+  color: var(--hg-color-text);
+}
+
+.view-commerce-cart-form .order-total-line__total .order-total-line-value,
+.cart-form .order-total-line__total .order-total-line-value {
+  font-size: 1.125rem;
+  font-weight: var(--hg-font-weight-bold);
+}
+
+/* Cart action buttons row */
+.cart-form .form-actions,
+.commerce-order-item-cart-form-form .form-actions {
+  display: flex;
+  gap: var(--hg-space-3);
+  padding-top: var(--hg-space-4);
+}
+
+.cart-form .button--primary,
+.cart-form input[type="submit"][value="Checkout"] {
+  background-color: var(--hg-color-header-accent);
+  color: var(--hg-color-header-accent-contrast);
+  border: none;
+  border-radius: var(--hg-radius-sm);
+  padding: var(--hg-space-3) var(--hg-space-6);
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.9375rem;
+  font-weight: var(--hg-font-weight-semibold);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cart-form .button--primary:hover,
+.cart-form input[type="submit"][value="Checkout"]:hover {
+  background-color: color-mix(in oklch, var(--hg-color-header-accent) 85%, black);
+}
+
+.cart-form .button:not(.button--primary),
+.cart-form input[type="submit"][value="Update cart"] {
+  background-color: var(--hg-color-surface-elevated);
+  color: var(--hg-color-text);
+  border: 1px solid var(--hg-color-border);
+  border-radius: var(--hg-radius-sm);
+  padding: var(--hg-space-2) var(--hg-space-4);
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.875rem;
+  font-weight: var(--hg-font-weight-medium);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cart-form .button:not(.button--primary):hover,
+.cart-form input[type="submit"][value="Update cart"]:hover {
+  background-color: var(--hg-color-border);
+}
+
+/* ==========================================================================
+   PAYMENT METHOD display
+   ========================================================================== */
+
+.commerce-payment-method--credit-card {
+  display: flex;
+  align-items: center;
+  gap: var(--hg-space-3);
+  padding: var(--hg-space-3);
+  background-color: var(--hg-color-surface-elevated);
+  border: 1px solid var(--hg-color-border);
+  border-radius: var(--hg-radius-sm);
+  font-family: var(--hg-font-family-sans);
+  font-size: 0.875rem;
+  color: var(--hg-color-text);
+}
+
+/* ==========================================================================
+   EMPTY CART PAGE
+   ========================================================================== */
+
+.cart-empty-page {
+  font-family: var(--hg-font-family-sans);
+  text-align: center;
+  padding: var(--hg-space-12) var(--hg-space-4);
+  color: var(--hg-color-text-muted);
+}

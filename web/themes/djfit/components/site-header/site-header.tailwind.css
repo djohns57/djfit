@@ -200,3 +200,22 @@
   height: var(--hg-header-action-icon-size);
   flex-shrink: 0;
 }
+
+/* Cart icon link */
+.site-header__cart-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--hg-color-header-text);
+  transition: opacity 0.15s ease;
+  flex-shrink: 0;
+}
+
+.site-header__cart-link:hover {
+  opacity: 0.7;
+}
+
+.site-header__cart-icon {
+  width: 1.375rem;
+  height: 1.375rem;
+}
