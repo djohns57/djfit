@@ -17,8 +17,8 @@ configuration:
   authentication_method: api_keys
   access_token: ''
   stripe_user_id: ''
-  publishable_key: ''
-  secret_key: ''
+  publishable_key: SET_IN_ENV_FILE
+  secret_key: SET_IN_ENV_FILE
   enable_credit_card_icons: true
 conditions: {  }
 conditionOperator: AND
