@@ -9,6 +9,15 @@
 #}
 {{ attach_library('djfit/breadcrumb') }}
 {% if breadcrumb %}
+  {% set deduped = [] %}
+  {% set prev_text = '' %}
+  {% for item in breadcrumb %}
+    {% if item.text != prev_text %}
+      {% set deduped = deduped|merge([item]) %}
+    {% endif %}
+    {% set prev_text = item.text %}
+  {% endfor %}
+  {% set breadcrumb = deduped %}
   {% set needs_truncation = (breadcrumb|length) > 3 %}
 
   {% set item_classes = 'flex items-center text-sm md:text-md' %}

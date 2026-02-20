@@ -139,13 +139,13 @@ class ToolsFunctionInput implements ToolsFunctionInputInterface {
     $function = [
       'name' => $this->name,
       'description' => $this->description,
-      'parameters' => new \stdClass(),
+      'parameters' => [
+        'type' => 'object',
+        'properties' => new \stdClass(),
+      ],
     ];
     if (!empty($properties)) {
-      $function['parameters'] = [
-        'type' => 'object',
-        'properties' => $properties,
-      ];
+      $function['parameters']['properties'] = $properties;
       foreach ($this->getRequiredProperties() as $property) {
         $function['parameters']['required'][] = $property->getName();
       }
