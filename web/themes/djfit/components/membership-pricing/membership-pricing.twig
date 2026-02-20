@@ -10,7 +10,9 @@
     <div class="membership-pricing__card membership-pricing__card--basic">
       <div class="membership-pricing__header">
         <h3 class="membership-pricing__plan-name">{{ basic_name }}</h3>
-        <p class="membership-pricing__plan-desc">{{ basic_description }}</p>
+        <p class="membership-pricing__plan-desc">
+          {{ basic_description }}
+        </p>
         <div class="membership-pricing__price-row">
           <span class="membership-pricing__price">{{ basic_price }}</span>
           <span class="membership-pricing__period">/ month</span>
@@ -32,13 +34,14 @@
     <div class="membership-pricing__card membership-pricing__card--pro">
       <div class="membership-pricing__badge">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="white"/>
-        </svg>
-        Most Popular
+          <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="white" />
+        </svg>Most Popular
       </div>
       <div class="membership-pricing__header">
         <h3 class="membership-pricing__plan-name">{{ pro_name }}</h3>
-        <p class="membership-pricing__plan-desc">{{ pro_description }}</p>
+        <p class="membership-pricing__plan-desc">
+          {{ pro_description }}
+        </p>
         <div class="membership-pricing__price-row">
           <span class="membership-pricing__price">{{ pro_price }}</span>
           <span class="membership-pricing__period">/ month</span>
@@ -63,7 +66,9 @@
 
   {# All plans include #}
   <div class="membership-pricing__includes">
-    <p class="membership-pricing__includes-label">All plans include:</p>
+    <p class="membership-pricing__includes-label">
+      All plans include:
+    </p>
     <div class="membership-pricing__includes-items">
       <span>✓ 30-day money-back guarantee</span>
       <span>✓ Cancel anytime</span>

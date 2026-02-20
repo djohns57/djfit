@@ -6,43 +6,43 @@ props:
     basic_name:
       type: string
       title: Basic Plan Name
-      default: 'Basic'
+      default: "Basic"
     basic_description:
       type: string
       title: Basic Plan Description
-      default: 'Perfect for getting started with structured fitness'
+      default: "Perfect for getting started with structured fitness"
     basic_price:
       type: string
       title: Basic Price
-      default: '$29'
+      default: "$29"
     basic_cta_text:
       type: string
       title: Basic CTA Text
-      default: 'Start Basic'
+      default: "Start Basic"
     basic_cta_url:
       type: string
       title: Basic CTA URL
-      default: '/product/1'
+      default: "/product/1"
     pro_name:
       type: string
       title: Pro Plan Name
-      default: 'Pro'
+      default: "Pro"
     pro_description:
       type: string
       title: Pro Plan Description
-      default: 'Complete access to everything you need to succeed'
+      default: "Complete access to everything you need to succeed"
     pro_price:
       type: string
       title: Pro Price
-      default: '$49'
+      default: "$49"
     pro_cta_text:
       type: string
       title: Pro CTA Text
-      default: 'Start Pro'
+      default: "Start Pro"
     pro_cta_url:
       type: string
       title: Pro CTA URL
-      default: '/product/2'
+      default: "/product/2"
 libraryOverrides:
   css:
     component:

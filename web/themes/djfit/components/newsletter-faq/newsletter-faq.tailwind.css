@@ -48,7 +48,7 @@
 }
 
 .nl-faq__question::after {
-  content: '+';
+  content: "+";
   font-size: 1.5rem;
   font-weight: 300;
   color: #717182;
@@ -58,7 +58,7 @@
 }
 
 details[open] > .nl-faq__question::after {
-  content: '−';
+  content: "−";
 }
 
 .nl-faq__answer {

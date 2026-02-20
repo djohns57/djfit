@@ -5,6 +5,7 @@ dependencies:
   config:
     - commerce_order.commerce_order_item_type.default
     - core.entity_form_mode.commerce_order_item.add_to_cart
+    - field.field.commerce_order_item.default.license
   module:
     - commerce_product
   enforced:
@@ -21,12 +22,13 @@ content:
   purchased_entity:
     type: commerce_product_variation_attributes
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   adjustments: true
   created: true
+  license: true
   quantity: true
   status: true
   total_price: true

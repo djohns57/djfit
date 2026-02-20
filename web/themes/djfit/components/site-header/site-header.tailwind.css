@@ -121,7 +121,9 @@
   color: var(--hg-color-header-text);
   text-decoration: none;
   border-radius: var(--hg-radius-sm);
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
 }
 
 .site-header__nav-link:hover {
@@ -168,7 +170,9 @@
   letter-spacing: var(--hg-letter-spacing-header-action);
   text-decoration: none;
   border-radius: var(--hg-radius-sm);
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
   cursor: pointer;
 }
 

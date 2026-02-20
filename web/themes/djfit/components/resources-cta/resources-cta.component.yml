@@ -6,19 +6,19 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Want Full Access to All Resources?'
+      default: "Want Full Access to All Resources?"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Pro membership includes unlimited downloads of all guides, templates, workout plans, and more.'
+      default: "Pro membership includes unlimited downloads of all guides, templates, workout plans, and more."
     cta_url:
       type: string
       title: CTA URL
-      default: '/membership'
+      default: "/membership"
     cta_text:
       type: string
       title: CTA Text
-      default: 'View Membership Plans'
+      default: "View Membership Plans"
 libraryOverrides:
   css:
     component:

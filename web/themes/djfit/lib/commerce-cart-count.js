@@ -7,28 +7,33 @@
  * then updated with the current count. Hidden when count is zero.
  */
 (function (Drupal, drupalSettings) {
-  'use strict';
+  "use strict";
+
+  function applyBadge(link, count, badgeClass) {
+    let badge = link.querySelector("." + badgeClass);
+
+    if (!badge) {
+      badge = document.createElement("span");
+      badge.className = badgeClass;
+      link.appendChild(badge);
+    }
+
+    badge.textContent = count;
+    badge.hidden = count === 0;
+    badge.setAttribute("aria-label", Drupal.t("@count items in cart", { "@count": count }));
+  }
 
   Drupal.behaviors.djfitCartCount = {
     attach: function (context, settings) {
-      const count = (settings.djfit && settings.djfit.cartCount) ? settings.djfit.cartCount : 0;
-      const cartLinks = context.querySelectorAll('.site-header__cart-link');
+      const count = settings.djfit && settings.djfit.cartCount ? settings.djfit.cartCount : 0;
 
-      cartLinks.forEach(function (link) {
-        let badge = link.querySelector('.site-header__cart-badge');
+      context.querySelectorAll(".site-header__cart-link").forEach(function (link) {
+        applyBadge(link, count, "site-header__cart-badge");
+      });
 
-        if (!badge) {
-          badge = document.createElement('span');
-          badge.className = 'site-header__cart-badge';
-          badge.setAttribute('aria-label', Drupal.t('@count items in cart', {'@count': count}));
-          link.appendChild(badge);
-        }
-
-        badge.textContent = count;
-        badge.hidden = count === 0;
-        badge.setAttribute('aria-label', Drupal.t('@count items in cart', {'@count': count}));
+      context.querySelectorAll("[data-cart-trigger]").forEach(function (link) {
+        applyBadge(link, count, "navbar--cart-badge");
       });
     },
   };
-
 })(Drupal, drupalSettings);

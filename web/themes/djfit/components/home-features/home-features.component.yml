@@ -8,7 +8,7 @@ props:
     feature1_icon:
       type: string
       title: Feature 1 icon
-      description: 'Icon variant: training, longevity, or results.'
+      description: "Icon variant: training, longevity, or results."
       default: training
       enum:
         - training
@@ -17,11 +17,11 @@ props:
     feature1_heading:
       type: string
       title: Feature 1 heading
-      default: 'Evidence-Based Training'
+      default: "Evidence-Based Training"
     feature1_body:
       type: string
       title: Feature 1 body
-      default: 'Programs built on the latest exercise science, optimized for men over 40 to build strength safely and effectively.'
+      default: "Programs built on the latest exercise science, optimized for men over 40 to build strength safely and effectively."
     feature2_icon:
       type: string
       title: Feature 2 icon
@@ -33,11 +33,11 @@ props:
     feature2_heading:
       type: string
       title: Feature 2 heading
-      default: 'Longevity Focused'
+      default: "Longevity Focused"
     feature2_body:
       type: string
       title: Feature 2 body
-      default: 'Strategies designed not just for today, but for sustained health, vitality, and performance for decades to come.'
+      default: "Strategies designed not just for today, but for sustained health, vitality, and performance for decades to come."
     feature3_icon:
       type: string
       title: Feature 3 icon
@@ -49,7 +49,7 @@ props:
     feature3_heading:
       type: string
       title: Feature 3 heading
-      default: 'Proven Results'
+      default: "Proven Results"
     feature3_body:
       type: string
       title: Feature 3 body

@@ -9,8 +9,8 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Video Library'
+      default: "Video Library"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Comprehensive workout programs, nutrition education, and recovery protocols. All taught by expert coaches.'
+      default: "Comprehensive workout programs, nutrition education, and recovery protocols. All taught by expert coaches."

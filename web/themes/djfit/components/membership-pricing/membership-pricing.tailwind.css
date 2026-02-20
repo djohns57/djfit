@@ -23,7 +23,9 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .membership-pricing__card:hover {
@@ -158,7 +160,7 @@
 }
 
 .membership-pricing__features li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0.25rem;

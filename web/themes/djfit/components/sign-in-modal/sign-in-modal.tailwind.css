@@ -16,7 +16,9 @@
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease, visibility 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease;
 }
 
 .signin-modal[aria-hidden="false"] {
@@ -41,7 +43,9 @@
   background-color: var(--hg-color-surface);
   border: 1px solid var(--hg-home-subtle-border);
   border-radius: var(--hg-radius-md);
-  box-shadow: 0 10px 15px 0 rgb(0 0 0 / 0.1), 0 4px 6px 0 rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 10px 15px 0 rgb(0 0 0 / 0.1),
+    0 4px 6px 0 rgb(0 0 0 / 0.1);
   padding: var(--hg-space-6);
 }
 

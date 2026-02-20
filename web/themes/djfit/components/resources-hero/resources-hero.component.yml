@@ -6,11 +6,11 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Templates & Guides'
+      default: "Templates & Guides"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Downloadable resources to support your fitness journey. Workout plans, nutrition guides, and tracking tools.'
+      default: "Downloadable resources to support your fitness journey. Workout plans, nutrition guides, and tracking tools."
 libraryOverrides:
   css:
     component:

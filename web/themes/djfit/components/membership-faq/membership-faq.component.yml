@@ -6,7 +6,7 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Frequently Asked Questions'
+      default: "Frequently Asked Questions"
 libraryOverrides:
   css:
     component:

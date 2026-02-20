@@ -9,7 +9,7 @@ props:
     section_heading:
       type: string
       title: Section Heading
-      default: 'Real Results from Real Men'
+      default: "Real Results from Real Men"
     section_subtitle:
       type: string
       title: Section Subtitle
@@ -17,11 +17,11 @@ props:
     testimonial1_name:
       type: string
       title: Testimonial 1 Name
-      default: 'Michael T.'
+      default: "Michael T."
     testimonial1_age:
       type: string
       title: Testimonial 1 Age
-      default: 'Age 45'
+      default: "Age 45"
     testimonial1_quote:
       type: string
       title: Testimonial 1 Quote
@@ -29,15 +29,15 @@ props:
     testimonial1_image_url:
       type: string
       title: Testimonial 1 Image URL
-      default: ''
+      default: ""
     testimonial2_name:
       type: string
       title: Testimonial 2 Name
-      default: 'James R.'
+      default: "James R."
     testimonial2_age:
       type: string
       title: Testimonial 2 Age
-      default: 'Age 52'
+      default: "Age 52"
     testimonial2_quote:
       type: string
       title: Testimonial 2 Quote
@@ -45,15 +45,15 @@ props:
     testimonial2_image_url:
       type: string
       title: Testimonial 2 Image URL
-      default: ''
+      default: ""
     testimonial3_name:
       type: string
       title: Testimonial 3 Name
-      default: 'David K.'
+      default: "David K."
     testimonial3_age:
       type: string
       title: Testimonial 3 Age
-      default: 'Age 48'
+      default: "Age 48"
     testimonial3_quote:
       type: string
       title: Testimonial 3 Quote
@@ -61,4 +61,4 @@ props:
     testimonial3_image_url:
       type: string
       title: Testimonial 3 Image URL
-      default: ''
+      default: ""

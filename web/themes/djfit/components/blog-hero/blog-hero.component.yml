@@ -9,8 +9,8 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Blog & Articles'
+      default: "Blog & Articles"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Expert insights, actionable advice, and evidence-based strategies for health and fitness after 40.'
+      default: "Expert insights, actionable advice, and evidence-based strategies for health and fitness after 40."

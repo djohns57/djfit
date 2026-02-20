@@ -252,7 +252,7 @@
 }
 
 .nl-preview__resource-list li::before {
-  content: '▶ ';
+  content: "▶ ";
   color: #005a7d;
 }
 

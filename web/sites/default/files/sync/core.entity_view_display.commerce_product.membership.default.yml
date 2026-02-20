@@ -1,0 +1,30 @@
+uuid: 9679e60e-0537-45c7-b220-14b6a7dbdd10
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.membership
+    - field.field.commerce_product.membership.body
+  module:
+    - commerce_product
+id: commerce_product.membership.default
+targetEntityType: commerce_product
+bundle: membership
+mode: default
+content:
+  variations:
+    type: commerce_add_to_cart
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  created: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  title: true
+  uid: true
