@@ -38,7 +38,7 @@
 
       <div class="home-videos__content">
         <h4 class="home-videos__card-heading">{{ video.heading }}</h4>
-        <p class="home-videos__card-body">{{ video.body }}</p>
+        <p class="home-videos__card-body">{{ video.body|striptags }}</p>
       </div>
     </a>
   {% endfor %}

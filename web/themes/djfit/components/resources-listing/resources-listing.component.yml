@@ -1,5 +1,8 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Resources Listing
-status: experimental
+status: stable
+description: Resources listing with category filters and resource card grid. Content is sourced dynamically from Resource nodes.
+group: Resources
 props:
   type: object
   properties: {}

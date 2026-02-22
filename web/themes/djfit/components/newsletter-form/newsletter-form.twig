@@ -2,26 +2,29 @@
 /**
  * @file
  * Newsletter subscription form – centered card with interest checkboxes.
+ * Submits via AJAX to /api/newsletter/subscribe.
  */
 #}
 <section class="newsletter-form">
   <div class="newsletter-form__card">
     <div class="newsletter-form__header">
-      <h1 class="newsletter-form__heading">{{ heading }}</h1>
+      <h2 class="newsletter-form__heading">{{ heading }}</h2>
       <p class="newsletter-form__subtitle">
         {{ subtitle }}
       </p>
     </div>
 
-    <form class="newsletter-form__form" action="#" method="post">
+    <form class="newsletter-form__form" action="/api/newsletter/subscribe" method="post" novalidate>
+      <div class="newsletter-form__error" role="alert" hidden></div>
+
       <div class="newsletter-form__row">
         <div class="newsletter-form__field">
           <label class="newsletter-form__label" for="nl-first-name">{{ first_name_label }}</label>
-          <input class="newsletter-form__input" type="text" id="nl-first-name" name="first_name" placeholder="{{ first_name_placeholder }}" />
+          <input class="newsletter-form__input" type="text" id="nl-first-name" name="first_name" placeholder="{{ first_name_placeholder }}" autocomplete="given-name" />
         </div>
         <div class="newsletter-form__field">
           <label class="newsletter-form__label" for="nl-email">{{ email_label }}</label>
-          <input class="newsletter-form__input" type="email" id="nl-email" name="email" placeholder="{{ email_placeholder }}" />
+          <input class="newsletter-form__input" type="email" id="nl-email" name="email" placeholder="{{ email_placeholder }}" required autocomplete="email" />
         </div>
       </div>
 
@@ -49,6 +52,13 @@
         </label>
       </div>
 
+      {# Honeypot – hidden from real users, bots fill it in #}
+      <div class="newsletter-form__hp" aria-hidden="true" tabindex="-1">
+        <label for="nl-website">Website</label>
+        <input type="text" id="nl-website" name="website" autocomplete="off" tabindex="-1" />
+      </div>
+      <input type="hidden" name="_ts" value="" />
+
       <div class="newsletter-form__actions">
         <button type="submit" class="newsletter-form__btn">{{ button_text }}</button>
         <p class="newsletter-form__disclaimer">
@@ -56,5 +66,16 @@
         </p>
       </div>
     </form>
+
+    <div class="newsletter-form__success" hidden>
+      <div class="newsletter-form__success-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="48" height="48">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+          <polyline points="22 4 12 14.01 9 11.01" />
+        </svg>
+      </div>
+      <h3 class="newsletter-form__success-heading">{{ success_heading|default("You're In!") }}</h3>
+      <p class="newsletter-form__success-message"></p>
+    </div>
   </div>
 </section>

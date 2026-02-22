@@ -1,7 +1,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Newsletter Stats
 group: Content
-status: experimental
+status: stable
 props:
   type: object
   properties:
@@ -9,34 +9,50 @@ props:
       type: string
       title: Stat 1 Value
       default: "10,000+"
+      examples:
+        - "10,000+"
     stat_1_label:
       type: string
       title: Stat 1 Label
       default: "Subscribers"
+      examples:
+        - "Subscribers"
     stat_2_value:
       type: string
       title: Stat 2 Value
       default: "200+"
+      examples:
+        - "200+"
     stat_2_label:
       type: string
       title: Stat 2 Label
       default: "Weekly Issues"
+      examples:
+        - "Weekly Issues"
     stat_3_value:
       type: string
       title: Stat 3 Value
       default: "98%"
+      examples:
+        - "98%"
     stat_3_label:
       type: string
       title: Stat 3 Label
       default: "Satisfaction Rate"
+      examples:
+        - "Satisfaction Rate"
     stat_4_value:
       type: string
       title: Stat 4 Value
       default: "4.9/5"
+      examples:
+        - "4.9/5"
     stat_4_label:
       type: string
       title: Stat 4 Label
       default: "Average Rating"
+      examples:
+        - "Average Rating"
 libraryOverrides:
   css:
     component:

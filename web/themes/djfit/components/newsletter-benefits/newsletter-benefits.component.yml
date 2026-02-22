@@ -1,7 +1,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Newsletter Benefits
 group: Content
-status: experimental
+status: stable
 props:
   type: object
   properties:
@@ -9,30 +9,44 @@ props:
       type: string
       title: Section Heading
       default: "What You'll Receive"
+      examples:
+        - "What You'll Receive"
     card_1_title:
       type: string
       title: Card 1 Title
       default: "Expert Insights"
+      examples:
+        - "Expert Insights"
     card_1_text:
       type: string
       title: Card 1 Text
       default: "Science-backed fitness, nutrition, and recovery strategies from certified professionals"
+      examples:
+        - "Science-backed fitness, nutrition, and recovery strategies from certified professionals"
     card_2_title:
       type: string
       title: Card 2 Title
       default: "Community Stories"
+      examples:
+        - "Community Stories"
     card_2_text:
       type: string
       title: Card 2 Text
       default: "Real success stories and transformations from men just like you"
+      examples:
+        - "Real success stories and transformations from men just like you"
     card_3_title:
       type: string
       title: Card 3 Title
       default: "Exclusive Content"
+      examples:
+        - "Exclusive Content"
     card_3_text:
       type: string
       title: Card 3 Text
       default: "Early access to new programs, resources, and special member-only offers"
+      examples:
+        - "Early access to new programs, resources, and special member-only offers"
 libraryOverrides:
   css:
     component:

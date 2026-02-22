@@ -1,7 +1,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Newsletter Testimonials
 group: Content
-status: experimental
+status: stable
 props:
   type: object
   properties:
@@ -9,30 +9,44 @@ props:
       type: string
       title: Section Heading
       default: "What Subscribers Say"
+      examples:
+        - "What Subscribers Say"
     quote_1:
       type: string
       title: Quote 1
       default: '"The weekly newsletter has been a game changer. Always packed with practical tips I can implement right away."'
+      examples:
+        - "The weekly newsletter has been a game changer. Always packed with practical tips I can implement right away."
     author_1:
       type: string
       title: Author 1
       default: "— Michael T., Age 45"
+      examples:
+        - "— Michael T., Age 45"
     quote_2:
       type: string
       title: Quote 2
       default: '"I look forward to it every Monday. Great mix of motivation, education, and real-world advice."'
+      examples:
+        - "I look forward to it every Monday. Great mix of motivation, education, and real-world advice."
     author_2:
       type: string
       title: Author 2
       default: "— James R., Age 52"
+      examples:
+        - "— James R., Age 52"
     quote_3:
       type: string
       title: Quote 3
       default: '"No fluff, just actionable information. Exactly what I need to stay on track with my health goals."'
+      examples:
+        - "No fluff, just actionable information. Exactly what I need to stay on track with my health goals."
     author_3:
       type: string
       title: Author 3
       default: "— David K., Age 48"
+      examples:
+        - "— David K., Age 48"
 libraryOverrides:
   css:
     component:

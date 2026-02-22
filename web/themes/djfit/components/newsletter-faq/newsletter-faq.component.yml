@@ -1,7 +1,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Newsletter FAQ
 group: Content
-status: experimental
+status: stable
 props:
   type: object
   properties:
@@ -9,38 +9,56 @@ props:
       type: string
       title: Section Heading
       default: "Frequently Asked Questions"
+      examples:
+        - "Frequently Asked Questions"
     q1:
       type: string
       title: Question 1
       default: "How often will I receive emails?"
+      examples:
+        - "How often will I receive emails?"
     a1:
       type: string
       title: Answer 1
       default: "You'll receive one email per week, typically on Monday mornings. We respect your inbox and never spam."
+      examples:
+        - "You'll receive one email per week, typically on Monday mornings. We respect your inbox and never spam."
     q2:
       type: string
       title: Question 2
       default: "Can I unsubscribe anytime?"
+      examples:
+        - "Can I unsubscribe anytime?"
     a2:
       type: string
       title: Answer 2
       default: "Absolutely. Every email includes an easy one-click unsubscribe link at the bottom."
+      examples:
+        - "Absolutely. Every email includes an easy one-click unsubscribe link at the bottom."
     q3:
       type: string
       title: Question 3
       default: "Is the newsletter free?"
+      examples:
+        - "Is the newsletter free?"
     a3:
       type: string
       title: Answer 3
       default: "Yes! The newsletter is completely free and available to everyone, members and non-members alike."
+      examples:
+        - "Yes! The newsletter is completely free and available to everyone, members and non-members alike."
     q4:
       type: string
       title: Question 4
       default: "Will you share my email address?"
+      examples:
+        - "Will you share my email address?"
     a4:
       type: string
       title: Answer 4
       default: "Never. We respect your privacy and will never sell or share your information with third parties."
+      examples:
+        - "Never. We respect your privacy and will never sell or share your information with third parties."
 libraryOverrides:
   css:
     component:

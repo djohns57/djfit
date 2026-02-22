@@ -1,5 +1,8 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Resources CTA
-status: experimental
+status: stable
+description: Resources CTA banner with gradient background and membership prompt.
+group: Resources
 props:
   type: object
   properties:
@@ -7,18 +10,26 @@ props:
       type: string
       title: Heading
       default: "Want Full Access to All Resources?"
+      examples:
+        - "Want Full Access to All Resources?"
     subtitle:
       type: string
       title: Subtitle
       default: "Pro membership includes unlimited downloads of all guides, templates, workout plans, and more."
+      examples:
+        - "Pro membership includes unlimited downloads of all guides, templates, workout plans, and more."
     cta_url:
       type: string
       title: CTA URL
       default: "/membership"
+      examples:
+        - "/membership"
     cta_text:
       type: string
       title: CTA Text
       default: "View Membership Plans"
+      examples:
+        - "View Membership Plans"
 libraryOverrides:
   css:
     component:

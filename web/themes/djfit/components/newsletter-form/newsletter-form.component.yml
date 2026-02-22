@@ -1,7 +1,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Newsletter Form
 group: Content
-status: experimental
+status: stable
 props:
   type: object
   properties:
@@ -9,59 +9,97 @@ props:
       type: string
       title: Heading
       default: "Subscribe Now"
+      examples:
+        - "Subscribe Now"
     subtitle:
       type: string
       title: Subtitle
       default: "Join 10,000+ men who receive our weekly newsletter"
+      examples:
+        - "Join 10,000+ men who receive our weekly newsletter"
     first_name_label:
       type: string
       title: First Name Label
       default: "First Name"
+      examples:
+        - "First Name"
     first_name_placeholder:
       type: string
       title: First Name Placeholder
       default: "John"
+      examples:
+        - "John"
     email_label:
       type: string
       title: Email Label
       default: "Email Address"
+      examples:
+        - "Email Address"
     email_placeholder:
       type: string
       title: Email Placeholder
       default: "john@example.com"
+      examples:
+        - "john@example.com"
     interests_label:
       type: string
       title: Interests Label
       default: "I'm interested in: (optional)"
+      examples:
+        - "I'm interested in: (optional)"
     interest_1:
       type: string
       title: Interest Option 1
       default: "Strength Training"
+      examples:
+        - "Strength Training"
     interest_2:
       type: string
       title: Interest Option 2
       default: "Nutrition & Meal Planning"
+      examples:
+        - "Nutrition & Meal Planning"
     interest_3:
       type: string
       title: Interest Option 3
       default: "Recovery & Mobility"
+      examples:
+        - "Recovery & Mobility"
     interest_4:
       type: string
       title: Interest Option 4
       default: "Mindset & Motivation"
+      examples:
+        - "Mindset & Motivation"
     interest_5:
       type: string
       title: Interest Option 5
       default: "Supplement Guidance"
+      examples:
+        - "Supplement Guidance"
     button_text:
       type: string
       title: Button Text
       default: "Subscribe to Newsletter"
+      examples:
+        - "Subscribe to Newsletter"
     disclaimer:
       type: string
       title: Disclaimer Text
       default: "By subscribing, you agree to receive weekly emails. You can unsubscribe at any time."
+      examples:
+        - "By subscribing, you agree to receive weekly emails. You can unsubscribe at any time."
+    success_heading:
+      type: string
+      title: Success Heading
+      default: "You're In!"
+      examples:
+        - "You're In!"
 libraryOverrides:
   css:
     component:
       newsletter-form.tailwind.css: {}
+  js:
+    newsletter-form.js: {}
+  dependencies:
+    - core/drupal

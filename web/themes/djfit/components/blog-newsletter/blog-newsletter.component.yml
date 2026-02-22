@@ -1,8 +1,8 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Blog Newsletter
 status: stable
 description: Newsletter signup CTA section for the blog page.
 group: Blog
-
 props:
   type: object
   properties:
@@ -10,15 +10,27 @@ props:
       type: string
       title: Heading
       default: "Never Miss an Article"
+      examples:
+        - "Never Miss an Article"
     subtitle:
       type: string
       title: Subtitle
       default: "Get the latest articles delivered directly to your inbox every week."
+      examples:
+        - "Get the latest articles delivered directly to your inbox every week."
     button_label:
       type: string
       title: Button Label
       default: "Subscribe to Newsletter"
+      examples:
+        - "Subscribe to Newsletter"
     button_url:
       type: string
       title: Button URL
       default: "/newsletter"
+      examples:
+        - "/newsletter"
+libraryOverrides:
+  css:
+    component:
+      blog-newsletter.tailwind.css: {}

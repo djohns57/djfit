@@ -1,7 +1,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Home Articles
 group: Layout
-status: experimental
+status: stable
 props:
   type: object
   properties:
@@ -9,34 +9,50 @@ props:
       type: string
       title: Section heading
       default: "Latest Articles"
+      examples:
+        - "Latest Articles"
     section_subtitle:
       type: string
       title: Section subtitle
       default: "Expert insights and actionable advice"
+      examples:
+        - "Expert insights and actionable advice"
     view_all_url:
       type: string
       title: View All URL
       default: "/blog"
+      examples:
+        - "/blog"
     article1_tag:
       type: string
       title: Article 1 tag
       default: "Fitness"
+      examples:
+        - "Fitness"
     article1_date:
       type: string
       title: Article 1 date
       default: "Feb 10, 2026"
+      examples:
+        - "Feb 10, 2026"
     article1_heading:
       type: string
       title: Article 1 heading
       default: "Building Muscle After 40: What Really Works"
+      examples:
+        - "Building Muscle After 40: What Really Works"
     article1_body:
       type: string
       title: Article 1 body
       default: "Science-backed strategies for maintaining and building muscle mass as you age."
+      examples:
+        - "Science-backed strategies for maintaining and building muscle mass as you age."
     article1_url:
       type: string
       title: Article 1 URL
       default: "/blog/building-muscle-after-40"
+      examples:
+        - "/blog/building-muscle-after-40"
     article1_image_url:
       type: string
       title: Article 1 image URL
@@ -45,22 +61,32 @@ props:
       type: string
       title: Article 2 tag
       default: "Recovery"
+      examples:
+        - "Recovery"
     article2_date:
       type: string
       title: Article 2 date
       default: "Feb 8, 2026"
+      examples:
+        - "Feb 8, 2026"
     article2_heading:
       type: string
       title: Article 2 heading
       default: "Optimizing Recovery: Sleep and Stress Management"
+      examples:
+        - "Optimizing Recovery: Sleep and Stress Management"
     article2_body:
       type: string
       title: Article 2 body
       default: "How proper recovery can accelerate your fitness results and improve overall health."
+      examples:
+        - "How proper recovery can accelerate your fitness results and improve overall health."
     article2_url:
       type: string
       title: Article 2 URL
       default: "/blog/optimizing-recovery"
+      examples:
+        - "/blog/optimizing-recovery"
     article2_image_url:
       type: string
       title: Article 2 image URL
@@ -69,23 +95,37 @@ props:
       type: string
       title: Article 3 tag
       default: "Nutrition"
+      examples:
+        - "Nutrition"
     article3_date:
       type: string
       title: Article 3 date
       default: "Feb 5, 2026"
+      examples:
+        - "Feb 5, 2026"
     article3_heading:
       type: string
       title: Article 3 heading
       default: "Nutrition Fundamentals for Men Over 40"
+      examples:
+        - "Nutrition Fundamentals for Men Over 40"
     article3_body:
       type: string
       title: Article 3 body
       default: "Essential dietary principles to support longevity, energy, and performance."
+      examples:
+        - "Essential dietary principles to support longevity, energy, and performance."
     article3_url:
       type: string
       title: Article 3 URL
       default: "/blog/nutrition-fundamentals"
+      examples:
+        - "/blog/nutrition-fundamentals"
     article3_image_url:
       type: string
       title: Article 3 image URL
       default: ""
+libraryOverrides:
+  css:
+    component:
+      home-articles.tailwind.css: {}

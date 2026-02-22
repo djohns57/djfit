@@ -1,0 +1,7 @@
+name: DJFit Newsletter
+type: module
+description: Handles newsletter subscription form submissions and stores them as webform submissions.
+package: DJFit
+core_version_requirement: ^11
+dependencies:
+  - drupal:webform

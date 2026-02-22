@@ -41,7 +41,7 @@
         <div class="resource-card__body">
           <span class="resource-card__tag">{{ item.category_label }}</span>
           <h4 class="resource-card__title">{{ item.title }}</h4>
-          <p class="resource-card__desc">{{ item.description }}</p>
+          <p class="resource-card__desc">{{ item.description|striptags }}</p>
           {% if item.tags|length > 0 %}
             <div class="resource-card__tags">
               {% for tag in item.tags %}
