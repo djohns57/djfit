@@ -1,5 +1,8 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Resources Hero
-status: experimental
+status: stable
+description: Resources page hero banner with gradient background, heading, and subtitle.
+group: Resources
 props:
   type: object
   properties:
@@ -7,10 +10,14 @@ props:
       type: string
       title: Heading
       default: "Templates & Guides"
+      examples:
+        - "Templates & Guides"
     subtitle:
       type: string
       title: Subtitle
       default: "Downloadable resources to support your fitness journey. Workout plans, nutrition guides, and tracking tools."
+      examples:
+        - "Downloadable resources to support your fitness journey. Workout plans, nutrition guides, and tracking tools."
 libraryOverrides:
   css:
     component:

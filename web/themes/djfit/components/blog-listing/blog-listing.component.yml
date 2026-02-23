@@ -1,8 +1,8 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Blog Listing
 status: stable
-description: Blog listing with category filters, article card grid, and pagination.
+description: Blog listing with category filters, article card grid, and pagination. Content is sourced dynamically from Article nodes.
 group: Blog
-
 props:
   type: object
   properties:
@@ -10,3 +10,9 @@ props:
       type: string
       title: Active Filter
       default: "all"
+      examples:
+        - "all"
+libraryOverrides:
+  css:
+    component:
+      blog-listing.tailwind.css: {}

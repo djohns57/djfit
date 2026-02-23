@@ -51,7 +51,7 @@
       </div>
       <div class="videos-demo__player-info">
         <h3 class="videos-demo__player-title">{{ featured_video.title }}</h3>
-        <p class="videos-demo__player-desc">{{ featured_video.description }}</p>
+        <p class="videos-demo__player-desc">{{ featured_video.description|striptags }}</p>
       </div>
     </div>
   </div>
@@ -118,7 +118,7 @@
             {% endfor %}
           </div>
           <h4 class="video-card__title">{{ vid.title }}</h4>
-          <p class="video-card__desc">{{ vid.description }}</p>
+          <p class="video-card__desc">{{ vid.description|striptags }}</p>
         </div>
 
         <div class="video-card__footer">

@@ -1,7 +1,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Newsletter Preview
 group: Content
-status: experimental
+status: stable
 props:
   type: object
   properties:
@@ -9,22 +9,194 @@ props:
       type: string
       title: Section Heading
       default: "Preview Our Newsletter"
+      examples:
+        - "Preview Our Newsletter"
     issue_date:
       type: string
       title: Issue Date
       default: "Monday, February 10, 2026"
+      examples:
+        - "Monday, February 10, 2026"
     issue_number:
       type: string
       title: Issue Number
       default: "Issue #208"
+      examples:
+        - "Issue #208"
     issue_title:
       type: string
       title: Issue Title
       default: "DJ Fit Weekly: The Recovery Edition"
+      examples:
+        - "DJ Fit Weekly: The Recovery Edition"
     issue_tagline:
       type: string
       title: Issue Tagline
       default: "Your weekly dose of fitness, nutrition, and recovery strategies"
+      examples:
+        - "Your weekly dose of fitness, nutrition, and recovery strategies"
+    greeting:
+      type: string
+      title: Greeting
+      default: "Hey there,"
+      examples:
+        - "Hey there,"
+    intro:
+      type: string
+      title: Intro Paragraph
+      default: "Welcome back to another edition of the DJ Fit Weekly newsletter. This week, we're diving deep into the often-overlooked foundation of all progress: <strong>recovery</strong>."
+      examples:
+        - "Welcome back to another edition of the DJ Fit Weekly newsletter. This week, we're diving deep into the often-overlooked foundation of all progress: <strong>recovery</strong>."
+    featured_label:
+      type: string
+      title: Featured Section Label
+      default: "This Week's Featured Topic"
+      examples:
+        - "This Week's Featured Topic"
+    featured_title:
+      type: string
+      title: Featured Topic Title
+      default: "The Recovery Pyramid: Building From The Ground Up"
+      examples:
+        - "The Recovery Pyramid: Building From The Ground Up"
+    featured_text:
+      type: string
+      title: Featured Topic Text
+      default: "Most guys over 40 focus solely on training harder, but the real gains happen during recovery. Here's what you need to prioritize:"
+      examples:
+        - "Most guys over 40 focus solely on training harder, but the real gains happen during recovery. Here's what you need to prioritize:"
+    featured_point_1:
+      type: string
+      title: Featured Point 1
+      default: "<strong>Sleep (7-9 hours):</strong> Non-negotiable. This is where muscle repair and hormone optimization happen."
+      examples:
+        - "<strong>Sleep (7-9 hours):</strong> Non-negotiable. This is where muscle repair and hormone optimization happen."
+    featured_point_2:
+      type: string
+      title: Featured Point 2
+      default: "<strong>Nutrition timing:</strong> Post-workout protein within 2 hours accelerates recovery by up to 25%."
+      examples:
+        - "<strong>Nutrition timing:</strong> Post-workout protein within 2 hours accelerates recovery by up to 25%."
+    featured_point_3:
+      type: string
+      title: Featured Point 3
+      default: "<strong>Active recovery:</strong> Light movement on rest days improves blood flow and reduces soreness."
+      examples:
+        - "<strong>Active recovery:</strong> Light movement on rest days improves blood flow and reduces soreness."
+    featured_point_4:
+      type: string
+      title: Featured Point 4
+      default: "<strong>Stress management:</strong> Chronic stress kills gains. Practice daily stress-reduction techniques."
+      examples:
+        - "<strong>Stress management:</strong> Chronic stress kills gains. Practice daily stress-reduction techniques."
+    tips_heading:
+      type: string
+      title: Tips Section Heading
+      default: "Quick Wins This Week"
+      examples:
+        - "Quick Wins This Week"
+    tip_1_title:
+      type: string
+      title: Tip 1 Title
+      default: "Workout Tip: Deload Week"
+      examples:
+        - "Workout Tip: Deload Week"
+    tip_1_text:
+      type: string
+      title: Tip 1 Text
+      default: "If you've been training hard for 4+ weeks, take a deload week. Reduce volume by 40-50% while maintaining intensity. Your body (and joints) will thank you."
+      examples:
+        - "If you've been training hard for 4+ weeks, take a deload week. Reduce volume by 40-50% while maintaining intensity. Your body (and joints) will thank you."
+    tip_2_title:
+      type: string
+      title: Tip 2 Title
+      default: "Nutrition Hack: Cherry Juice"
+      examples:
+        - "Nutrition Hack: Cherry Juice"
+    tip_2_text:
+      type: string
+      title: Tip 2 Text
+      default: "Tart cherry juice has been shown to reduce muscle soreness and improve sleep quality. Try 8oz before bed for better recovery."
+      examples:
+        - "Tart cherry juice has been shown to reduce muscle soreness and improve sleep quality. Try 8oz before bed for better recovery."
+    tip_3_title:
+      type: string
+      title: Tip 3 Title
+      default: "Recovery Tool: Foam Rolling"
+      examples:
+        - "Recovery Tool: Foam Rolling"
+    tip_3_text:
+      type: string
+      title: Tip 3 Text
+      default: "Just 10 minutes of foam rolling can increase range of motion by 10% and reduce delayed onset muscle soreness. Focus on quads, IT band, and lats."
+      examples:
+        - "Just 10 minutes of foam rolling can increase range of motion by 10% and reduce delayed onset muscle soreness. Focus on quads, IT band, and lats."
+    story_heading:
+      type: string
+      title: Story Section Heading
+      default: "Member Success Story"
+      examples:
+        - "Member Success Story"
+    story_quote:
+      type: string
+      title: Story Quote
+      default: "I used to think more training = more results. After implementing proper recovery protocols from DJ Fit, I've gained more muscle in 3 months than I did in the previous year. Sleep and nutrition matter just as much as the workouts."
+      examples:
+        - "I used to think more training = more results. After implementing proper recovery protocols from DJ Fit, I've gained more muscle in 3 months than I did in the previous year. Sleep and nutrition matter just as much as the workouts."
+    story_author:
+      type: string
+      title: Story Author
+      default: "— Robert M., Age 47, Pro Member"
+      examples:
+        - "— Robert M., Age 47, Pro Member"
+    resources_heading:
+      type: string
+      title: Resources Section Heading
+      default: "This Week's Resources"
+      examples:
+        - "This Week's Resources"
+    resource_1:
+      type: string
+      title: Resource 1
+      default: "<strong>New Video:</strong> 15-Minute Evening Mobility Routine (Members)"
+      examples:
+        - "<strong>New Video:</strong> 15-Minute Evening Mobility Routine (Members)"
+    resource_2:
+      type: string
+      title: Resource 2
+      default: "<strong>Blog Post:</strong> The Science of Sleep for Muscle Growth (Free)"
+      examples:
+        - "<strong>Blog Post:</strong> The Science of Sleep for Muscle Growth (Free)"
+    resource_3:
+      type: string
+      title: Resource 3
+      default: "<strong>Template:</strong> Recovery Tracking Worksheet (Members)"
+      examples:
+        - "<strong>Template:</strong> Recovery Tracking Worksheet (Members)"
+    sign_off:
+      type: string
+      title: Sign Off Message
+      default: "Remember: Your body doesn't get stronger in the gym. It gets stronger during recovery. Prioritize it accordingly."
+      examples:
+        - "Remember: Your body doesn't get stronger in the gym. It gets stronger during recovery. Prioritize it accordingly."
+    sign_off_closing:
+      type: string
+      title: Closing Line
+      default: "Train smart,"
+      examples:
+        - "Train smart,"
+    sign_off_name:
+      type: string
+      title: Signature Name
+      default: "The DJ Fit Team"
+      examples:
+        - "The DJ Fit Team"
+    footer_text:
+      type: string
+      title: Footer Text
+      default: "You're receiving this because you subscribed to the DJ Fit newsletter."
+      examples:
+        - "You're receiving this because you subscribed to the DJ Fit newsletter."
 libraryOverrides:
   css:
     component:

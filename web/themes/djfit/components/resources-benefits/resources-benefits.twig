@@ -7,6 +7,12 @@
 #}
 {% set heading = heading|default('Get Access to All Resources') %}
 {% set subtitle = subtitle|default('Pro members get unlimited downloads of all guides, templates, and resources') %}
+{% set card1_title = card1_title|default('50+ Resources') %}
+{% set card1_description = card1_description|default('Comprehensive library of workout plans, nutrition guides, and tracking tools') %}
+{% set card2_title = card2_title|default('Unlimited Downloads') %}
+{% set card2_description = card2_description|default('Download and print as many copies as you need for personal use') %}
+{% set card3_title = card3_title|default('Regular Updates') %}
+{% set card3_description = card3_description|default('New resources added monthly based on member feedback and requests') %}
 {% set cta_url = cta_url|default('/membership') %}
 {% set cta_text = cta_text|default('Upgrade to Pro') %}
 
@@ -32,9 +38,9 @@
           />
         </svg>
       </div>
-      <h4 class="resources-benefits__card-title">50+ Resources</h4>
+      <h4 class="resources-benefits__card-title">{{ card1_title }}</h4>
       <p class="resources-benefits__card-desc">
-        Comprehensive library of workout plans, nutrition guides, and tracking tools
+        {{ card1_description }}
       </p>
     </div>
 
@@ -46,9 +52,9 @@
           <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
         </svg>
       </div>
-      <h4 class="resources-benefits__card-title">Unlimited Downloads</h4>
+      <h4 class="resources-benefits__card-title">{{ card2_title }}</h4>
       <p class="resources-benefits__card-desc">
-        Download and print as many copies as you need for personal use
+        {{ card2_description }}
       </p>
     </div>
 
@@ -59,9 +65,9 @@
           <polyline points="17,6 23,6 23,12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </div>
-      <h4 class="resources-benefits__card-title">Regular Updates</h4>
+      <h4 class="resources-benefits__card-title">{{ card3_title }}</h4>
       <p class="resources-benefits__card-desc">
-        New resources added monthly based on member feedback and requests
+        {{ card3_description }}
       </p>
     </div>
   </div>

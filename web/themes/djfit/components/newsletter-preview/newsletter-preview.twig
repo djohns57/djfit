@@ -2,8 +2,37 @@
 /**
  * @file
  * Newsletter preview – mock email showing a sample issue.
+ * All body content is editable via Canvas props.
  */
 #}
+{% set _greeting = greeting|default('Hey there,') %}
+{% set _intro = intro|default('Welcome back to another edition of the DJ Fit Weekly newsletter. This week, we&#039;re diving deep into the often-overlooked foundation of all progress: <strong>recovery</strong>.') %}
+{% set _featured_label = featured_label|default("This Week's Featured Topic") %}
+{% set _featured_title = featured_title|default('The Recovery Pyramid: Building From The Ground Up') %}
+{% set _featured_text = featured_text|default("Most guys over 40 focus solely on training harder, but the real gains happen during recovery. Here's what you need to prioritize:") %}
+{% set _featured_point_1 = featured_point_1|default('<strong>Sleep (7-9 hours):</strong> Non-negotiable. This is where muscle repair and hormone optimization happen.') %}
+{% set _featured_point_2 = featured_point_2|default('<strong>Nutrition timing:</strong> Post-workout protein within 2 hours accelerates recovery by up to 25%.') %}
+{% set _featured_point_3 = featured_point_3|default('<strong>Active recovery:</strong> Light movement on rest days improves blood flow and reduces soreness.') %}
+{% set _featured_point_4 = featured_point_4|default('<strong>Stress management:</strong> Chronic stress kills gains. Practice daily stress-reduction techniques.') %}
+{% set _tips_heading = tips_heading|default('Quick Wins This Week') %}
+{% set _tip_1_title = tip_1_title|default('Workout Tip: Deload Week') %}
+{% set _tip_1_text = tip_1_text|default("If you've been training hard for 4+ weeks, take a deload week. Reduce volume by 40-50% while maintaining intensity. Your body (and joints) will thank you.") %}
+{% set _tip_2_title = tip_2_title|default('Nutrition Hack: Cherry Juice') %}
+{% set _tip_2_text = tip_2_text|default('Tart cherry juice has been shown to reduce muscle soreness and improve sleep quality. Try 8oz before bed for better recovery.') %}
+{% set _tip_3_title = tip_3_title|default('Recovery Tool: Foam Rolling') %}
+{% set _tip_3_text = tip_3_text|default('Just 10 minutes of foam rolling can increase range of motion by 10% and reduce delayed onset muscle soreness. Focus on quads, IT band, and lats.') %}
+{% set _story_heading = story_heading|default('Member Success Story') %}
+{% set _story_quote = story_quote|default("I used to think more training = more results. After implementing proper recovery protocols from DJ Fit, I've gained more muscle in 3 months than I did in the previous year. Sleep and nutrition matter just as much as the workouts.") %}
+{% set _story_author = story_author|default('— Robert M., Age 47, Pro Member') %}
+{% set _resources_heading = resources_heading|default("This Week's Resources") %}
+{% set _resource_1 = resource_1|default('<strong>New Video:</strong> 15-Minute Evening Mobility Routine (Members)') %}
+{% set _resource_2 = resource_2|default('<strong>Blog Post:</strong> The Science of Sleep for Muscle Growth (Free)') %}
+{% set _resource_3 = resource_3|default('<strong>Template:</strong> Recovery Tracking Worksheet (Members)') %}
+{% set _sign_off = sign_off|default("Remember: Your body doesn't get stronger in the gym. It gets stronger during recovery. Prioritize it accordingly.") %}
+{% set _sign_off_closing = sign_off_closing|default('Train smart,') %}
+{% set _sign_off_name = sign_off_name|default('The DJ Fit Team') %}
+{% set _footer_text = footer_text|default("You're receiving this because you subscribed to the DJ Fit newsletter.") %}
+
 <section class="nl-preview">
   <h2 class="nl-preview__heading">{{ heading }}</h2>
 
@@ -40,47 +69,44 @@
     {# Email body #}
     <div class="nl-preview__email-body">
       <p class="nl-preview__body-text">
-        Hey there,
+        {{ _greeting }}
       </p>
       <p class="nl-preview__body-text">
-        Welcome back to another edition of the DJ Fit Weekly newsletter. This week, we're diving deep into the often-overlooked foundation of all
-        progress: <strong>recovery</strong>.
+        {{ _intro|raw }}
       </p>
 
       <div class="nl-preview__featured">
-        <h4 class="nl-preview__featured-label">&#x1F525; This Week's Featured Topic</h4>
-        <h5 class="nl-preview__featured-title">The Recovery Pyramid: Building From The Ground Up</h5>
+        <h4 class="nl-preview__featured-label">&#x1F525; {{ _featured_label }}</h4>
+        <h5 class="nl-preview__featured-title">{{ _featured_title }}</h5>
         <p class="nl-preview__body-text">
-          Most guys over 40 focus solely on training harder, but the real gains happen during recovery. Here's what you need to prioritize:
+          {{ _featured_text }}
         </p>
         <ol class="nl-preview__numbered-list">
-          <li><strong>Sleep (7-9 hours):</strong> Non-negotiable. This is where muscle repair and hormone optimization happen.</li>
-          <li><strong>Nutrition timing:</strong> Post-workout protein within 2 hours accelerates recovery by up to 25%.</li>
-          <li><strong>Active recovery:</strong> Light movement on rest days improves blood flow and reduces soreness.</li>
-          <li><strong>Stress management:</strong> Chronic stress kills gains. Practice daily stress-reduction techniques.</li>
+          <li>{{ _featured_point_1|raw }}</li>
+          <li>{{ _featured_point_2|raw }}</li>
+          <li>{{ _featured_point_3|raw }}</li>
+          <li>{{ _featured_point_4|raw }}</li>
         </ol>
       </div>
 
       <div class="nl-preview__quick-wins">
-        <h4 class="nl-preview__section-title">&#x1F4A1; Quick Wins This Week</h4>
+        <h4 class="nl-preview__section-title">&#x1F4A1; {{ _tips_heading }}</h4>
         <div class="nl-preview__tip-card">
-          <h5 class="nl-preview__tip-title">Workout Tip: Deload Week</h5>
+          <h5 class="nl-preview__tip-title">{{ _tip_1_title }}</h5>
           <p class="nl-preview__tip-text">
-            If you've been training hard for 4+ weeks, take a deload week. Reduce volume by 40-50% while maintaining intensity. Your body (and joints)
-            will thank you.
+            {{ _tip_1_text }}
           </p>
         </div>
         <div class="nl-preview__tip-card">
-          <h5 class="nl-preview__tip-title">Nutrition Hack: Cherry Juice</h5>
+          <h5 class="nl-preview__tip-title">{{ _tip_2_title }}</h5>
           <p class="nl-preview__tip-text">
-            Tart cherry juice has been shown to reduce muscle soreness and improve sleep quality. Try 8oz before bed for better recovery.
+            {{ _tip_2_text }}
           </p>
         </div>
         <div class="nl-preview__tip-card">
-          <h5 class="nl-preview__tip-title">Recovery Tool: Foam Rolling</h5>
+          <h5 class="nl-preview__tip-title">{{ _tip_3_title }}</h5>
           <p class="nl-preview__tip-text">
-            Just 10 minutes of foam rolling can increase range of motion by 10% and reduce delayed onset muscle soreness. Focus on quads, IT band, and
-            lats.
+            {{ _tip_3_text }}
           </p>
         </div>
       </div>
@@ -88,14 +114,13 @@
       <div class="nl-preview__divider"></div>
 
       <div class="nl-preview__story">
-        <h4 class="nl-preview__section-title">&#x2B50; Member Success Story</h4>
+        <h4 class="nl-preview__section-title">&#x2B50; {{ _story_heading }}</h4>
         <div class="nl-preview__story-card">
           <p class="nl-preview__story-quote">
-            "I used to think more training = more results. After implementing proper recovery protocols from DJ Fit, I've gained more muscle in 3
-            months than I did in the previous year. Sleep and nutrition matter just as much as the workouts."
+            "{{ _story_quote }}"
           </p>
           <p class="nl-preview__story-author">
-            — Robert M., Age 47, Pro Member
+            {{ _story_author }}
           </p>
         </div>
       </div>
@@ -103,11 +128,11 @@
       <div class="nl-preview__divider"></div>
 
       <div class="nl-preview__resources">
-        <h4 class="nl-preview__section-title">&#x1F4DA; This Week's Resources</h4>
+        <h4 class="nl-preview__section-title">&#x1F4DA; {{ _resources_heading }}</h4>
         <ul class="nl-preview__resource-list">
-          <li><strong>New Video:</strong> 15-Minute Evening Mobility Routine (Members)</li>
-          <li><strong>Blog Post:</strong> The Science of Sleep for Muscle Growth (Free)</li>
-          <li><strong>Template:</strong> Recovery Tracking Worksheet (Members)</li>
+          <li>{{ _resource_1|raw }}</li>
+          <li>{{ _resource_2|raw }}</li>
+          <li>{{ _resource_3|raw }}</li>
         </ul>
       </div>
 
@@ -115,13 +140,13 @@
 
       <div class="nl-preview__sign-off">
         <p class="nl-preview__body-text">
-          Remember: Your body doesn't get stronger in the gym. It gets stronger during recovery. Prioritize it accordingly.
+          {{ _sign_off }}
         </p>
         <p class="nl-preview__body-text">
-          Train smart,
+          {{ _sign_off_closing }}
         </p>
         <p class="nl-preview__body-text nl-preview__body-text--strong">
-          The DJ Fit Team
+          {{ _sign_off_name }}
         </p>
       </div>
 
@@ -129,7 +154,7 @@
 
       <div class="nl-preview__footer">
         <p class="nl-preview__footer-text">
-          You're receiving this because you subscribed to the DJ Fit newsletter.
+          {{ _footer_text }}
         </p>
         <p class="nl-preview__footer-links">
           <a href="#">Update preferences</a> | <a href="#">Unsubscribe</a>

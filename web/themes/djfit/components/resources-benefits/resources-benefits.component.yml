@@ -1,5 +1,8 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Resources Benefits
-status: experimental
+status: stable
+description: Resources benefits section with 3 feature cards and CTA button.
+group: Resources
 props:
   type: object
   properties:
@@ -7,18 +10,62 @@ props:
       type: string
       title: Heading
       default: "Get Access to All Resources"
+      examples:
+        - "Get Access to All Resources"
     subtitle:
       type: string
       title: Subtitle
       default: "Pro members get unlimited downloads of all guides, templates, and resources"
+      examples:
+        - "Pro members get unlimited downloads of all guides, templates, and resources"
+    card1_title:
+      type: string
+      title: Card 1 Title
+      default: "50+ Resources"
+      examples:
+        - "50+ Resources"
+    card1_description:
+      type: string
+      title: Card 1 Description
+      default: "Comprehensive library of workout plans, nutrition guides, and tracking tools"
+      examples:
+        - "Comprehensive library of workout plans, nutrition guides, and tracking tools"
+    card2_title:
+      type: string
+      title: Card 2 Title
+      default: "Unlimited Downloads"
+      examples:
+        - "Unlimited Downloads"
+    card2_description:
+      type: string
+      title: Card 2 Description
+      default: "Download and print as many copies as you need for personal use"
+      examples:
+        - "Download and print as many copies as you need for personal use"
+    card3_title:
+      type: string
+      title: Card 3 Title
+      default: "Regular Updates"
+      examples:
+        - "Regular Updates"
+    card3_description:
+      type: string
+      title: Card 3 Description
+      default: "New resources added monthly based on member feedback and requests"
+      examples:
+        - "New resources added monthly based on member feedback and requests"
     cta_url:
       type: string
       title: CTA URL
       default: "/membership"
+      examples:
+        - "/membership"
     cta_text:
       type: string
       title: CTA Text
       default: "Upgrade to Pro"
+      examples:
+        - "Upgrade to Pro"
 libraryOverrides:
   css:
     component:

@@ -1,8 +1,8 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Blog Hero
 status: stable
 description: Blog page hero banner with gradient background, heading, and subtitle.
 group: Blog
-
 props:
   type: object
   properties:
@@ -10,7 +10,15 @@ props:
       type: string
       title: Heading
       default: "Blog & Articles"
+      examples:
+        - "Blog & Articles"
     subtitle:
       type: string
       title: Subtitle
       default: "Expert insights, actionable advice, and evidence-based strategies for health and fitness after 40."
+      examples:
+        - "Expert insights, actionable advice, and evidence-based strategies for health and fitness after 40."
+libraryOverrides:
+  css:
+    component:
+      blog-hero.tailwind.css: {}
