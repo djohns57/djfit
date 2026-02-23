@@ -4,9 +4,94 @@ status: true
 dependencies:
   theme:
     - djfit
-active_version: d01e0303a7fd0fe0
+active_version: 1915af1764000131
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        stat_1_value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '10,000+'
+          expression: ℹ︎string␟value
+        stat_1_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Subscribers
+          expression: ℹ︎string␟value
+        stat_2_value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 200+
+          expression: ℹ︎string␟value
+        stat_2_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Weekly Issues'
+          expression: ℹ︎string␟value
+        stat_3_value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 98%
+          expression: ℹ︎string␟value
+        stat_3_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Satisfaction Rate'
+          expression: ℹ︎string␟value
+        stat_4_value:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 4.9/5
+          expression: ℹ︎string␟value
+        stat_4_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Average Rating'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  d01e0303a7fd0fe0:
     settings:
       prop_field_definitions:
         stat_1_value:

@@ -4,9 +4,218 @@ status: true
 dependencies:
   theme:
     - djfit
-active_version: b07e6592d4916d7d
+active_version: 12f77605981ddec8
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        section_heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Latest Articles'
+          expression: ℹ︎string␟value
+        section_subtitle:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Expert insights and actionable advice'
+          expression: ℹ︎string␟value
+        view_all_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /blog
+          expression: ℹ︎string␟value
+        article1_tag:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Fitness
+          expression: ℹ︎string␟value
+        article1_date:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Feb 10, 2026'
+          expression: ℹ︎string␟value
+        article1_heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Building Muscle After 40: What Really Works'
+          expression: ℹ︎string␟value
+        article1_body:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Science-backed strategies for maintaining and building muscle mass as you age.'
+          expression: ℹ︎string␟value
+        article1_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /blog/building-muscle-after-40
+          expression: ℹ︎string␟value
+        article1_image_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        article2_tag:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Recovery
+          expression: ℹ︎string␟value
+        article2_date:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Feb 8, 2026'
+          expression: ℹ︎string␟value
+        article2_heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Optimizing Recovery: Sleep and Stress Management'
+          expression: ℹ︎string␟value
+        article2_body:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'How proper recovery can accelerate your fitness results and improve overall health.'
+          expression: ℹ︎string␟value
+        article2_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /blog/optimizing-recovery
+          expression: ℹ︎string␟value
+        article2_image_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+        article3_tag:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Nutrition
+          expression: ℹ︎string␟value
+        article3_date:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Feb 5, 2026'
+          expression: ℹ︎string␟value
+        article3_heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Nutrition Fundamentals for Men Over 40'
+          expression: ℹ︎string␟value
+        article3_body:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Essential dietary principles to support longevity, energy, and performance.'
+          expression: ℹ︎string␟value
+        article3_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: /blog/nutrition-fundamentals
+          expression: ℹ︎string␟value
+        article3_image_url:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value: null
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  b07e6592d4916d7d:
     settings:
       prop_field_definitions:
         section_heading:

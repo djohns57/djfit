@@ -5,9 +5,35 @@ dependencies:
   module:
     - commerce
     - options
-active_version: 571737f9c385e265
+active_version: c03a5267d3eda7fb
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: Status
+          expression: ℹ︎string␟value
+        variant:
+          required: false
+          field_type: list_string
+          field_storage_settings:
+            allowed_values_function: canvas_load_allowed_values_for_component_prop
+          field_instance_settings: {  }
+          field_widget: options_select
+          default_value:
+            -
+              value: neutral
+          expression: ℹ︎list_string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  571737f9c385e265:
     settings:
       prop_field_definitions:
         text:

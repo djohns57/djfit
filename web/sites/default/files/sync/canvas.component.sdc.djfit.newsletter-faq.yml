@@ -4,9 +4,104 @@ status: true
 dependencies:
   theme:
     - djfit
-active_version: 3e965dac418aec57
+active_version: 6c872395e9f96393
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Frequently Asked Questions'
+          expression: ℹ︎string␟value
+        q1:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'How often will I receive emails?'
+          expression: ℹ︎string␟value
+        a1:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: "You'll receive one email per week, typically on Monday mornings. We respect your inbox and never spam."
+          expression: ℹ︎string␟value
+        q2:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Can I unsubscribe anytime?'
+          expression: ℹ︎string␟value
+        a2:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Absolutely. Every email includes an easy one-click unsubscribe link at the bottom.'
+          expression: ℹ︎string␟value
+        q3:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Is the newsletter free?'
+          expression: ℹ︎string␟value
+        a3:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Yes! The newsletter is completely free and available to everyone, members and non-members alike.'
+          expression: ℹ︎string␟value
+        q4:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Will you share my email address?'
+          expression: ℹ︎string␟value
+        a4:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Never. We respect your privacy and will never sell or share your information with third parties.'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  3e965dac418aec57:
     settings:
       prop_field_definitions:
         heading:

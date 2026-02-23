@@ -4,9 +4,84 @@ status: true
 dependencies:
   theme:
     - djfit
-active_version: 27dfcb58c6e9dabe
+active_version: bbcf9d156c28d983
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: "What You'll Receive"
+          expression: ℹ︎string␟value
+        card_1_title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Expert Insights'
+          expression: ℹ︎string␟value
+        card_1_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Science-backed fitness, nutrition, and recovery strategies from certified professionals'
+          expression: ℹ︎string␟value
+        card_2_title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Community Stories'
+          expression: ℹ︎string␟value
+        card_2_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Real success stories and transformations from men just like you'
+          expression: ℹ︎string␟value
+        card_3_title:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Exclusive Content'
+          expression: ℹ︎string␟value
+        card_3_text:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Early access to new programs, resources, and special member-only offers'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  27dfcb58c6e9dabe:
     settings:
       prop_field_definitions:
         heading:

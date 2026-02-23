@@ -4,9 +4,34 @@ status: true
 dependencies:
   theme:
     - djfit
-active_version: c63b3f3352fc7592
+active_version: da2a6084d25cb028
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Join Our Newsletter'
+          expression: ℹ︎string␟value
+        subtitle:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Get expert health and fitness tips delivered to your inbox every week. No spam, just actionable advice.'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  c63b3f3352fc7592:
     settings:
       prop_field_definitions:
         heading:

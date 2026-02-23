@@ -4,9 +4,34 @@ status: true
 dependencies:
   theme:
     - djfit
-active_version: c63b3f3352fc7592
+active_version: 0bbc8ead3dac0a92
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Blog & Articles'
+          expression: ℹ︎string␟value
+        subtitle:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Expert insights, actionable advice, and evidence-based strategies for health and fitness after 40.'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
+  c63b3f3352fc7592:
     settings:
       prop_field_definitions:
         heading:

@@ -101,13 +101,17 @@
 }
 
 /* Auth-state visibility — Drupal sets body.logged-in / body.not-logged-in.
-   Canvas places buttons statically in the links slot so we hide/show via CSS. */
+   Canvas places buttons statically in the links slot; the JS behavior
+   nav-auth-state marks replaced elements with [data-auth-ready]. Before JS
+   runs we hide the wrong-state links with these rules. */
 body.not-logged-in .navbar--links a[href*="logout"] {
   display: none !important;
 }
-body.logged-in .navbar--links a:not([href*="logout"]),
-body.logged-in .navbar--links button {
+body.logged-in .navbar--links [data-signin-trigger],
+body.logged-in .navbar--links a[href="/membership"],
+body.logged-in .navbar--links a[href*="#signin-modal"] {
   display: none !important;
+}
 /* Cart icon link: match header accent, badge for item count */
 .navbar--cart-link {
   transition: opacity 0.2s ease;
