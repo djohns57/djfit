@@ -152,6 +152,7 @@ final class ThemeHooks {
       ->toRenderable();
 
     $route_name = $this->routeMatch->getRouteName();
+    $variables['is_commerce_product'] = ($route_name === 'entity.commerce_product.canonical');
     if ($route_name === 'entity.canvas_page.canonical' || str_starts_with($this->routeMatch->getRouteObject()?->getPath() ?? '', '/canvas/')) {
       $variables['rendered_by_canvas'] = TRUE;
     }
@@ -202,6 +203,14 @@ final class ThemeHooks {
       $variables['#attached']['drupalSettings']['djfit']['logoutUrl'] = '/user/logout';
     }
     $variables['#attached']['library'][] = 'djfit/nav_auth_state';
+
+    // Expose active membership status for the navbar "Member" badge.
+    $roles = $account->getRoles();
+    $variables['is_member'] = !empty(array_intersect(['basic_member', 'premium_member'], $roles));
+
+    // Vary the page cache by auth state so drupalSettings reflect the
+    // current user's logged-in status.
+    $variables['#cache']['contexts'][] = 'user.roles:authenticated';
   }
 
   /**

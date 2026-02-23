@@ -1,0 +1,35 @@
+uuid: 6e1c48e4-3f85-4129-a061-2f1e54a8ab0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.membership
+    - core.entity_view_mode.commerce_product_variation.summary
+    - field.field.commerce_product_variation.membership.billing_schedule
+    - field.field.commerce_product_variation.membership.license_expiration
+    - field.field.commerce_product_variation.membership.license_type
+    - field.field.commerce_product_variation.membership.subscription_type
+id: commerce_product_variation.membership.summary
+targetEntityType: commerce_product_variation
+bundle: membership
+mode: summary
+content:
+  title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  billing_schedule: true
+  langcode: true
+  license_expiration: true
+  license_type: true
+  list_price: true
+  price: true
+  product_id: true
+  search_api_excerpt: true
+  sku: true
+  subscription_type: true

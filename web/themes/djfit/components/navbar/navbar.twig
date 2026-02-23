@@ -66,32 +66,75 @@
       class="navbar--links col-span-1 col-start-1 row-span-1 row-start-3 ml-auto flex w-full flex-initial shrink-0 grow-0 flex-col justify-end gap-2 md:w-auto md:flex-row"
     >
       {% block links %}
-        <span data-signin-trigger>
-        {{
-          include(
-            'djfit:button',
-            {
-              variant: 'secondary-inverted',
-              label: 'Sign In'|t,
-              icon: 'user',
-              icon_first: true,
-              size: 'medium'
-            }
-          )
-        }}
-        </span>
+        {% if logged_in %}
+          {% if is_member %}
+            <span class="navbar--member-badge">
+              {{
+                include(
+                  '@djfit/components/icon/icon.twig',
+                  {
+                    icon: 'bell-ringing',
+                    icon_size: 'extra-small'
+                  }
+                )
+              }}
+              {{ 'Member'|t }}
+            </span>
+          {% endif %}
 
-        {{
-          include(
-            'djfit:button',
-            {
-              variant: 'primary',
-              label: 'Get Started'|t,
-              href: '/membership',
-              size: 'medium'
-            }
-          )
-        }}
+          {{
+            include(
+              'djfit:button',
+              {
+                variant: 'secondary-inverted',
+                label: user.displayName|default('My Account'|t),
+                icon: 'user',
+                icon_first: true,
+                href: '/user/' ~ user.id,
+                size: 'medium'
+              }
+            )
+          }}
+
+          {{
+            include(
+              'djfit:button',
+              {
+                variant: 'primary',
+                label: 'Log Out'|t,
+                href: '/user/logout',
+                size: 'medium'
+              }
+            )
+          }}
+        {% else %}
+          <span data-signin-trigger>
+          {{
+            include(
+              'djfit:button',
+              {
+                variant: 'secondary-inverted',
+                label: 'Sign In'|t,
+                icon: 'user',
+                icon_first: true,
+                size: 'medium'
+              }
+            )
+          }}
+          </span>
+
+          {{
+            include(
+              'djfit:button',
+              {
+                variant: 'primary',
+                label: 'Get Started'|t,
+                href: '/membership',
+                size: 'medium'
+              }
+            )
+          }}
+        {% endif %}
       {% endblock %}
     </div>
   </div>

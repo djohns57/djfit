@@ -6,3 +6,8 @@
 # OS files
 .DS_Store
 Thumbs.db
+core/
+vendor/
+web/themes/contrib/
+web/modules/contrib/
+web/profiles/contrib/

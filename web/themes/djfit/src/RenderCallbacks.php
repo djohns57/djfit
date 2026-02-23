@@ -26,6 +26,17 @@ final class RenderCallbacks implements TrustedCallbackInterface {
     if ($element['#component'] === 'djfit:hero-blog' && isset($element['#props']['date']) && is_int($element['#props']['date'])) {
       $element['#props']['date'] = date('Y-m-d', $element['#props']['date']);
     }
+
+    // Hide the "Member" badge for non-members.
+    if ($element['#component'] === 'djfit:badge' && ($element['#props']['label'] ?? '') === 'Member') {
+      $roles = \Drupal::currentUser()->getRoles();
+      $is_member = !empty(array_intersect(['basic_member', 'premium_member'], $roles));
+      if (!$is_member) {
+        $element['#printed'] = TRUE;
+      }
+      $element['#cache']['contexts'][] = 'user.roles';
+    }
+
     return $element;
   }
 

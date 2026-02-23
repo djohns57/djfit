@@ -15,8 +15,19 @@
  * default product output and rendered inline by the add-to-cart form.
  */
 #}
-<article{{ attributes.addClass('commerce-product') }}>
+<article{{ attributes.addClass('commerce-product', 'commerce-product--full') }}>
   {{ title_prefix }}
   {{ title_suffix }}
-  {{- product|without('variation_attributes') -}}
+  <div class="commerce-product__main">
+    <h1 class="commerce-product__title">{{ product_entity.title.value }}</h1>
+    <div class="commerce-product__purchase">
+      <div class="commerce-product__price">
+        {{ product.variation_price }}
+      </div>
+      <div class="commerce-product__cart">
+        {{ product.variations }}
+      </div>
+    </div>
+  </div>
+  {{- product|without('variation_attributes', 'variations', 'title', 'variation_price', 'variation_list_price') -}}
 </article>

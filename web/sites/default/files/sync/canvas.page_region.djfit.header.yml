@@ -5,6 +5,7 @@ dependencies:
   config:
     - canvas.component.block.system_branding_block
     - canvas.component.block.system_menu_block.main
+    - canvas.component.sdc.djfit.badge
     - canvas.component.sdc.djfit.button
     - canvas.component.sdc.djfit.navbar
   module:
@@ -26,7 +27,7 @@ component_tree:
     uuid: a1b2c3d4-e5f6-7890-abcd-ef1234567890
     component_id: sdc.djfit.button
     component_version: 8c253a9827f0ca84
-    inputs: '{"variant":"secondary-inverted","label":"Sign In","icon":"user","icon_first":true,"href":"#signin-modal","size":"medium"}'
+    inputs: '{"variant":"secondary-inverted","label":"Sign In","icon_first":true,"href":"#signin-modal","size":"medium","mobile_width":false,"disabled":false}'
   '0:links:1':
     parent_uuid: 3b448d2f-f191-44cb-8189-2362dbf3fe18
     slot: links
@@ -48,3 +49,10 @@ component_tree:
     component_id: block.system_menu_block.main
     component_version: 023ff7ba63f80798
     inputs: '{"label":"Main navigation","label_display":"0","level":1,"depth":null,"expand_all_items":false}'
+  '0:navigation:1':
+    parent_uuid: 3b448d2f-f191-44cb-8189-2362dbf3fe18
+    slot: navigation
+    uuid: 40ed2a70-80f1-4b01-a6d2-5305e6937b62
+    component_id: sdc.djfit.badge
+    component_version: 1333d70702cd586b
+    inputs: '{"label":"Member","style":"primary","icon":"rocket","icon_first":true}'

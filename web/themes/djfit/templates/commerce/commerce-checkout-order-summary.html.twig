@@ -18,9 +18,10 @@
     <div class="order-summary__items">
       {% for order_item in order_entity.getItems %}
         <div class="order-summary__line-item">
-          <span class="order-summary__qty">{{ order_item.getQuantity|number_format }}&nbsp;&times;</span>
-          <span class="order-summary__label">{{- order_item.label -}}</span>
-          <span class="order-summary__price">{{- order_item.getTotalPrice|commerce_price_format -}}</span>
+          <span class="order-summary__qty">{{ order_item.getQuantity|number_format }} &times;</span>
+          {% set _title = order_item.getPurchasedEntity ? order_item.getPurchasedEntity.getProduct.getTitle : order_item.getTitle %}
+          <span class="order-summary__label">{{ _title }}</span>
+          <span class="order-summary__price">{{ order_item.getTotalPrice|commerce_price_format }}</span>
         </div>
       {% endfor %}
     </div>

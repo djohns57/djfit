@@ -55,7 +55,9 @@
     {% if not rendered_by_canvas %}
       <div class="container mx-auto px-4 pb-4">
         {{ breadcrumb }}
-        {{ title }}
+        {% if not is_commerce_product %}
+          {{ title }}
+        {% endif %}
       </div>
     {% endif %}
   </header>
