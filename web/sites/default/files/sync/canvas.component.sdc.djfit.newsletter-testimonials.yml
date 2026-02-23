@@ -142,6 +142,81 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
+  33b90b9ada26ba91:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'What Subscribers Say'
+          expression: ℹ︎string␟value
+        quote_1:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'The weekly newsletter has been a game changer. Always packed with practical tips I can implement right away.'
+          expression: ℹ︎string␟value
+        author_1:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '— Michael T., Age 45'
+          expression: ℹ︎string␟value
+        quote_2:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'I look forward to it every Monday. Great mix of motivation, education, and real-world advice.'
+          expression: ℹ︎string␟value
+        author_2:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '— James R., Age 52'
+          expression: ℹ︎string␟value
+        quote_3:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'No fluff, just actionable information. Exactly what I need to stay on track with my health goals.'
+          expression: ℹ︎string␟value
+        author_3:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: '— David K., Age 48'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
 label: 'Newsletter Testimonials'
 id: sdc.djfit.newsletter-testimonials
 provider: djfit

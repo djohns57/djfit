@@ -118,7 +118,8 @@
                 "Canvas preview defaults for commerce status badge": "patches/drupal-commerce-canvas-preview-defaults.patch"
             },
             "drupal/commerce_license": {
-                "Fix TypeError in License::canRenew() when renewal interval is not configured": "patches/drupal-commerce-license-canrenew-null-interval.patch"
+                "Fix TypeError in License::canRenew() when renewal interval is not configured": "patches/drupal-commerce-license-canrenew-null-interval.patch",
+                "Guard against null role in checkUserHasExistingRights": "patches/drupal-commerce-license-null-guards.patch"
             },
             "drupal/ai": {
                 "Fix invalid empty tool parameters schema for Bedrock/LiteLLM providers": "patches/drupal-ai-tools-empty-parameters-schema.patch"

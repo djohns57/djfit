@@ -60,7 +60,6 @@ content:
 hidden:
   adjustments: true
   created: true
-  license: true
   status: true
   total_price: true
   uid: true

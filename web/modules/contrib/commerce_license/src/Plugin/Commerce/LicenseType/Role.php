@@ -94,7 +94,11 @@ class Role extends LicenseTypeBase implements ExistingRightsFromConfigurationChe
    */
   public function checkUserHasExistingRights(UserInterface $user) {
     $role_id = $this->configuration['license_role'];
-    $role = $this->entityTypeManager->getStorage('user_role')->load($role_id);
+    $role = $role_id ? $this->entityTypeManager->getStorage('user_role')->load($role_id) : NULL;
+
+    if (!$role) {
+      return ExistingRightsResult::rightsDoNotExist();
+    }
 
     return ExistingRightsResult::rightsExistIf(
       $user->hasRole($role_id),

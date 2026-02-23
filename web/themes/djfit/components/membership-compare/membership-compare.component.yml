@@ -1,5 +1,7 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Membership Compare
-status: experimental
+group: Membership
+status: stable
 props:
   type: object
   properties:
@@ -7,10 +9,14 @@ props:
       type: string
       title: Heading
       default: "Compare Plans"
+      examples:
+        - "Compare Plans"
     subtitle:
       type: string
       title: Subtitle
       default: "Choose the plan that best fits your goals"
+      examples:
+        - "Choose the plan that best fits your goals"
 libraryOverrides:
   css:
     component:

@@ -77,5 +77,4 @@ content:
     region: content
 hidden:
   adjustments: true
-  license: true
   search_api_excerpt: true

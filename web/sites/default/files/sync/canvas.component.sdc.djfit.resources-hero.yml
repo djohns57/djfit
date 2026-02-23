@@ -52,6 +52,31 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
+  8d4f309135e49b51:
+    settings:
+      prop_field_definitions:
+        heading:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Templates & Guides'
+          expression: ℹ︎string␟value
+        subtitle:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Downloadable resources to support your fitness journey. Workout plans, nutrition guides, and tracking tools.'
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
 label: 'Resources Hero'
 id: sdc.djfit.resources-hero
 provider: djfit

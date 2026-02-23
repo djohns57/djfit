@@ -1,5 +1,7 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Membership Pricing
-status: experimental
+group: Membership
+status: stable
 props:
   type: object
   properties:
@@ -7,42 +9,62 @@ props:
       type: string
       title: Basic Plan Name
       default: "Basic"
+      examples:
+        - "Basic"
     basic_description:
       type: string
       title: Basic Plan Description
       default: "Perfect for getting started with structured fitness"
+      examples:
+        - "Perfect for getting started with structured fitness"
     basic_price:
       type: string
       title: Basic Price
       default: "$29"
+      examples:
+        - "$29"
     basic_cta_text:
       type: string
       title: Basic CTA Text
       default: "Start Basic"
+      examples:
+        - "Start Basic"
     basic_cta_url:
       type: string
       title: Basic CTA URL
       default: "/product/1"
+      examples:
+        - "/product/1"
     pro_name:
       type: string
       title: Pro Plan Name
       default: "Pro"
+      examples:
+        - "Pro"
     pro_description:
       type: string
       title: Pro Plan Description
       default: "Complete access to everything you need to succeed"
+      examples:
+        - "Complete access to everything you need to succeed"
     pro_price:
       type: string
       title: Pro Price
       default: "$49"
+      examples:
+        - "$49"
     pro_cta_text:
       type: string
       title: Pro CTA Text
       default: "Start Pro"
+      examples:
+        - "Start Pro"
     pro_cta_url:
       type: string
       title: Pro CTA URL
       default: "/product/2"
+      examples:
+        - "/product/2"
 libraryOverrides:
   css:
     component:

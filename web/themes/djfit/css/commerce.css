@@ -1043,9 +1043,11 @@
   white-space: nowrap;
 }
 
-/* Cart wrapper — hide the "Variations" label rendered as a bare <div>.
-   Commerce renders it as: <div> <div>Variations</div> <div>…form…</div> </div> */
-.commerce-product__cart > div > div:first-child:not([class]) {
+/* Cart wrapper — hide the bare-text "Variations" label that Commerce may
+   render as a direct child of the field wrapper.  Only target text nodes
+   wrapped in a plain <div> that do NOT contain a <form>. The field__label
+   variant is already handled below with .field__label { display: none }. */
+.commerce-product__cart > div > div:first-child:not([class]):not(:has(form)) {
   display: none;
 }
 

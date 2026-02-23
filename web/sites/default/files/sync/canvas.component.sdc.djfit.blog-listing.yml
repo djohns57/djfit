@@ -34,6 +34,21 @@ versioned_properties:
           expression: ℹ︎string␟value
     fallback_metadata:
       slot_definitions: {  }
+  b188f8dfa4c71a23:
+    settings:
+      prop_field_definitions:
+        active_filter:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: all
+          expression: ℹ︎string␟value
+    fallback_metadata:
+      slot_definitions: {  }
 label: 'Blog Listing'
 id: sdc.djfit.blog-listing
 provider: djfit
