@@ -51,6 +51,7 @@ module:
   commerce_recurring: 0
   commerce_store: 0
   commerce_stripe: 0
+  commerce_stripe_webhook_event: 0
   config: 0
   content_moderation: 0
   contextual: 0
@@ -60,6 +61,7 @@ module:
   datetime: 0
   dblog: 0
   djfit_blog: 0
+  djfit_commerce_example: 0
   djfit_resources: 0
   djfit_videos: 0
   drupal_cms_helper: 0

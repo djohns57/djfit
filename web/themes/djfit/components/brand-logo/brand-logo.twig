@@ -13,9 +13,30 @@
 
 <a href="{{ href }}" class="brand-logo inline-flex items-center gap-3" rel="home" aria-label="DJ Fit">
   {% if show_jps %}
-    {{ include('djfit:logo-jps-enterprise', { url: href, size: size, standalone: false }, with_context: false) }}
+    {{
+      include(
+        'djfit:logo-jps-enterprise',
+        {
+          url: href,
+          size: size,
+          standalone: false
+        },
+        with_context: false
+      )
+    }}
   {% endif %}
   {% if show_djfit %}
-    {{ include('djfit:logo-djfit', { url: href, size: size, glow: true, standalone: false }, with_context: false) }}
+    {{
+      include(
+        'djfit:logo-djfit',
+        {
+          url: href,
+          size: size,
+          glow: true,
+          standalone: false
+        },
+        with_context: false
+      )
+    }}
   {% endif %}
 </a>

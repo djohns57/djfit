@@ -1,11 +1,7 @@
 /* Home Hero – Figma node 1:5 */
 
 .home-hero {
-  background: linear-gradient(
-    to bottom,
-    var(--hg-color-hero-gradient-start),
-    var(--hg-home-hero-gradient-end)
-  );
+  background: linear-gradient(to bottom, var(--hg-color-hero-gradient-start), var(--hg-home-hero-gradient-end));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,7 +75,9 @@
   padding-inline: 2rem;
   height: 2.5rem;
   cursor: pointer;
-  transition: background-color 0.15s ease, opacity 0.15s ease;
+  transition:
+    background-color 0.15s ease,
+    opacity 0.15s ease;
 }
 
 /* Primary – green CTA */

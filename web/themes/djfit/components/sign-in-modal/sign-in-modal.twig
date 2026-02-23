@@ -19,13 +19,7 @@
 {% set signup_url = signup_url|default('/membership') %}
 {% set form_action = form_action|default('/user/login') %}
 
-<div
-  class="signin-modal"
-  role="dialog"
-  aria-modal="true"
-  aria-label="{{ heading }}"
-  aria-hidden="true"
->
+<div class="signin-modal" role="dialog" aria-modal="true" aria-label="{{ heading }}" aria-hidden="true">
   {# Backdrop #}
   <div class="signin-modal__backdrop"></div>
 
@@ -34,18 +28,16 @@
     {# Header #}
     <div class="signin-modal__header">
       <h2 class="signin-modal__title">{{ heading }}</h2>
-      <p class="signin-modal__subtitle">{{ subtitle }}</p>
+      <p class="signin-modal__subtitle">
+        {{ subtitle }}
+      </p>
     </div>
 
     {# Close button #}
-    <button
-      type="button"
-      class="signin-modal__close"
-      aria-label="{{ 'Close'|t }}"
-    >
+    <button type="button" class="signin-modal__close" aria-label="{{ 'Close'|t }}">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M12 4L4 12" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M4 4L12 12" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 4L4 12" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M4 4L12 12" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </button>
 
@@ -66,21 +58,12 @@
 
       <div class="signin-modal__field">
         <label class="signin-modal__label" for="signin-password">{{ password_label }}</label>
-        <input
-          class="signin-modal__input"
-          type="password"
-          id="signin-password"
-          name="pass"
-          autocomplete="current-password"
-          required
-        />
+        <input class="signin-modal__input" type="password" id="signin-password" name="pass" autocomplete="current-password" required />
       </div>
 
       <input type="hidden" name="form_id" value="user_login_form" />
 
-      <button type="submit" class="signin-modal__submit">
-        {{ button_text }}
-      </button>
+      <button type="submit" class="signin-modal__submit">{{ button_text }}</button>
 
       <p class="signin-modal__signup">
         {{ signup_text }}

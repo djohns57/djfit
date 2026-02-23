@@ -9,32 +9,32 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Ready to Transform Your Health?'
+      default: "Ready to Transform Your Health?"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Get instant access to our complete library of workouts, nutrition guides, and expert coaching.'
+      default: "Get instant access to our complete library of workouts, nutrition guides, and expert coaching."
     primary_button_label:
       type: string
       title: Primary Button Label
-      default: 'View Membership Plans'
+      default: "View Membership Plans"
     primary_button_url:
       type: string
       title: Primary Button URL
-      default: '/membership'
+      default: "/membership"
     secondary_button_label:
       type: string
       title: Secondary Button Label
-      default: 'Explore Free Content'
+      default: "Explore Free Content"
     secondary_button_url:
       type: string
       title: Secondary Button URL
-      default: '/blog'
+      default: "/blog"
     badge1_text:
       type: string
       title: Trust Badge 1
-      default: 'Cancel anytime'
+      default: "Cancel anytime"
     badge2_text:
       type: string
       title: Trust Badge 2
-      default: '30-day guarantee'
+      default: "30-day guarantee"

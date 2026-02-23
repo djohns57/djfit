@@ -1,7 +1,9 @@
 uuid: aa822d97-0742-4b6d-809c-3ae5a61922bb
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - commerce_payment
 _core:
   default_config_hash: 50QUbDL5hfMj6JF3n2JcOsPZtzq8PyU9UR0iXIpVThA
 label: Default
@@ -41,3 +43,13 @@ configuration:
       step: _sidebar
       weight: 5
       view: commerce_checkout_order_summary
+    payment_information:
+      step: order_information
+      weight: 3
+    payment_process:
+      display_label: 'Payment process'
+      step: review
+      weight: 10
+      capture: true
+      id: payment_process
+      label: 'Payment process'

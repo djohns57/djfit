@@ -23,7 +23,8 @@
         "composer/composer": "^2.8",
         "composer/installers": "^2.3",
         "cweagans/composer-patches": "^1.7",
-        "drupal/ai_provider_amazeeio": "^1.2",
+        "drupal/ai": "~1.2.0",
+        "drupal/ai_provider_amazeeio": "~1.2.3",
         "drupal/ai_vdb_provider_postgres": "^1.0@alpha",
         "drupal/byte": "^1",
         "drupal/commerce": "^3",
@@ -31,6 +32,7 @@
         "drupal/commerce_recurring": "^1.0@rc",
         "drupal/commerce_stripe": "^2",
         "drupal/content_access": "^2.1@rc",
+        "drupal/core": ">=10.4",
         "drupal/core-composer-scaffold": "^11.3",
         "drupal/core-project-message": "^11.3",
         "drupal/core-recipe-unpack": "^11.3",
@@ -114,8 +116,15 @@
         "patches": {
             "drupal/commerce": {
                 "Canvas preview defaults for commerce status badge": "patches/drupal-commerce-canvas-preview-defaults.patch"
+            },
+            "drupal/commerce_license": {
+                "Fix TypeError in License::canRenew() when renewal interval is not configured": "patches/drupal-commerce-license-canrenew-null-interval.patch"
+            },
+            "drupal/ai": {
+                "Fix invalid empty tool parameters schema for Bedrock/LiteLLM providers": "patches/drupal-ai-tools-empty-parameters-schema.patch"
             }
-        }
+        },
+        "composer-exit-on-patch-failure": true
     },
     "scripts": {
         "post-update-cmd": [

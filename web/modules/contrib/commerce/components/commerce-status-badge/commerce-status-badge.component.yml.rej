@@ -1,8 +1,0 @@
---- components/commerce-status-badge/commerce-status-badge.component.yml
-+++ components/commerce-status-badge/commerce-status-badge.component.yml
-@@ -22,3 +24,5 @@ props:
-         - danger
-         - neutral
-       default: neutral
-+      examples:
-+        - neutral

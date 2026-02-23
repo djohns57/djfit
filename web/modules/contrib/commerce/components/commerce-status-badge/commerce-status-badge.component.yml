@@ -21,4 +21,6 @@ props:
         - danger
         - neutral
       default: neutral
+      examples:
+        - neutral
 

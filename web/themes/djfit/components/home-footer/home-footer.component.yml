@@ -9,88 +9,88 @@ props:
     brand_name:
       type: string
       title: Brand Name
-      default: 'DJ Fit'
+      default: "DJ Fit"
     brand_description:
       type: string
       title: Brand Description
-      default: 'Health, strength, and longevity for men over 40. Science-backed fitness, nutrition, and recovery strategies.'
+      default: "Health, strength, and longevity for men over 40. Science-backed fitness, nutrition, and recovery strategies."
     facebook_url:
       type: string
       title: Facebook URL
-      default: '#'
+      default: "#"
     twitter_url:
       type: string
       title: Twitter URL
-      default: '#'
+      default: "#"
     instagram_url:
       type: string
       title: Instagram URL
-      default: '#'
+      default: "#"
     privacy_url:
       type: string
       title: Privacy Policy URL
-      default: '/privacy'
+      default: "/privacy"
     privacy_label:
       type: string
       title: Privacy Policy Label
-      default: 'Privacy Policy'
+      default: "Privacy Policy"
     terms_url:
       type: string
       title: Terms of Service URL
-      default: '/terms'
+      default: "/terms"
     terms_label:
       type: string
       title: Terms of Service Label
-      default: 'Terms of Service'
+      default: "Terms of Service"
     cookies_url:
       type: string
       title: Cookie Policy URL
-      default: '/cookies'
+      default: "/cookies"
     cookies_label:
       type: string
       title: Cookie Policy Label
-      default: 'Cookie Policy'
+      default: "Cookie Policy"
     contact_url:
       type: string
       title: Contact Us URL
-      default: '/contact'
+      default: "/contact"
     contact_label:
       type: string
       title: Contact Us Label
-      default: 'Contact Us'
+      default: "Contact Us"
     blog_url:
       type: string
       title: Blog URL
-      default: '/blog'
+      default: "/blog"
     blog_label:
       type: string
       title: Blog Label
-      default: 'Blog'
+      default: "Blog"
     videos_url:
       type: string
       title: Video Library URL
-      default: '/videos'
+      default: "/videos"
     videos_label:
       type: string
       title: Video Library Label
-      default: 'Video Library'
+      default: "Video Library"
     resources_url:
       type: string
       title: Resources URL
-      default: '/resources'
+      default: "/resources"
     resources_label:
       type: string
       title: Resources Label
-      default: 'Resources'
+      default: "Resources"
     membership_url:
       type: string
       title: Membership URL
-      default: '/membership'
+      default: "/membership"
     membership_label:
       type: string
       title: Membership Label
-      default: 'Membership'
+      default: "Membership"
     copyright_text:
       type: string
       title: Copyright Text
-      default: '© 2026 DJ Fit. All rights reserved.'
+      default: "© 2026 DJ Fit. All rights reserved."

@@ -1,0 +1,9 @@
+--- components/commerce-status-badge/commerce-status-badge.component.yml.orig	2026-02-19 21:37:19
++++ components/commerce-status-badge/commerce-status-badge.component.yml	2026-02-19 21:37:24
+@@ -21,4 +21,6 @@
+         - danger
+         - neutral
+       default: neutral
++      examples:
++        - neutral
+ 

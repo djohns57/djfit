@@ -8,27 +8,27 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Subscribe Now'
+      default: "Subscribe Now"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Join 10,000+ men who receive our weekly newsletter'
+      default: "Join 10,000+ men who receive our weekly newsletter"
     first_name_label:
       type: string
       title: First Name Label
-      default: 'First Name'
+      default: "First Name"
     first_name_placeholder:
       type: string
       title: First Name Placeholder
-      default: 'John'
+      default: "John"
     email_label:
       type: string
       title: Email Label
-      default: 'Email Address'
+      default: "Email Address"
     email_placeholder:
       type: string
       title: Email Placeholder
-      default: 'john@example.com'
+      default: "john@example.com"
     interests_label:
       type: string
       title: Interests Label
@@ -36,31 +36,31 @@ props:
     interest_1:
       type: string
       title: Interest Option 1
-      default: 'Strength Training'
+      default: "Strength Training"
     interest_2:
       type: string
       title: Interest Option 2
-      default: 'Nutrition & Meal Planning'
+      default: "Nutrition & Meal Planning"
     interest_3:
       type: string
       title: Interest Option 3
-      default: 'Recovery & Mobility'
+      default: "Recovery & Mobility"
     interest_4:
       type: string
       title: Interest Option 4
-      default: 'Mindset & Motivation'
+      default: "Mindset & Motivation"
     interest_5:
       type: string
       title: Interest Option 5
-      default: 'Supplement Guidance'
+      default: "Supplement Guidance"
     button_text:
       type: string
       title: Button Text
-      default: 'Subscribe to Newsletter'
+      default: "Subscribe to Newsletter"
     disclaimer:
       type: string
       title: Disclaimer Text
-      default: 'By subscribing, you agree to receive weekly emails. You can unsubscribe at any time.'
+      default: "By subscribing, you agree to receive weekly emails. You can unsubscribe at any time."
 libraryOverrides:
   css:
     component:

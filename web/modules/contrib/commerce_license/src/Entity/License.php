@@ -548,6 +548,10 @@ class License extends ContentEntityBase implements LicenseInterface {
         'period'
     );
 
+    if (empty($allow_renewal_window_interval) || empty($allow_renewal_window_period)) {
+      return FALSE;
+    }
+
     $interval_object = new Interval($allow_renewal_window_interval, $allow_renewal_window_period);
 
     $renewal_window_start_time = new DrupalDateTime('@' . $this->getExpiresTime());

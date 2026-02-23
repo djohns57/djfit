@@ -9,11 +9,16 @@
 #}
 {% set category = node.field_article_category.value ?? '' %}
 {% set category_label = '' %}
-{% if category == 'fitness' %}{% set category_label = 'Fitness' %}
-{% elseif category == 'recovery' %}{% set category_label = 'Recovery' %}
-{% elseif category == 'nutrition' %}{% set category_label = 'Nutrition' %}
-{% elseif category == 'mindset' %}{% set category_label = 'Mindset' %}
-{% else %}{% set category_label = category|capitalize %}
+{% if category == 'fitness' %}
+  {% set category_label = 'Fitness' %}
+{% elseif category == 'recovery' %}
+  {% set category_label = 'Recovery' %}
+{% elseif category == 'nutrition' %}
+  {% set category_label = 'Nutrition' %}
+{% elseif category == 'mindset' %}
+  {% set category_label = 'Mindset' %}
+{% else %}
+  {% set category_label = category|capitalize %}
 {% endif %}
 {% set author = node.field_article_author.value ?? '' %}
 {% set read_time = node.field_article_read_time.value ?? '' %}
@@ -35,18 +40,23 @@
       {% endif %}
       <span class="article-detail__date">
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M11.0833 2.33333H2.91667C2.27233 2.33333 1.75 2.85567 1.75 3.5V11.6667C1.75 12.311 2.27233 12.8333 2.91667 12.8333H11.0833C11.7277 12.8333 12.25 12.311 12.25 11.6667V3.5C12.25 2.85567 11.7277 2.33333 11.0833 2.33333Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M9.33333 1.16667V3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M4.66667 1.16667V3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M1.75 5.83333H12.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+          <path
+            d="M11.0833 2.33333H2.91667C2.27233 2.33333 1.75 2.85567 1.75 3.5V11.6667C1.75 12.311 2.27233 12.8333 2.91667 12.8333H11.0833C11.7277 12.8333 12.25 12.311 12.25 11.6667V3.5C12.25 2.85567 11.7277 2.33333 11.0833 2.33333Z"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path d="M9.33333 1.16667V3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M4.66667 1.16667V3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M1.75 5.83333H12.25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         {{ created|date('M j, Y') }}
       </span>
       {% if read_time %}
         <span class="article-detail__read-time">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
-            <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+            <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
           {{ read_time }}
         </span>
@@ -60,8 +70,14 @@
     {% if author %}
       <div class="article-detail__author">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path
+            d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
         <span>By {{ author }}</span>
       </div>
@@ -76,10 +92,9 @@
     <div class="article-detail__back">
       <a href="/blog" class="article-detail__back-link">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M12.6667 8H3.33333" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M8 12.6667L3.33333 8L8 3.33333" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Back to Blog &amp; Articles
+          <path d="M12.6667 8H3.33333" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M8 12.6667L3.33333 8L8 3.33333" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>Back to Blog &amp; Articles
       </a>
     </div>
   </div>

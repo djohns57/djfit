@@ -8,35 +8,35 @@ props:
     section_heading:
       type: string
       title: Section heading
-      default: 'Featured Videos'
+      default: "Featured Videos"
     section_subtitle:
       type: string
       title: Section subtitle
-      default: 'Watch and learn from our expert trainers'
+      default: "Watch and learn from our expert trainers"
     library_url:
       type: string
       title: Video Library URL
-      default: '/videos'
+      default: "/videos"
     video1_heading:
       type: string
       title: Video 1 heading
-      default: 'Complete Full Body Workout - 30 Minutes'
+      default: "Complete Full Body Workout - 30 Minutes"
     video1_body:
       type: string
       title: Video 1 description
-      default: 'Efficient strength training for busy professionals'
+      default: "Efficient strength training for busy professionals"
     video1_url:
       type: string
       title: Video 1 URL
-      default: '/videos/full-body-workout'
+      default: "/videos/full-body-workout"
     video1_image_url:
       type: string
       title: Video 1 thumbnail URL
-      default: ''
+      default: ""
     video1_badge:
       type: string
       title: Video 1 badge text
-      default: 'FREE'
+      default: "FREE"
       enum:
         - FREE
         - MEMBERS
@@ -44,31 +44,31 @@ props:
     video1_locked:
       type: string
       title: Video 1 locked
-      description: 'yes = show lock icon, no = show play icon'
-      default: 'no'
+      description: "yes = show lock icon, no = show play icon"
+      default: "no"
       enum:
-        - 'yes'
-        - 'no'
+        - "yes"
+        - "no"
     video2_heading:
       type: string
       title: Video 2 heading
-      default: 'Advanced Mobility and Recovery Protocol'
+      default: "Advanced Mobility and Recovery Protocol"
     video2_body:
       type: string
       title: Video 2 description
-      default: 'Premium content for enhanced flexibility and injury prevention'
+      default: "Premium content for enhanced flexibility and injury prevention"
     video2_url:
       type: string
       title: Video 2 URL
-      default: '/videos/mobility-recovery'
+      default: "/videos/mobility-recovery"
     video2_image_url:
       type: string
       title: Video 2 thumbnail URL
-      default: ''
+      default: ""
     video2_badge:
       type: string
       title: Video 2 badge text
-      default: 'MEMBERS'
+      default: "MEMBERS"
       enum:
         - FREE
         - MEMBERS
@@ -76,8 +76,8 @@ props:
     video2_locked:
       type: string
       title: Video 2 locked
-      description: 'yes = show lock icon, no = show play icon'
-      default: 'yes'
+      description: "yes = show lock icon, no = show play icon"
+      default: "yes"
       enum:
-        - 'yes'
-        - 'no'
+        - "yes"
+        - "no"

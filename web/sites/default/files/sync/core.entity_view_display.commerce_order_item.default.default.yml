@@ -28,6 +28,14 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  license:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: hidden
   purchased_entity:
     type: entity_reference_entity_view
     label: above

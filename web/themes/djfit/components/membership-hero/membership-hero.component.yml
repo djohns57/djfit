@@ -6,11 +6,11 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Choose Your Membership'
+      default: "Choose Your Membership"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Invest in your health with science-backed fitness, nutrition, and recovery strategies.'
+      default: "Invest in your health with science-backed fitness, nutrition, and recovery strategies."
 libraryOverrides:
   css:
     component:

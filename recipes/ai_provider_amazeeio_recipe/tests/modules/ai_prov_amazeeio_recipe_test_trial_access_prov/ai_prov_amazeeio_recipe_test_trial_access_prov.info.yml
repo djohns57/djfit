@@ -1,0 +1,9 @@
+name: 'amazee.ai AI Provider Recipe Testing: Trial access provisioning'
+description: 'Disables automated trial access provisioning in tests.'
+package: Testing
+type: module
+core_version_requirement: '*'
+
+# The module cannot depend on ai_provider_amazeeio because if does then
+# both hook_install() runs in Functional test and bundled config entities get
+# imported independently of what the recipe wishes to import.

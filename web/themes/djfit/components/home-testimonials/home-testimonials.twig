@@ -15,20 +15,20 @@
     name: testimonial1_name|default('Michael T.'),
     age: testimonial1_age|default('Age 45'),
     quote: testimonial1_quote|default('"Lost 30 pounds and feel stronger than I did in my 30s. The structured approach made all the difference."'),
-    image: testimonial1_image_url|default(''),
+    image: testimonial1_image_url|default('')
   },
   {
     name: testimonial2_name|default('James R.'),
     age: testimonial2_age|default('Age 52'),
     quote: testimonial2_quote|default('"Finally found a program that addresses the specific challenges of training after 40. Game changer."'),
-    image: testimonial2_image_url|default(''),
+    image: testimonial2_image_url|default('')
   },
   {
     name: testimonial3_name|default('David K.'),
     age: testimonial3_age|default('Age 48'),
     quote: testimonial3_quote|default('"The combination of fitness, nutrition, and recovery guidance transformed my health completely."'),
-    image: testimonial3_image_url|default(''),
-  },
+    image: testimonial3_image_url|default('')
+  }
 ] %}
 
 <section class="home-testimonials">
@@ -36,7 +36,9 @@
     {# Section header #}
     <div class="home-testimonials__header">
       <h2 class="home-testimonials__heading">{{ _heading }}</h2>
-      <p class="home-testimonials__subtitle">{{ _subtitle }}</p>
+      <p class="home-testimonials__subtitle">
+        {{ _subtitle }}
+      </p>
     </div>
 
     {# Testimonial cards grid #}
@@ -49,10 +51,19 @@
                 <img src="{{ item.image }}" alt="{{ item.name }}" class="home-testimonials__avatar-img" loading="lazy" />
               {% else %}
                 {# Placeholder avatar SVG #}
-                <svg class="home-testimonials__avatar-placeholder" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                  <rect width="64" height="64" rx="32" fill="#f3f4f6"/>
-                  <path d="M26.5 25.5C26.5 22.4624 28.9624 20 32 20C35.0376 20 37.5 22.4624 37.5 25.5C37.5 28.5376 35.0376 31 32 31C28.9624 31 26.5 28.5376 26.5 25.5Z" fill="#d1d5db"/>
-                  <path d="M22 42C22 37.0294 26.4771 33 32 33C37.5228 33 42 37.0294 42 42V44H22V42Z" fill="#d1d5db"/>
+                <svg
+                  class="home-testimonials__avatar-placeholder"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <rect width="64" height="64" rx="32" fill="#f3f4f6" />
+                  <path
+                    d="M26.5 25.5C26.5 22.4624 28.9624 20 32 20C35.0376 20 37.5 22.4624 37.5 25.5C37.5 28.5376 35.0376 31 32 31C28.9624 31 26.5 28.5376 26.5 25.5Z"
+                    fill="#d1d5db"
+                  />
+                  <path d="M22 42C22 37.0294 26.4771 33 32 33C37.5228 33 42 37.0294 42 42V44H22V42Z" fill="#d1d5db" />
                 </svg>
               {% endif %}
             </div>
@@ -61,7 +72,9 @@
               <span class="home-testimonials__age">{{ item.age }}</span>
             </div>
           </div>
-          <p class="home-testimonials__quote">{{ item.quote }}</p>
+          <p class="home-testimonials__quote">
+            {{ item.quote }}
+          </p>
         </article>
       {% endfor %}
     </div>

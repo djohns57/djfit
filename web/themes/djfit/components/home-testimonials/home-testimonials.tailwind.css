@@ -4,11 +4,7 @@
  * ============================================= */
 
 .home-testimonials {
-  background: linear-gradient(
-    to bottom,
-    var(--hg-color-hero-gradient-start),
-    var(--hg-home-testimonial-gradient-end)
-  );
+  background: linear-gradient(to bottom, var(--hg-color-hero-gradient-start), var(--hg-home-testimonial-gradient-end));
   padding-block-start: var(--hg-space-16);
   padding-block-end: var(--hg-space-16);
   padding-inline: var(--hg-home-section-inline-padding);

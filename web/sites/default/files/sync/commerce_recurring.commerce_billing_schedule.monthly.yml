@@ -14,9 +14,7 @@ retrySchedule:
 unpaidSubscriptionState: canceled
 plugin: fixed
 configuration:
-  trial_interval:
-    number: 7
-    unit: day
+  trial_interval: {  }
   interval:
     number: 1
     unit: month

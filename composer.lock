@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "664d16801345d09d632438da64fa9e68",
+    "content-hash": "debd441ae6db311219b415befb02064b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2116,10 +2116,6 @@
                     "homepage": "https://www.drupal.org/user/385947"
                 },
                 {
-                    "name": "michaellander",
-                    "homepage": "https://www.drupal.org/user/636494"
-                },
-                {
                     "name": "murz",
                     "homepage": "https://www.drupal.org/user/157092"
                 },
@@ -2476,10 +2472,6 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
-                {
-                    "name": "camoa",
-                    "homepage": "https://www.drupal.org/user/2448054"
-                },
                 {
                     "name": "marcus_johansson",
                     "homepage": "https://www.drupal.org/user/385947"
@@ -3459,6 +3451,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Canvas preview defaults for commerce status badge": "patches/drupal-commerce-canvas-preview-defaults.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

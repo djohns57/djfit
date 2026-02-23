@@ -1,7 +1,12 @@
 uuid: ea27d31e-b032-4530-966d-d7333679bfe1
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - commerce_license
+third_party_settings:
+  commerce_license:
+    allow_renewal: true
 id: membership
 label: Membership
 traits:

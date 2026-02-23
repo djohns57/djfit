@@ -9,4 +9,4 @@ props:
     active_filter:
       type: string
       title: Active Filter
-      default: 'all'
+      default: "all"

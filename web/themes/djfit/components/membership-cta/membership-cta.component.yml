@@ -6,27 +6,27 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Ready to Get Started?'
+      default: "Ready to Get Started?"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Join thousands of men over 40 who are building strength, health, and longevity.'
+      default: "Join thousands of men over 40 who are building strength, health, and longevity."
     primary_cta_text:
       type: string
       title: Primary CTA Text
-      default: 'Start Your Journey'
+      default: "Start Your Journey"
     primary_cta_url:
       type: string
       title: Primary CTA URL
-      default: '/product/2'
+      default: "/product/2"
     secondary_cta_text:
       type: string
       title: Secondary CTA Text
-      default: 'Explore Free Content'
+      default: "Explore Free Content"
     secondary_cta_url:
       type: string
       title: Secondary CTA URL
-      default: '/blog'
+      default: "/blog"
 libraryOverrides:
   css:
     component:

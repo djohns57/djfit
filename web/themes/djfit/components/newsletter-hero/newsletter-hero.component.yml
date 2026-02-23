@@ -8,11 +8,11 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Join Our Newsletter'
+      default: "Join Our Newsletter"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Get expert health and fitness tips delivered to your inbox every week. No spam, just actionable advice.'
+      default: "Get expert health and fitness tips delivered to your inbox every week. No spam, just actionable advice."
 libraryOverrides:
   css:
     component:

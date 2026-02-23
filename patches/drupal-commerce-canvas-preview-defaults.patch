@@ -1,7 +1,7 @@
 diff --git a/components/commerce-status-badge/commerce-status-badge.component.yml b/components/commerce-status-badge/commerce-status-badge.component.yml
 --- a/components/commerce-status-badge/commerce-status-badge.component.yml
 +++ b/components/commerce-status-badge/commerce-status-badge.component.yml
-@@ -9,6 +9,8 @@ props:
+@@ -8,6 +8,8 @@ props:
      text:
        type: string
        title: Text
@@ -10,15 +10,10 @@ diff --git a/components/commerce-status-badge/commerce-status-badge.component.ym
        description: The badge text content
      variant:
        type: string
-@@ -20,3 +22,5 @@ props:
+@@ -19,4 +21,6 @@ props:
          - danger
          - neutral
        default: neutral
 +      examples:
 +        - neutral
-diff --git a/components/commerce-status-badge/commerce-status-badge.twig b/components/commerce-status-badge/commerce-status-badge.twig
---- a/components/commerce-status-badge/commerce-status-badge.twig
-+++ b/components/commerce-status-badge/commerce-status-badge.twig
-@@ -11 +11 @@
--<span class="commerce-status-badge commerce-status-badge--{{ variant }}">{{ text }}</span>
-+<span class="commerce-status-badge commerce-status-badge--{{ variant|default('neutral') }}">{{ text|default('Status') }}</span>
+ 

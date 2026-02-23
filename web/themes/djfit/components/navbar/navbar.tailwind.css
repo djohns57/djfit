@@ -108,6 +108,19 @@ body.not-logged-in .navbar--links a[href*="logout"] {
 body.logged-in .navbar--links a:not([href*="logout"]),
 body.logged-in .navbar--links button {
   display: none !important;
+/* Cart icon link: match header accent, badge for item count */
+.navbar--cart-link {
+  transition: opacity 0.2s ease;
+}
+
+.navbar--cart-link:hover {
+  opacity: 0.7;
+}
+
+.navbar--cart-badge {
+  @apply absolute -top-0.5 -right-0.5 flex h-[18px] min-w-[18px] items-center justify-center rounded-full px-1 text-[10px] leading-none font-bold;
+  background-color: var(--hg-color-primary);
+  color: var(--hg-color-on-primary, #fff);
 }
 
 /* Site name: Inter Bold 20px, accent color */

@@ -6,11 +6,11 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Compare Plans'
+      default: "Compare Plans"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Choose the plan that best fits your goals'
+      default: "Choose the plan that best fits your goals"
 libraryOverrides:
   css:
     component:

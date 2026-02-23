@@ -5,23 +5,69 @@
  */
 #}
 {% set features = [
-  { name: 'Basic Workout Videos', basic: true, pro: true },
-  { name: 'Community Forum', basic: true, pro: true },
-  { name: 'Weekly Newsletter', basic: true, pro: true },
-  { name: 'Full Video Library (200+)', basic: false, pro: true },
-  { name: 'Advanced Programs', basic: false, pro: true },
-  { name: 'Personalized Meal Plans', basic: false, pro: true },
-  { name: 'Weekly Coaching Calls', basic: false, pro: true },
-  { name: 'Private Coaching Community', basic: false, pro: true },
-  { name: 'Downloadable Resources', basic: false, pro: true },
-  { name: 'Priority Support', basic: false, pro: true },
-  { name: 'Early Access to Content', basic: false, pro: true },
+  {
+    name: 'Basic Workout Videos',
+    basic: true,
+    pro: true
+  },
+  {
+    name: 'Community Forum',
+    basic: true,
+    pro: true
+  },
+  {
+    name: 'Weekly Newsletter',
+    basic: true,
+    pro: true
+  },
+  {
+    name: 'Full Video Library (200+)',
+    basic: false,
+    pro: true
+  },
+  {
+    name: 'Advanced Programs',
+    basic: false,
+    pro: true
+  },
+  {
+    name: 'Personalized Meal Plans',
+    basic: false,
+    pro: true
+  },
+  {
+    name: 'Weekly Coaching Calls',
+    basic: false,
+    pro: true
+  },
+  {
+    name: 'Private Coaching Community',
+    basic: false,
+    pro: true
+  },
+  {
+    name: 'Downloadable Resources',
+    basic: false,
+    pro: true
+  },
+  {
+    name: 'Priority Support',
+    basic: false,
+    pro: true
+  },
+  {
+    name: 'Early Access to Content',
+    basic: false,
+    pro: true
+  }
 ] %}
 
 <section class="membership-compare">
   <div class="membership-compare__container">
     <h2 class="membership-compare__heading">{{ heading }}</h2>
-    <p class="membership-compare__subtitle">{{ subtitle }}</p>
+    <p class="membership-compare__subtitle">
+      {{ subtitle }}
+    </p>
 
     <table class="membership-compare__table">
       <thead>
@@ -37,14 +83,34 @@
             <td class="membership-compare__td membership-compare__td--feature">{{ feature.name }}</td>
             <td class="membership-compare__td membership-compare__td--basic">
               {% if feature.basic %}
-                <svg class="membership-compare__check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Yes"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="#005a7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg
+                  class="membership-compare__check"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Yes"
+                >
+                  <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#005a7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               {% else %}
                 <span class="membership-compare__dash">—</span>
               {% endif %}
             </td>
             <td class="membership-compare__td membership-compare__td--pro">
               {% if feature.pro %}
-                <svg class="membership-compare__check" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Yes"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="#005a7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg
+                  class="membership-compare__check"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Yes"
+                >
+                  <path d="M16.667 5L7.5 14.167 3.333 10" stroke="#005a7d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
               {% else %}
                 <span class="membership-compare__dash">—</span>
               {% endif %}

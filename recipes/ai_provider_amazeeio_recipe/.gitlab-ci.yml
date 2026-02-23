@@ -1,0 +1,20 @@
+################
+# GitLabCI template for Drupal projects.
+#
+# The full documentation is on https://project.pages.drupalcode.org/gitlab_templates/
+################
+
+# For information on alternative values for 'ref' see https://project.pages.drupalcode.org/gitlab_templates/info/templates-version/
+include:
+  - project: $_GITLAB_TEMPLATES_REPO
+    ref: $_GITLAB_TEMPLATES_REF
+    file:
+      - '/includes/include.drupalci.main.yml'
+      - '/includes/include.drupalci.variables.yml'
+      - '/includes/include.drupalci.workflows.yml'
+
+variables:
+  _CSPELL_WORDS: 'amazee, amazeeai, amazeeio, litellm, pgvector, vectordb'
+#   SKIP_ESLINT: '1'
+#   OPT_IN_TEST_NEXT_MAJOR: '1'
+#   _CURL_TEMPLATES_REF: 'main'

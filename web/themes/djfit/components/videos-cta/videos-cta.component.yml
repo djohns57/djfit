@@ -9,24 +9,24 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Unlock the Complete Video Library'
+      default: "Unlock the Complete Video Library"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Get unlimited access to over 200+ workout videos, nutrition guides, and recovery protocols.'
+      default: "Get unlimited access to over 200+ workout videos, nutrition guides, and recovery protocols."
     primary_button_label:
       type: string
       title: Primary Button Label
-      default: 'View Membership Plans'
+      default: "View Membership Plans"
     primary_button_url:
       type: string
       title: Primary Button URL
-      default: '/membership'
+      default: "/membership"
     secondary_button_label:
       type: string
       title: Secondary Button Label
-      default: 'Learn More'
+      default: "Learn More"
     secondary_button_url:
       type: string
       title: Secondary Button URL
-      default: '#'
+      default: "#"

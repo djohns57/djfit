@@ -7,6 +7,7 @@ dependencies:
     - field.field.commerce_order_item.default.license
   module:
     - commerce_order
+    - tagify
   enforced:
     module:
       - commerce_product
@@ -17,6 +18,20 @@ targetEntityType: commerce_order_item
 bundle: default
 mode: default
 content:
+  license:
+    type: tagify_entity_reference_autocomplete_widget
+    weight: 3
+    region: hidden
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      placeholder: ''
+      suggestions_dropdown: 1
+      show_entity_id: 0
+      show_info_label: 0
+      info_label: ''
+      parent_selection: 1
+    third_party_settings: {  }
   purchased_entity:
     type: entity_reference_autocomplete
     weight: 0

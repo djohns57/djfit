@@ -22,7 +22,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: -1
+    weight: 0
     region: content
 hidden:
   langcode: true

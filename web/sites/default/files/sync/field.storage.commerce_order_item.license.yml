@@ -1,4 +1,4 @@
-uuid: c16772a5-4ecf-40e1-b8f0-6103d2ceac69
+uuid: b0742b0f-29cd-463b-9ad0-d9fec2a602cb
 langcode: en
 status: true
 dependencies:
@@ -12,9 +12,9 @@ type: entity_reference
 settings:
   target_type: commerce_license
 module: core
-locked: false
+locked: true
 cardinality: 1
-translatable: true
+translatable: false
 indexes: {  }
 persist_with_no_fields: false
 custom_storage: false

@@ -8,48 +8,52 @@
   <div class="newsletter-form__card">
     <div class="newsletter-form__header">
       <h1 class="newsletter-form__heading">{{ heading }}</h1>
-      <p class="newsletter-form__subtitle">{{ subtitle }}</p>
+      <p class="newsletter-form__subtitle">
+        {{ subtitle }}
+      </p>
     </div>
 
     <form class="newsletter-form__form" action="#" method="post">
       <div class="newsletter-form__row">
         <div class="newsletter-form__field">
           <label class="newsletter-form__label" for="nl-first-name">{{ first_name_label }}</label>
-          <input class="newsletter-form__input" type="text" id="nl-first-name" name="first_name" placeholder="{{ first_name_placeholder }}">
+          <input class="newsletter-form__input" type="text" id="nl-first-name" name="first_name" placeholder="{{ first_name_placeholder }}" />
         </div>
         <div class="newsletter-form__field">
           <label class="newsletter-form__label" for="nl-email">{{ email_label }}</label>
-          <input class="newsletter-form__input" type="email" id="nl-email" name="email" placeholder="{{ email_placeholder }}">
+          <input class="newsletter-form__input" type="email" id="nl-email" name="email" placeholder="{{ email_placeholder }}" />
         </div>
       </div>
 
       <div class="newsletter-form__interests">
         <span class="newsletter-form__label">{{ interests_label }}</span>
         <label class="newsletter-form__checkbox">
-          <input type="checkbox" name="interests[]" value="strength_training">
+          <input type="checkbox" name="interests[]" value="strength_training" />
           <span>{{ interest_1 }}</span>
         </label>
         <label class="newsletter-form__checkbox">
-          <input type="checkbox" name="interests[]" value="nutrition">
+          <input type="checkbox" name="interests[]" value="nutrition" />
           <span>{{ interest_2 }}</span>
         </label>
         <label class="newsletter-form__checkbox">
-          <input type="checkbox" name="interests[]" value="recovery">
+          <input type="checkbox" name="interests[]" value="recovery" />
           <span>{{ interest_3 }}</span>
         </label>
         <label class="newsletter-form__checkbox">
-          <input type="checkbox" name="interests[]" value="mindset">
+          <input type="checkbox" name="interests[]" value="mindset" />
           <span>{{ interest_4 }}</span>
         </label>
         <label class="newsletter-form__checkbox">
-          <input type="checkbox" name="interests[]" value="supplements">
+          <input type="checkbox" name="interests[]" value="supplements" />
           <span>{{ interest_5 }}</span>
         </label>
       </div>
 
       <div class="newsletter-form__actions">
         <button type="submit" class="newsletter-form__btn">{{ button_text }}</button>
-        <p class="newsletter-form__disclaimer">{{ disclaimer }}</p>
+        <p class="newsletter-form__disclaimer">
+          {{ disclaimer }}
+        </p>
       </div>
     </form>
   </div>

@@ -8,30 +8,30 @@ props:
     logo_url:
       type: string
       title: Logo URL
-      description: 'URL to the site logo image (e.g. /themes/djfit/components/site-header/assets/logo-jps-enterprise.png).'
+      description: "URL to the site logo image (e.g. /themes/djfit/components/site-header/assets/logo-jps-enterprise.png)."
       examples:
-        - '/themes/djfit/components/site-header/assets/logo-jps-enterprise.png'
+        - "/themes/djfit/components/site-header/assets/logo-jps-enterprise.png"
     logo_alt:
       type: string
       title: Logo alt text
-      description: 'Accessible alt text for the logo image.'
-      default: 'JPS Enterprise'
+      description: "Accessible alt text for the logo image."
+      default: "JPS Enterprise"
       examples:
-        - 'JPS Enterprise'
+        - "JPS Enterprise"
     site_name:
       type: string
       title: Site name
-      description: 'Brand text displayed next to the logo.'
-      default: 'DJ Fit'
+      description: "Brand text displayed next to the logo."
+      default: "DJ Fit"
       examples:
-        - 'DJ Fit'
+        - "DJ Fit"
     home_url:
       type: string
       title: Home URL
-      description: 'URL the logo links to.'
-      default: '/'
+      description: "URL the logo links to."
+      default: "/"
       examples:
-        - '/'
+        - "/"
     nav_links:
       type: array
       title: Navigation links
@@ -51,18 +51,18 @@ props:
     signin_url:
       type: string
       title: Sign In URL
-      default: '/user/login'
+      default: "/user/login"
       examples:
-        - '/user/login'
+        - "/user/login"
     signup_url:
       type: string
       title: Get Started URL
-      default: '/membership'
+      default: "/membership"
       examples:
-        - '/membership'
+        - "/membership"
     cart_url:
       type: string
       title: Cart URL
-      default: '/cart'
+      default: "/cart"
       examples:
-        - '/cart'
+        - "/cart"

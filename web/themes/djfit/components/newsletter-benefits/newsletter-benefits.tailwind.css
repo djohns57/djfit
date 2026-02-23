@@ -61,9 +61,15 @@
   height: 32px;
 }
 
-.nl-benefits__icon-wrap--teal .nl-benefits__icon { color: #005a7d; }
-.nl-benefits__icon-wrap--green .nl-benefits__icon { color: #7cb873; }
-.nl-benefits__icon-wrap--slate .nl-benefits__icon { color: #6b9fb0; }
+.nl-benefits__icon-wrap--teal .nl-benefits__icon {
+  color: #005a7d;
+}
+.nl-benefits__icon-wrap--green .nl-benefits__icon {
+  color: #7cb873;
+}
+.nl-benefits__icon-wrap--slate .nl-benefits__icon {
+  color: #6b9fb0;
+}
 
 .nl-benefits__title {
   font-family: var(--hg-font-family-header);

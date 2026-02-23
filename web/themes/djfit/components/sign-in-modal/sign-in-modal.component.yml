@@ -8,27 +8,27 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Sign In'
+      default: "Sign In"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Enter your credentials to access your account.'
+      default: "Enter your credentials to access your account."
     email_label:
       type: string
       title: Email Label
-      default: 'Email'
+      default: "Email"
     email_placeholder:
       type: string
       title: Email Placeholder
-      default: 'your@email.com'
+      default: "your@email.com"
     password_label:
       type: string
       title: Password Label
-      default: 'Password'
+      default: "Password"
     button_text:
       type: string
       title: Button Text
-      default: 'Sign In'
+      default: "Sign In"
     signup_text:
       type: string
       title: Signup Prompt
@@ -36,15 +36,15 @@ props:
     signup_link_text:
       type: string
       title: Signup Link Text
-      default: 'Get started'
+      default: "Get started"
     signup_url:
       type: string
       title: Signup URL
-      default: '/membership'
+      default: "/membership"
     form_action:
       type: string
       title: Form Action URL
-      default: '/user/login'
+      default: "/user/login"
 libraryOverrides:
   css:
     component:

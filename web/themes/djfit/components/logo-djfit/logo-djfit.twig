@@ -22,7 +22,16 @@
 {% endset %}
 
 {% if standalone %}
-  <a href="{{ href }}" class="logo-djfit inline-flex items-center font-bold {{ size_classes[size] }} {{ has_glow ? 'logo-djfit--glow' : '' }}" rel="home" aria-label="DJ Fit">{{ logo_content|raw }}</a>
+  <a
+    href="{{ href }}"
+    class="logo-djfit inline-flex items-center font-bold {{ size_classes[size] }} {{ has_glow ? 'logo-djfit--glow' : '' }}"
+    rel="home"
+    aria-label="DJ Fit"
+  >
+    {{ logo_content|raw }}
+  </a>
 {% else %}
-  <span class="logo-djfit inline-flex items-center font-bold {{ size_classes[size] }} {{ has_glow ? 'logo-djfit--glow' : '' }}" aria-hidden="true">{{ logo_content|raw }}</span>
+  <span class="logo-djfit inline-flex items-center font-bold {{ size_classes[size] }} {{ has_glow ? 'logo-djfit--glow' : '' }}" aria-hidden="true">
+    {{ logo_content|raw }}
+  </span>
 {% endif %}

@@ -882,11 +882,26 @@ if (getenv('IS_DDEV_PROJECT') == 'true' && file_exists(__DIR__ . '/settings.ddev
   include __DIR__ . '/settings.ddev.php';
 }
 
+// Load .env file into the environment so secrets stay out of the database.
+$env_path = dirname(DRUPAL_ROOT) . '/.env';
+if (file_exists($env_path)) {
+  foreach (file($env_path, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
+    if (str_starts_with(trim($line), '#')) {
+      continue;
+    }
+    if (str_contains($line, '=')) {
+      putenv(trim($line));
+    }
+  }
+}
+
 // Stripe Commerce configuration — loaded from .env, never hardcoded.
+// To switch between test/live, change STRIPE_MODE and the corresponding keys
+// in the .env file. The database never stores real keys.
 if (getenv('STRIPE_SECRET_KEY')) {
   $config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['secret_key'] = getenv('STRIPE_SECRET_KEY');
   $config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['publishable_key'] = getenv('STRIPE_PUBLISHABLE_KEY');
-  $config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['mode'] = 'test';
+  $config['commerce_payment.commerce_payment_gateway.stripe']['configuration']['mode'] = getenv('STRIPE_MODE') ?: 'test';
 }
 
 // Harden local config and remove status report warnings.

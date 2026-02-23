@@ -2150,6 +2150,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Fix invalid empty tool parameters schema for Bedrock/LiteLLM providers": "patches/drupal-ai-tools-empty-parameters-schema.patch"
                 }
             },
             "installation-source": "dist",
@@ -3588,7 +3591,9 @@
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
-                "patches_applied": []
+                "patches_applied": {
+                    "Canvas preview defaults for commerce status badge": "patches/drupal-commerce-canvas-preview-defaults.patch"
+                }
             },
             "installation-source": "dist",
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3747,6 +3752,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Fix TypeError in License::canRenew() when renewal interval is not configured": "patches/drupal-commerce-license-canrenew-null-interval.patch"
                 }
             },
             "installation-source": "dist",

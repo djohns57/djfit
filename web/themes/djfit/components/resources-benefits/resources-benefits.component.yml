@@ -6,19 +6,19 @@ props:
     heading:
       type: string
       title: Heading
-      default: 'Get Access to All Resources'
+      default: "Get Access to All Resources"
     subtitle:
       type: string
       title: Subtitle
-      default: 'Pro members get unlimited downloads of all guides, templates, and resources'
+      default: "Pro members get unlimited downloads of all guides, templates, and resources"
     cta_url:
       type: string
       title: CTA URL
-      default: '/membership'
+      default: "/membership"
     cta_text:
       type: string
       title: CTA Text
-      default: 'Upgrade to Pro'
+      default: "Upgrade to Pro"
 libraryOverrides:
   css:
     component:

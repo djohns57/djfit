@@ -1,4 +1,4 @@
-uuid: d8bdbbab-820a-4731-a1bd-28b6a0df3b93
+uuid: 8be8d289-3a77-45d0-95a6-dfd4d1c64176
 langcode: en
 status: true
 dependencies:
@@ -10,11 +10,11 @@ field_name: license
 entity_type: commerce_order_item
 bundle: default
 label: License
-description: ''
+description: 'The license purchased with this order item.'
 required: false
-translatable: true
+translatable: false
 default_value: {  }
-default_value_callback: ''
+default_value_callback: null
 settings:
   handler: 'default:commerce_license'
   handler_settings: {  }
